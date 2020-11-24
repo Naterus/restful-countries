@@ -14,7 +14,29 @@ class StateController extends Controller
         return view("admin.states",compact("states","country"));
     }
 
+    public function createState($country,Request $request){
 
+        $this->validate($request,[
+            "name" => "required"
+        ]);
+
+
+        State::create([
+            "country_id" => $country,
+            "name" => $request->input("name"),
+            "nick_name" => $request->input("nick_name"),
+            "slogan" => $request->input("slogan"),
+            "iso2" => $request->input("iso2"),
+            "official_language" => $request->input("official_language"),
+            "fips_code" => $request->input("fips_code"),
+            "population" => $request->input("population"),
+            "size" => $request->input("size"),
+            "region" => $request->input("region"),
+        ]);
+
+        return redirect()->back()->with("success","State created successfully");
+
+    }
 
     public function editState($country,$state){
 
@@ -35,10 +57,9 @@ class StateController extends Controller
             "name" => $request->input("name"),
             "nick_name" => $request->input("nick_name"),
             "slogan" => $request->input("slogan"),
-            "description" => $request->input("description"),
+            "iso2" => $request->input("iso2"),
             "official_language" => $request->input("official_language"),
             "population" => $request->input("population"),
-            "governor" => $request->input("governor"),
             "size" => $request->input("size"),
             "region" => $request->input("region"),
         ]);

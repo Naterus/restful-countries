@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://github.com/Naterus/restful-countries/blob/main/LICENSE"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
 ## Restful Countries

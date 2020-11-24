@@ -6,9 +6,6 @@
     <!-- Data Tables -->
     <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/media/css/dataTables.bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/extensions/Responsive/css/responsive.bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal.css") !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/toastr/toastr.css") !!}">
 @endsection
 @section("page-content")
     <div class="main-content">
@@ -24,7 +21,7 @@
                                               class="btn btn-info btn-sm waves-effect waves-light">Add Country</span>
                             </div>
                         </div>
-                @endif
+                    @endif
                 <!-- /.dropdown js__dropdown -->
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
@@ -161,52 +158,5 @@
 
 @endsection
 @section("page-script")
-    @if(Session::has("success"))
-        <script>
-            Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
 
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
-    @if(Session::has("error"))
-        <script>
-            Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
 @endsection

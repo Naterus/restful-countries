@@ -65,6 +65,8 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::get('administrator/countries/{id}/states', 'StateController@states')->name('admin.states')->middleware("permission.check:VIEW STATE");
 
+    Route::post('administrator/countries/{id}/state/create', 'StateController@createState')->name('admin.states.create')->middleware("permission.check:CREATE STATE");
+
     Route::get('administrator/countries/{country}/states/{state}', 'StateController@editState')->name('admin.states.edit')->middleware("permission.check:UPDATE STATE");
 
     Route::post('administrator/countries/{country}/states/{state}/update', 'StateController@updateState')->name('admin.states.edit.update')->middleware("permission.check:UPDATE STATE");

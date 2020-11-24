@@ -88,7 +88,7 @@ class DonationController extends Controller
 
         }else{
             return redirect()->route("donate")->with([
-                'success' =>  "Opps! your donation was not successful."
+                'success' =>  "Thank you for your donation."
             ]);
         }
     }

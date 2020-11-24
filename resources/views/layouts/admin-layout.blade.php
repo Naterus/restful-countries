@@ -34,6 +34,9 @@
     <link rel="stylesheet" href="{!! asset('storage/users/plugin/fullcalendar/fullcalendar.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('storage/users/plugin/fullcalendar/fullcalendar.print.css') !!}" media='print'>
     <link rel="stylesheet" href="{!! asset('storage/users/styles/custom.css') !!}">
+    <link rel="stylesheet" href="{!! asset("storage/users/plugin/toastr/toastr.css") !!}">
+    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal.css") !!}">
+    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
     @yield("page-style")
 </head>
 <body>
@@ -162,6 +165,54 @@
 <script src="{!! asset("storage/users/plugin/toastr/toastr.min.js") !!}"></script>
 <!-- Remodal -->
 <script src="{!! asset("storage/users/plugin/modal/remodal/remodal.min.js") !!}"></script>
+@if(Session::has("success"))
+    <script>
+        Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "rtl": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": 300,
+            "hideDuration": 1000,
+            "timeOut": 5000,
+            "extendedTimeOut": 1000,
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+@endif
+@if(Session::has("error"))
+    <script>
+        Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "rtl": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": 300,
+            "hideDuration": 1000,
+            "timeOut": 5000,
+            "extendedTimeOut": 1000,
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+@endif
 @yield("page-script")
 </body>
 </html>
