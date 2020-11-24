@@ -84,6 +84,78 @@
         </div>
         <!-- /.row small-spacing -->
 
+        <div class="row small-spacing">
+            <div class="col-lg-12 col-xs-12">
+                <div class="box-content">
+                    <div class="row small-spacing">
+
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="box-content">
+                                <h4 class="box-title text-success">Feedbacks</h4>
+                                <!-- /.box-title -->
+
+                                <div class="content widget-stat">
+                                    <div class="left-content"><i class="fa fa-check text-success" style="font-size:50px;"></i></div>
+                                    <!-- /#traffic-sparkline-chart-1 -->
+                                    <div class="right-content">
+                                        <h2 class="counter text-success" >{!! $feedbacks !!}</h2>
+                                        <!-- /.counter -->
+                                        <!-- /.text -->
+                                    </div>
+                                    <!-- .right-content -->
+                                </div>
+                                <!-- /.content widget-stat -->
+                            </div>
+                            <!-- /.box-content -->
+                        </div>
+
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="box-content">
+                                <h4 class="box-title text-info">Total API Versions</h4>
+                                <!-- /.box-title -->
+
+                                <div class="content widget-stat">
+                                    <div class="left-content"><i class="fa fa-book text-info" style="font-size:50px;"></i></div>
+                                    <!-- /#traffic-sparkline-chart-1 -->
+                                    <div class="right-content">
+                                        <h2 class="counter text-info" >
+                                           {!! $total_api_versions !!}
+                                        </h2>
+                                        <!-- /.counter -->
+                                        <!-- /.text -->
+                                    </div>
+                                    <!-- .right-content -->
+                                </div>
+                                <!-- /.content widget-stat -->
+                            </div>
+                            <!-- /.box-content -->
+                        </div>
+
+                        <div class="col-lg-4 col-xs-12">
+                            <div class="box-content">
+                                <h4 class="box-title text-warning">Current API Version</h4>
+                                <!-- /.box-title -->
+
+                                <div class="content widget-stat">
+                                    <div class="left-content"><i class="fa fa-exchange text-warning" style="font-size:50px;"></i></div>
+                                    <!-- /#traffic-sparkline-chart-1 -->
+                                    <div class="right-content">
+                                        <h2 class="counter text-warning" >V{!! $current_api_version !!}</h2>
+                                        <!-- /.counter -->
+                                        <!-- /.text -->
+                                    </div>
+                                    <!-- .right-content -->
+                                </div>
+                                <!-- /.content widget-stat -->
+                            </div>
+                            <!-- /.box-content -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- /.main-content -->
 @endsection

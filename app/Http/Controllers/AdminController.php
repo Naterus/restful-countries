@@ -45,10 +45,18 @@ class AdminController extends Controller
     }
 
     public function dashboard(){
+        $current_api_version = env("APP_VERSION");
+        $total_api_versions = 0;
+
+        for ($version = 1; $version <= $current_api_version; $version++){
+            $total_api_versions = $total_api_versions+1;
+        }
+
+        $feedbacks = FeedBack::all()->count();
         $total_requests = ApiRequest::all()->count();
         $failed_requests = ApiRequest::whereStatus(0)->count();
         $successful_requests = ApiRequest::whereStatus(1)->count();
-        return view('admin.dashboard',compact("total_requests","failed_requests","successful_requests"));
+        return view('admin.dashboard',compact("feedbacks","current_api_version","total_api_versions","total_requests","failed_requests","successful_requests"));
     }
 
     public function feedbacks(){
