@@ -61,6 +61,9 @@
                                     @if(helper::instance()->isPermitted("VIEW PRESIDENT"))
                                         <a href="{!! route("admin.presidents",$country->id) !!}">Presidents</a><br/>
                                    @endif
+                                        @if(helper::instance()->isPermitted("DELETE COUNTRY"))
+                                            <a href="javascript:void(0)" onclick="confirmCountryDelete('{!! $country->id  !!}')">Delete</a> <br/>
+                                    @endif
                                 <!-- /.dropdown js__dropdown -->
                                 </td>
                             </tr>
@@ -156,7 +159,37 @@
         </div>
     @endif
 
+    @if(helper::instance()->isPermitted("DELETE COUNTRY"))
+        <div class="remodal" data-remodal-id="delete-country" role="dialog"
+             aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+            <button data-remodal-action="close" class="remodal-close"
+                    aria-label="Close"></button>
+
+
+            <form method="post" action="{!! route("admin.countries.delete") !!}">
+                @csrf
+                <div class="remodal-content">
+                    <h2 id="modal1Title">Delete Country</h2>
+                    <h3 class="text-danger">Country and associated  states and districts would be deleted.</h3>
+                    <br/>
+                    <input type="number" name="country" hidden>
+                </div>
+                <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
+                <button class="remodal-confirm">Proceed Delete
+                </button>
+            </form>
+        </div>
+    @endif
+
 @endsection
 @section("page-script")
+    @if(helper::instance()->isPermitted("DELETE COUNTRY"))
+        <script>
+            function confirmCountryDelete($country,$state){
+                $("input[name='country']").val($country);
 
+                window.location.href = "#delete-country";
+            }
+        </script>
+    @endif
 @endsection

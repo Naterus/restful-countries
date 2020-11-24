@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Country;
+use App\District;
+use App\President;
+use App\State;
 use Illuminate\Http\Request;
 
 class CountryController extends Controller
@@ -15,6 +18,40 @@ class CountryController extends Controller
     public function editCountry($id){
         $country = Country::whereId($id)->first();
         return view("admin.edit-country",compact("country"));
+    }
+
+    public function deleteCountry(Request $request){
+        $this->validate($request,[
+            "country" => "required"
+        ]);
+
+        $country = $request->input("country");
+
+        Country::whereId($country)->delete();
+
+        $states = State::whereCountryId($country)->get();
+
+        $presidents = President::whereCountryId($country)->get();
+
+        //Delete Presidents
+        foreach ($presidents as $president) {
+            President::whereId($president->id)->whereCountryId($country)->delete();
+        }
+
+
+        //Delete States and districts
+        foreach ($states as $state){
+            //Delete states
+            State::whereId($state->id)->whereCountryId($country)->delete();
+
+            foreach ($state->districts as $district){
+                //Delete districts
+                District::whereId($district->id)->whereStateId($state->id)->whereCountryId($country)->delete();
+            }
+
+        }
+
+        return redirect()->back()->with("success","Country and associated states and districts deleted successfully.");
     }
 
     public function createCountry(Request $request){
