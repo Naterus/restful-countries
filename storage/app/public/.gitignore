@@ -1,8 +1,3 @@
-/images
+*
 !.gitignore
-!/css
-!/fonts
-!/js
-!/scss
-!/users
 
