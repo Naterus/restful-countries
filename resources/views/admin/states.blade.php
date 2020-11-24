@@ -21,9 +21,9 @@
                                               class="btn btn-info btn-sm waves-effect waves-light">Add State</span>
                             </div>
                         </div>
-                    @endif
+                @endif
 
-                    <!-- /.dropdown js__dropdown -->
+                <!-- /.dropdown js__dropdown -->
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
                         <tr>
@@ -56,10 +56,9 @@
                                     @if(helper::instance()->isPermitted("VIEW DISTRICT"))
                                         <a href="{!! route("admin.districts",["country" => $state->country_id,"state"=>$state->id]) !!}">districts</a><br/>
                                     @endif
-                                <!--
-                                    <a href="">Delete</a><br/>
-                                    -->
-                                    <!-- /.dropdown js__dropdown -->
+                                    @if(helper::instance()->isPermitted("DELETE STATE"))
+                                        <a href="javascript:void(0)" onclick="confirmStateDelete('{!! $state->country_id  !!}','{!! $state->id  !!}')">Delete</a> <br/>
+                                    @endif
                                 </td>
                             </tr>
                             <?php $id++; ?>
@@ -131,8 +130,39 @@
         </div>
     @endif
 
+    @if(helper::instance()->isPermitted("DELETE STATE"))
+        <div class="remodal" data-remodal-id="delete-state" role="dialog"
+             aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+            <button data-remodal-action="close" class="remodal-close"
+                    aria-label="Close"></button>
+
+
+            <form method="post" action="{!! route("admin.states.delete") !!}">
+                @csrf
+                <div class="remodal-content">
+                    <h2 id="modal1Title">Delete State</h2>
+                    <h3 class="text-danger">State and associated districts would be deleted.</h3>
+                    <br/>
+                    <input type="number" name="country" hidden>
+                    <input type="number" name="state" hidden>
+                </div>
+                <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
+                <button class="remodal-confirm">Proceed Delete
+                </button>
+            </form>
+        </div>
+    @endif
 
 @endsection
 @section("page-script")
+    @if(helper::instance()->isPermitted("DELETE STATE"))
+        <script>
+            function confirmStateDelete($country,$state){
+               $("input[name='country']").val($country);
+               $("input[name='state']").val($state);
 
+                window.location.href = "#delete-state";
+            }
+        </script>
+    @endif
 @endsection

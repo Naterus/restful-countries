@@ -1,13 +1,11 @@
 <?php
 
 
-/*
- * This file is part of the Restful Countries API.
+/**
+ * This file is part of the Restful Countries API/Management Console.
  *
- * (c) Nathan Dauda Aluwong <nathandauda27@gmail.com>
+ * @author Nathan Dauda Aluwong <nathandauda27@gmail.com>
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
  */
 
 namespace App\Helpers;

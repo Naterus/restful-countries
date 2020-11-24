@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Country;
+use App\District;
 use App\State;
 use Illuminate\Http\Request;
 
@@ -66,6 +67,29 @@ class StateController extends Controller
 
         return redirect()->back()->with("success","State updated successfully");
 
+    }
+
+    public function deleteState(Request $request){
+        $this->validate($request,[
+              "country" => "required",
+               "state" => "required"
+            ]);
+
+        $country = $request->input("country");
+        $state = $request->input("state");
+
+
+        State::whereCountryId($country)->whereId($state)->delete();
+
+        //Get all districts for the state
+        $districts = District::whereCountryId($country)->whereStateId($state)->get();
+
+        foreach ($districts as $district){
+            //Use state and country ids again to ensure you are deleting the right districts.
+            District::whereId($district->id)->whereStateId($state)->whereCountryId($country)->delete();
+        }
+
+        return redirect()->back()->with("success","State and related districts deleted successfully");
     }
 
 }
