@@ -17,6 +17,34 @@ class CountryController extends Controller
         return view("admin.edit-country",compact("country"));
     }
 
+    public function createCountry(Request $request){
+
+        $this->validate($request,[
+            "name" => "required|unique:countries"
+        ]);
+
+
+        $country = Country::create([
+            "name" => $request->input("name"),
+            "nick_name" => $request->input("nick_name"),
+            "full_name" => $request->input("full_name"),
+            "description" => $request->input("description"),
+            "iso2" => $request->input("iso2"),
+            "iso3" => $request->input("iso3"),
+            "currency" => $request->input("currency"),
+            "official_language" => $request->input("official_language"),
+            "capital" => $request->input("capital"),
+            "population" => $request->input("population"),
+            "independence_day" => $request->input("independence_day"),
+            "size" => $request->input("size"),
+            "continent" => $request->input("continent"),
+            "region" => $request->input("region"),
+        ]);
+
+        return redirect()->back()->with("success","Country created successfully");
+
+    }
+
     public function updateCountry($id,Request $request){
 
         $this->validate($request,[
