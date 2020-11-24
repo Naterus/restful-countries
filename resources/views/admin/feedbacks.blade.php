@@ -34,8 +34,8 @@
                         @foreach($feedbacks as $feedback)
                             <tr>
                                 <td>{!! $id !!}</td>
-                                <td>{!! $feedback->name ? !null : "Not Provided" !!}</td>
-                                <td>{!! $feedback->email ? !null : "Not Provided" !!}</td>
+                                <td>@if($feedback->name == "") Not provided @else {!! $feedback->name !!} @endif</td>
+                                <td>@if($feedback->email == "") Not provided @else {!! $feedback->email !!} @endif</td>
                                 <td>{!! $feedback->category !!}</td>
                                 <td>{!! $feedback->feedback !!}</td>
                                 <td>{!! $feedback->created_at !!}</td>
