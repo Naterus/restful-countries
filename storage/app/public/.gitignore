@@ -1,8 +1,8 @@
-images
+/images
 !.gitignore
-!css
-!fonts
-!js
-!scss
-!users
+!/css
+!/fonts
+!/js
+!/scss
+!/users
 
