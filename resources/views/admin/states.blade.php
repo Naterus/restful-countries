@@ -42,9 +42,13 @@
                                 <td>{!! $state->iso2 !!}</td>
                                 <td>{!! $state->fips_code !!}</td>
                                 <td>
-                                    <a href="{!! route("admin.states.edit",["country" => $state->country_id,"state"=>$state->id]) !!}">Edit</a> <br/>
-                                    <a href="{!! route("admin.districts",["country" => $state->country_id,"state"=>$state->id]) !!}">districts</a><br/>
-                                    <!--
+                                    @if(helper::instance()->isPermitted("UPDATE STATE"))
+                                        <a href="{!! route("admin.states.edit",["country" => $state->country_id,"state"=>$state->id]) !!}">Edit</a> <br/>
+                                    @endif
+                                    @if(helper::instance()->isPermitted("VIEW DISTRICT"))
+                                        <a href="{!! route("admin.districts",["country" => $state->country_id,"state"=>$state->id]) !!}">districts</a><br/>
+                                    @endif
+                                <!--
                                     <a href="">Delete</a><br/>
                                     -->
                                     <!-- /.dropdown js__dropdown -->

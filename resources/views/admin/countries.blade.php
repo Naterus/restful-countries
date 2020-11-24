@@ -55,10 +55,16 @@
                                 <td>{!! $country->iso2 !!}</td>
                                 <td>{!! $country->iso3 !!}</td>
                                 <td>
-                                    <a  href="{!! route("admin.countries.edit",$country->id) !!}">Edit</a> <br style="margin-bottom: 20px;" />
-                                    <a href="{!! route("admin.states",$country->id) !!}">States</a><br/>
-                                    <a href="{!! route("admin.presidents",$country->id) !!}">Presidents</a><br/>
-                                    <!-- /.dropdown js__dropdown -->
+                                    @if(helper::instance()->isPermitted("UPDATE COUNTRY"))
+                                        <a  href="{!! route("admin.countries.edit",$country->id) !!}">Edit</a> <br style="margin-bottom: 20px;" />
+                                    @endif
+                                    @if(helper::instance()->isPermitted("VIEW STATE"))
+                                        <a href="{!! route("admin.states",$country->id) !!}">States</a><br/>
+                                    @endif
+                                    @if(helper::instance()->isPermitted("VIEW PRESIDENT"))
+                                        <a href="{!! route("admin.presidents",$country->id) !!}">Presidents</a><br/>
+                                   @endif
+                                <!-- /.dropdown js__dropdown -->
                                 </td>
                             </tr>
                         @endforeach
