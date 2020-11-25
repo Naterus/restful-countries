@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Resources\Country;
+namespace App\Http\Resources\State;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class CountryCollection extends ResourceCollection
+class StateCollection extends ResourceCollection
 {
-
-
-
     /**
      * Transform the resource collection into an array.
      *
@@ -18,7 +15,7 @@ class CountryCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'data' => CountryResource::collection($this->collection)
+            'data' => StateResource::collection($this->collection)
         ];
     }
 }
