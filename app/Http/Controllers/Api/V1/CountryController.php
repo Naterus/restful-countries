@@ -11,14 +11,6 @@ use Illuminate\Http\Request;
 class CountryController extends Controller
 {
     public function getCountries(Request $request){
-        $country_name = $request->get("name");
-
-        if(isset($country_name)){
-            //Get country by name
-            $country = Country::whereName($country_name)->first();
-            return new CountryResource($country);
-        }
-
 
         $country_count = Country::all()->count();
 
@@ -28,7 +20,9 @@ class CountryController extends Controller
         return new CountryCollection(Country::paginate($per_page));
     }
 
-    public function findById(Country $country,Request $request){
+    public function findByNameOrId($country,Request $request){
+
+        $country = Country::whereId($country)->orWhere("name",$country)->first();
 
         return new CountryResource($country);
     }
