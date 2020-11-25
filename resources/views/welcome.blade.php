@@ -70,7 +70,7 @@
                 $.each(countries.data,function(key,value){
                     $('#country-select')
                         .append($("<option></option>")
-                            .attr("value", value.id)
+                            .attr("value", value.name)
                             .text(value.name));
                 });
 
@@ -89,7 +89,7 @@
                 $.each(states.data,function(key,value){
                     $('#state-select')
                         .append($("<option></option>")
-                            .attr("value", value.id)
+                            .attr("value", value.name)
                             .text(value.name));
                 });
 
@@ -108,7 +108,7 @@
                 $.each(districts.data,function(key,value){
                     $('#district-select')
                         .append($("<option></option>")
-                            .attr("value", value.id)
+                            .attr("value", value.name)
                             .text(value.name));
                 });
 
