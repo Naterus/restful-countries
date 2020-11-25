@@ -16,7 +16,6 @@ class CountryResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
             'name' => $this->name,
             'full_name' => $this->full_name,
             'current_president' => [
@@ -41,8 +40,6 @@ class CountryResource extends JsonResource
                 'states' => route("states.index",$this->id),
                 'flag' => asset("storage/images/flags/".$this->flag),
             ],
-
-            //States data increases load time so we just include states in href
             //'states' => StateResource::collection($this->states)
         ];
     }

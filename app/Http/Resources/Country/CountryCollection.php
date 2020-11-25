@@ -18,7 +18,7 @@ class CountryCollection extends ResourceCollection
     public function toArray($request)
     {
         return [
-            'data' => CountryResource::collection($this->collection)
+            'data' => $this->collection->count() > 0 ? CountryResource::collection($this->collection) : null
         ];
     }
 }

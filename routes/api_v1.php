@@ -10,7 +10,7 @@ Route::group(['middleware' => ["throttle:20,1","api_logger"]], function(){
 
     Route::get("/countries",'CountryController@getCountries')->name("countries.index");
 
-    Route::get("/countries/{country}",'CountryController@findByNameOrId')->name("countries.show");
+    Route::get("/countries/{country}",'CountryController@getCountry')->name("countries.show");
 
     Route::get("/countries/{country}/states",'StateController@getStates')->name("states.index");
 

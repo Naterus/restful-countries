@@ -20,9 +20,9 @@ class CountryController extends Controller
         return new CountryCollection(Country::paginate($per_page));
     }
 
-    public function findByNameOrId($country,Request $request){
+    public function getCountry($country,Request $request){
 
-        $country = Country::whereId($country)->orWhere("name",$country)->first();
+        $country = Country::whereName($country)->first();
 
         return new CountryResource($country);
     }
