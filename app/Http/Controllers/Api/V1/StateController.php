@@ -20,9 +20,10 @@ class StateController extends Controller
     }
 
     public function getState($country,$state){
+        //Get country_id using country name to find state
         $country_id = Country::whereName($country)->first();
-        $state_id = State::whereName($state)->first();
-        $state  = State::whereCountryId($country_id->id ?: null)->whereId($state_id->id ?: null)->first();
+
+        $state = State::whereName($state)->whereCountryId($country_id->id ?: null)->first();
        return new StateResource($state);
    }
 
