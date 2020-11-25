@@ -95,7 +95,7 @@
                                 <!-- /.box-title -->
 
                                 <div class="content widget-stat">
-                                    <div class="left-content"><i class="fa fa-check text-success" style="font-size:50px;"></i></div>
+                                    <div class="left-content"><i class="fa fa-thumbs-up text-success" style="font-size:50px;"></i></div>
                                     <!-- /#traffic-sparkline-chart-1 -->
                                     <div class="right-content">
                                         <h2 class="counter text-success" >{!! $feedbacks !!}</h2>
