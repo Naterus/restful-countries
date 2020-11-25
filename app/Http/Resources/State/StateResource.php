@@ -16,7 +16,6 @@ class StateResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
             'name' => $this->name,
             'iso2' => $this->iso2,
             'fips_code' => $this->fips_code,
@@ -27,12 +26,12 @@ class StateResource extends JsonResource
             'region' => $this->region,
             'href' => [
                 'self' => route("states.show",[
-                    'country' => $this->country_id,
-                    'state' => $this->id
+                    'country' => $this->country->name,
+                    'state' => $this->name
                 ]),
                 'districts' => route("districts.index",[
-                    'country' => $this->country_id,
-                    'state' => $this->id
+                    'country' => $this->country->name,
+                    'state' => $this->name
                 ]),
             ],
             //'districts' => $this->districts != null ? DistrictResource::collection($this->districts) : null,
