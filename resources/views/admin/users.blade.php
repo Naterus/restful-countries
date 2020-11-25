@@ -49,7 +49,7 @@
                                 <td>@if($user->status == 1) <span class="text-success">Active</span> @else <span class="text-danger">Inactive</span> @endif</td>
                                 <td>{!! $user->created_at!!}</td>
                                 <td>
-                                    <a href="">Edit</a> <br/>
+                                    <a href="javascript:void(0)" onclick="confirmUserDelete('{!! $user->id !!}')">Delete</a> <br/>
                                     <!--
                                     <a href="">Delete</a><br/>
                                     -->
@@ -106,55 +106,34 @@
         </form>
     </div>
 
+    <div class="remodal" data-remodal-id="delete-user" role="dialog"
+         aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <button data-remodal-action="close" class="remodal-close"
+                aria-label="Close"></button>
+
+
+        <form method="post" action="{!! route("admin.user.delete") !!}">
+            @csrf
+            <div class="remodal-content">
+                <h2 id="modal1Title">Delete User</h2>
+                <h3 class="text-danger">User would be permanently deleted.</h3>
+                <br/>
+                <input type="number" name="user" hidden>
+            </div>
+            <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
+            <button class="remodal-confirm">Proceed Delete
+            </button>
+        </form>
+    </div>
+
 
 @endsection
 @section("page-script")
-    @if(Session::has("success"))
-        <script>
-            Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
+    <script>
+        function confirmUserDelete($user){
+            $("input[name='user']").val($user);
 
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
-    @if(Session::has("error"))
-        <script>
-            Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
+            window.location.href = "#delete-user";
+        }
+    </script>
 @endsection

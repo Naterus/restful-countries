@@ -43,6 +43,8 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::get('administrator/users', 'AdminController@users')->name('admin.users')->middleware("permission.check:MANAGE USER");
 
+    Route::post('administrator/user/delete', 'AdminController@deleteUser')->name('admin.user.delete')->middleware("permission.check:MANAGE USER");
+
     Route::post('administrator/users/create', 'AdminController@createUser')->name('admin.users.create')->middleware("permission.check:MANAGE USER");
 
     Route::get('administrator/roles', 'RoleController@roles')->name('admin.roles')->middleware("permission.check:MANAGE ROLE");

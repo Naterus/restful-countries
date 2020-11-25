@@ -113,6 +113,16 @@ class AdminController extends Controller
         return redirect()->back()->with("success","User created successfully");
     }
 
+    public function deleteUser(Request $request){
+        $this->validate($request,[
+            "user" => "required"
+        ]);
 
+        $user = $request->input("user");
+
+        User::whereId($user)->delete();
+
+        return redirect()->back()->with("success","User deleted successfully");
+    }
 
 }
