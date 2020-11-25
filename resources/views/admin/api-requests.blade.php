@@ -19,11 +19,11 @@
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Endpoint</th>
-                            <th>Status</th>
-                            <th>Message</th>
-                            <th>Request Time</th>
+                            <th width="5%">#</th>
+                            <th width="30%">Endpoint</th>
+                            <th width="30%">Status</th>
+                            <th width="20%">Message</th>
+                            <th width="15%">Request Time</th>
                         </tr>
                         </thead>
 
@@ -32,11 +32,11 @@
                         <?php $id = 1; ?>
                         @foreach($api_requests as $api_request)
                             <tr>
-                                <td>{!! $id !!}</td>
-                                <td>{!! $api_request->endpoint !!}</td>
-                                <td>@if($api_request->status == 1) Successful @else Failed @endif</td>
-                                <td>{!! $api_request->message !!}</td>
-                                <td>{!! $api_request->created_at !!}</td>
+                                <td >{!! $id !!}</td>
+                                <td >{!! $api_request->endpoint !!}</td>
+                                <td >@if($api_request->status == 1) Successful @else Failed @endif</td>
+                                <td >{!! $api_request->message !!}</td>
+                                <td >{!! $api_request->created_at !!}</td>
                             </tr>
                             <?php $id++; ?>
                         @endforeach

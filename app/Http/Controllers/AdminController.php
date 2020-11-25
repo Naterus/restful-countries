@@ -11,6 +11,7 @@ use App\State;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Auth;
@@ -65,7 +66,7 @@ class AdminController extends Controller
     }
 
     public function apiRequests(){
-        $api_requests = ApiRequest::all();
+        $api_requests = DB::table("api_requests")->orderBy("created_at","desc")->get();
         return view("admin.api-requests",compact("api_requests"));
     }
 
