@@ -26,10 +26,10 @@
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
                         <tr>
-                            <th>Country Id</th>
                             <th>Flag</th>
                             <th>Name</th>
                             <th>Capital</th>
+                            <th>Continent</th>
                             <th>Population</th>
                             <th>Currency</th>
                             <th>Phone Code</th>
@@ -42,10 +42,10 @@
                         <tbody>
                         @foreach($countries as $country)
                             <tr>
-                                <td>{!! $country->id !!}</td>
                                 <td> <img src="{!! asset("storage/images/flags/".$country->flag) !!}" style="height:40px; width:40px;"></td>
                                 <td>{!! $country->name !!}</td>
                                 <td>{!! $country->capital !!}</td>
+                                <td>{!! $country->continent !!}</td>
                                 <td>{!! $country->population !!}</td>
                                 <td>{!! $country->currency !!}</td>
                                 <td>{!! $country->code !!}</td>

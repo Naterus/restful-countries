@@ -17,6 +17,12 @@ class CountryController extends Controller
         //Return all countries if per_page is not provided
         $per_page = $request->get('per_page') ?: $country_count;
 
+        $continent = $request->get('continent');
+
+        if(isset($continent)){
+            return new CountryCollection(Country::whereContinent($continent)->paginate($per_page));
+        }
+
         return new CountryCollection(Country::paginate($per_page));
     }
 
