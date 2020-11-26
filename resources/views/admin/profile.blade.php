@@ -12,13 +12,20 @@
                 <div class="box-content">
                     <h4 class="box-title">Profile </h4>
                     <div class="card-content">
-                        <form class="form-horizontal" action="{!! route("admin.countries.edit.update",1) !!}" method="post">
+                        <form class="form-horizontal" action="{!! route("admin.profile.update") !!}" method="post">
                             @csrf
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                                 <span ></span>
                                 <div class="col-sm-6">
                                     <input type="text" name="name" disabled class="form-control" value="{!! Auth::user()->email !!}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Role</label>
+                                <span ></span>
+                                <div class="col-sm-6">
+                                    <input type="text" disabled class="form-control" value="{!! Auth::user()->role->role !!}">
                                 </div>
                             </div>
                             <div class="form-group">

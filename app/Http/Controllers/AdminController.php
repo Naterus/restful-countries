@@ -81,12 +81,14 @@ class AdminController extends Controller
         return view("admin.profile");
     }
 
-    public function changePassword(Request $request){
+    public function updateProfile(Request $request){
         $this->validate($request,[
            "old_password" => "required",
             "new_password" => "required",
             "password_confirm" => "required"
         ]);
+
+
 
 
     }
