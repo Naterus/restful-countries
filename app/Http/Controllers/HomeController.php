@@ -81,7 +81,19 @@ class HomeController extends Controller
         return view("countries",compact('country','countries'));
     }
 
-    public function donate(){
+    public function donate(Request $request){
+        $success = $request->get("success");
+        $message = null;
+
+        if(isset($success)){
+            if($success == "yes"){
+                $success = "Thank you for your donation.";
+                return view('donate',compact("success"));
+            }else{
+                $error = "Opps! Donation was not completed.";
+                return view('donate',compact("error"));
+            }
+        }
         return view('donate');
     }
 

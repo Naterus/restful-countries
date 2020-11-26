@@ -24,9 +24,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-center" >
-                            <span data-remodal-target="paypal"><img src="{!! asset("storage/images/iconfinder_Paypal-Curved_70607.png") !!}" height="39" width="100"></span>
-                            <span  data-remodal-target="paystack" class="btn btn-primary">Paystack</span>
-                            <span  data-remodal-target="bitcoin"><img src="{!! asset("storage/images/iconfinder_payment_method_bitcoin_206681.png") !!}" height="39" width="100"></span>
+                           <span>
+                               <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                <input type="hidden" name="hosted_button_id" value="D5KM86CAKG5LA" />
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                <img alt="" border="0" src="https://www.paypal.com/en_NG/i/scr/pixel.gif" width="1" height="1"  />
+                                   <span style="margin-bottom: 32px;" data-remodal-target="paystack" class="btn btn-primary">Paystack</span>
+                                   <span data-remodal-target="bitcoin" ><img style="margin-bottom: 32px; margin-left:10px;"  src="{!! asset("storage/images/iconfinder_payment_method_bitcoin_206681.png") !!}" height="39" width="100"></span>
+                            </form>
+                           </span>
                         </div>
                     </div>
                 </div>
@@ -42,15 +48,13 @@
 
         <div class="remodal-content">
             <h2 id="modal1Title">Donate with paystack</h2>
-            <form action="{!! route('donate.paypal.charge') !!}" method="post" name="donation-form">
-                @csrf
-                <label>Email Address</label>
-                <input type="email" class="form-control" name="email">
-                <br/>
-                <label>Amount (#)</label>
-                <input type="number" class="form-control" name="paystack_amount" value="1">
-                <br/>
-            </form>
+
+            <label>Email Address</label>
+            <input type="email" class="form-control" name="email">
+            <br/>
+            <label>Amount (#)</label>
+            <input type="number" class="form-control" name="paystack_amount" value="1">
+            <br/>
 
 
             <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
@@ -58,24 +62,7 @@
             </button>
         </div>
     </div>
-    <div class="remodal" data-remodal-id="paypal" role="dialog"
-         aria-labelledby="modal1Title" aria-describedby="modal1Desc">
-        <button data-remodal-action="close" class="remodal-close"
-                aria-label="Close"></button>
 
-        <div class="remodal-content">
-            <h2 id="modal1Title">Donate with paypal</h2>
-            <form action="{!! route('donate.paypal.charge') !!}" method="post" name="donation-form">
-                @csrf
-                <label>Amount ($)</label>
-                <input type="number" class="form-control" name="amount" value="1">
-                <br/>
-                <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
-                <button class="remodal-confirm" type="submit">Proceed Payment
-                </button>
-            </form>
-        </div>
-    </div>
     <div class="remodal" data-remodal-id="bitcoin" role="dialog"
          aria-labelledby="modal1Title" aria-describedby="modal1Desc">
         <button data-remodal-action="close" class="remodal-close"

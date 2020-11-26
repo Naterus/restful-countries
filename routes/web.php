@@ -7,12 +7,6 @@ Route::get('/','HomeController@index')->name('home');
 
 Route::get('/donate','HomeController@donate')->name('donate');
 
-Route::post('/donate/paypal/charge', 'DonationController@paypalCharge')->name("donate.paypal.charge");
-
-Route::get('/donate/paypal/payment-success', 'DonationController@paypalSuccess')->name("donate.paypal.success");
-
-Route::get('/donate/paypal/payment-error', 'DonationController@paypalError')->name("donate.paypal.error");
-
 Route::post('/donate/paystack/callback', 'DonationController@paystackGatewayCallback')->name("donate.paystack.callback");
 
 Route::get('/api-documentation/version/{version}','HomeController@documentation')->name('documentation');
