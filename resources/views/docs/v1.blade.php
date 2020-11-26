@@ -66,7 +66,6 @@
                                 <li><a href="#state-by-country-state">State by country name and state name</a> <span class="float-right"></span></li>
                                 <li><a href="#districts-by-country-state">Districts by country name and state name</a> <span class="float-right"></span></li>
                                 <li><a href="#districts-by-country-state-district">District by country name, state name and district name</a> <span class="float-right"></span></li>
-                                <li><a href="#response-structure">Response Structure</a> <span class="float-right"></span></li>
 
                             </ul>
                         </div>
@@ -109,10 +108,12 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">All Countries</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">All Countries - <span class="text-success">GET</span></a></h4>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1</a></p>
                                     <p>Or</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries</a></p>
+                                    <p>Returns a paginated result of all countries available</p>
+                                    <pre id="api-response"></pre>
                                 </div>
 
                             </div>
@@ -132,7 +133,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by name</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}</p>
 
@@ -156,7 +157,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent=continent</p>
 
@@ -180,7 +181,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by code</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by code - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?code=code</p>
 
@@ -204,7 +205,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">States by country name</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">States by country name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Afghanistan/states</a></p>
@@ -227,7 +228,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">State by country name and state name</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">State by country name and state name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states/Alaska</a></p>
@@ -250,7 +251,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Districts by country name and state name</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Districts by country name and state name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}/districts</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Canada/states/Manitoba/districts</a></p>
@@ -273,7 +274,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">District by country name,state name and district name</a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">District by country name,state name and district name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}/districts/{district}</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states/Trafford/districts/xxxx</a></p>
@@ -283,31 +284,6 @@
                         </div><!--end col-->
                     </div>
                     <br/>
-                    <div class="row" id="districts-by-country-state">
-                        <div class="col-lg-12 mb-12 pb-12">
-                            <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Response  Structure</a></h4>
-
-                                    <p>Calling the countries endpoint would return a paginated result of all the countries available.</p>
-                                    <a href="https://restfulcountries.com/api/v1" target="_blank">https://restfulcountries.com/api/v1/countries</a>
-                                    <p></p>
-                                    <pre id="api-response"></pre>
-
-                                </div>
-
-                            </div>
-                        </div><!--end col-->
-                    </div>
                 </div>
             </div>
         </div>
@@ -330,7 +306,7 @@
             { "data":
                     [
                         {
-                            "name": "Afghanistan",
+                            "country": "Afghanistan",
                             "full_name": null,
                             "current_president": [],
                             "presidents": [],
@@ -366,9 +342,9 @@
                     "from": 1,
                     "last_page": 1,
                     "path": "http://localhost:8081/restful_countries/public/api/v1/countries",
-                    "per_page": 247,
-                    "to": 247,
-                    "total": 247
+                    "per_page": 1,
+                    "to": 1,
+                    "total": 1
                 }
             };
 

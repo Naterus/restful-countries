@@ -17,7 +17,7 @@ class CreateCountriesTable extends Migration
             $table->id();
             $table->string("name");
             $table->bigInteger("population")->nullable();
-            $table->string("president")->nullable();
+            $table->bigInteger("president_id")->unsigned()->index()->nullable();
             $table->string("full_name")->nullable();
             $table->text("description")->nullable();
             $table->string("nick_name")->nullable();
@@ -33,6 +33,7 @@ class CreateCountriesTable extends Migration
             $table->string("size")->nullable();
             $table->date("national_holiday")->nullable();
             $table->date("independence_date")->nullable();
+            $table->foreign("president_id")->references("id")->on("presidents")->onDelete("cascade");
             $table->timestamps();
         });
     }

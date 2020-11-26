@@ -19,7 +19,11 @@ class CountryResource extends JsonResource
             'name' => $this->name,
             'full_name' => $this->full_name,
             'current_president' => [
-
+                 "name" => null,
+                "gender" => null,
+                "appointment_start_date" => null,
+                "appointment_end_date" => null,
+                "picture" => asset("storage/images/presidents/".$this->president),
             ],
             'presidents' => [
 
