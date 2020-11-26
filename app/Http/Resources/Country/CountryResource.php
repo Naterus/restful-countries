@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Country;
 
+use App\Http\Resources\President\PresidentResource;
 use App\Http\Resources\State\StateResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -18,13 +19,7 @@ class CountryResource extends JsonResource
         return [
             'name' => $this->name,
             'full_name' => $this->full_name,
-            'current_president' => [
-                 "name" => null,
-                "gender" => null,
-                "appointment_start_date" => null,
-                "appointment_end_date" => null,
-                "picture" => asset("storage/images/presidents/".$this->president),
-            ],
+            'current_president' => new PresidentResource($this->president),
             'presidents' => [
 
             ],
