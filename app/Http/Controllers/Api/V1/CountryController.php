@@ -12,19 +12,20 @@ class CountryController extends Controller
 {
     public function getCountries(Request $request){
 
+
         $country_count = Country::all()->count();
 
         //Optional route parameters
         $per_page = $request->get('per_page') ?: $country_count;
-        $continent = str_replace("-"," ",$request->get('continent'));
+        $continent = $request->get('continent');
         $iso2 = $request->get('iso2');
         $iso3 = $request->get('iso3');
         $code = $request->get('code');
-        $region = str_replace("-"," ",$request->get('region'));
+        $region = $request->get('region');
 
         if(isset($continent)){
             //Find countries by continent
-            return new CountryCollection(Country::whereContinent($continent)->paginate($per_page));
+            return new CountryCollection(Country::whereContinent(str_replace("-"," ",$continent))->paginate($per_page));
         }
 
         if(isset($code)){
@@ -47,7 +48,7 @@ class CountryController extends Controller
 
         if(isset($region)){
             //Find countries by region
-            return new CountryResource(Country::whereRegion($region)->paginate($per_page));
+            return new CountryResource(Country::whereRegion(str_replace("-"," ",$region))->paginate($per_page));
         }
 
         return new CountryCollection(Country::paginate($per_page));

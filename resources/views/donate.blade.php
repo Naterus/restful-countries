@@ -15,15 +15,10 @@
                 <div class="col-md-6">
                     <div class="text-center text-white">
                         <h4 class="text-uppercase title mb-4">Support Restful Countries</h4>
-                        <p>Our aim is to provide developers all over the  world with relevant information they need about any country.</p>
-                        <p>You may wish to support the research work, development and maintenance (Web Server,Database,Domain name,SSL) of restful countries using any of the channels below.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="home-form-position">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="text-center" >
+                        <div class="home-form-position">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="text-center" >
                            <span>
                                <form action="https://www.paypal.com/donate" method="post" target="_top">
                                 <input type="hidden" name="hosted_button_id" value="D5KM86CAKG5LA" />
@@ -33,10 +28,16 @@
                                    <span data-remodal-target="bitcoin" ><img style="margin-bottom: 32px; margin-left:10px;"  src="{!! asset("storage/images/iconfinder_payment_method_bitcoin_206681.png") !!}" height="39" width="100"></span>
                             </form>
                            </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <p>Our aim is to provide developers/researchers all over the  world with relevant information they need about any country.</p>
+                        <p>You may wish to support the research work, development and maintenance (Web Server,Database,Domain name,SSL) of restful countries using any of the channels above.</p>
                     </div>
                 </div>
             </div>
+
 
         </div>
     </section>
