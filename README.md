@@ -7,7 +7,9 @@
 
 ## Restful Countries
 
-Restful (JSON) Api to retrieve data about any country,  also an admin management console to monitor requests, manage country data, feedbacks, and admin users based on roles:
+Restful (JSON) Api to retrieve data about any country with an admin management console to monitor requests, manage country data, feedbacks, and admin users with roles and permissions:
+
+Everything you see on [https://restfulcountries.com](https://restfulcountries.com) is available here except the data itself as it is hosted on a live database server.
 
 ## Donations
 
@@ -19,4 +21,4 @@ See contribution  guide here - [Restful Countries Contribution](https://laravel.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Restful countries is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
