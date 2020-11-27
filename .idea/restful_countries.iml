@@ -118,13 +118,13 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/environment" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
-      <excludeFolder url="file://$MODULE_DIR$/storage/app/public/images" />
       <excludeFolder url="file://$MODULE_DIR$/storage/app/private" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/7d" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/44" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/bc" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c2" />
       <excludeFolder url="file://$MODULE_DIR$/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
