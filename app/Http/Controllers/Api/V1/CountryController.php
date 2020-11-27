@@ -16,11 +16,11 @@ class CountryController extends Controller
 
         //Optional route parameters
         $per_page = $request->get('per_page') ?: $country_count;
-        $continent = $request->get('continent');
+        $continent = str_replace("-"," ",$request->get('continent'));
         $iso2 = $request->get('iso2');
         $iso3 = $request->get('iso3');
         $code = $request->get('code');
-        $region = $request->get('region');
+        $region = str_replace("-"," ",$request->get('region'));
 
         if(isset($continent)){
             //Find countries by continent
@@ -55,7 +55,8 @@ class CountryController extends Controller
 
     public function getCountry($country,Request $request){
 
-        $country = Country::whereName($country)->first();
+        //remove hyphen from country name e.g south-africa to south africa
+        $country = Country::whereName(str_replace("-"," ",$country))->first();
 
         return new CountryResource($country);
     }
