@@ -22,64 +22,6 @@
                                     <input type="text" name="name" required="required" class="form-control" value="{!! $district->name !!}">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="inputEmail3"  class="col-sm-2 control-label">Nick Name</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="text" name="nick_name" class="form-control" value="{!! $district->nick_name !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3"  class="col-sm-2 control-label">Slogan</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="text" name="slogan" class="form-control" value="{!! $district->slogan !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">About</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <textarea class="form-control" name="description" required>{!! $district->description!!}</textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Official Language</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <select class="form-control" name="official_language">
-                                        <option value="{!! $district->official_language !!}" >{!! $district->official_language !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Population</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="number" name="population" class="form-control" value="{!! $district->population !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Size (Sqm)</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="number" name="size" class="form-control" value="{!! $district->size !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Region</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <select class="form-control" name="region">
-                                        <option value="{!! $district->region !!}" >{!! $district->region !!}</option>
-                                        <option value="Nigeria">North</option>
-                                        <option value="Ghana">East</option>
-                                    </select>
-                                </div>
-                            </div>
-
                             <div class="form-group margin-bottom-0">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-info btn-sm waves-effect waves-light">Update</button>

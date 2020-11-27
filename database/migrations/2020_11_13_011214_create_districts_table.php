@@ -18,13 +18,8 @@ class CreateDistrictsTable extends Migration
             $table->integer('country_id');
             $table->bigInteger('state_id')->unsigned()->index();
             $table->string('name');
-            $table->string('nick_name')->nullable();
-            $table->string('slogan')->nullable();
-            $table->string('size')->nullable();
-            $table->bigInteger('population')->nullable();
-            $table->string('region')->nullable();
-            $table->string('official_language')->nullable();
             $table->string("created_by")->nullable();
+            $table->string("updated_by")->nullable();
             $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
             $table->timestamps();
         });

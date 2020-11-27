@@ -36,7 +36,6 @@ class HomeController extends Controller
          *
          * */
 
-        /**
         $old_state = State2::all();
         foreach ($old_state as $country2){
 
@@ -47,9 +46,7 @@ class HomeController extends Controller
                 "fips_code" => $country2->fips_code,
             ]);
         }
-         *
-         *
-         * */
+
 
 
         $countries = Country::all()->count();

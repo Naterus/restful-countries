@@ -81,35 +81,6 @@
                     <input type="text" name="name" required="required" class="form-control">
                     <br/>
 
-                    <label for="inputEmail3" class="col-sm-12 control-label">Nick Name</label>
-                    <input type="text" name="nick_name" class="form-control">
-                    <br/>
-
-                    <label for="inputEmail3" class="col-sm-12 control-label">Slogan</label>
-                    <input type="text" name="slogan" class="form-control">
-                    <br/>
-
-                    <label for="inputEmail3" class="col-sm-12 control-label">Region</label>
-                    <select name="region"  class="form-control">
-                        <option value=""  selected disabled>-------------</option>
-                        <option value="North">North</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <br/>
-
-                    <label for="inputEmail3" class="col-sm-12 control-label">Official Language</label>
-                    <input type="text" name="official_language" class="form-control">
-                    <br/>
-
-                    <label for="inputEmail3" class="col-sm-12 control-label">Population</label>
-                    <input type="number" name="population" class="form-control">
-                    <br/>
-
-                    <label for="inputEmail3" class="col-sm-12 control-label">Size (Sqm)</label>
-                    <input type="number" name="size" class="form-control">
-                    <br/>
-
-
                 </div>
                 <!-- 									<input type="text" th:value="${user.id}" th:field="${user.id}" hidden="hidden">  -->
                 <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>

@@ -6,6 +6,7 @@ use App\Country;
 use App\District;
 use App\State;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DistrictController extends Controller
 {
@@ -31,12 +32,7 @@ class DistrictController extends Controller
             ]);
         District::whereCountryId($country)->whereStateId($state)->whereId($district)->update([
             "name" => $request->input("name"),
-            "nick_name" => $request->input("nick_name"),
-            "slogan" => $request->input("slogan"),
-            "official_language" => $request->input("official_language"),
-            "population" => $request->input("population"),
-            "size" => $request->input("size"),
-            "region" => $request->input("region"),
+            "updated_by" => Auth::user()->email,
         ]);
 
         return redirect()->back()->with("success","District updated successfully");
@@ -53,12 +49,7 @@ class DistrictController extends Controller
             "country_id" => $country,
             "state_id" => $state,
             "name" => $request->input("name"),
-            "nick_name" => $request->input("nick_name"),
-            "slogan" => $request->input("slogan"),
-            "official_language" => $request->input("official_language"),
-            "population" => $request->input("population"),
-            "size" => $request->input("size"),
-            "region" => $request->input("region"),
+            "created_by" => Auth::user()->email,
         ]);
 
         return redirect()->back()->with("success","District created successfully");
