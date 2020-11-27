@@ -13,6 +13,5 @@ class DatabaseSeeder extends Seeder
     {
         factory(App\Country::class,5)->create();
         factory(App\State::class,50)->create();
-        factory(App\District::class,100)->create();
     }
 }

@@ -9,7 +9,7 @@
 
 Restful (JSON) Api to retrieve data about any country with an admin management console to monitor requests, manage country data, feedbacks, and admin users with roles and permissions:
 
-Everything you see on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
+Everything on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
 
 ## Documentation
 See api documentation here -  [Api Docs](https://restfulcountries.com/api-documentation)
