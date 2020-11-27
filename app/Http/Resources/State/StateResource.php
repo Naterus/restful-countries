@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources\State;
 
-use App\Http\Resources\District\DistrictResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class StateResource extends JsonResource
@@ -29,12 +28,9 @@ class StateResource extends JsonResource
                     'country' => $this->country->name,
                     'state' => $this->name
                 ]),
-                'districts' => route("districts.index",[
-                    'country' => $this->country->name,
-                    'state' => $this->name
-                ]),
+                'country' => route("countries.show",$this->country->name)
             ],
-            //'districts' => $this->districts != null ? DistrictResource::collection($this->districts) : null,
+
         ];
     }
 }

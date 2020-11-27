@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Country;
-use App\District;
 use App\State;
 use Illuminate\Http\Request;
 

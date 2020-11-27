@@ -22,28 +22,20 @@
                                     <form class="registration-form">
                                         <div class="row">
 
-                                            <div class="col-lg-4 col-md-6">
+                                            <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
                                                     <select id="country-select" class="demo-default form-control">
                                                         <option selected disabled>Country</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-6">
+                                            <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
                                                     <select  id="state-select" name="" class="demo-default form-control">
                                                         <option selected disabled>State</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="registration-form-box">
-                                                    <select  id="district-select" class="demo-default form-control">
-                                                        <option selected disabled>District</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
                                         </div>
                                     </form>
 
@@ -95,26 +87,6 @@
 
             });
         });
-
-
-        //Load districts on state change
-        $("#state-select").change(function(){
-            country=$("#country-select").val();
-            state=$("#state-select").val();
-            //Remove previous loaded options
-            $('#district-select option:gt(0)').remove();
-            $.get('http://localhost:8081/restful_countries/public/api/v1/countries/'+country+'/'+state+'/districts',function(districts){
-
-                $.each(districts.data,function(key,value){
-                    $('#district-select')
-                        .append($("<option></option>")
-                            .attr("value", value.name)
-                            .text(value.name));
-                });
-
-            });
-        });
-
 
     </script>
 @endsection

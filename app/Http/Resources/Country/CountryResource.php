@@ -3,7 +3,6 @@
 namespace App\Http\Resources\Country;
 
 use App\Http\Resources\President\PresidentResource;
-use App\Http\Resources\State\StateResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CountryResource extends JsonResource
@@ -35,11 +34,10 @@ class CountryResource extends JsonResource
             'description' => $this->description,
             'population' => $this->population,
             'href' => [
-                'self' => route("countries.show",$this->id),
-                'states' => route("states.index",$this->id),
+                'self' => route("countries.show",$this->name),
+                'states' => route("states.index",$this->name),
                 'flag' => asset("storage/images/flags/".$this->flag),
-            ],
-            //'states' => StateResource::collection($this->states)
+            ]
         ];
     }
 }

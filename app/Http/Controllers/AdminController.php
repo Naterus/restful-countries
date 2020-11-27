@@ -5,15 +5,10 @@ namespace App\Http\Controllers;
 use App\ApiRequest;
 use App\Country;
 use App\FeedBack;
-use App\President;
 use App\Role;
-use App\State;
 use App\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 use Auth;
 
 class AdminController extends Controller

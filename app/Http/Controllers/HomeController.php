@@ -3,13 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Country;
-use App\Country2;
-use App\District;
 use App\FeedBack;
 use App\State;
-use App\State2;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
