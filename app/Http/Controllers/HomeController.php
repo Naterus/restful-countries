@@ -55,12 +55,17 @@ class HomeController extends Controller
         return view("welcome",compact('countries','states','districts'));
     }
 
+    //Method to redirect to latest api version if version id is not provided
+    public function docs(){
+        return redirect()->route("documentation",env("APP_VERSION"));
+    }
+
     public function documentation($version){
         $latest_version = env("APP_VERSION");
 
         if($version > $latest_version || $version < 1){
             $error = "Api version not available";
-            return view("docs.v".$latest_version,compact('error'));
+            return view("docs.v".$latest_version,compact('latest_version','error'));
         }
 
         return view("docs.v".$version,compact('version'));

@@ -9,6 +9,8 @@ Route::get('/donate','HomeController@donate')->name('donate');
 
 Route::post('/donate/paystack/callback', 'DonationController@paystackGatewayCallback')->name("donate.paystack.callback");
 
+Route::get('/api-documentation','HomeController@docs')->name('docs');
+
 Route::get('/api-documentation/version/{version}','HomeController@documentation')->name('documentation');
 
 Route::get('/feedback','HomeController@feedback')->name('feedback');
