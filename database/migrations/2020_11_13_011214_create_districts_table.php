@@ -24,6 +24,7 @@ class CreateDistrictsTable extends Migration
             $table->bigInteger('population')->nullable();
             $table->string('region')->nullable();
             $table->string('official_language')->nullable();
+            $table->string("created_by")->nullable();
             $table->foreign('state_id')->references('id')->on('states')->onDelete('cascade');
             $table->timestamps();
         });

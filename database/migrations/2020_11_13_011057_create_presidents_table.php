@@ -21,6 +21,7 @@ class CreatePresidentsTable extends Migration
             $table->date("appointment_start_date");
             $table->date("appointment_end_date");
             $table->string("picture")->nullable();
+            $table->string("created_by")->nullable();
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });

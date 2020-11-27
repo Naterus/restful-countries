@@ -25,6 +25,8 @@ class CreateStatesTable extends Migration
             $table->string('official_language')->nullable();
             $table->string('size')->nullable();
             $table->bigInteger('population')->nullable();
+            $table->string("created_by")->nullable();
+            $table->string("updated_by")->nullable();
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
             $table->timestamps();
         });
