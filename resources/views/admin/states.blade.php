@@ -53,9 +53,6 @@
                                     @if(helper::instance()->isPermitted("UPDATE STATE"))
                                         <a href="{!! route("admin.states.edit",["country" => $state->country_id,"state"=>$state->id]) !!}">Edit</a> <br/>
                                     @endif
-                                    @if(helper::instance()->isPermitted("VIEW DISTRICT"))
-                                        <a href="{!! route("admin.districts",["country" => $state->country_id,"state"=>$state->id]) !!}">districts</a><br/>
-                                    @endif
                                     @if(helper::instance()->isPermitted("DELETE STATE"))
                                         <a href="javascript:void(0)" onclick="confirmStateDelete('{!! $state->country_id  !!}','{!! $state->id  !!}')">Delete</a> <br/>
                                     @endif

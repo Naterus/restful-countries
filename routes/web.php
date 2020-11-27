@@ -17,9 +17,6 @@ Route::get('/feedback','HomeController@feedback')->name('feedback');
 
 Route::post('/feedback/submit','HomeController@submitFeedback')->name('feedback.submit');
 
-//Route::get('/countries','HomeController@countries')->name('countries');
-
-//Route::get('/countries/{country}','HomeController@country')->name('country');
 
 
 
@@ -83,11 +80,4 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::post('administrator/countries/{country}/president/create', 'PresidentController@createPresident')->name('admin.presidents.create')->middleware("permission.check:CREATE PRESIDENT");
 
-    Route::get('administrator/countries/{country}/states/{state}/districts', 'DistrictController@districts')->name('admin.districts')->middleware("permission.check:VIEW DISTRICT");
-
-    Route::get('administrator/countries/{country}/states/{state}/districts/{district}', 'DistrictController@editDistrict')->name('admin.districts.edit')->middleware("permission.check:UPDATE DISTRICT");
-
-    Route::post('administrator/countries/{country}/states/{state}/districts/{district}/update', 'DistrictController@updateDistrict')->name('admin.districts.edit.update')->middleware("permission.check:UPDATE DISTRICT");
-
-    Route::post('administrator/countries/{country}/states/{state}/district/create', 'DistrictController@createDistrict')->name('admin.districts.create')->middleware("permission.check:CREATE DISTRICT");
 });
