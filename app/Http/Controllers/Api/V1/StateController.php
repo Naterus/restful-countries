@@ -14,16 +14,16 @@ class StateController extends Controller
 
     public function getStates($country){
 
-        $country = Country::whereName($country)->first();
+        $country = Country::whereName(str_replace("-"," ",$country))->first();
         $states  = State::whereCountryId($country->id ? : null)->get();
         return new StateCollection($states);
     }
 
     public function getState($country,$state){
         //Get country_id using country name to find state
-        $country_id = Country::whereName($country)->first();
+        $country_id = Country::whereName(str_replace("-"," ",$country))->first();
 
-        $state = State::whereName($state)->whereCountryId($country_id->id ?: null)->first();
+        $state = State::whereName(str_replace("-"," ",$state))->whereCountryId($country_id->id ?: null)->first();
        return new StateResource($state);
    }
 
