@@ -1,7 +1,7 @@
 @extends("layouts.admin-layout")
-@section("title","Country")
+@section("title","Covid Update")
 @section("page-title","Covid update")
-@section("countries","Covid Update")
+@section("countries","current")
 @section("page-style")
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/toastr/toastr.css") !!}">
 @endsection
