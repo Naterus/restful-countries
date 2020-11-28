@@ -62,6 +62,10 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::post('administrator/country/delete', 'CountryController@deleteCountry')->name('admin.countries.delete')->middleware("permission.check:DELETE COUNTRY");
 
+    Route::get('administrator/countries/{country}/covid19/edit', 'Covid19Controller@editCovid19')->name('admin.countries.covid19')->middleware("permission.check:UPDATE COVID19");
+
+    Route::post('administrator/countries/{country}/covid19/update', 'Covid19Controller@updateCovid19')->name('admin.countries.covid19.update')->middleware("permission.check:UPDATE COVID19");
+
     Route::get('administrator/countries/{id}/states', 'StateController@states')->name('admin.states')->middleware("permission.check:VIEW STATE");
 
     Route::post('administrator/countries/{id}/state/create', 'StateController@createState')->name('admin.states.create')->middleware("permission.check:CREATE STATE");
