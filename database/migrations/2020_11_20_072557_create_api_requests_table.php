@@ -17,6 +17,7 @@ class CreateApiRequestsTable extends Migration
             $table->id();
             $table->string("endpoint");
             $table->tinyInteger("status");
+            $table->string("host")->nullable();
             $table->text("message")->nullable();
             $table->timestamps();
         });
