@@ -33,7 +33,12 @@ class Covid19Controller extends Controller
         if(isset($country)){
             //Fetch based on country name
             $country_id = Country::whereName(str_replace("-"," ",$country))->first();
-            return new Covid19OnlyResource(Covid19::whereCountryId($country_id->id)->first());
+
+            if($country) {
+                return new Covid19OnlyResource(Covid19::whereCountryId($country_id->id)->first());
+            }
+
+            abort(404,"Covid19 Resource Not Found for specified country");
         }
 
         $country_count = Country::all()->count();

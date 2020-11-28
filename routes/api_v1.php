@@ -24,7 +24,7 @@ Route::group(['middleware' => ["throttle:20,1","api_logger"]], function(){
 
 Route::fallback(function(){
     return response()->json([
-        'message' => 'Page Not Found. Check that you entered the correct url'], 404);
+        'message' => 'Resource Not Found. Check that you entered the correct address'], 404);
 });
 
 

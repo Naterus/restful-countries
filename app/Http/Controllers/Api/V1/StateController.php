@@ -24,7 +24,12 @@ class StateController extends Controller
         $country_id = Country::whereName(str_replace("-"," ",$country))->first();
 
         $state = State::whereName(str_replace("-"," ",$state))->whereCountryId($country_id->id ?: null)->first();
-       return new StateResource($state);
-   }
+
+        if($state) {
+            return new StateResource($state);
+        }
+
+        abort(404,"State Resource Not Found. Check that it is spelt correctly");
+    }
 
 }

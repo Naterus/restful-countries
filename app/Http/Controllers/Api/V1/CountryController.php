@@ -6,7 +6,9 @@ use App\Country;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Country\CountryResource;
 use App\Http\Resources\Country\CountryCollection;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
+use function PHPUnit\Framework\throwException;
 
 class CountryController extends Controller
 {
@@ -59,6 +61,10 @@ class CountryController extends Controller
         //remove hyphen from country name e.g south-africa to south africa
         $country = Country::whereName(str_replace("-"," ",$country))->first();
 
-        return new CountryResource($country);
+        if($country) {
+            return new CountryResource($country);
+        }
+
+        abort(404,"Country Resource Not Found. Check that it is spelt correctly");
     }
 }
