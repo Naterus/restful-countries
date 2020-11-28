@@ -35,7 +35,7 @@ class CountryResource extends JsonResource
             'href' => [
                 'self' => route("countries.show",$this->name),
                 'states' => route("states.index",$this->name),
-                'presidents' => route("states.index",$this->name),
+                'presidents' => route("presidents.index",$this->name),
                 'flag' => asset("storage/images/flags/".$this->flag),
             ]
         ];
