@@ -15,4 +15,8 @@ class Country extends Model
     public function president(){
         return $this->hasOne(President::class);
     }
+
+    public function covid19(){
+        return $this->hasOne(Covid19::class);
+    }
 }

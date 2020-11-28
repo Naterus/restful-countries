@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Country;
 
+use App\Http\Resources\Covid19\Covid19Resource;
 use App\Http\Resources\President\PresidentResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -22,6 +23,7 @@ class CountryResource extends JsonResource
             'presidents' => [
 
             ],
+            "covid19" => new Covid19Resource($this->covid19),
             'iso2' => $this->iso2,
             'iso3' => $this->iso3,
             'currency' => $this->currency,
