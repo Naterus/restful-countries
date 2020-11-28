@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Resources\President;
-
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class PresidentCollection extends ResourceCollection
@@ -14,6 +13,8 @@ class PresidentCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            "data" => PresidentResource::collection($this->collection)
+        ];
     }
 }
