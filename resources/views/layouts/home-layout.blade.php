@@ -9,7 +9,7 @@
     <meta name="author" content="Themesdesign" />
     <title>Restful Countries - @yield("title")</title>
 
-    <link rel="shortcut icon" href="{!! asset("storage/images/logo/logo-white.png") !!}">
+    <link rel="shortcut icon" href="{!! url("storage/images/logo/logo-white.png") !!}">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{!! asset("storage/css/bootstrap.min.css") !!}" type="text/css">
