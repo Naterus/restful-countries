@@ -24,8 +24,7 @@
                                 <input type="hidden" name="hosted_button_id" value="D5KM86CAKG5LA" />
                                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                                 <img alt="" border="0" src="https://www.paypal.com/en_NG/i/scr/pixel.gif" width="1" height="1"  />
-                                   <span style="margin-bottom: 32px;" data-remodal-target="paystack" class="btn btn-primary">Paystack</span>
-                                   <span data-remodal-target="bitcoin" ><img style="margin-bottom: 32px; margin-left:10px;"  src="{!! asset("storage/images/iconfinder_payment_method_bitcoin_206681.png") !!}" height="39" width="100"></span>
+                                   <span data-remodal-target="bitcoin" ><img style="margin-bottom: 32px; margin-left:10px;"  src="{!! asset("storage/images/iconfinder_payment_method_bitcoin_206681.png") !!}" height="39" width="80"></span>
                             </form>
                            </span>
                                     </div>
@@ -42,27 +41,6 @@
         </div>
     </section>
     <!-- end home -->
-    <div class="remodal" data-remodal-id="paystack" role="dialog"
-         aria-labelledby="modal1Title" aria-describedby="modal1Desc">
-        <button data-remodal-action="close" class="remodal-close"
-                aria-label="Close"></button>
-
-        <div class="remodal-content">
-            <h2 id="modal1Title">Donate with paystack</h2>
-
-            <label>Email Address</label>
-            <input type="email" class="form-control" name="email">
-            <br/>
-            <label>Amount (#)</label>
-            <input type="number" class="form-control" name="paystack_amount" value="1">
-            <br/>
-
-
-            <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
-            <button class="remodal-confirm" onclick="payStackInit()">Proceed Payment
-            </button>
-        </div>
-    </div>
 
     <div class="remodal" data-remodal-id="bitcoin" role="dialog"
          aria-labelledby="modal1Title" aria-describedby="modal1Desc">
@@ -96,53 +74,8 @@
 
 @endsection
 @section("page-script")
-    <script src="https://js.paystack.co/v1/inline.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script type="text/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js"></script>
-
-    <script type="text/javascript">
-
-        function payStackInit(){
-            let email =  $('input[name="email"]').val();
-            let amount =  $('input[name="paystack_amount"]').val();
-
-            if(amount > 0) {
-
-                var handler = PaystackPop.setup({
-                    key: '{!! env('PAYSTACK_PUBLIC_KEY') !!}',
-                    email: email,
-                    amount: amount * 100,
-                    currency: "NGN",
-
-                    callback: function (response) {
-                        var form = $(document.createElement('form'));
-                        $(form).attr('action', "{{ route('donate.paystack.callback') }}");
-                        $(form).attr("method", "POST");
-                        var _token = $("<input>")
-                            .attr("type", "text")
-                            .attr("name", "_token")
-                            .val($('meta[name="_token"]').attr('content'));
-                        var reference = $("<input>")
-                            .attr("type", "hidden")
-                            .attr("name", "reference_no")
-                            .val(response.reference);
-                        $(form).append($(reference));
-                        $(form).append($(_token));
-                        form.appendTo(document.body);
-                        $(form).submit();
-                    },
-                    onClose: function () {
-
-                    }
-                });
-                handler.openIframe();
-
-            }else {
-                alert("Invalid amount provided");
-            }
-        }
-
-    </script>
 
     @if(Session::has('success'))
         <script>
