@@ -15,6 +15,11 @@ class CreateCovid19sTable extends Migration
     {
         Schema::create('covid19s', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger("country_id")->index()->unsigned();
+            $table->bigInteger("total_case")->default(0);
+            $table->bigInteger("total_deaths")->default(0);
+            $table->string("updated_by")->nullable();
+            $table->foreign("country_id")->references("id")->on("countries")->onDelete("cascade");
             $table->timestamps();
         });
     }
