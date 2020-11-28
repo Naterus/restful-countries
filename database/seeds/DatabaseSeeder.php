@@ -1,5 +1,7 @@
 <?php
 
+use App\Permission;
+use App\Role;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -11,9 +13,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         factory(App\Country::class,4)->create();
         factory(App\State::class,50)->create();
-        factory(App\User::class,1)->create();
         factory(App\Role::class,1)->create();
+        factory(App\User::class,1)->create();
+        factory(App\Permission::class,1)->create();
+
     }
 }

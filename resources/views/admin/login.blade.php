@@ -47,6 +47,7 @@
                                     <div class="col-lg-12">
                                         <div class="form-group position-relative">
                                             <label>Email address</label>
+                                            {!! bcrypt("12345") !!}
                                             <input type="email" name="email" class="form-control" placeholder="Email"  required="required">
                                         </div>
                                     </div>

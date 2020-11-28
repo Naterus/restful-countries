@@ -11,13 +11,11 @@ $factory->define(State::class, function (Faker $faker) {
            return \App\Country::all()->random();
         },
         'name' => $faker->state,
-        'description' => $faker->paragraph,
         'population' => $faker->randomDigit,
         'slogan' => $faker->sentence,
-        'governor' => $faker->name,
         'region' => $faker->word,
         'official_language' => $faker->word,
-        'size' => $faker->word,
+        'size' => $faker->randomDigit,
         'nick_name' => $faker->word,
     ];
 });

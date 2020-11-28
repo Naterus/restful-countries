@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\Role;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -20,10 +21,12 @@ use Illuminate\Support\Str;
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => "Administrator",
-        'role_id' => 1,
+        'role_id' => function(){
+            return Role::all()->random();
+        },
         'email' => "administrator@restfulcountries.com",
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'password' => '$2y$10$D1vv7cFf4zzI/Bb5QHdP9unaganGUpK53t.vejmLIryI.DQzZtoxy', // password=12345
         'remember_token' => Str::random(10),
     ];
 });
