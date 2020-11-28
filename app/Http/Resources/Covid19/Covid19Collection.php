@@ -14,6 +14,8 @@ class Covid19Collection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            "data" => Covid19OnlyResource::collection($this->collection)
+        ];
     }
 }

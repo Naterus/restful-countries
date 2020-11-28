@@ -18,6 +18,8 @@ Route::group(['middleware' => ["throttle:20,1","api_logger"]], function(){
 
     Route::get("/countries/{country}/states/{state}",'StateController@getState')->name("states.show");
 
+    Route::get("/covid19",'Covid19Controller@getAllCases');
+
 });
 
 
