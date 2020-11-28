@@ -8,15 +8,15 @@ use Illuminate\Http\Request;
 class Covid19Controller extends Controller
 {
     public function editCovid19($country){
-        $covids = Covid19::whereCountryId($country)->first();
-        return view("admin.covid-19",compact("covids"));
+        $covid = Covid19::whereCountryId($country)->first();
+        return view("admin.covid-19",compact("covid"));
     }
 
     public function updateCovid19($country,Request $request){
 
         $this->validate($request,[
-           "total_case" => "required|number",
-           "total_deaths" => "required|number"
+           "total_case" => "required",
+           "total_deaths" => "required"
         ]);
 
         Covid19::whereCountryId($country)->update([
