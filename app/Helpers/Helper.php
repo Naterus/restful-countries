@@ -31,6 +31,7 @@ class Helper
             "CREATE COUNTRY",
             "UPDATE COUNTRY",
             "DELETE COUNTRY",
+            "UPDATE COVID19",
             "VIEW STATE",
             "CREATE STATE",
             "UPDATE STATE",

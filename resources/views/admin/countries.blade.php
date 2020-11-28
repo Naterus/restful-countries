@@ -21,7 +21,7 @@
                                               class="btn btn-info btn-sm waves-effect waves-light">Add Country</span>
                             </div>
                         </div>
-                    @endif
+                @endif
                 <!-- /.dropdown js__dropdown -->
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
@@ -60,10 +60,13 @@
                                     @endif
                                     @if(helper::instance()->isPermitted("VIEW PRESIDENT"))
                                         <a href="{!! route("admin.presidents",$country->id) !!}">Presidents</a><br/>
-                                   @endif
-                                        @if(helper::instance()->isPermitted("DELETE COUNTRY"))
-                                            <a href="javascript:void(0)" onclick="confirmCountryDelete('{!! $country->id  !!}')">Delete</a> <br/>
                                     @endif
+                                    @if(helper::instance()->isPermitted("UPDATE COVID19"))
+                                        <a href="{!! route("admin.covid19.edit",$country->id) !!}">Covid 19</a><br/>
+                                    @endif
+                                    @if(helper::instance()->isPermitted("DELETE COUNTRY"))
+                                        <a href="javascript:void(0)" onclick="confirmCountryDelete('{!! $country->id  !!}')">Delete</a> <br/>
+                                @endif
                                 <!-- /.dropdown js__dropdown -->
                                 </td>
                             </tr>

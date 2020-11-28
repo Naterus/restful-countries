@@ -12,9 +12,8 @@
                 <div class="box-content">
                     <h4 class="box-title"><a href="{!! route("admin.countries") !!}">Countries</a> / <a href="{!! route("admin.countries.edit",$covid->country->id) !!}" >{!! $covid->country->name !!}</a>  / Covid 19</h4>
                     <div class="card-content">
-                        <form class="form-horizontal" action="{!! route("admin.countries.covid19.update",$covid->country->id) !!}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" action="{!! route("admin.covid19.update",$covid->country->id) !!}">
                             @csrf
-
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Total Case</label>
                                 <span ></span>
