@@ -113,7 +113,10 @@
                                     <p>Or</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries</a></p>
                                     <p>Returns a paginated result of all countries available</p>
-                                    <pre id="api-response"></pre>
+                                    <pre id="countries-response"></pre>
+                                    <p>Parameters</p>
+                                    <p>continent</p></a>
+
                                 </div>
 
                             </div>
@@ -301,30 +304,35 @@
     </script>
     <script src="{!! asset("storage/js/pretty-print-json.js") !!}"></script>
     <script>
-        const apiResponse =
+        const countriesResponse =
 
             { "data":
                     [
                         {
-                            "country": "Afghanistan",
+                            "name": "Afghanistan",
                             "full_name": null,
-                            "current_president": [],
-                            "presidents": [],
+                            "capital": "Kabul",
                             "iso2": "AF",
                             "iso3": "AFG",
+                            "covid19": {
+                                "total_case": 50000,
+                                "total_deaths": 23,
+                                "last_updated": "2020-11-28T05:46:01.000000Z"
+                            },
+                            "current_president": null,
                             "currency": "AFN",
                             "phone_code": "93",
                             "continent": null,
+                            "description": null,
                             "size": null,
                             "independence_date": null,
                             "region": null,
-                            "capital": "Kabul",
-                            "description": null,
                             "population": null,
                             "href": {
-                                "self": "http://localhost:8081/restful_countries/public/api/v1/countries/1",
-                                "states": "http://localhost:8081/restful_countries/public/api/v1/countries/1/states",
-                                "flag": "http://localhost:8081/restful_countries/public/storage/images/flags/Afghanistan.png"
+                                "self": "https://restfulcountries.com/api/v1/countries/Afghanistan",
+                                "states": "https://restfulcountries.com/api/v1/countries/Afghanistan/states",
+                                "presidents": "https://restfulcountries.com/api/v1/countries/Afghanistan/presidents",
+                                "flag": "https://restfulcountries.com/storage/images/flags/Afghanistan.png"
                             }
                         }
                     ] ,
@@ -348,6 +356,6 @@
                 }
             };
 
-        $('#api-response').html(prettyPrintJson.toHtml(apiResponse));
+        $('#countries-response').html(prettyPrintJson.toHtml(countriesResponse));
     </script>
 @endsection
