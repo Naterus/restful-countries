@@ -15,6 +15,20 @@
                         <form method="post" class="form-horizontal" action="{!! route("admin.covid19.update",$covid->country->id) !!}">
                             @csrf
                             <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Last Updated</label>
+                                <span ></span>
+                                <div class="col-sm-6">
+                                    <input type="text"  class="form-control" value="{!! $covid->updated_at !!}" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Last Updated By</label>
+                                <span ></span>
+                                <div class="col-sm-6">
+                                    <input type="text"  class="form-control" value="{!! $covid->user->name !!}" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Total Case</label>
                                 <span ></span>
                                 <div class="col-sm-6">

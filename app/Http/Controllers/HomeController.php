@@ -13,14 +13,6 @@ class HomeController extends Controller
 
     public function index(){
 
-        ini_set("max_execution_time","3000");
-        $countries = Country::all();
-        foreach ($countries as $country){
-            Covid19::create([
-                "country_id" => $country->id,
-                "updated_by" => 1
-            ]);
-        }
         return view("welcome");
     }
 

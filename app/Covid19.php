@@ -10,5 +10,9 @@ class Covid19 extends Model
         return $this->belongsTo(Country::class);
     }
 
+    public function user(){
+        return $this->belongsTo(User::class,"updated_by","id");
+    }
+
     protected $guarded = ["id"];
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Covid19;
+use Auth;
 use Illuminate\Http\Request;
 
 class Covid19Controller extends Controller
@@ -22,7 +23,7 @@ class Covid19Controller extends Controller
         Covid19::whereCountryId($country)->update([
             "total_case" => $request->input("total_case"),
             "total_deaths" => $request->input("total_deaths"),
-            "updated_by" => Auth::user()->email
+            "updated_by" => Auth::user()->id
         ]);
 
         return redirect()->back()->with("success","Covid19 stats updated successfully");
