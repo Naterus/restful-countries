@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="Themesdesign" />
-    <title>@yield("title")</title>
+    <title>Restful Countries - @yield("title")</title>
 
     <link rel="shortcut icon" href="{!! asset("storage/images/logo/logo-white.png") !!}">
 
@@ -41,7 +41,7 @@
             <div class="float-left">
                 <div class="email">
                     <a href="mail-to:support@restfulcountries.com">
-                        <i class="mdi mdi-email"></i> Support@restfulcountries.com
+                        <i class="mdi mdi-email"></i> support@restfulcountries.com
                     </a>
                 </div>
             </div>

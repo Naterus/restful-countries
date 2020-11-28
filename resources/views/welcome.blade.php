@@ -1,5 +1,6 @@
 
 @extends("layouts.home-layout")
+@section("title","Welcome")
 @section("page-content")
     <!-- Start Home -->
     <section class="bg-home" style="background: url('{!! asset("storage/images/map2.jpg") !!}') center center;">
@@ -11,7 +12,7 @@
                         <div class="col-lg-12">
                             <div class="title-heading text-center text-white">
                                 <h1 class="heading font-weight-bold mb-4">All 	Countries Repository</h1>
-                                <h6 class="small-title text-uppercase text-light mb-3">Get countries information like states,presidents, flag, population continent and and others via Restful Api.</h6>
+                                <h6 class="small-title text-uppercase text-light mb-3">Get countries information like states, covid19 stats, presidents, flag, population and others via Restful Api.</h6>
                             </div>
                         </div>
                     </div>

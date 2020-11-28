@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Covid19;
 use App\FeedBack;
-use App\Country;
 
 use Illuminate\Http\Request;
 

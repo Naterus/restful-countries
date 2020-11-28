@@ -17,10 +17,11 @@ Route::post('/feedback/submit','HomeController@submitFeedback')->name('feedback.
 
 
 
+Route::group(['middleware' => ["guest"]], function() {
+    Route::get('administrator/login', 'AdminController@login')->name('admin.login');
 
-Route::get('administrator/login', 'AdminController@login')->name('admin.login');
-
-Route::post('administrator/login/attempt', 'AdminController@loginAttempt')->name('admin.login.attempt');
+    Route::post('administrator/login/attempt', 'AdminController@loginAttempt')->name('admin.login.attempt');
+});
 
 Route::group(['middleware' => ["auth.admin"]], function() {
 
