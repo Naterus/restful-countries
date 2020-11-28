@@ -22,7 +22,8 @@
                             <th width="5%">#</th>
                             <th width="30%">Endpoint</th>
                             <th width="30%">Status</th>
-                            <th width="20%">Message</th>
+                            <th width="10%">Host</th>
+                            <th width="10%">Message</th>
                             <th width="15%">Request Time</th>
                         </tr>
                         </thead>
@@ -35,6 +36,7 @@
                                 <td >{!! $id !!}</td>
                                 <td >{!! $api_request->endpoint !!}</td>
                                 <td >@if($api_request->status == 1) Successful @else Failed @endif</td>
+                                <td >{!! $api_request->host !!}</td>
                                 <td >{!! $api_request->message !!}</td>
                                 <td >{!! $api_request->created_at !!}</td>
                             </tr>
