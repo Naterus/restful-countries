@@ -10,15 +10,12 @@ Restful (JSON) Api to retrieve data about any country with an admin management c
 
 Everything on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
 
-## Documentation
-See api documentation here -  [Api Docs](https://restfulcountries.com/api-documentation)
-
 ## Use Case
 The simplest use case of this api is to populate your form with countries and states data using a select field.
 Here is a sample jquery script.
 
 ```angular2html
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     //Populate countries select on page load
     $(document).ready(function(){
@@ -73,16 +70,42 @@ Then of course add 2 select fields on your html form with IDs `country-select` a
 That's it, you should have your select populated with countries on load and get the country states on country select change.
 There are many other use cases, it all depends on the data you wish to access.
 
-## Installation
+## Documentation
+See api documentation here -  [Api Docs](https://restfulcountries.com/api-documentation)
 
+## Installation
+The current release of restful countries is built with Laravel Framework 7.29.3 and might need [PHP](https://php.net) 7.4+ to run smoothly.
+
+If you wish to run the app for the purpose of contributing or just for personal use, you can follow these steps.
+
+I would assume you have cloned this project already, ran `composer install` and
+ `npm install` , also made a copy of your `.env.example` as `.env` 
+
+Create an empty database and enter the database information on your `.env`
+
+Add this variable to your .env
+`APP_VERSION=1` which is the current api version.
+
+Finally run `php artisan db:seed`
+
+This would create sample data for you to test, the most important data is the super admin user created. 
+`email administrator@restfulcountries.com` and password `12345`
+
+You can now run the application.
+
+ Open  [localhost:{port}/{directory-name}/administrator/login](#)
+You can now enter the admin email and password to login.
+
+Open the documentation page for api endpoints.
+
+## Contributing
+
+See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
 
 ## Donations
 
 A kind gesture would go a long way in maintaining restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
 
-## Contributing
-
-See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
 
 ## License
 
