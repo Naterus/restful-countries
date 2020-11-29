@@ -10,8 +10,13 @@ Restful (JSON) Api to retrieve data about any country with an admin management c
 
 Everything on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
 
+## Donations
+
+A kind gesture would be appreciated for the maintenance of restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
+
+
 ## Use Case
-The simplest use case of this api is to populate your form with countries and states data using a select field.
+A basic use case of this api is to populate your form with countries and states data using a select field.
 Here is a sample jquery script.
 
 ```angular2html
@@ -104,11 +109,6 @@ don't forget to add `APP_VERSION=1` to your .env, very important.
 ## Contributing
 
 See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
-
-## Donations
-
-A kind gesture would go a long way in maintaining restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
-
 
 ## License
 

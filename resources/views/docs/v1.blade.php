@@ -63,10 +63,12 @@
                                 <li><a href="#country-by-name">Country by name</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-continent">Country by continent</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-region">Country by region</a> <span class="float-right"></span></li>
+                                <li><a href="#covid19">All countries covid 19 cases only</a> <span class="float-right"></span></li>
+                                <li><a href="#covid19-by-deaths">Covid 19 by deaths</a> <span class="float-right"></span></li>
+                                <li><a href="#covid19-by-total">Covid 19 by total case</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country">States by country name</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country-state">State by country name and state name</a> <span class="float-right"></span></li>
-                                <li><a href="#districts-by-country-state">Districts by country name and state name</a> <span class="float-right"></span></li>
-                                <li><a href="#districts-by-country-state-district">District by country name, state name and district name</a> <span class="float-right"></span></li>
 
                             </ul>
                         </div>
@@ -115,8 +117,6 @@
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries</a></p>
                                     <p>Returns a paginated result of all countries available</p>
                                     <pre id="countries-response"></pre>
-                                    <p>Parameters</p>
-                                    <p>continent</p></a>
 
                                 </div>
 
@@ -148,7 +148,7 @@
                         </div><!--end col-->
                     </div>
                     <br/>
-                    <div class="row" id="country-by-region">
+                    <div class="row" id="country-by-continent">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
                                 <div class="position-relative overflow-hidden">
@@ -163,7 +163,7 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent=continent</p>
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent={continent}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?continent=africa</a></p>
                                 </div>
@@ -172,6 +172,7 @@
                         </div><!--end col-->
                     </div>
                     <br/>
+
                     <div class="row" id="country-by-code">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
@@ -187,7 +188,7 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by code - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?code=code</p>
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
                                 </div>
@@ -196,6 +197,107 @@
                         </div><!--end col-->
                     </div>
                     <br/>
+
+                    <div class="row" id="country-by-region">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Countries by region - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?region={region}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=sahara</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="covid19">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">All countries covid 19 cases only - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19</a></p>
+                                    <p>Returns a paginated result of all countries covid19 case</p>
+
+                                    <pre id="covid19-response"></pre>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="covid19-by-deaths">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by death range only - <span class="text-success">GET</span></a></h4>
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?death_from=50&death_to=200000</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="covid19-by-total">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by total confirmed range only - <span class="text-success">GET</span></a></h4>
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+
                     <div class="row" id="state-by-country">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
@@ -212,7 +314,9 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">States by country name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Afghanistan/states</a></p>
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Nigeria/states</a></p>
+<p>Returns result of country states without pagination</p>
+                                    <pre id="states-response"></pre>
                                 </div>
 
                             </div>
@@ -236,52 +340,6 @@
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states/Alaska</a></p>
-                                </div>
-
-                            </div>
-                        </div><!--end col-->
-                    </div>
-                    <br/>
-                    <div class="row" id="districts-by-country-state">
-                        <div class="col-lg-12 mb-12 pb-12">
-                            <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Districts by country name and state name - <span class="text-success">GET</span></a></h4>
-
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}/districts</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Canada/states/Manitoba/districts</a></p>
-                                </div>
-
-                            </div>
-                        </div><!--end col-->
-                    </div>
-                    <br/>
-                    <div class="row" id="districts-by-country-state-district">
-                        <div class="col-lg-12 mb-12 pb-12">
-                            <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">District by country name,state name and district name - <span class="text-success">GET</span></a></h4>
-
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}/districts/{district}</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states/Trafford/districts/xxxx</a></p>
                                 </div>
 
                             </div>
@@ -357,6 +415,71 @@
                 }
             };
 
+        const covid19Response =
+            {
+                "data": [
+                    {
+                        "country_name": "Afghanistan",
+                        "total_case": 500,
+                        "total_deaths": 23,
+                        "last_updated": "2020-11-28T04:46:01.000000Z",
+                        "href": {
+                            "country": "https://restfulcountries.com/api/v1/countries/Afghanistan"
+                        }
+                    },
+                ],
+                "links": {
+                    "first": "https://restfulcountries.com/api/v1/covid19?page=1",
+                    "last": "https://restfulcountries.com/api/v1/covid19?page=1",
+                    "prev": null,
+                    "next": null
+                },
+                "meta": {
+                    "current_page": 1,
+                    "from": 1,
+                    "last_page": 1,
+                    "path": "https://restfulcountries.com/api/v1/covid19",
+                    "per_page": 1,
+                    "to": 1,
+                    "total": 1
+                }
+            };
+
+        const statesResponse = {
+            "data": [
+                {
+                    "name": "Jigawa",
+                    "iso2": "JI",
+                    "fips_code": "39",
+                    "slogan": null,
+                    "population": null,
+                    "size": null,
+                    "official_language": null,
+                    "region": null,
+                    "href": {
+                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Jigawa",
+                        "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
+                    }
+                },
+                {
+                    "name": "Enugu",
+                    "iso2": "EN",
+                    "fips_code": "47",
+                    "slogan": null,
+                    "population": null,
+                    "size": null,
+                    "official_language": null,
+                    "region": null,
+                    "href": {
+                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Enugu",
+                        "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
+                    }
+                },
+            ]
+        };
+
         $('#countries-response').html(prettyPrintJson.toHtml(countriesResponse));
+        $('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
+        $('#states-response').html(prettyPrintJson.toHtml(statesResponse));
     </script>
 @endsection
