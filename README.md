@@ -83,13 +83,15 @@ I would assume you have cloned this project already, ran `composer install` and
 
 Create an empty database and enter the database information on your `.env`
 
+Then run `php artisan migrate`
+
 Add this variable to your .env
 `APP_VERSION=1` which is the current api version.
 
 Finally run `php artisan db:seed`
 
-This would create sample data for you to test, the most important data is the super admin user created. 
-`email administrator@restfulcountries.com` and password `12345`
+This would create sample data for you to test, the most important data is the super admin user created.
+email `administrator@restfulcountries.com` and password `12345`
 
 You can now run the application.
 
@@ -98,6 +100,7 @@ You can now enter the admin email and password to login.
 
 Open the documentation page for api endpoints.
 
+don't forget to add `APP_VERSION=1` to your .env, very important.
 ## Contributing
 
 See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
