@@ -15,14 +15,15 @@ See api documentation here -  [Api Docs](https://restfulcountries.com/api-docume
 
 ## Use Case
 The simplest use case of this api is to populate your form with countries and states data using a select field.
-Her is a sample jquery script.
+Here is a sample jquery script.
 
 ```angular2html
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     //Populate countries select on page load
     $(document).ready(function(){
-        $.get('http://localhost:8081/restful_countries/public/api/v1/countries',function(countries){
+        $.get('https://restfulcountries.com/api/v1/countries',function(countries){
+            //Loop through data returned and populate select field 
             $.each(countries.data,function(key,value){
                 $('#country-select')
                     .append($("<option></option>")
@@ -41,8 +42,9 @@ Her is a sample jquery script.
         //Remove previous loaded options
         $('#state-select option:gt(0)').remove();
         $('#district-select option:gt(0)').remove();
-        $.get('http://localhost:8081/restful_countries/public/api/v1/countries/'+country+'/states',function(states){
+        $.get('https://restfulcountries.com/api/v1/countries/'+country+'/states',function(states){
 
+            //Loop through data returned and populate select field 
             $.each(states.data,function(key,value){
                 $('#state-select')
                     .append($("<option></option>")
