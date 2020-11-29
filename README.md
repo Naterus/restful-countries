@@ -1,4 +1,4 @@
-<p align="center"><a href="https://restfulcountries.com" target="_blank"><img src="https://restfulcountries.com/storage/images/logo/logo-v-w.png" width="100"></a></p>
+<p align="center"><a href="https://restfulcountries.com" target="_blank"><img src="https://restfulcountries.com/storage/images/logo/restful-logo-VERTICAL-SVG.svg" width="200"></a></p>
 
 <p align="center">
 
