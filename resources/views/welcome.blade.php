@@ -25,14 +25,14 @@
 
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
-                                                    <select id="country-select" class="demo-default form-control">
+                                                    <select id="country-select" class="form-control">
                                                         <option selected disabled>Country</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
-                                                    <select  id="state-select" name="" class="demo-default form-control">
+                                                    <select  id="state-select" name="" class="form-control">
                                                         <option selected disabled>State</option>
                                                     </select>
                                                 </div>
