@@ -19,7 +19,6 @@ class CreateCountriesTable extends Migration
             $table->bigInteger("population")->nullable();
             $table->string("full_name")->nullable();
             $table->text("description")->nullable();
-            $table->string("nick_name")->nullable();
             $table->string("flag")->nullable();
             $table->string("currency")->nullable();
             $table->string("iso2")->nullable();
