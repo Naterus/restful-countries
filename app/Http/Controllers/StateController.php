@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class StateController extends Controller
 {
     public function states($country){
-        $states = State::whereCountryId($country)->get();
+        $states = State::whereCountryId($country)->orderBy("name","ASC")->get();
         $country = Country::whereId($country)->first();
         return view("admin.states",compact("states","country"));
     }

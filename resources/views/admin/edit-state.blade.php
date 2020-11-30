@@ -38,21 +38,17 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">About</label>
+                                <label for="inputEmail3"  class="col-sm-2 control-label">ISO2</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <textarea class="form-control" name="description" required>{!! $state->description!!}</textarea>
+                                    <input type="text" name="iso2" class="form-control" value="{!! $state->iso2 !!}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Official Language</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <select class="form-control" name="official_language">
-                                        <option value="{!! $state->official_language !!}" >{!! $state->official_language !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
+                                    <input type="text" name="official_language" class="form-control" value="{!! $state->official_language !!}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -63,18 +59,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Governor</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <select class="form-control" name="governor">
-                                        <option value="{!! $state->governor !!}" >{!! $state->governor !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Size (Sqm)</label>
+                                <label for="inputEmail3" class="col-sm-2 control-label">Size (Sq km)</label>
                                 <span ></span>
                                 <div class="col-sm-6">
                                     <input type="number" name="size" class="form-control" value="{!! $state->size !!}">
@@ -86,8 +71,16 @@
                                 <div class="col-sm-6">
                                     <select class="form-control" name="region">
                                         <option value="{!! $state->region !!}" >{!! $state->region !!}</option>
-                                        <option value="Nigeria">North</option>
-                                        <option value="Ghana">East</option>
+                                        <option value="North">North</option>
+                                        <option value="East">East</option>
+                                        <option value="South">South</option>
+                                        <option value="West">West</option>
+                                        <option value="North East">North East</option>
+                                        <option value="North West">North West</option>
+                                        <option value="North Central">North Central</option>
+                                        <option value="South East">South East</option>
+                                        <option value="South West">South West</option>
+                                        <option value="South South">South South</option>
                                     </select>
                                 </div>
                             </div>
@@ -110,52 +103,5 @@
     <!-- /.main-content -->
 @endsection
 @section("page-script")
-    @if(Session::has("success"))
-        <script>
-            Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
 
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
-    @if(Session::has("error"))
-        <script>
-            Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
 @endsection
