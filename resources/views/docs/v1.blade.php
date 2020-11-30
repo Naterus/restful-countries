@@ -400,36 +400,39 @@
             { "data":
                     [
                         {
-                            "name": "India",
-                            "full_name": "The Republic of India (Bhārat Gaṇarājya)",
-                            "capital": "New Delhi",
-                            "iso2": "IN",
-                            "iso3": "IND",
+                            "name": "Nigeria",
+                            "full_name": "Federal Republic of Nigeria",
+                            "capital": "Abuja",
+                            "iso2": "NG",
+                            "iso3": "NGA",
                             "covid19": {
-                                "total_case": 0,
-                                "total_deaths": 0,
-                                "last_updated": "2020-11-28T04:34:33.000000Z"
+                                "total_case": 67412,
+                                "total_deaths": 1173,
+                                "last_updated": "2020-11-30T20:36:49.000000Z"
                             },
                             "current_president": {
-                                "name": "Ram Nath Kovind",
+                                "name": "Muhammadu Buhari",
                                 "gender": "Male",
-                                "appointment_start_date": "2017-07-20",
+                                "appointment_start_date": "2015-05-29",
                                 "appointment_end_date": null,
-                                "picture": "https://restfulcountries.com/storage/images/presidents/ram-nath-kovindfy6d2usmhy.jpg"
+                                "href": {
+                                    "self": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents/Muhammadu-Buhari",
+                                    "country": "https://restfulcountries.com/api/v1/countries/Nigeria",
+                                    "picture": "https://restfulcountries.com/storage/images/presidents/muhammadu-buharipxpjw98lcj.jpg"
+                                }
                             },
-                            "currency": "INR",
-                            "phone_code": "91",
-                            "continent": null,
-                            "description": null,
-                            "size": null,
-                            "independence_date": null,
-                            "region": null,
-                            "population": null,
+                            "currency": "NGN",
+                            "phone_code": "234",
+                            "continent": "Africa",
+                            "description": "Nigeria is the most populous country in Africa and the seventh most populous country in the world, with an estimated 206 million inhabitants as of late 2019.  The name Nigeria was taken from the Niger River running through the country.",
+                            "size": "923768",
+                            "independence_date": "923768",
+                            "population": 208355710,
                             "href": {
-                                "self": "https://restfulcountries.com/api/v1/countries/India",
-                                "states": "https://restfulcountries.com/api/v1/countries/India/states",
-                                "presidents": "https://restfulcountries.com/api/v1/countries/India/presidents",
-                                "flag": "https://restfulcountries.com/storage/images/flags/India.png"
+                                "self": "https://restfulcountries.com/api/v1/countries/Nigeria",
+                                "states": "https://restfulcountries.com/api/v1/countries/Nigeria/states",
+                                "presidents": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents",
+                                "flag": "https://restfulcountries.com/storage/images/flags/Nigeria.png"
                             }
                         }
                     ] ,
