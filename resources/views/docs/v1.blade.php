@@ -406,9 +406,9 @@
                             "iso2": "NG",
                             "iso3": "NGA",
                             "covid19": {
-                                "total_case": 67412,
-                                "total_deaths": 1173,
-                                "last_updated": "2020-11-30T20:36:49.000000Z"
+                                "total_case": "67,412",
+                                "total_deaths": "1,173",
+                                "last_updated": "2020-11-30T19:36:49.000000Z"
                             },
                             "current_president": {
                                 "name": "Muhammadu Buhari",
@@ -425,9 +425,9 @@
                             "phone_code": "234",
                             "continent": "Africa",
                             "description": "Nigeria is the most populous country in Africa and the seventh most populous country in the world, with an estimated 206 million inhabitants as of late 2019.  The name Nigeria was taken from the Niger River running through the country.",
-                            "size": "923768",
-                            "independence_date": "923768",
-                            "population": 208355710,
+                            "size": "923,768 km²",
+                            "independence_date": "1960-10-01",
+                            "population": "208,355,710",
                             "href": {
                                 "self": "https://restfulcountries.com/api/v1/countries/Nigeria",
                                 "states": "https://restfulcountries.com/api/v1/countries/Nigeria/states",
