@@ -97,11 +97,11 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">Independence Day </label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <input type="date" name="independence_day" class="form-control" value="{!! $country->independence_date !!}">
+                                    <input type="date" name="independence_day" class="form-control" value="{!! $country->independence_day !!}">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Size (Sqm)</label>
+                                <label for="inputEmail3" class="col-sm-2 control-label">Size (Sq km)</label>
                                 <span ></span>
                                 <div class="col-sm-6">
                                     <input type="number" name="size" class="form-control" value="{!! $country->size !!}">
@@ -115,22 +115,14 @@
                                         <option value="{!! $country->continent !!}" >{!! $country->continent !!}</option>
                                         <option value="Africa">Africa</option>
                                         <option value="Antarctica">Antarctica</option>
+                                        <option value="Oceana">Oceana</option>
+                                        <option value="Central America">Central America</option>
+                                        <option value="The Caribean">The Caribean</option>
                                         <option value="Asia">Asia</option>
                                         <option value="Australia">Australia</option>
                                         <option value="Europe">Europe</option>
                                         <option value="South America">South America</option>
                                         <option value="North America">North America</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Region</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <select class="form-control" name="region">
-                                        <option value="{!! $country->region !!}" >{!! $country->region !!}</option>
-                                        <option value="Nigeria">North</option>
-                                        <option value="Ghana">East</option>
                                     </select>
                                 </div>
                             </div>

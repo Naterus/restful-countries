@@ -97,7 +97,6 @@ class CountryController extends Controller
             "president" => $request->input("president"),
             "size" => $request->input("size"),
             "continent" => $request->input("continent"),
-            "region" => $request->input("region"),
             "code" => $request->input("code"),
         ]);
 
