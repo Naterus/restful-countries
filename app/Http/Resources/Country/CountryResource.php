@@ -4,6 +4,7 @@ namespace App\Http\Resources\Country;
 
 use App\Http\Resources\Covid19\Covid19Resource;
 use App\Http\Resources\President\PresidentResource;
+use App\President;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class CountryResource extends JsonResource
@@ -23,7 +24,7 @@ class CountryResource extends JsonResource
             'iso2' => $this->iso2,
             'iso3' => $this->iso3,
             "covid19" => new Covid19Resource($this->covid19),
-            'current_president' => new PresidentResource($this->president),
+            'current_president' => new PresidentResource(President::whereCountryId($this->id)->whereAppointmentEndDate(null)->first()),
             'currency' => $this->currency,
             'phone_code' => $this->code,
             'continent' => $this->continent,
