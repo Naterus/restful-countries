@@ -1,6 +1,9 @@
 
 @extends("layouts.home-layout")
 @section("title","Donation")
+@section("page-description")
+    Support the development and maintenance (Web Server,Database,Domain name,SSL) of restful countries.
+@endsection
 @section("page-style")
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal.css") !!}">
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">

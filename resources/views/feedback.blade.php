@@ -1,6 +1,9 @@
 
 @extends("layouts.home-layout")
 @section("title","Feedback")
+@section("page-description")
+    Suggest new features, Report bugs, or invalid data returned in api.
+@endsection
 @section("page-style")
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal.css") !!}">
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">

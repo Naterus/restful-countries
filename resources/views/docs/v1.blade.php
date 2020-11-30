@@ -1,6 +1,9 @@
 
 @extends("layouts.home-layout")
 @section("title","Documentation")
+@section("page-description")
+    See our api documentation
+@endsection
 @section("page-style")
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/pretty-print-json.css") !!}" />
 @endsection
