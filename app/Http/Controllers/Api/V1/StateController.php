@@ -15,7 +15,7 @@ class StateController extends Controller
     public function getStates($country){
 
         $country = Country::whereName(str_replace("-"," ",$country))->first();
-        $states  = State::whereCountryId($country->id ? : null)->get();
+        $states  = State::whereCountryId($country->id ? : null)->orderBy("name","ASC")->get();
         return new StateCollection($states);
     }
 

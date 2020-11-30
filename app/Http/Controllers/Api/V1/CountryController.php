@@ -27,7 +27,7 @@ class CountryController extends Controller
 
         if(isset($continent)){
             //Find countries by continent
-            return new CountryCollection(Country::whereContinent(str_replace("-"," ",$continent))->paginate($per_page));
+            return new CountryCollection(Country::whereContinent(str_replace("-"," ",$continent))->orderBy("name","ASC")->paginate($per_page));
         }
 
         if(isset($code)){
