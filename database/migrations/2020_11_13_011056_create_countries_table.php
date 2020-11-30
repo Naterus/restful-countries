@@ -27,7 +27,6 @@ class CreateCountriesTable extends Migration
             $table->string("capital")->nullable();
             $table->string("official_language")->nullable();
             $table->string("continent")->nullable();
-            $table->string("region")->nullable();
             $table->string("size")->nullable();
             $table->date("independence_date")->nullable();
             $table->string("created_by")->nullable();

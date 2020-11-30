@@ -66,7 +66,6 @@
                                 <li><a href="#country-by-name">Country by name</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-continent">Country by continent</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
-                                <li><a href="#country-by-region">Country by region</a> <span class="float-right"></span></li>
                                 <li><a href="#presidents-by-country">Presidents by country</a> <span class="float-right"></span></li>
                                 <li><a href="#president-by-country">Presidents by country and name</a> <span class="float-right"></span></li>
                                 <li><a href="#covid19">Covid 19 cases only</a> <span class="float-right"></span></li>
@@ -196,31 +195,6 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
-                                </div>
-
-                            </div>
-                        </div><!--end col-->
-                    </div>
-                    <br/>
-
-                    <div class="row" id="country-by-region">
-                        <div class="col-lg-12 mb-12 pb-12">
-                            <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">Countries by region - <span class="text-success">GET</span></a></h4>
-
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?region={region}</p>
-
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=sahara</a></p>
                                 </div>
 
                             </div>

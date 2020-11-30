@@ -48,11 +48,6 @@ class CountryController extends Controller
             return new CountryResource(Country::whereIso3($iso3)->first());
         }
 
-        if(isset($region)){
-            //Find countries by region
-            return new CountryResource(Country::whereRegion(str_replace("-"," ",$region))->paginate($per_page));
-        }
-
         return new CountryCollection(Country::paginate($per_page));
     }
 

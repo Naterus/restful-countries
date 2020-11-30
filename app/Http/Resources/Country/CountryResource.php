@@ -31,7 +31,6 @@ class CountryResource extends JsonResource
             'description' => $this->description,
             'size' => $this->size,
             'independence_date' => $this->size,
-            'region' => $this->region,
             'population' => $this->population,
             'href' => [
                 'self' => route("countries.show",$this->name),
