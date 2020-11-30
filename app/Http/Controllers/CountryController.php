@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Country;
-use App\District;
 use App\President;
 use App\State;
 use Illuminate\Http\Request;
@@ -43,12 +42,6 @@ class CountryController extends Controller
         foreach ($states as $state){
             //Delete states
             State::whereId($state->id)->whereCountryId($country)->delete();
-
-            foreach ($state->districts as $district){
-                //Delete districts
-                District::whereId($district->id)->whereStateId($state->id)->whereCountryId($country)->delete();
-            }
-
         }
 
         return redirect()->back()->with("success","Country and associated states and districts deleted successfully.");
@@ -105,7 +98,7 @@ class CountryController extends Controller
             "size" => $request->input("size"),
             "continent" => $request->input("continent"),
             "region" => $request->input("region"),
-            "national_holiday" => $request->input("national_holiday"),
+            "code" => $request->input("code"),
         ]);
 
         return redirect()->back()->with("success","Country updated successfully");

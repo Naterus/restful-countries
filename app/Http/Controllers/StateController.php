@@ -80,15 +80,8 @@ class StateController extends Controller
 
         State::whereCountryId($country)->whereId($state)->delete();
 
-        //Get all districts for the state
-        $districts = District::whereCountryId($country)->whereStateId($state)->get();
 
-        foreach ($districts as $district){
-            //Use state and country ids again to ensure you are deleting the right districts.
-            District::whereId($district->id)->whereStateId($state)->whereCountryId($country)->delete();
-        }
-
-        return redirect()->back()->with("success","State and related districts deleted successfully");
+        return redirect()->back()->with("success","States deleted successfully");
     }
 
 }

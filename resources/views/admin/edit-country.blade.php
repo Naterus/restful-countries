@@ -62,7 +62,7 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">Country Code</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <input type="text" name="iso" class="form-control" value="{!! $country->iso !!}">
+                                    <input type="text" name="code" class="form-control" value="{!! $country->code !!}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -76,23 +76,14 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">Official Language</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <select class="form-control" name="official_language">
-                                        <option value="{!! $country->official_language !!}" >{!! $country->official_language !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
+                                    <input type="text" name="official_language" class="form-control" value="{!! $country->official_language!!}">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Capital</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <select class="form-control" name="capital">
-                                        <option value="{!! $country->capital !!}" >{!! $country->capital !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
-
+                                    <input type="text" name="capital" class="form-control" value="{!! $country->capital !!}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -103,21 +94,10 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Independence Day</label>
+                                <label for="inputEmail3" class="col-sm-2 control-label">Independence Day </label>
                                 <span ></span>
                                 <div class="col-sm-6">
                                     <input type="date" name="independence_day" class="form-control" value="{!! $country->independence_date !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">President</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <select class="form-control" name="president">
-                                        <option value="{!! $country->president !!}" >{!! $country->president !!}</option>
-                                        <option value="Nigeria">North America</option>
-                                        <option value="Ghana">South America</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -134,8 +114,12 @@
                                     <select class="form-control" name="continent">
                                         <option value="{!! $country->continent !!}" >{!! $country->continent !!}</option>
                                         <option value="Africa">Africa</option>
-                                        <option value="North America">North America</option>
+                                        <option value="Antarctica">Antarctica</option>
+                                        <option value="Asia">Asia</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Europe">Europe</option>
                                         <option value="South America">South America</option>
+                                        <option value="North America">North America</option>
                                     </select>
                                 </div>
                             </div>
@@ -148,13 +132,6 @@
                                         <option value="Nigeria">North</option>
                                         <option value="Ghana">East</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">National Holiday</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="date" name="national_holiday" class="form-control" value="{!! $country->national_holiday !!}">
                                 </div>
                             </div>
                             <div class="form-group margin-bottom-0">
