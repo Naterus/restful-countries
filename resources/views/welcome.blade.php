@@ -25,16 +25,14 @@
 
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
-                                                    <select id="country-select" class="form-control">
-                                                        <option selected disabled>Country</option>
+                                                    <select id="country-select" class="form-control" onchange="initStates()">
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
                                                     <select  id="state-select" name="" class="form-control">
-                                                        <option selected disabled>State</option>
-                                                    </select>
+]                                                   </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -60,6 +58,7 @@
         //Populate countries select on page load
         $(document).ready(function(){
             $.get('http://localhost:8081/restful_countries/public/api/v1/countries',function(countries){
+
                 $.each(countries.data,function(key,value){
                     $('#country-select')
                         .append($("<option></option>")
@@ -67,12 +66,15 @@
                             .text(value.name));
                 });
 
+                //Select first country returned
+                $("#country-select").val(countries.data[0].name);
+                //Populate currently selected country states
+                initStates();
             });
         });
 
-        //Load states on country change
-        $("#country-select").change(function(){
-            country=$("#country-select").val();
+        function initStates(){
+            let country=$("#country-select").val();
 
             //Remove previous loaded options
             $('#state-select option:gt(0)').remove();
@@ -85,9 +87,7 @@
                             .attr("value", value.name)
                             .text(value.name));
                 });
-
             });
-        });
-
+        }
     </script>
 @endsection
