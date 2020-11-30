@@ -12,7 +12,7 @@
 @section("page-content")
 
     <!-- Start home -->
-    <section class="bg-half page-next-level" style="background-image: url('{!! asset('storage/images/donate2.jpg') !!}');">
+    <section class="bg-half page-next-level" style="background-image: url('{!! asset('storage/images/places.jpg') !!}');">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row justify-content-center">
