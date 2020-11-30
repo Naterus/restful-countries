@@ -21,6 +21,10 @@ class PresidentResource extends JsonResource
             "appointment_end_date" => $this->appointment_end_date,
             "appointment_end_date" => $this->appointment_end_date,
             "picture" => asset("storage/images/presidents/".$this->picture),
+            "href" => [
+                "self" => route("presidents.show",["country"=>str_replace(" ","-",$this->country->name),"president"=>str_replace(" ","-",$this->name)]),
+                "country" => route("countries.show",str_replace(" ","-",$this->country->name))
+            ]
         ];
     }
 }

@@ -14,6 +14,8 @@ Route::group(['middleware' => ["throttle:20,1","api_logger"]], function(){
 
     Route::get("/countries/{country}/presidents",'PresidentController@getPresidents')->name("presidents.index");
 
+    Route::get("/countries/{country}/presidents/{president}",'PresidentController@getPresident')->name("presidents.show");
+
     Route::get("/countries/{country}/states",'StateController@getStates')->name("states.index");
 
     Route::get("/countries/{country}/states/{state}",'StateController@getState')->name("states.show");

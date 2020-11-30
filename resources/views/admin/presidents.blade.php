@@ -97,7 +97,7 @@
                     <br/>
 
                     <label for="inputEmail3" class="col-sm-12 control-label">Appointment End Date</label>
-                    <input type="date" name="appointment_end_date" required="required" class="form-control">
+                    <input type="date" name="appointment_end_date" class="form-control">
                     <br/>
 
                 </div>

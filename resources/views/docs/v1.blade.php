@@ -67,7 +67,8 @@
                                 <li><a href="#country-by-continent">Country by continent</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-region">Country by region</a> <span class="float-right"></span></li>
-                                <li><a href="#covid19">All countries covid 19 cases only</a> <span class="float-right"></span></li>
+                                <li><a href="#country-presidents">Country Presidents</a> <span class="float-right"></span></li>
+                                <li><a href="#covid19">Covid 19 cases only</a> <span class="float-right"></span></li>
                                 <li><a href="#covid19-by-deaths">Covid 19 by deaths</a> <span class="float-right"></span></li>
                                 <li><a href="#covid19-by-total">Covid 19 by total case</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country">States by country name</a> <span class="float-right"></span></li>
@@ -226,6 +227,33 @@
                     </div>
                     <br/>
 
+                    <div class="row" id="country-presidents">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country Presidents - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/India/presidents</a></p>
+                                   <
+                                    <pre id="presidents-response"></pre>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
                     <div class="row" id="covid19">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
@@ -239,7 +267,7 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <h4><a href="javascript:void(0)" class="title text-dark">All countries covid 19 cases only - <span class="text-success">GET</span></a></h4>
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases only - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19</a></p>
                                     <p>Returns a paginated result of all countries covid19 case</p>
@@ -371,19 +399,25 @@
             { "data":
                     [
                         {
-                            "name": "Afghanistan",
-                            "full_name": null,
-                            "capital": "Kabul",
-                            "iso2": "AF",
-                            "iso3": "AFG",
+                            "name": "India",
+                            "full_name": "The Republic of India (Bhārat Gaṇarājya)",
+                            "capital": "New Delhi",
+                            "iso2": "IN",
+                            "iso3": "IND",
                             "covid19": {
-                                "total_case": 50000,
-                                "total_deaths": 23,
-                                "last_updated": "2020-11-28T05:46:01.000000Z"
+                                "total_case": 0,
+                                "total_deaths": 0,
+                                "last_updated": "2020-11-28T04:34:33.000000Z"
                             },
-                            "current_president": null,
-                            "currency": "AFN",
-                            "phone_code": "93",
+                            "current_president": {
+                                "name": "Ram Nath Kovind",
+                                "gender": "Male",
+                                "appointment_start_date": "2017-07-20",
+                                "appointment_end_date": null,
+                                "picture": "https://restfulcountries.com/storage/images/presidents/ram-nath-kovindfy6d2usmhy.jpg"
+                            },
+                            "currency": "INR",
+                            "phone_code": "91",
                             "continent": null,
                             "description": null,
                             "size": null,
@@ -391,30 +425,28 @@
                             "region": null,
                             "population": null,
                             "href": {
-                                "self": "https://restfulcountries.com/api/v1/countries/Afghanistan",
-                                "states": "https://restfulcountries.com/api/v1/countries/Afghanistan/states",
-                                "presidents": "https://restfulcountries.com/api/v1/countries/Afghanistan/presidents",
-                                "flag": "https://restfulcountries.com/storage/images/flags/Afghanistan.png"
+                                "self": "https://restfulcountries.com/api/v1/countries/India",
+                                "states": "https://restfulcountries.com/api/v1/countries/India/states",
+                                "presidents": "https://restfulcountries.com/api/v1/countries/India/presidents",
+                                "flag": "https://restfulcountries.com/storage/images/flags/India.png"
                             }
                         }
                     ] ,
 
                 "links": {
-                    "first": "http://localhost:8081/restful_countries/public/api/v1/countries?page=1",
-                    "last": "http://localhost:8081/restful_countries/public/api/v1/countries?page=1",
+                    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+                    "last": "https://restfulcountries.com/api/v1/countries?page=1",
                     "prev": null,
                     "next": null
-
                 },
-
                 "meta": {
                     "current_page": 1,
                     "from": 1,
                     "last_page": 1,
-                    "path": "http://localhost:8081/restful_countries/public/api/v1/countries",
-                    "per_page": 1,
-                    "to": 1,
-                    "total": 1
+                    "path": "https://restfulcountries.com/api/v1/countries",
+                    "per_page": 241,
+                    "to": 241,
+                    "total": 241
                 }
             };
 
@@ -481,8 +513,22 @@
             ]
         };
 
+        const presidentsResponse =
+            {
+                "data": [
+                    {
+                        "name": "Ram Nath Kovind",
+                        "gender": "Male",
+                        "appointment_start_date": "2017-07-20",
+                        "appointment_end_date": "2020-11-30",
+                        "picture": "https://restfulcountries.com/storage/images/presidents/ram-nath-kovindfy6d2usmhy.jpg"
+                    }
+                ]
+            };
+
         $('#countries-response').html(prettyPrintJson.toHtml(countriesResponse));
         $('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
         $('#states-response').html(prettyPrintJson.toHtml(statesResponse));
+        $('#presidents-response').html(prettyPrintJson.toHtml(presidentsResponse));
     </script>
 @endsection
