@@ -24,7 +24,7 @@ class CountryResource extends JsonResource
             'iso2' => $this->iso2,
             'iso3' => $this->iso3,
             "covid19" => new Covid19Resource($this->covid19),
-            'current_president' => new PresidentResource(President::whereCountryId($this->id)->whereAppointmentEndDate(null)->first()),
+            'current_president' => new PresidentResource(President::whereCountryId($this->id)->whereNull("appointment_end_date")->first()),
             'currency' => $this->currency,
             'phone_code' => $this->code,
             'continent' => $this->continent,
