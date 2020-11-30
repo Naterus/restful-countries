@@ -29,9 +29,9 @@ class CountryResource extends JsonResource
             'phone_code' => $this->code,
             'continent' => $this->continent,
             'description' => $this->description,
-            'size' => $this->size,
-            'independence_date' => $this->size,
-            'population' => $this->population,
+            'size' => number_format($this->size)." km²",
+            'independence_date' => $this->independence_date,
+            'population' => number_format($this->population),
             'href' => [
                 'self' => route("countries.show",$this->name),
                 'states' => route("states.index",$this->name),

@@ -93,7 +93,7 @@ class CountryController extends Controller
             "official_language" => $request->input("official_language"),
             "capital" => $request->input("capital"),
             "population" => $request->input("population"),
-            "independence_day" => $request->input("independence_day"),
+            "independence_date" => $request->input("independence_day"),
             "president" => $request->input("president"),
             "size" => $request->input("size"),
             "continent" => $request->input("continent"),

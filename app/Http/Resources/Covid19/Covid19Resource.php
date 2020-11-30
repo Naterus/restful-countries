@@ -15,8 +15,8 @@ class Covid19Resource extends JsonResource
     public function toArray($request)
     {
         return [
-            "total_case" => $this->total_case,
-            "total_deaths" => $this->total_deaths,
+            "total_case" => number_format($this->total_case),
+            "total_deaths" => number_format($this->total_deaths),
             "last_updated" => $this->updated_at
         ];
     }

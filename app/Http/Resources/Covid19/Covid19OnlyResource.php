@@ -16,8 +16,8 @@ class Covid19OnlyResource extends JsonResource
     {
         return [
             "country_name" => $this->country->name,
-            "total_case" => $this->total_case,
-            "total_deaths" => $this->total_deaths,
+            "total_case" => number_format($this->total_case),
+            "total_deaths" => number_format($this->total_deaths),
             "last_updated" => $this->updated_at,
             "href" => [
                 "country" => route("countries.show",$this->country->name)

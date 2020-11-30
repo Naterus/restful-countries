@@ -31,13 +31,6 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="inputEmail3"  class="col-sm-2 control-label">Nick Name</label>
-                                <span ></span>
-                                <div class="col-sm-6">
-                                    <input type="text" name="nick_name" class="form-control" value="{!! $country->nick_name !!}">
-                                </div>
-                            </div>
-                            <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">About</label>
                                 <span ></span>
                                 <div class="col-sm-6">
@@ -97,7 +90,7 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">Independence Day </label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <input type="date" name="independence_day" class="form-control" value="{!! $country->independence_day !!}">
+                                    <input type="date" name="independence_day" class="form-control" value="{!! $country->independence_date !!}">
                                 </div>
                             </div>
                             <div class="form-group">
