@@ -353,7 +353,7 @@
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents/{president}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/India/presidents/Ram-Nath-Kovind</a></p>
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
 
                                 </div>
 
@@ -379,7 +379,6 @@
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19</a></p>
                                     <p>Returns a paginated result of all countries covid 19 case</p>
-
                                     <pre id="covid19-response"></pre>
                                 </div>
 
@@ -570,7 +569,6 @@
                             }
                         }
                     ] ,
-
                 "links": {
                     "first": "https://restfulcountries.com/api/v1/countries?page=1",
                     "last": "https://restfulcountries.com/api/v1/countries?page=1",
@@ -582,9 +580,9 @@
                     "from": 1,
                     "last_page": 1,
                     "path": "https://restfulcountries.com/api/v1/countries",
-                    "per_page": 241,
-                    "to": 241,
-                    "total": 241
+                    "per_page": 186,
+                    "to": 186,
+                    "total": 186
                 }
             };
 
@@ -593,9 +591,9 @@
                 "data": [
                     {
                         "country_name": "Afghanistan",
-                        "total_case": 500,
-                        "total_deaths": 23,
-                        "last_updated": "2020-11-28T04:46:01.000000Z",
+                        "total_case": "46,498",
+                        "total_deaths": "1,774",
+                        "last_updated": "2020-12-01T15:35:51.000000Z",
                         "href": {
                             "country": "https://restfulcountries.com/api/v1/countries/Afghanistan"
                         }
@@ -624,7 +622,6 @@
                     "name": "Jigawa",
                     "iso2": "JI",
                     "fips_code": "39",
-                    "slogan": null,
                     "population": null,
                     "size": null,
                     "official_language": null,

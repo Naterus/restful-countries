@@ -18,7 +18,6 @@ class StateResource extends JsonResource
             'name' => $this->name,
             'iso2' => $this->iso2,
             'fips_code' => $this->fips_code,
-            'slogan' => $this->slogan,
             'population' => number_format($this->population),
             'size' => $this->size,
             'official_language' => $this->official_language,
