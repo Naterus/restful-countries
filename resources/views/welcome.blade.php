@@ -1,8 +1,8 @@
 
 @extends("layouts.home-layout")
-@section("title","Welcome")
+@section("title","Get countries data via restful api")
 @section("page-description")
-    Get countries information like states, covid19 stats, presidents, flag, population and others via Restful Api.
+    Get countries information like states, covid19 summary, presidents, flag, population and others via Restful Api.
 @endsection
 @section("page-content")
     <!-- Start Home -->

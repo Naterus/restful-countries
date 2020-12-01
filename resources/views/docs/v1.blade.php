@@ -2,7 +2,7 @@
 @extends("layouts.home-layout")
 @section("title","Documentation")
 @section("page-description")
-    See our api documentation
+    Api documentation
 @endsection
 @section("page-style")
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/pretty-print-json.css") !!}" />
@@ -41,7 +41,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <span class="text-uppercase text-white font-weight-bold">Read our documentation for easy api consumption.</span>
+                                <span class="text-uppercase text-white font-weight-bold">Documentation helps you navigate our api endpoints.</span>
                             </div>
                         </ul>
                     </div>
@@ -301,7 +301,7 @@
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso2=AGO</a></p>
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
                                 </div>
 
                             </div>
