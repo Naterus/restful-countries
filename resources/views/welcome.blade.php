@@ -29,13 +29,15 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
                                                     <select id="country-select" class="form-control" onchange="initStates()">
+                                                        <option selected disabled>Countries</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="registration-form-box">
                                                     <select  id="state-select" name="" class="form-control">
-]                                                   </select>
+]                                                       <option selected disabled>States</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
