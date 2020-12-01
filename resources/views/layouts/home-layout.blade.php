@@ -112,14 +112,14 @@
                 </div>
                 <div style="margin-top:10px;">
                     <ul class="social-icon social list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-github-circle"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div><!--end container-->
+                        <!--li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-github-circle"></i></a></li>-->
+                        <li class="list-inline-item"><a href="https://twitter.com/restfulcountrie" target="_blank"  class="rounded"><i class="mdi mdi-twitter"></i></a></li>
+                        <!-- <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li> -->
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div><!--end container-->
 </footer><!--end footer-->
 <!-- Footer End -->
 

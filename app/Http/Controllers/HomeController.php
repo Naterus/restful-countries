@@ -62,7 +62,6 @@ class HomeController extends Controller
             "feedback" => $request->input("feedback"),
         ]);
 
-        return redirect()->back()->with("success","Thanks for submitting a feedback, we will look into it soon.");
+        return redirect()->back()->with("success","Thanks for your feedback.");
     }
-
 }
