@@ -67,6 +67,7 @@
                                 <li><a href="#country-by-continent">Country by continent</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-population">Country by population range</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-size">Country by Size range</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-iso2">Country by ISO2</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-iso3">Country by ISO3</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
@@ -220,10 +221,37 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Population - <span class="text-success">GET</span></a></h4>
+                                    <p>Get a paginated list of countries by Population range </p>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?population_from=100&population_to=5000</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="country-by-size">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by Size - <span class="text-success">GET</span></a></h4>
+
+                                    <p>Get a paginated list of countries by size (km²) range </p>
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?size_from={min_size}&size_to={max_size}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?size_from=1000&size_to=60000</a></p>
                                 </div>
 
                             </div>
@@ -350,7 +378,7 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases only - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19</a></p>
-                                    <p>Returns a paginated result of all countries covid19 case</p>
+                                    <p>Returns a paginated result of all countries covid 19 case</p>
 
                                     <pre id="covid19-response"></pre>
                                 </div>
@@ -377,6 +405,7 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?death_from=50&death_to=200000</a></p>
+                                    <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
                             </div>
@@ -401,6 +430,7 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
+                                     <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
                             </div>
@@ -429,7 +459,6 @@
 <p>Returns result of country states without pagination</p>
                                     <pre id="states-response"></pre>
                                 </div>
-
                             </div>
                         </div><!--end col-->
                     </div>
