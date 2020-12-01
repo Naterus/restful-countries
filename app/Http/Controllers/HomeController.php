@@ -53,7 +53,7 @@ class HomeController extends Controller
     public function submitFeedback(Request $request){
         $this->validate($request,[
             "feedback_category" => "required",
-            "feedback" => "required",
+            "feedback" => "required|max:450",
         ]);
 
         FeedBack::create([
