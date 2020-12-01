@@ -21,7 +21,8 @@
                                               class="btn btn-info btn-sm waves-effect waves-light">Add Country</span>
                             </div>
                         </div>
-                @endif
+                    @endif
+
                 <!-- /.dropdown js__dropdown -->
                     <table id="example" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
@@ -162,6 +163,7 @@
         </div>
     @endif
 
+
     @if(helper::instance()->isPermitted("DELETE COUNTRY"))
         <div class="remodal" data-remodal-id="delete-country" role="dialog"
              aria-labelledby="modal1Title" aria-describedby="modal1Desc">
@@ -183,6 +185,7 @@
             </form>
         </div>
     @endif
+
 
 @endsection
 @section("page-script")
