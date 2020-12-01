@@ -66,6 +66,13 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">Flag name</label>
+                                <span ></span>
+                                <div class="col-sm-6">
+                                    <input type="text" name="flag" class="form-control" value="{!! $country->flag !!}">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Official Language</label>
                                 <span ></span>
                                 <div class="col-sm-6">

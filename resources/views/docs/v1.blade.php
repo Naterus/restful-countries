@@ -66,6 +66,10 @@
                                 <li><a href="#country-by-name">Country by name</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-continent">Country by continent</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-population">Country by population range</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-iso2">Country by ISO2</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-iso3">Country by ISO3</a> <span class="float-right"></span></li>
+                                <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
                                 <li><a href="#presidents-by-country">Presidents by country</a> <span class="float-right"></span></li>
                                 <li><a href="#president-by-country">Presidents by country and name</a> <span class="float-right"></span></li>
                                 <li><a href="#covid19">Covid 19 cases only</a> <span class="float-right"></span></li>
@@ -73,7 +77,7 @@
                                 <li><a href="#covid19-by-total">Covid 19 by total case</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country">States by country name</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country-state">State by country name and state name</a> <span class="float-right"></span></li>
-
+                                <li><a href="#references">References</a> <span class="float-right"></span></li>
                             </ul>
                         </div>
 
@@ -195,6 +199,81 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="country-by-population">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by Population - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?population_from=100&population_to=5000</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="country-by-iso2">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO2 - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso2={iso2}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso2=AO</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+                    <div class="row" id="country-by-iso3">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO3 - <span class="text-success">GET</span></a></h4>
+
+                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso2=AGO</a></p>
                                 </div>
 
                             </div>
@@ -378,6 +457,32 @@
                         </div><!--end col-->
                     </div>
                     <br/>
+                    <div class="row" id="references">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">References </a></h4>
+
+                                    <ul>
+                                        <li><a href="https://en.wikipedia.org/" target="_blank">https://en.wikipedia.org/</a> </li>
+                                        <li><a href="https://www.worldometers.info/world-population" target="_blank">https://www.worldometers.info/world-population</a> </li>
+                                        <li><a href="https://covid19.who.int/" target="_blank">https://covid19.who.int</a> </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
                 </div>
             </div>
         </div>
@@ -390,7 +495,7 @@
     <script type="text/javascript">
         $("#select-country").on("change",function(){
             version = $("select[name='version']").val();
-            window.location.href='http://localhost:8080/docs/'+version;
+            window.location.href='http://restfulcountries.com/api-documentation/version/'+version;
         });
     </script>
     <script src="{!! asset("storage/js/pretty-print-json.js") !!}"></script>
