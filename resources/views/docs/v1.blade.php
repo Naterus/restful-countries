@@ -2,7 +2,7 @@
 @extends("layouts.home-layout")
 @section("title","Documentation")
 @section("page-description")
-    Api documentation
+    Api documentation V{!! $version !!}
 @endsection
 @section("page-style")
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/pretty-print-json.css") !!}" />

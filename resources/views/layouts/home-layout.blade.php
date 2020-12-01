@@ -7,7 +7,7 @@
     <meta name="description" content="@yield("page-description")" />
     <meta name="keywords" content="Countries,States Api, Restful api,Covid19,Countries Api,Continents,Api,Earth,States,Presidents, Presidents Api, Independence, Donations" />
     <meta name="author" content="Nathan Dauda">
-    <meta property="og:image" itemprop="image" content="{!! asset("storage/images/logo/logo-white.png") !!}">
+    <meta property="og:image" itemprop="image" content="{!! asset("storage/images/logo/logo-w-b.png") !!}">
     <title>Restful Countries - @yield("title")</title>
 
     <link rel="shortcut icon" href="{!! asset("storage/images/logo/logo-white.png") !!}">
