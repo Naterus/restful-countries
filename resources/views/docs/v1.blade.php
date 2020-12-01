@@ -327,7 +327,7 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/India/presidents</a></p>
-                                   <p>Returns a list of country presidents available.</p>
+                                    <p>Returns a list of country presidents available.</p>
                                     <pre id="presidents-response"></pre>
                                 </div>
 
@@ -429,7 +429,7 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
-                                     <p>Returns a list of covid 19 confirmed cases</p>
+                                    <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
                             </div>
@@ -455,7 +455,7 @@
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states</p>
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Nigeria/states</a></p>
-<p>Returns result of country states without pagination</p>
+                                    <p>Returns result of country states without pagination</p>
                                     <pre id="states-response"></pre>
                                 </div>
                             </div>
@@ -619,32 +619,33 @@
         const statesResponse = {
             "data": [
                 {
-                    "name": "Jigawa",
-                    "iso2": "JI",
-                    "fips_code": "39",
-                    "population": null,
+                    "name": "Adamawa",
+                    "iso2": "AD",
+                    "fips_code": "35",
+                    "population": "5,527,800",
                     "size": null,
                     "official_language": null,
-                    "region": null,
+                    "region": "North East",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Jigawa",
+                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Adamawa",
                         "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
                     }
                 },
+
                 {
-                    "name": "Enugu",
-                    "iso2": "EN",
-                    "fips_code": "47",
-                    "slogan": null,
-                    "population": null,
+                    "name": "Akwa Ibom",
+                    "iso2": "AK",
+                    "fips_code": "21",
+                    "population": "5,482,200",
                     "size": null,
                     "official_language": null,
-                    "region": null,
+                    "region": "South South",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Enugu",
+                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Akwa%20Ibom",
                         "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
                     }
-                },
+
+                }
             ]
         };
 
