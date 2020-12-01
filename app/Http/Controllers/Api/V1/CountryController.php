@@ -6,6 +6,7 @@ use App\Country;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Country\CountryResource;
 use App\Http\Resources\Country\CountryCollection;
+use App\Http\Resources\Country\SlimCountryResource;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use function PHPUnit\Framework\throwException;
@@ -30,12 +31,19 @@ class CountryController extends Controller
 
         if(isset($population_from) && isset($population_to)){
             //Find by population
+            if($request->fetch_type == "slim"){
+                return SlimCountryResource::collection(Country::where("population",">=",$population_from)->where("population","<=",$population_to)->orderBy("name","ASC")->paginate($per_page));
+            }
             return new CountryCollection(Country::where("population",">=",$population_from)->where("population","<=",$population_to)->orderBy("name","ASC")->paginate($per_page));
         }
 
 
         if(isset($size_from) && isset($size_to)){
-            //Find by size
+            if($request->fetch_type == "slim"){
+                //Apply slim fetch for countries by size endpoint
+                return SlimCountryResource::collection(Country::where("size",">=",$size_from)->where("size","<=",$size_to)->orderBy("name","ASC")->paginate($per_page));
+            }
+
             return new CountryCollection(Country::where("size",">=",$size_from)->where("size","<=",$size_to)->orderBy("name","ASC")->paginate($per_page));
         }
 
@@ -62,7 +70,14 @@ class CountryController extends Controller
             return new CountryResource(Country::whereIso3($iso3)->first());
         }
 
+
+        if($request->fetch_type == "slim"){
+            //Apply slim fetch to call countries endpoint
+            return SlimCountryResource::collection(Country::paginate($per_page));
+        }
+
         return new CountryCollection(Country::paginate($per_page));
+
     }
 
     public function getCountry($country,Request $request){
