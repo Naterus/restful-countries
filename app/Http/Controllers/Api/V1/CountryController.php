@@ -23,7 +23,21 @@ class CountryController extends Controller
         $iso2 = $request->get('iso2');
         $iso3 = $request->get('iso3');
         $code = $request->get('code');
-        $region = $request->get('region');
+        $population_from = $request->get('population_from');
+        $population_to = $request->get('population_to');
+        $size_from = $request->get('size_from');
+        $size_to = $request->get('size_to');
+
+        if(isset($population_from) && isset($population_to)){
+            //Find by population
+            return new CountryCollection(Country::where("population",">=",$population_from)->where("population","<=",$population_to)->orderBy("name","ASC")->paginate($per_page));
+        }
+
+
+        if(isset($size_from) && isset($size_to)){
+            //Find by size
+            return new CountryCollection(Country::where("size",">=",$size_from)->where("size","<=",$size_to)->orderBy("name","ASC")->paginate($per_page));
+        }
 
         if(isset($continent)){
             //Find countries by continent

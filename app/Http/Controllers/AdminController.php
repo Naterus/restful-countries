@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\ApiRequest;
 use App\Country;
+use App\Covid19;
 use App\FeedBack;
 use App\Role;
+use App\State;
+use App\State2;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,6 +17,7 @@ use Auth;
 class AdminController extends Controller
 {
     public function login(){
+
         return view('admin.login');
     }
 
@@ -29,18 +33,19 @@ class AdminController extends Controller
             "status" => 1
         ],true)){
 
-           return redirect()->intended("administrator/profile");
+            return redirect()->intended("administrator/profile");
         }
 
         return redirect()->back()->with("error","Email or password incorrect");
     }
 
     public function logout(){
-       Auth::logout();
-       return redirect()->route("admin.login");
+        Auth::logout();
+        return redirect()->route("admin.login");
     }
 
     public function dashboard(){
+
         $current_api_version = env("APP_VERSION");
         $total_api_versions = 0;
 
@@ -78,7 +83,7 @@ class AdminController extends Controller
 
     public function updateProfile(Request $request){
         $this->validate($request,[
-           "old_password" => "required",
+            "old_password" => "required",
             "new_password" => "required",
             "password_confirm" => "required"
         ]);
