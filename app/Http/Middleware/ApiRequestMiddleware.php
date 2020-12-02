@@ -31,7 +31,7 @@ class ApiRequestMiddleware
         ApiRequest::create([
                 "endpoint" => $request->path(),
                 "status" => $status,
-                "host" => $request->getHost(),
+                "host" => $request->getClientIp(),
                 "message" => "Request returned ".$response->getStatusCode()
             ]
         );

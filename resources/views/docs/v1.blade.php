@@ -156,6 +156,7 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by name - <span class="text-success">GET</span></a></h4>
+                                    <p>Get a single company by name : You may use space in country name or hyphen e.g <span class="text-muted">countries/south africa</span>  or <span class="text-muted">countries/south-africa</span></p>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}</p>
 
@@ -180,10 +181,11 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent - <span class="text-success">GET</span></a></h4>
-
+                                    <p>Get a list of countries by continent</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent={continent}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?continent=africa</a></p>
+
                                 </div>
 
                             </div>
@@ -205,10 +207,11 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by code - <span class="text-success">GET</span></a></h4>
-
+                                    <p>Get a single country by calling code</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
+
                                 </div>
 
                             </div>
@@ -230,7 +233,7 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Population - <span class="text-success">GET</span></a></h4>
-                                    <p>Get a paginated list of countries by Population range </p>
+                                    <p>Get a paginated list of countries by Population range.</p>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
 
@@ -282,7 +285,7 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO2 - <span class="text-success">GET</span></a></h4>
-
+                                    <p>Get a single country by ISO2 code</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso2={iso2}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso2=AO</a></p>
@@ -307,7 +310,7 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO3 - <span class="text-success">GET</span></a></h4>
-
+                                    <p>Get a single country by ISO3 code </p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
@@ -334,7 +337,7 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Slim country response - <span class="text-success">GET</span></a></h4>
 
-                                    <p>In the case were you just want the country name and maybe flag and country code to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
+                                    <p>In the case were you just want the minimal country information to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?fetch_type=slim</a></p>
                                     <pre id="countries-slim"></pre>
@@ -386,7 +389,6 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">President by country and name - <span class="text-success">GET</span></a></h4>
-
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents/{president}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
