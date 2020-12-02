@@ -108,14 +108,11 @@
     <div class="container text-center">
         <div class="row justify-content-center">
             <div class="col-12">
-                <div class="">
-                    <p class="mb-0">© 2020 Restful Countries</p>
-                </div>
                 <div style="margin-top:10px;">
                     <ul class="social-icon social list-inline mb-0">
-                        <!--li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-github-circle"></i></a></li>-->
                         <li class="list-inline-item"><a href="https://twitter.com/restfulcountrie" target="_blank"  class="rounded"><i class="mdi mdi-twitter"></i></a></li>
-                        <!-- <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-linkedin"></i></a></li> -->
+                        <li class="list-inline-item"><a href="mail-to:support@restfulcountries.com" class="rounded"><i class="mdi mdi-email"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="rounded"><i class="mdi mdi-github-circle"></i></a></li>
                      </ul>
                  </div>
              </div>
