@@ -22,7 +22,7 @@ class Covid19Controller extends Controller
 
         if(isset($deaths_from) && isset($deaths_to)){
             //Fetch based on deaths range
-             return new Covid19Collection(Covid19::where("total_deaths",">=",$deaths_from)->where("total_deaths","<=",$deaths_to)->get());
+            return new Covid19Collection(Covid19::where("total_deaths",">=",$deaths_from)->where("total_deaths","<=",$deaths_to)->get());
         }
 
         if(isset($total_from) && isset($total_to)){
@@ -34,11 +34,8 @@ class Covid19Controller extends Controller
             //Fetch based on country name
             $country_id = Country::whereName(str_replace("-"," ",$country))->first();
 
-            if($country) {
-                return new Covid19OnlyResource(Covid19::whereCountryId($country_id->id)->first());
-            }
+            return new Covid19OnlyResource(Covid19::whereCountryId($country_id->id)->first());
 
-            abort(404,"Covid19 Resource Not Found for specified country");
         }
 
         $country_count = Country::all()->count();

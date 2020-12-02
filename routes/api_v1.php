@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ["throttle:100,1","api_logger"]], function(){
 
-
     Route::get("/",'CountryController@getCountries');
 
     Route::get("/countries",'CountryController@getCountries')->name("countries.index");

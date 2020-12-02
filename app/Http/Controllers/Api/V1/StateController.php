@@ -8,6 +8,7 @@ use App\Http\Resources\State\SlimStateResource;
 use App\Http\Resources\State\StateCollection;
 use App\Http\Resources\State\StateResource;
 use App\State;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class StateController extends Controller
@@ -34,7 +35,7 @@ class StateController extends Controller
             return new StateResource($state);
         }
 
-        abort(404,"State Resource Not Found. Check that it is spelt correctly");
+        throw new ModelNotFoundException("State resource not found");
     }
 
 }

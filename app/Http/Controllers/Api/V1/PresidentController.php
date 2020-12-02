@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\President\PresidentCollection;
 use App\Http\Resources\President\PresidentResource;
 use App\President;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class PresidentController extends Controller
@@ -16,11 +17,8 @@ class PresidentController extends Controller
         //remove hyphen from country name e.g south-africa to south africa
         $country_id = Country::whereName(str_replace("-"," ",$country))->first();
 
-        if($country_id){
-            return new PresidentCollection(President::whereCountryId($country_id->id ? : null)->get());
-        }
+        return new PresidentCollection(President::whereCountryId($country_id->id ? : null)->get());
 
-        abort(404,"Presidents resource not found for selected country.");
     }
 
     public function getPresident($country,$president){
@@ -29,14 +27,13 @@ class PresidentController extends Controller
         if($country_id){
             $president = President::whereCountryId($country_id->id ? : null)->whereName(str_replace("-"," ",$president))->first();
 
-            if($president){
+            if($president) {
                 return new PresidentResource($president);
             }
 
-            abort(404,"President resource not found with provided name.");
-        }
+            throw new ModelNotFoundException("President resource not found");
 
-        abort(404,"President resource not found for selected country.");
+        }
 
     }
 }
