@@ -102,11 +102,6 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
-                                    <div class="alert alert-info text-center">
-                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                        <strong>As much as we try to source data from reliable sources, the information returned by our api stands to be corrected in the case of spelling errors or invalid data.</strong>
-                                        <p>See <a href="{!! route("feedback") !!}" >Feedback</a> to submit errors or new feature suggestions</p>
-                                    </div>
                                     <h4><a href="javascript:void(0)" class="title text-dark">Base Url</a></h4>
                                     <a href="https://restfulcountries.com/api/v1" target="_blank">https://restfulcountries.com/api/v1</a>                                </div>
 
@@ -117,24 +112,15 @@
                     <div class="row" id="all-countries">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">All Countries - <span class="text-success">GET</span></a></h4>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1</a></p>
                                     <p>Or</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries</a></p>
-                                    <p>Returns a paginated result of all countries available</p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries</a></p>
+                                    <p>Returns a list of all countries available</p>
                                     <pre id="countries-response"></pre>
                                     <p>Use the per_page parameter to specify number of items to return</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?per_page=15</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?per_page=15</a></p>
                                     <p>This would return 15 countries per page</p>
                                 </div>
 
@@ -145,22 +131,13 @@
                     <div class="row" id="country-by-name">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by name - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single company by name : You may use space in country name or hyphen e.g <span class="text-muted">countries/south africa</span>  or <span class="text-muted">countries/south-africa</span></p>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Nigeria</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/Nigeria</a></p>
                                 </div>
 
                             </div>
@@ -170,21 +147,12 @@
                     <div class="row" id="country-by-continent">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent - <span class="text-success">GET</span></a></h4>
                                     <p>Get a list of countries by continent</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent={continent}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?continent=africa</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?continent=africa</a></p>
 
                                 </div>
 
@@ -196,24 +164,13 @@
                     <div class="row" id="country-by-code">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by code - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by calling code</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
-
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
                                 </div>
-
                             </div>
                         </div><!--end col-->
                     </div>
@@ -222,22 +179,13 @@
                     <div class="row" id="country-by-population">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Population - <span class="text-success">GET</span></a></h4>
-                                    <p>Get a paginated list of countries by Population range.</p>
+                                    <p>Get a  list of countries by Population range.</p>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?population_from=100&population_to=5000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?population_from=100&population_to=5000</a></p>
                                 </div>
 
                             </div>
@@ -248,22 +196,13 @@
                     <div class="row" id="country-by-size">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Size - <span class="text-success">GET</span></a></h4>
 
-                                    <p>Get a paginated list of countries by size (km²) range </p>
+                                    <p>Get a list of countries by size (km²) range </p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?size_from={min_size}&size_to={max_size}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?size_from=1000&size_to=60000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?size_from=1000&size_to=60000</a></p>
                                 </div>
 
                             </div>
@@ -274,21 +213,12 @@
                     <div class="row" id="country-by-iso2">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO2 - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by ISO2 code</p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso2={iso2}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso2=AO</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?iso2=AO</a></p>
                                 </div>
 
                             </div>
@@ -299,21 +229,12 @@
                     <div class="row" id="country-by-iso3">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO3 - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by ISO3 code </p>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
                                 </div>
 
                             </div>
@@ -325,21 +246,12 @@
                     <div class="row" id="country-slim">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Slim country response - <span class="text-success">GET</span></a></h4>
 
                                     <p>In the case were you just want the minimal country information to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?fetch_type=slim</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?fetch_type=slim</a></p>
                                     <pre id="countries-slim"></pre>
                                 </div>
 
@@ -351,21 +263,12 @@
                     <div class="row" id="presidents-by-country">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Presidents by country - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/India/presidents</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/India/presidents</a></p>
                                     <p>Returns a list of country presidents available.</p>
                                     <pre id="presidents-response"></pre>
                                 </div>
@@ -378,21 +281,11 @@
                     <div class="row" id="president-by-country">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">President by country and name - <span class="text-success">GET</span></a></h4>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents/{president}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
-
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
                                 </div>
 
                             </div>
@@ -403,19 +296,10 @@
                     <div class="row" id="covid19">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases only - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19</a></p>
                                     <p>Returns a paginated result of all countries covid 19 case</p>
                                     <pre id="covid19-response"></pre>
                                 </div>
@@ -428,20 +312,11 @@
                     <div class="row" id="covid19-by-deaths">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by death range only - <span class="text-success">GET</span></a></h4>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?death_from=50&death_to=200000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19?death_from=50&death_to=200000</a></p>
                                     <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
@@ -453,20 +328,11 @@
                     <div class="row" id="covid19-by-total">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by total confirmed range only - <span class="text-success">GET</span></a></h4>
                                     <p class="text-muted">https://restfulcountries.com/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
                                     <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
@@ -479,20 +345,11 @@
                     <div class="row" id="state-by-country">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">States by country name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/Nigeria/states</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/Nigeria/states</a></p>
                                     <p>Returns result of country states without pagination</p>
                                     <pre id="states-response"></pre>
                                 </div>
@@ -503,20 +360,11 @@
                     <div class="row" id="state-by-country-state">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">State by country name and state name - <span class="text-success">GET</span></a></h4>
 
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}</p>
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states/Alaska</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/United States/states/Alaska</a></p>
                                 </div>
 
                             </div>
@@ -527,20 +375,11 @@
                     <div class="row" id="state-slim">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Slim state response - <span class="text-success">GET</span></a></h4>
                                     <p>Just like the slim country response , you may want to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
 
-                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states?fetch_type=slim</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/United States/states?fetch_type=slim</a></p>
 
                                     <pre id="states-slim"></pre>
                                 </div>
@@ -553,18 +392,12 @@
                     <div class="row" id="references">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
-                                <div class="position-relative overflow-hidden">
-                                    <div class="overlay rounded-top bg-dark"></div>
-                                    <div class="likes">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
-                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">References </a></h4>
-
+                                    <div class="alert alert-warning text-center">
+                                        <strong>As much as we try to source data from reliable sources, the information returned by our api stands to be corrected in the case of spelling errors or invalid data.</strong>
+                                        <p>See <a href="{!! route("feedback") !!}" >Feedback</a> to submit errors or new feature suggestions</p>
+                                    </div>
                                     <ul>
                                         <li><a href="https://en.wikipedia.org/" target="_blank">https://en.wikipedia.org/</a> </li>
                                         <li><a href="https://www.worldometers.info/world-population" target="_blank">https://www.worldometers.info/world-population</a> </li>
