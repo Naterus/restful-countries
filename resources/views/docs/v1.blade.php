@@ -71,6 +71,7 @@
                                 <li><a href="#country-by-iso2">Country by ISO2</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-iso3">Country by ISO3</a> <span class="float-right"></span></li>
                                 <li><a href="#country-by-code">Country by code</a> <span class="float-right"></span></li>
+                                <li><a href="#country-slim">Slim Country response</a> <span class="float-right"></span></li>
                                 <li><a href="#presidents-by-country">Presidents by country</a> <span class="float-right"></span></li>
                                 <li><a href="#president-by-country">Presidents by country and name</a> <span class="float-right"></span></li>
                                 <li><a href="#covid19">Covid 19 cases only</a> <span class="float-right"></span></li>
@@ -78,6 +79,7 @@
                                 <li><a href="#covid19-by-total">Covid 19 by total case</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country">States by country name</a> <span class="float-right"></span></li>
                                 <li><a href="#state-by-country-state">State by country name and state name</a> <span class="float-right"></span></li>
+                                <li><a href="#state-slim">Slim State response</a> <span class="float-right"></span></li>
                                 <li><a href="#references">References</a> <span class="float-right"></span></li>
                             </ul>
                         </div>
@@ -100,6 +102,11 @@
                                     </div>
                                 </div>
                                 <div class="content p-4">
+                                    <div class="alert alert-info text-center">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        <strong>As much as we try to source data from reliable sources, the information returned by our api stands to be corrected in the case of spelling errors or invalid data.</strong>
+                                        <p>See <a href="{!! route("feedback") !!}" >Feedback</a> to submit errors or new feature suggestions</p>
+                                    </div>
                                     <h4><a href="javascript:void(0)" class="title text-dark">Base Url</a></h4>
                                     <a href="https://restfulcountries.com/api/v1" target="_blank">https://restfulcountries.com/api/v1</a>                                </div>
 
@@ -126,7 +133,9 @@
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries</a></p>
                                     <p>Returns a paginated result of all countries available</p>
                                     <pre id="countries-response"></pre>
-
+                                    <p>Use the per_page parameter to specify number of items to return</p>
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?per_page=15</a></p>
+                                    <p>This would return 15 countries per page</p>
                                 </div>
 
                             </div>
@@ -302,6 +311,33 @@
                                     <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
 
                                     <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
+
+                    <div class="row" id="country-slim">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Slim country response - <span class="text-success">GET</span></a></h4>
+
+                                    <p>In the case were you just want the country name and maybe flag and country code to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries?fetch_type=slim</a></p>
+                                    <pre id="countries-slim"></pre>
                                 </div>
 
                             </div>
@@ -485,6 +521,33 @@
                         </div><!--end col-->
                     </div>
                     <br/>
+
+                    <div class="row" id="state-slim">
+                        <div class="col-lg-12 mb-12 pb-12">
+                            <div class="blog position-relative overflow-hidden shadow rounded">
+                                <div class="position-relative overflow-hidden">
+                                    <div class="overlay rounded-top bg-dark"></div>
+                                    <div class="likes">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="list-inline-item mr-2"><a href="javascript:void(0)" class="text-white like"><i class="mdi mdi-heart-outline mr-1"></i>33</a></li>
+                                            <li class="list-inline-item"><a href="javascript:void(0)" class="text-white comments"><i class="mdi mdi-comment-outline mr-1"></i>08</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content p-4">
+                                    <h4><a href="javascript:void(0)" class="title text-dark">Slim state response - <span class="text-success">GET</span></a></h4>
+                                    <p>Just like the slim country response , you may want to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
+
+                                    <p class="text-muted"><a href="#">https://restfulcountries.com/api/v1/countries/United States/states?fetch_type=slim</a></p>
+
+                                    <pre id="states-slim"></pre>
+                                </div>
+
+                            </div>
+                        </div><!--end col-->
+                    </div>
+                    <br/>
+
                     <div class="row" id="references">
                         <div class="col-lg-12 mb-12 pb-12">
                             <div class="blog position-relative overflow-hidden shadow rounded">
@@ -580,9 +643,9 @@
                     "from": 1,
                     "last_page": 1,
                     "path": "https://restfulcountries.com/api/v1/countries",
-                    "per_page": 186,
-                    "to": 186,
-                    "total": 186
+                    "per_page": 1,
+                    "to": 1,
+                    "total": 1
                 }
             };
 
@@ -666,9 +729,69 @@
                 ]
             };
 
+        const countriesSlim =
+            {
+                "data": [
+                    {
+                        "name": "Afghanistan",
+                        "phone_code": "93",
+                        "href": {
+                            "self": "https://restfulcountries.com/api/v1/countries/Afghanistan",
+                            "flag": "https://restfulcountries.com/storage/images/flags/Afghanistan.png"
+                        }
+                    },
+                    {
+                        "name": "Albania",
+                        "phone_code": "355",
+                        "href": {
+                            "self": "https://restfulcountries.com/api/v1/countries/Albania",
+                            "flag": "https://restfulcountries.com/storage/images/flags/Albania.png"
+                        }
+                    },
+                ],
+                "links": {
+                    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+                    "last": "https://restfulcountries.com/api/v1/countries?page=1",
+                    "prev": null,
+                    "next": null
+                },
+                "meta": {
+                    "current_page": 1,
+                    "from": 1,
+                    "last_page": 1,
+                    "path": "https://restfulcountries.com/api/v1/countries",
+                    "per_page": 2,
+                    "to": 2,
+                    "total": 2
+                }
+            };
+
+        const statesSlim = {
+            "data" : [
+                {
+                    "name": "Al Jazirah",
+                    "iso2": "GZ",
+                    "href": {
+                        "self": "https://restfulcountries.com/api/v1/countries/Sudan/states/Al%20Jazirah",
+                        "country": "https://restfulcountries.com/api/v1/countries/Sudan"
+                    }
+                },
+                {
+                    "name": "Al Qadarif",
+                    "iso2": "GD",
+                    "href": {
+                        "self": "https://restfulcountries.com/api/v1/countries/Sudan/states/Al%20Qadarif",
+                        "country": "https://restfulcountries.com/api/v1/countries/Sudan"
+                    }
+                }
+            ]
+        }
+
         $('#countries-response').html(prettyPrintJson.toHtml(countriesResponse));
         $('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
         $('#states-response').html(prettyPrintJson.toHtml(statesResponse));
         $('#presidents-response').html(prettyPrintJson.toHtml(presidentsResponse));
+        $('#countries-slim').html(prettyPrintJson.toHtml(countriesSlim));
+        $('#states-slim').html(prettyPrintJson.toHtml(statesSlim));
     </script>
 @endsection
