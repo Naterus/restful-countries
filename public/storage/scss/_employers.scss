@@ -1,0 +1,21 @@
+.employers-list {
+    transition: all 0.2s ease;
+    .name {
+        &:hover {
+            color: $primary !important;
+        }
+    }
+    .fav-collection {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        opacity: 0;
+    }
+    &:hover {
+        box-shadow: $shadow;
+        transform: scale(1.02);
+        .fav-collection {
+            opacity: 1;
+        }
+    }
+}

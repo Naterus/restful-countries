@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Base Url</a></h4>
-                                    <a href="https://restfulcountries.com/api/v1" target="_blank">https://restfulcountries.com/api/v1</a>                                </div>
+                                    <a href="{{env('APP_URL')}}/api/v1" target="_blank">{{env('APP_URL')}}/api/v1</a>                                </div>
 
                             </div>
                         </div><!--end col-->
@@ -114,13 +114,13 @@
                             <div class="blog position-relative overflow-hidden shadow rounded">
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">All Countries - <span class="text-success">GET</span></a></h4>
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1</a></p>
                                     <p>Or</p>
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries</a></p>
                                     <p>Returns a list of all countries available</p>
                                     <pre id="countries-response"></pre>
                                     <p>Use the per_page parameter to specify number of items to return</p>
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?per_page=15</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?per_page=15</a></p>
                                     <p>This would return 15 countries per page</p>
                                 </div>
 
@@ -135,9 +135,9 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by name - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single company by name : You may use space in country name or hyphen e.g <span class="text-muted">countries/south africa</span>  or <span class="text-muted">countries/south-africa</span></p>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries/{country}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/Nigeria</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/Nigeria</a></p>
                                 </div>
 
                             </div>
@@ -150,9 +150,9 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Countries by continent - <span class="text-success">GET</span></a></h4>
                                     <p>Get a list of countries by continent</p>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?continent={continent}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?continent={continent}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?continent=africa</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?continent=africa</a></p>
 
                                 </div>
 
@@ -167,9 +167,9 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by code - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by calling code</p>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?code={code}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?code={code}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?code=+234</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?code=+234</a></p>
                                 </div>
                             </div>
                         </div><!--end col-->
@@ -183,9 +183,9 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Population - <span class="text-success">GET</span></a></h4>
                                     <p>Get a  list of countries by Population range.</p>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?population_from={min_population}&population_to={max_population}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?population_from=100&population_to=5000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?population_from=100&population_to=5000</a></p>
                                 </div>
 
                             </div>
@@ -200,9 +200,9 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by Size - <span class="text-success">GET</span></a></h4>
 
                                     <p>Get a list of countries by size (km²) range </p>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?size_from={min_size}&size_to={max_size}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?size_from={min_size}&size_to={max_size}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?size_from=1000&size_to=60000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?size_from=1000&size_to=60000</a></p>
                                 </div>
 
                             </div>
@@ -216,9 +216,9 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO2 - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by ISO2 code</p>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso2={iso2}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?iso2={iso2}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?iso2=AO</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?iso2=AO</a></p>
                                 </div>
 
                             </div>
@@ -232,9 +232,9 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Country by ISO3 - <span class="text-success">GET</span></a></h4>
                                     <p>Get a single country by ISO3 code </p>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries?iso3={iso3}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries?iso3={iso3}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?iso3=AGO</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?iso3=AGO</a></p>
                                 </div>
 
                             </div>
@@ -251,7 +251,7 @@
 
                                     <p>In the case were you just want the minimal country information to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries?fetch_type=slim</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries?fetch_type=slim</a></p>
                                     <pre id="countries-slim"></pre>
                                 </div>
 
@@ -266,9 +266,9 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Presidents by country - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries/{country}/presidents</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/India/presidents</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/India/presidents</a></p>
                                     <p>Returns a list of country presidents available.</p>
                                     <pre id="presidents-response"></pre>
                                 </div>
@@ -283,9 +283,9 @@
                             <div class="blog position-relative overflow-hidden shadow rounded">
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">President by country and name - <span class="text-success">GET</span></a></h4>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/presidents/{president}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries/{country}/presidents/{president}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/afghanistan/presidents/Ashraf-Ghani</a></p>
                                 </div>
 
                             </div>
@@ -299,7 +299,7 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases only - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/covid19</a></p>
                                     <p>Returns a paginated result of all countries covid 19 case</p>
                                     <pre id="covid19-response"></pre>
                                 </div>
@@ -314,9 +314,9 @@
                             <div class="blog position-relative overflow-hidden shadow rounded">
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by death range only - <span class="text-success">GET</span></a></h4>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19?death_from=50&death_to=200000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/covid19?death_from=50&death_to=200000</a></p>
                                     <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
@@ -330,9 +330,9 @@
                             <div class="blog position-relative overflow-hidden shadow rounded">
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">Covid 19 cases by total confirmed range only - <span class="text-success">GET</span></a></h4>
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/covid19?total_from=3000&total_to=500000</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/covid19?total_from=3000&total_to=500000</a></p>
                                     <p>Returns a list of covid 19 confirmed cases</p>
                                 </div>
 
@@ -348,8 +348,8 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">States by country name - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states</p>
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/Nigeria/states</a></p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries/{country}/states</p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/Nigeria/states</a></p>
                                     <p>Returns result of country states without pagination</p>
                                     <pre id="states-response"></pre>
                                 </div>
@@ -363,8 +363,8 @@
                                 <div class="content p-4">
                                     <h4><a href="javascript:void(0)" class="title text-dark">State by country name and state name - <span class="text-success">GET</span></a></h4>
 
-                                    <p class="text-muted">https://restfulcountries.com/api/v1/countries/{country}/states/{state}</p>
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/United States/states/Alaska</a></p>
+                                    <p class="text-muted">{{env('APP_URL')}}/api/v1/countries/{country}/states/{state}</p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/United States/states/Alaska</a></p>
                                 </div>
 
                             </div>
@@ -379,7 +379,7 @@
                                     <h4><a href="javascript:void(0)" class="title text-dark">Slim state response - <span class="text-success">GET</span></a></h4>
                                     <p>Just like the slim country response , you may want to reduce the amount of data loaded to your page, you can use the slim fetch type parameter.</p>
 
-                                    <p class="text-muted"><a href="javascript:void(0)">https://restfulcountries.com/api/v1/countries/United States/states?fetch_type=slim</a></p>
+                                    <p class="text-muted"><a href="javascript:void(0)">{{env('APP_URL')}}/api/v1/countries/United States/states?fetch_type=slim</a></p>
 
                                     <pre id="states-slim"></pre>
                                 </div>
@@ -447,9 +447,9 @@
                                 "appointment_start_date": "2015-05-29",
                                 "appointment_end_date": null,
                                 "href": {
-                                    "self": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents/Muhammadu-Buhari",
-                                    "country": "https://restfulcountries.com/api/v1/countries/Nigeria",
-                                    "picture": "https://restfulcountries.com/storage/images/presidents/muhammadu-buharipxpjw98lcj.jpg"
+                                    "self": "{{env('APP_URL')}}/api/v1/countries/Nigeria/presidents/Muhammadu-Buhari",
+                                    "country": "{{env('APP_URL')}}/api/v1/countries/Nigeria",
+                                    "picture": "{{env('APP_URL')}}/storage/images/presidents/muhammadu-buharipxpjw98lcj.jpg"
                                 }
                             },
                             "currency": "NGN",
@@ -460,16 +460,16 @@
                             "independence_date": "1960-10-01",
                             "population": "208,355,710",
                             "href": {
-                                "self": "https://restfulcountries.com/api/v1/countries/Nigeria",
-                                "states": "https://restfulcountries.com/api/v1/countries/Nigeria/states",
-                                "presidents": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents",
-                                "flag": "https://restfulcountries.com/storage/images/flags/Nigeria.png"
+                                "self": "{{env('APP_URL')}}/api/v1/countries/Nigeria",
+                                "states": "{{env('APP_URL')}}/api/v1/countries/Nigeria/states",
+                                "presidents": "{{env('APP_URL')}}/api/v1/countries/Nigeria/presidents",
+                                "flag": "{{env('APP_URL')}}/storage/images/flags/Nigeria.png"
                             }
                         }
                     ] ,
                 "links": {
-                    "first": "https://restfulcountries.com/api/v1/countries?page=1",
-                    "last": "https://restfulcountries.com/api/v1/countries?page=1",
+                    "first": "{{env('APP_URL')}}/api/v1/countries?page=1",
+                    "last": "{{env('APP_URL')}}/api/v1/countries?page=1",
                     "prev": null,
                     "next": null
                 },
@@ -477,7 +477,7 @@
                     "current_page": 1,
                     "from": 1,
                     "last_page": 1,
-                    "path": "https://restfulcountries.com/api/v1/countries",
+                    "path": "{{env('APP_URL')}}/api/v1/countries",
                     "per_page": 1,
                     "to": 1,
                     "total": 1
@@ -493,13 +493,13 @@
                         "total_deaths": "1,774",
                         "last_updated": "2020-12-01T15:35:51.000000Z",
                         "href": {
-                            "country": "https://restfulcountries.com/api/v1/countries/Afghanistan"
+                            "country": "{{env('APP_URL')}}/api/v1/countries/Afghanistan"
                         }
                     },
                 ],
                 "links": {
-                    "first": "https://restfulcountries.com/api/v1/covid19?page=1",
-                    "last": "https://restfulcountries.com/api/v1/covid19?page=1",
+                    "first": "{{env('APP_URL')}}/api/v1/covid19?page=1",
+                    "last": "{{env('APP_URL')}}/api/v1/covid19?page=1",
                     "prev": null,
                     "next": null
                 },
@@ -507,7 +507,7 @@
                     "current_page": 1,
                     "from": 1,
                     "last_page": 1,
-                    "path": "https://restfulcountries.com/api/v1/covid19",
+                    "path": "{{env('APP_URL')}}/api/v1/covid19",
                     "per_page": 1,
                     "to": 1,
                     "total": 1
@@ -525,8 +525,8 @@
                     "official_language": null,
                     "region": "North East",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Adamawa",
-                        "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
+                        "self": "{{env('APP_URL')}}/api/v1/countries/Nigeria/states/Adamawa",
+                        "country": "{{env('APP_URL')}}/api/v1/countries/Nigeria"
                     }
                 },
 
@@ -539,8 +539,8 @@
                     "official_language": null,
                     "region": "South South",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/states/Akwa%20Ibom",
-                        "country": "https://restfulcountries.com/api/v1/countries/Nigeria"
+                        "self": "{{env('APP_URL')}}/api/v1/countries/Nigeria/states/Akwa%20Ibom",
+                        "country": "{{env('APP_URL')}}/api/v1/countries/Nigeria"
                     }
 
                 }
@@ -555,10 +555,10 @@
                         "gender": "Male",
                         "appointment_start_date": "2017-07-20",
                         "appointment_end_date": null,
-                        "picture": "https://restfulcountries.com/storage/images/presidents/ram-nath-kovindfy6d2usmhy.jpg",
+                        "picture": "{{env('APP_URL')}}/storage/images/presidents/ram-nath-kovindfy6d2usmhy.jpg",
                         "href": {
-                            "self": "https://restfulcountries.com/api/v1/countries/India/presidents/Ram-Nath-Kovind",
-                            "country": "https://restfulcountries.com/api/v1/countries/India"
+                            "self": "{{env('APP_URL')}}/api/v1/countries/India/presidents/Ram-Nath-Kovind",
+                            "country": "{{env('APP_URL')}}/api/v1/countries/India"
                         }
                     }
                 ]
@@ -571,22 +571,22 @@
                         "name": "Afghanistan",
                         "phone_code": "93",
                         "href": {
-                            "self": "https://restfulcountries.com/api/v1/countries/Afghanistan",
-                            "flag": "https://restfulcountries.com/storage/images/flags/Afghanistan.png"
+                            "self": "{{env('APP_URL')}}/api/v1/countries/Afghanistan",
+                            "flag": "{{env('APP_URL')}}/storage/images/flags/Afghanistan.png"
                         }
                     },
                     {
                         "name": "Albania",
                         "phone_code": "355",
                         "href": {
-                            "self": "https://restfulcountries.com/api/v1/countries/Albania",
-                            "flag": "https://restfulcountries.com/storage/images/flags/Albania.png"
+                            "self": "{{env('APP_URL')}}/api/v1/countries/Albania",
+                            "flag": "{{env('APP_URL')}}/storage/images/flags/Albania.png"
                         }
                     },
                 ],
                 "links": {
-                    "first": "https://restfulcountries.com/api/v1/countries?page=1",
-                    "last": "https://restfulcountries.com/api/v1/countries?page=1",
+                    "first": "{{env('APP_URL')}}/api/v1/countries?page=1",
+                    "last": "{{env('APP_URL')}}/api/v1/countries?page=1",
                     "prev": null,
                     "next": null
                 },
@@ -594,7 +594,7 @@
                     "current_page": 1,
                     "from": 1,
                     "last_page": 1,
-                    "path": "https://restfulcountries.com/api/v1/countries",
+                    "path": "{{env('APP_URL')}}/api/v1/countries",
                     "per_page": 2,
                     "to": 2,
                     "total": 2
@@ -607,16 +607,16 @@
                     "name": "Al Jazirah",
                     "iso2": "GZ",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Sudan/states/Al%20Jazirah",
-                        "country": "https://restfulcountries.com/api/v1/countries/Sudan"
+                        "self": "{{env('APP_URL')}}/api/v1/countries/Sudan/states/Al%20Jazirah",
+                        "country": "{{env('APP_URL')}}/api/v1/countries/Sudan"
                     }
                 },
                 {
                     "name": "Al Qadarif",
                     "iso2": "GD",
                     "href": {
-                        "self": "https://restfulcountries.com/api/v1/countries/Sudan/states/Al%20Qadarif",
-                        "country": "https://restfulcountries.com/api/v1/countries/Sudan"
+                        "self": "{{env('APP_URL')}}/api/v1/countries/Sudan/states/Al%20Qadarif",
+                        "country": "{{env('APP_URL')}}/api/v1/countries/Sudan"
                     }
                 }
             ]

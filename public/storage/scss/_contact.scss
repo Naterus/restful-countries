@@ -1,0 +1,103 @@
+.contact-icon {
+    height: 74px;
+    width: 74px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 74px;
+    border-color: $primary !important; 
+    transition: all 0.5s;
+}
+
+.error {
+    margin: 8px 0px;
+    display: none;
+    color:$danger;
+}
+
+#ajaxsuccess {
+    font-size: 16px;
+    width: 100%;
+    display: none;
+    clear: both;
+    margin: 8px 0px;
+}
+
+.error_message {
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid lighten($primary, 4%);
+    color: lighten($primary, 4%);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-loader {
+    display: none;
+}
+
+#success_page {
+    text-align: center;
+    margin-bottom: 50px;
+    h3 {
+        color: $success;
+        font-size: 22px;
+    }    
+}
+
+.app-contact-desc {
+    p {
+        overflow: hidden;
+    }
+}
+
+.contact-location {
+    border: 1px solid $primary;
+    border-radius: 4px;
+}
+
+.contact-location-icon {
+    border: 1px solid $primary;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    font-size: 40px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 0.5s;
+    i {
+        -webkit-text-stroke: 2px $primary;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.contact-social-icon {
+    li {
+        a {
+            height: 38px;
+            width: 38px;
+            font-size: 18px;
+            line-height: 36px;
+        }
+    }
+}
+
+.contact-social-icon {
+    li {
+        margin: 4px !important;
+    }
+}
+
+.custom-file-label:after {
+    border-radius: 0 10px 10px 0;
+}
+
+.map {
+    iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
