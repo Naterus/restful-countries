@@ -93,8 +93,6 @@ Then run `php artisan migrate`
 Add this variable to your .env
 `APP_VERSION=1` which is the current api version.
 
-Generate symlink `php artisan storage:link` (You might have to delete the storage file with your root public directory)
-
 Finally run `php artisan db:seed`
 
 This would create sample data for you to test, the most important data is the super admin user created.
