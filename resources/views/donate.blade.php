@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
     <meta name="_token" content="{{ csrf_token() }}">
 @endsection
+@section('nav-bar')
+    @include('layouts.navbar')
+@endsection
 @section("page-content")
 
     <!-- Start home -->

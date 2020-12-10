@@ -2591,3 +2591,54 @@ hr {
   border-top: 1px solid #333744;
 }
 /*# sourceMappingURL=style.css.map */
+
+/*New styles for API documentation*/
+.other-bg {
+  background: #0000009c;
+  padding: 100px 0;
+}
+
+.other-bg h2 {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.select__version {
+  width: 90%;
+  height: 50px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #000000c4;
+}
+
+.registration-form-box {
+  position: relative;
+  width: 100%;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+.content h4:before{
+  content: '# ';
+  color:#000
+}
+.inner{
+  padding-left:20px;
+}
+.inner .url{
+  color:#007bff;
+}
+pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+  border: 1px solid #f0f0f0;
+  padding: 20px;
+  max-height: 400px;
+}
+/*End of API documentation styles*/

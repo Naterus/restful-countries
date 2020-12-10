@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
 
 @endsection
+
+@section('nav-bar')
+    @include('layouts.navbar')
+@endsection
+
+
 @section("page-content")
 
     <!-- Start home -->
