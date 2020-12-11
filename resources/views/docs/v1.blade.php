@@ -5,89 +5,11 @@
 @endsection
 @section("page-style")
     <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/pretty-print-json.css") !!}"/>
-    <style>
-
-        .sidebar {
-            position: fixed;
-            overflow-y: scroll;
-            height: 100%;
-            background: #fff;
-            z-index: 1;
-            padding-top: 50px;
-        }
-        .show-sidebar-sm {
-            position: fixed;
-            bottom: 5%;
-            padding: 12px;
-            background: #3bb9ff;
-            width: 60px;
-            z-index: 2;
-            color: white;
-            left: 3%;
-            border-radius: 48%;
-            font-size: 22px;
-            text-align: center;
-            box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
-            -webkit-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
-            -moz-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
-            display: none;
-        }
-        .inner h6{
-            font-weight: bolder;
-        }
-        .navbar {
-            background: #fff;
-            border-bottom: 1px solid #ececec;
-        }
-        .navbar-nav li{
-
-            float: left;
-            display: block;
-            position: relative;
-            margin: 0 10px;
-
-        }
-        .navbar-nav > li > a {
-            display: block;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 13px;
-            background-color: transparent !important;
-            font-weight: 700;
-            letter-spacing: 1px;
-            line-height: 24px;
-            text-transform: uppercase;
-            -webkit-transition: all 0.5s;
-            transition: all 0.5s;
-            font-family: "Nunito", sans-serif;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
-            color: #4466d8;
-        }
-        .code{
-
-            background: #ececec;
-            color: olive;
-            font-size: small;
-            padding: 0 10px;
-            display: inline-block;
-
-        }
-        @media(max-width: 994px){
-            .sidebar{
-                display: none;
-            }
-            .show-sidebar-sm {
-                display: block;
-            }
-        }
-    </style>
 @endsection
 
 @section('nav-bar')
-    <!-- Navigation Bar-->
+    <!-- simple__navigation Bar-->
+<div id="simple__navigation">
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -100,7 +22,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{Route::is('Home')}} active">
                         <a class="nav-link" href="{!! route('home') !!}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -118,6 +40,8 @@
         </div>
 
     </nav>
+
+</div>
 @endsection
 
 @section("page-content")
