@@ -4,7 +4,7 @@
     Api documentation V{!! $version !!}
 @endsection
 @section("page-style")
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/pretty-print-json.css") !!}"/>
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/pretty-print-json.css") !!}"/>
     <style>
 
         .sidebar {
@@ -92,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="{!! route('home') !!}">
-                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-w-b.png") !!}" class="logo-light" height="60" />
+                <img  alt="Restful Countries" src="{!! asset("assets/images/logo/logo-w-b.png") !!}" class="logo-light" height="60" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -220,7 +220,6 @@
                             <p>
                                 <span class="code">GET  <a href="{{env('APP_URL')}}/api/v1" target="_blank">{{env('APP_URL')}}/api/v1</a> </span>
                             </p>
-
                         </div>
                     </div>
                     <div id="quick-start" class="content p-4" >
@@ -476,6 +475,6 @@
 @endsection
 @section("page-script")
 
-    <script src="{!! asset("storage/js/pretty-print-json.js") !!}"></script>
-    <script src="{!! asset("storage/js/app.js") !!}"></script>
+    <script src="{!! asset("assets/js/pretty-print-json.js") !!}"></script>
+    <script src="{!! asset("assets/js/app.js") !!}"></script>
 @endsection
