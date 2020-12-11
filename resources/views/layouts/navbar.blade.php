@@ -19,8 +19,8 @@
         <!-- Logo container-->
         <div>
             <a href="{!! route("home") !!}" class="logo">
-                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-white.png") !!}" class="logo-light" height="60" />
-                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-w-b.png") !!}" class="logo-dark" height="60" />
+                <img  alt="Restful Countries" src="{!! asset("assets/images/logo/logo-white.png") !!}" class="logo-light" height="60" />
+                <img  alt="Restful Countries" src="{!! asset("assets/images/logo/logo-w-b.png") !!}" class="logo-dark" height="60" />
             </a>
         </div>
 

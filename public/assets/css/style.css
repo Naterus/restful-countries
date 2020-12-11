@@ -1624,11 +1624,10 @@ p {
 }
 
 .bg-half {
-  padding: 280px 0px 180px 0px;
-  background-image: url("https://via.placeholder.com/2000X1100//88929f/5a6270C/O https://placeholder.com/");
+  padding: 180px 0px 180px 0px;
+  background: url('../images/map2.jpg') center center;
   background-size: cover;
   position: relative;
-  background-position: center center;
 }
 
 .home-registration-form {
@@ -2593,6 +2592,88 @@ hr {
 /*# sourceMappingURL=style.css.map */
 
 /*New styles for API documentation*/
+.sidebar {
+  position: fixed;
+  overflow-y: scroll;
+  height: 100%;
+  background: #fff;
+  z-index: 1;
+  padding-top: 50px;
+}
+.show-sidebar-sm {
+  position: fixed;
+  bottom: 5%;
+  padding: 12px;
+  background: #3bb9ff;
+  width: 60px;
+  z-index: 2;
+  color: white;
+  left: 3%;
+  border-radius: 48%;
+  font-size: 22px;
+  text-align: center;
+  box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+  -webkit-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+  -moz-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+  display: none;
+}
+.inner h6{
+  font-weight: bolder;
+}
+#simple__navigation  .navbar {
+  background: #fff;
+  border-bottom: 1px solid #ececec;
+}
+#simple__navigation  .navbar-nav li{
+
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0 10px;
+
+}
+#simple__navigation  .navbar-nav > li > a {
+  display: block;
+
+  font-size: 13px;
+  background-color: transparent !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: "Nunito", sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#simple__navigation .navbar-light .navbar-nav .active > .nav-link, #simple__navigation .navbar-light .navbar-nav .nav-link.active, #simple__navigation .navbar-light .navbar-nav .nav-link.show,#simple__navigation .navbar-light .navbar-nav .show > #simple__navigation .nav-link {
+  color: #4466d8;
+}
+.code{
+
+  background: #ececec;
+  color: olive;
+  font-size: small;
+  padding: 0 10px;
+  display: inline-block;
+
+}
+.btn-submit{
+  color: #fff;
+  background: #3bb9ff;
+  border: 1px solid #3bb9ff;
+
+}
+@media(max-width: 994px){
+  .sidebar{
+    display: none;
+  }
+  .show-sidebar-sm {
+    display: block;
+  }
+}
 .other-bg {
   background: #0000009c;
   padding: 100px 0;
