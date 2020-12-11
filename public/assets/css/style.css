@@ -2721,4 +2721,17 @@ pre {
   padding: 20px;
   max-height: 400px;
 }
+#donation .home-form-position div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#donation .home-form-position div:first-child {
+  margin-right: 30px;
+
+}
+#bitcoinModal .modal-body{
+  min-height: 200px;
+  height: auto;
+}
 /*End of API documentation styles*/
