@@ -22,8 +22,9 @@
                     <div class=" text-center text-white f-14">
                         <div class="mb-5">
                             <h1 class="text-uppercase mb-4">Support Restful Countries</h1>
-                            <p>Restful Countries API aims is to provide developers/researchers all over the world with relevant information
-                                they need about any country. You may wish to support the research work, development and maintenance of restful
+                            <p>Restful Countries API aims to provide developers and researchers all over the world with relevant information about any country.
+                                </p>
+                            <p>You may wish to support the research work, development and maintenance of restful
                                 countries using any of the channels below:</p>
 
                         </div>
