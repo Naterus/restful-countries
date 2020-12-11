@@ -2606,15 +2606,14 @@ hr {
 }
 
 .select__version {
-  width: 90%;
-  height: 50px;
-  border-radius: 15px;
+  width: 80%;
+  height: 30px;
+  border-radius: 6px;
   text-align: center;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  font-size: 13px;
   color: #000000c4;
+  border: 1px solid #ececec;
 }
-
 .registration-form-box {
   position: relative;
   width: 100%;

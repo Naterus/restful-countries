@@ -1,6 +1,19 @@
 <!-- Navigation Bar-->
 <header  id="topnav" class="defaultscroll scroll-active">
-
+    <!-- Tagline STart -->
+    <div class="tagline">
+        <div class="container">
+            <div class="float-left">
+                <div class="email">
+                    <a href="mail-to:support@restfulcountries.com">
+                        <i class="mdi mdi-email"></i> support@restfulcountries.com
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!-- Tagline End -->
     <!-- Menu Start -->
     <div class="container">
         <!-- Logo container-->

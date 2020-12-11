@@ -5,60 +5,156 @@
 @endsection
 @section("page-style")
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/pretty-print-json.css") !!}"/>
+    <style>
+
+        .sidebar {
+            position: fixed;
+            overflow-y: scroll;
+            height: 100%;
+            background: #fff;
+            z-index: 1;
+            padding-top: 50px;
+        }
+        .show-sidebar-sm {
+            position: fixed;
+            bottom: 5%;
+            padding: 12px;
+            background: #3bb9ff;
+            width: 60px;
+            z-index: 2;
+            color: white;
+            left: 3%;
+            border-radius: 48%;
+            font-size: 22px;
+            text-align: center;
+            box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+            -webkit-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+            -moz-box-shadow: 2px 3px 8px 0px rgba(32,41,66,0.75);
+            display: none;
+        }
+        .inner h6{
+            font-weight: bolder;
+        }
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #ececec;
+        }
+        .navbar-nav li{
+
+            float: left;
+            display: block;
+            position: relative;
+            margin: 0 10px;
+
+        }
+        .navbar-nav > li > a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            background-color: transparent !important;
+            font-weight: 700;
+            letter-spacing: 1px;
+            line-height: 24px;
+            text-transform: uppercase;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+            font-family: "Nunito", sans-serif;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+            color: #4466d8;
+        }
+        .code{
+
+            background: #ececec;
+            color: olive;
+            font-size: small;
+            padding: 0 10px;
+            display: inline-block;
+
+        }
+        @media(max-width: 994px){
+            .sidebar{
+                display: none;
+            }
+            .show-sidebar-sm {
+                display: block;
+            }
+        }
+    </style>
 @endsection
 
 @section('nav-bar')
-    @include('layouts.navbar')
+    <!-- Navigation Bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{!! route('home') !!}">
+                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-w-b.png") !!}" class="logo-light" height="60" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{!! route('home') !!}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{!! route("documentation",env("APP_VERSION")) !!}">Documentation</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{!! route("feedback") !!}">Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{!! route("donate") !!}">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
 @endsection
 
 @section("page-content")
 
-    <!-- Start home -->
-    <section class="other-bg">
-
-        <div class="container text-center">
-            <h2 class="text-uppercase title mb-4">Docs Version {!! $version !!}</h2>
-            <div class="col-lg-6 col-md-6 mx-auto">
-                <div class="home-registration-form p-3 mb-3">
-                    <form class="registration-form">
-                        <div class="row">
 
 
-                            <div class="registration-form-box">
-                                <i class="mdi mdi-book ml-4"></i>
-                                <select id="select-country" name="version" class="select__version">
-                                    @for($version = 1; $version <= env('APP_VERSION'); $version++)
-                                        <option value="{!! $version !!}">Version {!! $version !!}</option>
-                                    @endfor
-                                </select>
-                            </div>
-                        </div>
-
-
-                    </form>
-                </div>
-            </div>
-            <span class="text-white f-14">Documentation helps you navigate our api endpoints.</span>
-
-        </div>
-
-    </section>
-    <!-- end home -->
-
-    <!-- BLOG LIST START -->
+    <!-- API DOCUMENTATION START -->
     <section class="section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="sidebar mt-sm-30 p-4 shadow">
+                <div class="col-lg-3 col-sm-12 " style="margin-left: -25px;">
 
-                        <div class="widget mb-4 pb-2">
-                            <h4 class="widget-title">Endpoints</h4>
+                    <div class="sidebar">
+
+                        <div class="widget mb-4 pl-4">
+                            <h4 class="widget-title">Restful Countries API</h4>
+
+                            <div class="home-registration-form my-4">
+                                <form class="registration-form">
+                                        <div class="registration-form-box">
+                                            <i class="mdi mdi-book ml-2"></i>
+                                            <select id="select-country" name="version" class="select__version">
+                                                @for($version = 1; $version <= env('APP_VERSION'); $version++)
+                                                    <option value="{!! $version !!}">Version {!! $version !!}</option>
+                                                @endfor
+                                            </select>
+                                        </div>
+
+                                </form>
+                            </div>
                             <ul class="list-unstyled mt-4 mb-0 catagories">
                                 <li><a href="#api-reference" class="scroll-div">API Reference</a> </li>
-
-                                <li><a href="#base-url" class="scroll-div">Base Url</a> </li>
-                                <li><a href="#all-countries" class="scroll-div">All Countries</a></li>
+                                <li><a href="#authentication-guide" class="scroll-div">Authentication Guide</a></li>
+                                <li><a href="#rate-limiting" class="scroll-div">Rate Limiting</a> </li>
+                                <li><a href="#base-url" class="scroll-div">Base URL</a></li>
+                                <li><a href="#quick-start" class="scroll-div">Quick Start</a></li>
+                                {{--<li><a href="#all-countries" class="scroll-div">All Countries</a></li>--}}
                                 <li><a href="#country-by-name" class="scroll-div">Country by name</a></li>
                                 <li><a href="#country-by-continent" class="scroll-div">Country by continent</a> </li>
                                 <li><a href="#country-by-code" class="scroll-div">Country by code</a></li>
@@ -79,31 +175,56 @@
                                 <li><a href="#references" class="scroll-div">References</a> </li>
                             </ul>
                         </div>
-
                     </div>
+
                 </div><!--end col-->
 
-                <div class="col-lg-8 col-md-6">
+                <div class="col-lg-8  col-sm-12">
 
                     <div id="api-reference" class="content p-4" >
                         <h4 class="title text-dark">API Reference </h4>
                         <div class="inner">
-                            <p>Restful Countries API is organized around <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" target="_blank"> REST</a>. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, and verbs.</p>
-                            <p> We use <a href="https://en.wikipedia.org/wiki/Throttling_process_(computing)" target="_blank">throttling</a> to ensure /* describe the limits */</p>
+                            <p>Restful Countries API allows users to explore the entire database for information on countries and their states, presidents, flag, population, covid19 stats and others.</p>
+                            <p>Restful Countries API is organized around <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer" target="_blank"> REST</a>. Our API has predictable resource-oriented URLs, returns JSON-encoded responses and uses standard HTTP response codes, and verbs.</p>
                         </div>
                     </div>
 
+                    <div id="authentication-guide" class="content p-4" >
+                        <h4 class="title text-dark">Authentication Guide </h4>
+                        <div class="inner">
+                           <p>No authentication is required while using Restful Countries API.
+                            </p>
+                          
+                        </div>
+                    </div>
+                    <div id="rate-limiting" class="content p-4" >
+                        <h4 class="title text-dark">Rate Limiting </h4>
+                        <div class="inner">
+                            <p>
+                                Rate limiting is applied to the Restful Countries API to ensure a high-quality service is delivered for all users, and to protect client applications from unexpected loops.
+                            </p>
+                            <h6>Per application rates</h6>
+                            <p>
+                                You can make up to 100 requests within a minute period. If you exceed this limit, you will receive a <span class="code">429 Too Many Requests HTTP status code</span>  for each request made within the remainder of the five-minute window. At the end of the period, your rate limit will reset back to its maximum value of 100 requests.
+                            </p>
+                            <h6>Increasing your rate limit</h6>
+                            <p>
+                                If you have an application that requires a higher rate limit than the default applied, then please contact us, we will be happy to help.
+                            </p>
+                        </div>
+                    </div>
 
                     <div id="base-url" class="content p-4" >
-                        <h4 class="title text-dark">Base Url </h4>
+                        <h4 class="title text-dark">Base URL </h4>
                         <div class="inner">
-                            <a href="{{env('APP_URL')}}/api/v1" target="_blank">{{env('APP_URL')}}/api/v1</a>
+                            <p>
+                                <span class="code">GET  <a href="{{env('APP_URL')}}/api/v1" target="_blank">{{env('APP_URL')}}/api/v1</a> </span>
+                            </p>
+
                         </div>
                     </div>
-
-
-                    <div id="all-countries" class="content p-4">
-                        <h4 class="title text-dark">All Countries - <span class="text-success">GET</span></h4>
+                    <div id="quick-start" class="content p-4" >
+                        <h4 class="title text-dark">Quick Start </h4>
                         <div class="inner">
                             <p>Returns a list of all countries available</p>
                             <div class="url">{{env('APP_URL')}}/api/v1/countries</div>
@@ -116,6 +237,7 @@
                             <p>This would return 15 countries per page</p>
                         </div>
                     </div>
+
 
                     <div id="country-by-name" class="content p-4">
                         <h4 class="title text-dark">Country by name - <span class="text-success">GET</span></h4>
@@ -346,9 +468,11 @@
             </div>
         </div>
     </section>
-    <!-- BLOG LIST END -->
+    <!-- API DOCUMENTATION END -->
 
-
+    <div class="show-sidebar-sm">
+        <i class="mdi mdi-book-open-page-variant"></i>
+    </div>
 @endsection
 @section("page-script")
 

@@ -229,13 +229,31 @@ $("#select-country").on("change", function () {
     window.location.href = 'http://restfulcountries.com/api-documentation/version/' + version;
 });
 
-$(document).on('click','.scroll-div', function(event) {
-//            event.preventDefault();
+$(document).on('click','.scroll-div', function() {
     var target =  $(this).attr('href');
-    console.log(target);
+
     $('html, body').animate({
-        scrollTop: $(target).offset().top - 50
+        scrollTop: $(target).offset().top -100
     }, 100);
 });
 
+$(".show-sidebar-sm").click(function () {
+   $(".sidebar").show(300);
+   $(this).hide();
+});
 
+
+if ($(window).width() < 994) {
+
+    $(document).mouseup(function(e)
+    {
+        var container = $(".sidebar");
+
+        if (!container.is(e.target) && container.has(e.target).length === 0)
+        {
+            container.hide();
+            $(".show-sidebar-sm").show()
+        }
+    });
+
+}
