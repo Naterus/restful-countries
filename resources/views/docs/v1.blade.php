@@ -22,17 +22,17 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item {{Route::is('Home')}} active">
+                    <li class="nav-item {{Route::is('home') ? 'active' : ''}}">
                         <a class="nav-link" href="{!! route('home') !!}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{Route::is('documentation') ? 'active' : ''}}">
                         <a class="nav-link" href="{!! route("documentation",env("APP_VERSION")) !!}">Documentation</a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item {{Route::is('feedback') ? 'active' : ''}}">
                         <a class="nav-link" href="{!! route("feedback") !!}">Feedback</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{Route::is('donate') ? 'active' : ''}}">
                         <a class="nav-link" href="{!! route("donate") !!}">Donate</a>
                     </li>
                 </ul>
