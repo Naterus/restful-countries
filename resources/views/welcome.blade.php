@@ -4,6 +4,10 @@
 @section("page-description")
     Get countries information like states, covid19 summary, presidents, flag, population and others via Restful Api.
 @endsection
+@section('nav-bar')
+    @include('layouts.navbar')
+
+@endsection
 @section("page-content")
     <!-- Start Home -->
     <section class="bg-home" style="background: url('{!! asset("storage/images/map2.jpg") !!}') center center;">

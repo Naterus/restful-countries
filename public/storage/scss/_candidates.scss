@@ -1,0 +1,50 @@
+/********************
+  CANDIDATES LISTING
+*********************/
+.fav-icon {
+    i {
+        -webkit-text-stroke: 2px $danger;
+        -webkit-text-fill-color: transparent;
+        
+        &:hover {
+            -webkit-text-stroke: 0px $danger;
+            -webkit-text-fill-color: $danger;
+        }
+    }
+}
+/********************
+  CANDIDATES PROFILE
+*********************/
+.candidates-profile-education {
+    padding: 64px 24px 24px;
+    .profile-education-icon {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        transition: all 0.5s;
+    }
+}
+/********************
+  CANDIDATES RESUME
+*********************/
+.resume-user {
+    width: 90px;
+    height: 90px;
+    line-height: 110px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+@media (max-width: 425px) {
+    .fav-icon {
+        position: absolute;
+        left: 0;
+        right: 200px;
+    }
+}

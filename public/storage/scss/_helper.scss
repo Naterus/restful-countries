@@ -1,0 +1,220 @@
+//
+// helper.scss
+//
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+.section-two {
+    padding: 60px 0;
+    position: relative;
+}
+.bg-overlay {
+    background-color: $overlay;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+
+.bg-overlay-gradient {
+    background-color: $gradident-overlay;
+}
+//Title
+.title-heading {
+    line-height: 26px;
+    .heading {
+        font-size: 45px;
+        letter-spacing: 1px;
+    }
+    .para-desc {
+        font-size: 18px;
+    }
+}
+.section-title {
+    position: relative;
+    .title {
+        letter-spacing: 0.5px;
+        font-size: 30px;
+        &.title-line {
+            &:before {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 80px;
+                left: 50%;
+                top: 60px;
+                text-align: center;
+                background: $primary;
+                margin-left: -42px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                left: 50%;
+                top: 56px;
+                z-index: 1;
+                text-align: center;
+                background: darken($primary, 5%);
+                margin-left: -7px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+} 
+.para-desc {
+    max-width: 600px;
+}
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+// Loader
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(45deg, $white, $white);
+    z-index: 9999999;
+    #status {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            margin: 100px auto;
+            .double-bounce1, .double-bounce2 {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $primary;
+                opacity: 0.6;
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: sk-bounce 2.0s infinite ease-in-out;
+            }
+            .double-bounce2 {
+                animation-delay: -1.0s;
+            }
+        }
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+    }
+  }
+
+//Social icons
+.social-icon {
+    li {
+        a {
+            color: $dark;
+            border: 1px solid $dark;
+            display: inline-block;
+            height: 32px;
+            text-align: center;
+            font-size: 15px;
+            width: 32px;
+            line-height: 30px;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50% !important;
+            &:hover {
+                background-color: $primary;
+                border-color: $primary !important;
+                color: $white !important;
+            }
+        }
+    }
+    &.social {
+        li {
+            a {
+                color: $gray-500;
+                border-color: $gray-500;
+            }
+        }
+    }
+}
+//back to top
+.back-to-top {
+    z-index: 99; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    display: none;
+    color: $dark;
+    background-color: $gray-400;
+    transition: all 0.5s ease; 
+    box-shadow: $shadow;
+    i {
+        font-size: 16px;   
+    }
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+}
+//back-to-home(User Pages)
+.back-to-home {
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    z-index: 1;
+    a {
+        font-size: 22px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background: $primary;
+    }
+}
+.login-page {
+    font-size: 15px;
+    .forgot-pass {
+        z-index: 99;
+        position: relative;
+        font-size: 13px;
+    }
+} 
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+    .title-heading {
+        .heading {
+            font-size: 35px !important;
+        }
+    }
+    .section-title {
+        .title {
+            font-size: 24px;
+        }
+    }
+    .mt-60 {
+        margin-top: 60px;
+    }
+}

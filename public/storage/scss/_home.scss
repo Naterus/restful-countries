@@ -1,0 +1,156 @@
+// Home
+.bg-home {
+    padding: 300px 0px 175px 0px;
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+}
+.home-center {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.home-desc-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+.bg-half {
+    padding: 280px 0px 180px 0px;
+    background-image: url("https://via.placeholder.com/2000X1100//88929f/5a6270C/O https://placeholder.com/");
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+}
+
+.home-registration-form {
+    background: rgba($white, 0.2);
+    border-radius: 10px;
+}
+
+.registration-form-box {
+    position: relative;
+    .selectize-input {
+        line-height: 2.4;
+        padding: 6px 6px 6px 45px;
+        box-shadow: none;
+    }
+}
+
+.registration-form-box {
+    i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+        z-index: 2;
+        color: $muted;
+    }
+}
+
+.registration-input-box {
+    border: none;
+    box-shadow: none !important;
+    font-size: 13px;
+    height: 45px !important;
+    padding: 6px 6px 6px 45px;
+    border: 1px solid darken($light, 5%);
+}
+
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+    border-radius: 10px;
+}
+.selectize-control {
+    line-height: 0.8;
+}
+.selectize-input {
+    border: 1px solid darken($light, 5%);
+}
+.popu-category-box {
+    transition: all 0.5s ease;
+    i {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        background: lighten($primary,45%);
+    }
+    .popu-category-content {
+        .title {
+            font-size: 18px;
+        }
+    }
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: $shadow;
+    }
+}
+
+.how-it-work-box {
+    .how-it-work-img {
+        background-color: lighten($primary, 45%);
+        height: 90px;
+        width: 90px;
+        position: relative;
+        margin: 0 auto;
+        padding: 12px 8px;
+    }
+}
+.testi-box {
+    .testi-icon {
+        i {
+            position: absolute;
+            right: 18px;
+            bottom: 0px;
+            color: lighten($primary, 40%);
+        }
+    }
+}
+
+
+.owl-theme {
+    .owl-controls {
+        .owl-page {
+            span {
+                height: 8px;
+                background: $primary;
+            }
+        }
+    }
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+    .registration-form-box {
+        margin-bottom: 10px;
+    }
+
+    .bg-home, .bg-half {
+        padding: 190px 0px 120px;;
+    }
+}
+
+@media (max-width: 425px) {
+    .mo-mb-2 {
+        margin-bottom: .5rem !important;
+    }
+    #counter {
+        .counter-icon {
+            float: none !important;
+            margin: 0 !important;
+        }
+        .home-counter {
+            text-align: center;
+        }
+    }
+    .subscribe {
+        input {
+            margin: 12px 0;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .testi-icon {
+        i {
+            display: none;
+        }
+    }
+}

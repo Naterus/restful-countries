@@ -18,83 +18,14 @@
     <!--Material Icon -->
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/materialdesignicons.min.css") !!}" />
 
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/fontawesome.css") !!}" />
-
-    <!-- selectize css -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/selectize.css") !!}" />
-
-    <!--Slider-->
-    <link rel="stylesheet" href="{!! asset("storage/css/owl.carousel.css") !!}" />
-    <link rel="stylesheet" href="{!! asset("storage/css/owl.theme.css") !!}" />
-    <link rel="stylesheet" href="{!! asset("storage/css/owl.transitions.css") !!}" />
-
     <!-- Custom  Css -->
     <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/style.css") !!}" />
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/custom.css") !!}" />
+
     @yield("page-style")
 </head>
 <body>
-<!-- Navigation Bar-->
-<header  id="topnav" class="defaultscroll scroll-active">
-    <!-- Tagline STart -->
-    <div class="tagline">
-        <div class="container">
-            <div class="float-left">
-                <div class="email">
-                    <a href="mail-to:support@restfulcountries.com">
-                        <i class="mdi mdi-email"></i> support@restfulcountries.com
-                    </a>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- Tagline End -->
-    <!-- Menu Start -->
-    <div class="container">
-        <!-- Logo container-->
-        <div>
-            <a href="{!! route("home") !!}" class="logo">
-                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-white.png") !!}" class="logo-light" height="60" />
-                <img  alt="Restful Countries" src="{!! asset("storage/images/logo/logo-w-b.png") !!}" class="logo-dark" height="60" />
-            </a>
-        </div>
 
-        <!-- End Logo container-->
-        <div class="menu-extras">
-            <div class="menu-item">
-                <!-- Mobile menu toggle-->
-                <a class="navbar-toggle">
-                    <div class="lines">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </a>
-                <!-- End mobile menu toggle-->
-            </div>
-        </div>
-
-        <div id="navigation">
-            <!-- Navigation Menu-->
-            <ul class="navigation-menu">
-                <li><a href="{!! route('home') !!}">Home</a></li>
-                <li>
-                    <a href="{!! route("documentation",env("APP_VERSION")) !!}">Documentation</a>
-                </li>
-                <li>
-                    <a  href="{!! route("feedback") !!}">Feedback</a>
-                </li>
-                <li>
-                    <a  href="{!! route("donate") !!}">Donate</a>
-                </li>
-
-            </ul><!--end navigation menu-->
-        </div><!--end navigation-->
-    </div><!--end container-->
-    <!--end end-->
-</header><!--end header-->
-<!-- Navbar End -->
+@yield('nav-bar')
 
 
 @yield("page-content")
@@ -128,22 +59,12 @@
 </a>
 <!-- Back to top -->
 
-<!-- javascript -->
+<!-- Jquery -->
 <script src="{!! asset("storage/js/jquery.min.js") !!}"></script>
-<script src="{!! asset("storage/js/bootstrap.bundle.min.js") !!}"></script>
-<script src="{!! asset("storage/js/jquery.easing.min.js") !!}"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="{!! asset("storage/js/plugins.js") !!}"></script>
 
-<!-- selectize js -->
-<script src="{!! asset("storage/js/selectize.min.js") !!}"></script>
-<script src="{!! asset("storage/js/jquery.nice-select.min.js") !!}"></script>
-
-<script src="{!! asset("storage/js/owl.carousel.min.js") !!}"></script>
-<script src="{!! asset("storage/js/counter.int.js") !!}"></script>
-
-<script src="{!! asset("storage/js/app.js") !!}"></script>
-<script src="{!! asset("storage/js/home.js") !!}"></script>
-<script src="{!! asset("storage/users/plugin/modal/remodal/remodal.min.js") !!}"></script>
 @yield("page-script")
 
 </body>

@@ -1,0 +1,24 @@
+
+
+.notification-icon {
+    i {
+        font-size: 27px;
+    }
+    span {
+        position: absolute;
+        top: -5px;
+        right: -7px;
+        font-size: 9px;
+        padding: .45em .6em;
+    }
+}
+
+.subscribe {
+    input {
+        padding: 21px 12px;
+        border: 1px solid darken($light, 4%);
+        &:focus {
+            box-shadow: none;
+        }        
+    }
+}

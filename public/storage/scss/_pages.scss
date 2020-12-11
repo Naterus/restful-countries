@@ -1,0 +1,134 @@
+/********************
+      ABOUT US
+*********************/
+.about-bg {
+    padding: 180px 0px 80px 0px;
+    background-image: url("../images/about-bg.jpg");
+    background-size: cover;
+    position: relative;
+    background-position: center center;
+}
+
+.bolg-post-icon {
+    li {
+        a {
+            color: $muted;
+            transition: all 0.5s;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.nav-pills .nav-link.about-us.active,
+.nav-pills .show>.nav-link.about-us {
+    background-color: rgba(0, 123, 255, 0);
+}
+
+.nav-link {
+    &:hover,
+    &.active {
+        .blog-post-overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($dark, 0.50);
+            border-radius: 10px;
+            transition: all 0.5s;
+        }
+    }
+}
+
+.blog-post-testi-img {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.blog-post-testi-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: 0.5s
+}
+
+.nav-link:hover .blog-post-testi-icon,
+.nav-link.active .blog-post-testi-icon {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+
+
+
+/********************
+      SERVICE
+*********************/
+.service-icon {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: lighten($primary, 44%);
+    width: 86px;
+    height: 90px;
+    line-height: 108px;
+    text-align: center;
+    -webkit-text-stroke: 1px $primary;
+    -webkit-text-fill-color: transparent;
+}
+
+.service-info-img {
+    .service-overlay {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        bottom: 0px;
+        right: 0px; 
+        opacity: 0;
+        .service-info {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+        .title {
+            background: rgba($dark, 0.5);
+        }
+    }
+    &:hover {
+        .service-overlay {
+            opacity: 1;
+        }
+    }
+}
+/********************
+        TEAM
+*********************/
+.team-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background: rgba($dark, 0.8);
+}
+
+/********************
+        PRICING  
+*********************/ 
+.pricing-box {
+    transition: all 0.5s ease;
+    .pricing-plan-item {
+        li {
+            padding: 6px;
+        }
+    }
+    &:hover {
+        box-shadow: $shadow;
+        transform: translateY(-10px);
+    }
+}

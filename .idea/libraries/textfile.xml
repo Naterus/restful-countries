@@ -3,7 +3,6 @@
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/vendor/swiftmailer/swiftmailer/tests/_samples/files/textfile.zip!/" />
     </CLASSES>
-    <JAVADOC />
     <SOURCES />
   </library>
 </component>

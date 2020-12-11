@@ -1,0 +1,601 @@
+//
+// components.scss
+//
+
+//component-wrapper
+.component-wrapper {
+    .title {
+        font-size: 20px;
+    }
+}
+
+//Buttons
+.btn {
+    padding: 8px 20px;
+    outline: none;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    font-weight: 600;
+    border-radius: 10px;
+    &:focus{
+        box-shadow: none !important;
+    }
+    &.btn-sm{
+        padding: 7px 16px;
+        font-size: 12px;
+    }
+    &.btn-lg{
+        padding: 14px 30px;
+        font-size: 16px;
+    } 
+    &.searchbtn {
+        padding: 6px 20px;
+    }
+    &.btn-primary, 
+    &.btn-secondary, 
+    &.btn-success, 
+    &.btn-danger, 
+    &.btn-info, 
+    &.btn-warning, 
+    &.btn-dark {
+        color: $white !important;
+        &:hover, &:focus, &:active, &.active, &.focus {
+            color: $white !important;
+        }
+    }
+
+    &.btn-primary-outline, 
+    &.btn-secondary-outline, 
+    &.btn-success-outline, 
+    &.btn-danger-outline, 
+    &.btn-info-outline, 
+    &.btn-warning-outline,
+    &.btn-dark-outline {
+        &:hover, &:focus, &:active, &.active, &.focus {
+            color: $white !important;            
+        }
+    }
+
+    &.btn-primary {
+        background: $primary;
+        border: 1px solid $primary;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($primary, 10%) !important;
+        }
+    }    
+    &.btn-primary-outline {
+        border: 1px solid $primary;
+        color: $primary;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+
+    &.btn-secondary {
+        background: $secondary;
+        border: 1px solid $secondary;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($secondary, 10%) !important;
+        }
+    }    
+    &.btn-secondary-outline {
+        border: 1px solid $secondary;
+        color: $secondary;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    &.btn-success {
+        background: $success;
+        border: 1px solid $success;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($success, 10%) !important;
+        }
+    }    
+    &.btn-success-outline {
+        border: 1px solid $success;
+        color: $success;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $success;
+            border-color: $success;
+        }
+    }
+
+    &.btn-danger {
+        background: $danger;
+        border: 1px solid $danger;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($danger, 10%) !important;
+        }
+    }    
+    &.btn-danger-outline {
+        border: 1px solid $danger;
+        color: $danger;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $danger;
+            border-color: $danger;
+        }
+    }
+
+    &.btn-info {
+        background: $info;
+        border: 1px solid $info;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($info, 10%) !important;
+        }
+    }    
+    &.btn-info-outline {
+        border: 1px solid $info;
+        color: $info;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $info;
+            border-color: $info;
+        }
+    }
+
+    &.btn-warning {
+        background: $warning;
+        border: 1px solid $warning;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($warning, 10%) !important;
+        }
+    }    
+    &.btn-warning-outline {
+        border: 1px solid $warning;
+        color: $warning;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $warning;
+            border-color: $warning;
+        }
+    }
+
+    &.btn-dark {
+        background: $dark;
+        border: 1px solid $dark;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($dark, 10%) !important;
+        }
+    }    
+    &.btn-dark-outline {
+        border: 1px solid $dark;
+        color: $dark;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $dark;
+            border-color: $dark;
+        }
+    }
+
+    &.btn-light {
+        color: $dark;
+        background: $light;
+        border: 1px solid $gray-300;
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: darken($light, 10%) !important;
+            color: $dark; 
+        }
+    }    
+    &.btn-light-outline {
+        border: 1px solid $gray-300;
+        color: $dark;
+        background-color: transparent;    
+        &:hover, &:focus, &:active, &.active, &.focus{
+            background-color: $light;
+        }
+    }
+}
+.form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+    opacity: 1;
+}
+button:not(:disabled) {
+    outline: none;
+}
+//Shadow 
+.shadow {
+    box-shadow: $shadow !important;
+}
+
+//Processbar
+.progress-box {
+    .title {
+        font-size: 15px;
+    }
+    .progress {
+        height: 10px;
+        overflow: visible;
+        .progress-bar {
+            border-radius: 10px;
+            animation: animate-positive 3s;
+        }
+        .progress-value {
+            position: absolute;
+            top: -25px;
+            right: -15px;
+            font-size: 13px;
+        }
+    }
+    @keyframes animate-positive {
+        0% {
+            width: 0;
+        }
+    }
+}
+//Breadcrumb
+.page-next-level{
+    .title {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .page-next {
+        letter-spacing: 0.5px;
+        padding-left: 0;
+        z-index: 99;
+        li {
+            display: inline-block;
+            margin-right: 5px;
+            &:after {
+                content: "\f142";
+                font-size: 16px;
+                color: $light; 
+                font-family: 'Material Design Icons';
+            }     
+            &:last-child {
+                margin-right: 0;
+                &:after {
+                    display: none;
+                }
+            }       
+            a, span {        
+                font-size: 13px;
+                padding-right: 8px;           
+                transition: all 0.5s ease;
+                color: $gray-400;
+            }
+            a {
+                &:hover {
+                    color: $white !important;
+                }
+            }
+            span {
+                &:last-child {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
+
+//Badges
+.badge {
+    padding: 5px 8px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    &.badge-primary,
+    &.badge-secondary,
+    &.badge-success,
+    &.badge-danger,
+    &.badge-info,
+    &.badge-warning,
+    &.badge-dark {
+        color: $white !important;
+    }
+    &.badge-primary {
+        background-color: $primary !important;
+    }
+    &.badge-secondary {
+        background-color: $secondary !important;
+    }
+    &.badge-success {
+        background-color: $success !important;
+    }
+    &.badge-danger {
+        background-color: $danger !important;
+    }
+    &.badge-warning {
+        background-color: $warning !important;
+    }
+    &.badge-info {
+        background-color: $info !important;
+    }
+    &.badge-light {
+        color: $dark;
+        background-color: $light !important;
+    }
+    &.badge-dark {
+        background-color: $dark !important;
+    }
+}
+
+//Alert
+.alert {
+    padding: 8px 15px;
+    border-radius: 10px;
+    &.alert-primary,
+    &.alert-secondary,
+    &.alert-success,
+    &.alert-danger,
+    &.alert-warning,
+    &.alert-info,
+    &.alert-dark{
+        color: $white;
+    }
+    &.alert-primary {
+        background-color: lighten($primary, 15%);
+        border-color: $primary;
+    }
+    &.alert-secondary {
+        background-color: lighten($secondary, 15%);
+        border-color: $secondary;
+    }
+    &.alert-success {
+        background-color: lighten($success, 15%);
+        border-color: $success;
+    }
+    &.alert-danger {
+        background-color: lighten($danger, 15%);
+        border-color: $danger;
+    }
+    &.alert-warning {
+        background-color: lighten($warning, 15%);
+        border-color: $warning;
+    }
+    &.alert-info {
+        background-color: lighten($info, 15%);
+        border-color: $info;
+    }
+    &.alert-dark {
+        background-color: lighten($dark, 15%);
+        border-color: $dark;
+    }
+    &.alert-light {
+        background-color: $light;
+        color: $dark;
+        border-color: $gray-300;
+    }
+}
+//Avatar
+.avatar {
+    &.avatar-small{
+        height: 80px;
+    }
+    &.avatar-medium{
+        height: 110px;
+    }
+    &.avatar-large{
+        height: 140px;
+    }
+}
+//FAQ
+.faq-container {
+    .question {
+        font-size: 20px;
+    }
+}
+
+.faq-content {
+    .card {
+        .faq {           
+            .card-header {
+                padding-right: 40px !important;
+                &.card-header-2 {
+                    border-bottom: 0;
+                    .faq-question {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }  
+        a.faq[data-toggle=collapse]{
+            background-color: $white;
+            color: $primary;
+            transition: all 0.5s;
+            &:before {
+                content: '\F143';
+                display: block;
+                font-family: 'Material Design Icons';
+                font-size: 18px;
+                color: $dark;
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: all 0.5s ease;
+            }
+            &.collapsed {
+                background-color: $white;
+                color: $dark;
+                transition: all 0.5s;
+                &:before {
+                    top: 20px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .title {
+            font-size: 18px;
+        }
+    }
+}
+
+//Nav
+.nav-pills {
+    .nav-link{
+        color: $dark !important;
+        padding: 0.7rem 2rem;
+        font-weight: 700;
+        &.active {
+            background-color: $primary;
+            color: $white !important;
+            border-color: $primary !important;
+            box-shadow: $shadow;
+        }
+    }
+}
+
+
+//blockquote
+.blockquote {
+    border-left: 3px solid $gray-300;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+//Form
+.form-group {
+    margin-bottom: 20px;
+    label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .form-control {
+        box-shadow: none;
+        border: 1px solid $gray-300;
+        height: 42px; 
+        font-size: 13px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        &:focus, &.active {
+            border-color: $primary;
+        }
+    } 
+    textarea {
+        height: 120px !important;
+        &.form-control {
+            line-height: 25px;
+        }
+    }
+}
+
+//Checkbox / Radio button
+.custom-control-input:checked~.custom-control-label::before {
+    color: $white;
+    border-color: $primary;
+    background-color: $primary;
+}
+.custom-control-input:focus~.custom-control-label::before,
+.form-control:focus,
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+    box-shadow: none;
+    border-color: $primary !important;
+}
+
+.form-button {
+    .nice-select {
+        width: 100%;
+        height: 39px;
+        line-height: 37px;
+        color: $dark;
+        margin-bottom: 1rem;
+        border: solid 1px darken($light, 5%);
+        &.open {
+            .list {
+                width: 100%
+            }
+        }
+    }
+}
+//Subscribe form
+.subcribe-form {
+    input {
+        padding: 14px 20px;
+        width: 100%;
+        color: $dark !important;
+        border: none;
+        outline: none !important;
+        padding-right: 160px;
+        padding-left: 30px;
+        background-color: rgba($white, 0.8);
+    }
+    button {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        outline: none !important;
+    }
+    form {
+        position: relative;
+        max-width: 600px;
+        margin: 0px auto;
+    }
+}
+//pagination
+
+.pagination {
+    &.job-pagination {
+        .page-link {
+            border-radius: 50% !important;
+            margin: 0 4px;
+            height: 46px;
+            width: 45px;
+            line-height: 29px;
+            text-align: center;
+            color: $muted;
+        }
+    }
+    .page-item {
+        &.active {
+            .page-link {
+                background-color: $primary;
+                border-color: $primary;
+                color: $white !important;
+            }
+        }
+    }
+}
+
+
+//Display
+.display-1 {
+    font-size: 80px !important;
+}
+.display-2 {
+    font-size: 72px !important;
+}
+.display-3 {
+    font-size: 64px !important;
+}
+.display-4 {
+    font-size: 56px !important;
+}
+
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 56px !important;
+    }
+    .display-2 {
+        font-size: 50px !important;
+    }
+    .display-3 {
+        font-size: 42px !important;
+    }
+    .display-4 {
+        font-size: 36px !important;
+    }
+}
+
+
+@media (max-width: 425px) {
+    .pagination {
+        li {
+            >a {
+                height: 36px;
+                width: 36px;
+                line-height: 36px;
+            }
+        }
+    }
+}
