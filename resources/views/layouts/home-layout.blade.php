@@ -7,19 +7,19 @@
     <meta name="description" content="@yield("page-description")" />
     <meta name="keywords" content="Countries,States Api, Restful api,Covid19,Countries Api,Continents,Api,Earth,States,Presidents, Presidents Api, Independence, Donations" />
     <meta name="author" content="Nathan Dauda">
-    <meta property="og:image" itemprop="image" content="{!! asset("storage/images/logo/logo-w-b.png") !!}">
+    <meta property="og:image" itemprop="image" content="{!! asset("assets/images/logo/logo-w-b.png") !!}">
     <title>Restful Countries - @yield("title")</title>
 
-    <link rel="shortcut icon" href="{!! asset("storage/images/logo/logo-white.png") !!}">
+    <link rel="shortcut icon" href="{!! asset("assets/images/logo/logo-white.png") !!}">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{!! asset("storage/css/bootstrap.min.css") !!}" type="text/css">
+    <link rel="stylesheet" href="{!! asset("assets/css/bootstrap.min.css") !!}" type="text/css">
 
     <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/materialdesignicons.min.css") !!}" />
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/materialdesignicons.min.css") !!}" />
 
     <!-- Custom  Css -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/style.css") !!}" />
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/style.css") !!}" />
 
     @yield("page-style")
 </head>
@@ -32,9 +32,6 @@
 
 
 
-<span>
-       <hr>
-    </span>
 <footer class="footer footer-bar">
     <div class="container text-center">
         <div class="row justify-content-center">
@@ -60,10 +57,10 @@
 <!-- Back to top -->
 
 <!-- Jquery -->
-<script src="{!! asset("storage/js/jquery.min.js") !!}"></script>
+<script src="{!! asset("assets/js/jquery.min.js") !!}"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="{!! asset("storage/js/plugins.js") !!}"></script>
+{{--<script src="{!! asset("assets/js/plugins.js") !!}"></script>--}}
 
 @yield("page-script")
 
