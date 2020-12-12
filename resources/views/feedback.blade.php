@@ -17,15 +17,14 @@
 @section("page-content")
 
     <!-- Start home -->
-    <section class="bg-half page-next-level"
-             style="">
+    <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 mx-auto">
                     <div class=" text-white f-14">
                         <div class="mb-4">
-                        <h1 class="text-uppercase mb-4">Feedback</h1>
+                        <h1 class="text-uppercase mb-4 text-center">Feedback</h1>
 
                         <p>Tell us what you think is missing in restful countries, it could be a bug,feature,or
                             incorrect data returned in our api.</p>
