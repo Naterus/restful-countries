@@ -3,6 +3,8 @@
 /storage/*.key
 /.idea
 /vendor
+/public/assets/images/logo
+/public/assets/images/presidents
 .env
 .env.backup
 .phpunit.result.cache
