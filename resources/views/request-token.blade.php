@@ -42,7 +42,7 @@
                                 <input type="email" class="form-control" name="email" required>
                                 <br/>
                                 <label>Website Url (Optional) </label>
-                                <input type="website" class="form-control" name="email" required>
+                                <input type="text" class="form-control" name="website">
                                 <br/>
 
                                 <button class="btn  btn-submit" >Submit</button>

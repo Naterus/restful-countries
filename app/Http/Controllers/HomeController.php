@@ -76,9 +76,12 @@ class HomeController extends Controller
             "website" => "string|max:40"
         ]);
 
-        $validated_details["password"] = bcrypt($validated_details["email"]);
-
-        $created_user = User::create($validated_details);
+        $created_user = User::create([
+            "email" => $validated_details["email"],
+            "website" => $validated_details["website"],
+            "password" => bcrypt($validated_details["email"]),
+            "status" => 0
+        ]);
 
         $api_token = $created_user->createToken('authToken')->accessToken;
 
