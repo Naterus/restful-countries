@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FeedBack;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -67,5 +68,24 @@ class HomeController extends Controller
 
     public function requestAccessToken(){
         return view("request-token");
+    }
+
+    public function generateApiToken(Request $request){
+        $validated_details = $this->validate($request,[
+            "email" => "required|unique:users|min:6|max:40",
+            "website" => "string|max:40"
+        ]);
+
+        $validated_details["password"] = bcrypt($validated_details["email"]);
+
+        $created_user = User::create($validated_details);
+
+        $api_token = $created_user->createToken('authToken')->accessToken;
+
+        return redirect()->back()->with([
+            "success" => "Api access Token generated successfully. Kindly copy and use as authorization bearer token to all requests.",
+            "api_token"  => $api_token
+        ]);
+
     }
 }
