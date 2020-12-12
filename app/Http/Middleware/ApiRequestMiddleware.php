@@ -4,19 +4,11 @@ namespace App\Http\Middleware;
 
 use App\ApiRequest;
 use Closure;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 
 class ApiRequestMiddleware
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
+
     public function handle($request, Closure $next)
     {
         //Log After result is sent
@@ -32,11 +24,14 @@ class ApiRequestMiddleware
                 "endpoint" => $request->path(),
                 "status" => $status,
                 "host" => $request->getClientIp(),
+                "email" => $request->user()->email,
+                "website" => $request->user()->website,
                 "message" => "Request returned ".$response->getStatusCode()
             ]
         );
 
         return $next($request);
     }
+
 
 }
