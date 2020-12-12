@@ -64,4 +64,8 @@ class HomeController extends Controller
 
         return redirect()->back()->with("success","Thanks for your feedback.");
     }
+
+    public function requestAccessToken(){
+        return view("request-token");
+    }
 }

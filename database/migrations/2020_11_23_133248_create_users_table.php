@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('role_id')->unsigned()->index();
             $table->tinyInteger('status')->default(1);
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->foreign("role_id")->references("id")->on("roles")->onDelete("cascade");
             $table->rememberToken();
             $table->timestamps();

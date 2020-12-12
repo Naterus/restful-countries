@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => ["throttle:100,1","api_logger"]], function(){
+Route::group(['middleware' => ["auth:api","throttle:100,1","api_logger"]], function(){
 
     Route::get("/",'CountryController@getCountries');
 

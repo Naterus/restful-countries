@@ -13,6 +13,8 @@ Route::get('/api-documentation/version/{version}','HomeController@documentation'
 
 Route::get('/feedback','HomeController@feedback')->name('feedback');
 
+Route::get('/request-access-token','HomeController@requestAccessToken')->name('request_token');
+
 Route::post('/feedback/submit','HomeController@submitFeedback')->name('feedback.submit');
 
 
