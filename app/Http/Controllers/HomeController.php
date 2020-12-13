@@ -89,6 +89,5 @@ class HomeController extends Controller
             "success" => "Api access Token generated successfully. Kindly copy and use as authorization bearer token to all requests.",
             "api_token"  => $api_token
         ]);
-
     }
 }
