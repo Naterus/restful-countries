@@ -12,15 +12,17 @@ class AccessTokenMail extends Mailable
     use Queueable, SerializesModels;
 
     public $access_token;
+    public $email;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($access_token)
+    public function __construct($access_token,$email)
     {
         $this->access_token = $access_token;
+        $this->email = $email;
 
     }
 
