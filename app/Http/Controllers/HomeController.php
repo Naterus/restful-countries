@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\FeedBack;
 
+use App\Mail\AccessTokenMail;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailer;
 
 class HomeController extends Controller
 {
@@ -70,7 +72,7 @@ class HomeController extends Controller
         return view("request-token");
     }
 
-    public function generateApiToken(Request $request){
+    public function generateApiToken(Request $request,Mailer $mail){
         $validated_details = $this->validate($request,[
             "email" => "required|unique:users|min:6|max:40",
             "website" => "string|max:40"
@@ -85,10 +87,17 @@ class HomeController extends Controller
 
         $api_token = $created_user->createToken('authToken')->accessToken;
 
-        return redirect()->back()->with([
-            "success" => "Api access Token generated successfully. Kindly copy and use as authorization bearer token to all requests.",
-            "api_token"  => $api_token
-        ]);
+        try {
+            $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"]));
+        }catch (\Exception $e){
+            return redirect()->back()->with([
+                "success" => "A problem occurred while attempting to send mail, below is your access token. Ensure you copy and save securely.",
+                "api_token"  => $api_token
+            ]);
+        }
 
+        return redirect()->back()->with([
+            "success" => "Api access Token has been sent to your email successfully.",
+        ]);
     }
 }
