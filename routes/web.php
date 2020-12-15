@@ -13,9 +13,9 @@ Route::get('/api-documentation/version/{version}','HomeController@documentation'
 
 Route::get('/feedback','HomeController@feedback')->name('feedback');
 
-Route::get('/request-access-token','HomeController@requestAccessToken')->name('request_token');
+Route::get('/request-access-token','ApiTokenController@requestAccessToken')->name('request_token');
 
-Route::post('/request-access-token/generate-token','HomeController@generateApiToken')->name('request_token.generate');
+Route::post('/request-access-token/generate-token','ApiTokenController@generateApiToken')->name('request_token.generate');
 
 Route::post('/feedback/submit','HomeController@submitFeedback')->name('feedback.submit');
 

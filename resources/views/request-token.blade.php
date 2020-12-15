@@ -24,17 +24,24 @@
                         </div>
 
                         <div class="home-form-position">
-                            @if(Session::has('success') && Session::has('api_token'))
+
+                            @if(Session::has('success'))
                                 <div class="alert alert-success text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                    <p>{!! Session::get('success') !!}</p>
+                                    <strong>{!! Session::get('success') !!}</strong>
                                 </div>
+                            @endif
+
+                            @if(Session::has('api_token'))
+
                                 <textarea placeholder="API Token" id="api-token" class="api-text" rows="14" readonly>
                                     {!! Session::get('api_token') !!}
                                 </textarea>
 
-                            <button class="copy-btn">Copy</button>
+                                <button class="copy-btn">Copy</button>
                             @endif
+
+
                             <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
                                 @csrf
                                 <div class="form-group">
@@ -58,7 +65,7 @@
             </div>
 
         </div>
-        </div>
+
     </section>
     <!-- end home -->
 
