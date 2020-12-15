@@ -3,11 +3,7 @@
 @section("page-description")
     Request Token to access Api.
 @endsection
-@section("page-style")
-    <link rel="stylesheet" href="{!! asset("assets/users/plugin/modal/remodal/remodal.css") !!}">
-    <link rel="stylesheet" href="{!! asset("assets/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
 
-@endsection
 
 @section('nav-bar')
     @include('layouts.navbar')
@@ -15,7 +11,6 @@
 
 
 @section("page-content")
-
     <!-- Start home -->
     <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>
@@ -32,20 +27,30 @@
                             @if(Session::has('success') && Session::has('api_token'))
                                 <div class="alert alert-success text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                    <strong>{!! Session::get('success') !!}</strong>
-                                    <p class="text-info">{!! Session::get('api_token') !!}</p>
+                                    <p>{!! Session::get('success') !!}</p>
                                 </div>
+                                <textarea placeholder="API Token" id="api-token" class="api-text" rows="14" readonly>
+                                    {!! Session::get('api_token') !!}
+                                </textarea>
+
+                            <button class="copy-btn">Copy</button>
                             @endif
                             <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
                                 @csrf
-                                <label>Email Address </label>
-                                <input type="email" class="form-control" name="email" required>
-                                <br/>
-                                <label>Website Url (Optional) </label>
-                                <input type="text" class="form-control" name="website">
-                                <br/>
+                                <div class="form-group">
+                                    <label>Email address </label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                                </div>
 
-                                <button class="btn  btn-submit" >Submit</button>
+                                <div class="form-group">
+                                    <label>Website URL </label>
+                                    <input type="text" class="form-control" name="website" placeholder="Website URL">
+                                </div>
+                                <div class="form-group">
+
+                                    <button class="btn  btn-submit" >Submit</button>
+                                </div>
+
                             </form>
                         </div>
                     </div>
@@ -61,6 +66,8 @@
 
 @endsection
 @section("page-script")
+<script>
 
+</script>
 
 @endsection

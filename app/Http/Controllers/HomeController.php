@@ -90,6 +90,7 @@ class HomeController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"]));
         }catch (\Exception $e){
+
             return redirect()->back()->with([
                 "success" => "A problem occurred while attempting to send mail, below is your access token. Ensure you copy and save securely.",
                 "api_token"  => $api_token

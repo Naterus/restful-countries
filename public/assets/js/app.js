@@ -254,6 +254,18 @@ if ($(window).width() < 994) {
             container.hide();
             $(".show-sidebar-sm").show()
         }
-    });
 
+    });
+    $(".scroll-div").click(function () {
+        $(".sidebar").hide(300);
+        $(".show-sidebar-sm").show()
+    });
 }
+
+$(".copy-btn").click(function () {
+    var copyText = document.getElementById("api-token");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("You have copied your API key");
+});
