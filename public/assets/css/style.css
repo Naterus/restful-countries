@@ -605,10 +605,10 @@ button:not(:disabled) {
   margin-bottom: 20px;
 }
 
-.form-group label {
-  font-size: 14px;
-  font-weight: 700;
-}
+/*.form-group label {*/
+  /*font-size: 14px;*/
+  /*font-weight: 700;*/
+/*}*/
 
 .form-group .form-control {
   -webkit-box-shadow: none;
@@ -2186,25 +2186,25 @@ a.job-list[data-toggle=collapse].collapsed:before {
   font-size: 18px;
 }
 
-.sidebar .widget .catagories li {
+.sidebar .widget .categories li {
   padding-bottom: 10px;
 }
 
-.sidebar .widget .catagories li:last-child {
+.sidebar .widget .categories li:last-child {
   padding-bottom: 0;
 }
 
-.sidebar .widget .catagories li a, .sidebar .widget .catagories li span {
+.sidebar .widget .categories li a, .sidebar .widget .categories li span {
   font-size: 15px;
 }
 
-.sidebar .widget .catagories li a {
+.sidebar .widget .categories li a {
   color: #3c4858;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
-.sidebar .widget .catagories li a:hover {
+.sidebar .widget .categories li a:hover {
   color: #2f55d4;
 }
 
@@ -2651,14 +2651,13 @@ hr {
 #simple__navigation .navbar-light .navbar-nav .active > .nav-link, #simple__navigation .navbar-light .navbar-nav .nav-link.active, #simple__navigation .navbar-light .navbar-nav .nav-link.show,#simple__navigation .navbar-light .navbar-nav .show > #simple__navigation .nav-link {
   color: #4466d8;
 }
-.code{
-
+.code {
   background: #ececec;
   color: olive;
-  font-size: small;
+  /*font-size: small;*/
   padding: 0 10px;
   display: inline-block;
-
+  margin-bottom: 20px;
 }
 .btn-submit{
   color: #fff;
@@ -2712,6 +2711,7 @@ hr {
 }
 .inner .url{
   color:#007bff;
+  overflow-wrap: break-word;
 }
 pre {
   display: block;
@@ -2733,5 +2733,44 @@ pre {
 #bitcoinModal .modal-body{
   min-height: 200px;
   height: auto;
+}
+.mb-40{
+  margin-bottom: 40%;
+}
+.copy-btn {
+  position: absolute;
+  right: 35px;
+  margin-top: 5px;
+  background: none;
+  border: 1px solid #3bb9ff;
+  font-size: 12px;
+  color: #3bb9ff;
+}
+.api-text {
+  width: 100%;
+  padding: 0 50px 0 10px;
+  margin-bottom: 20px;
+  color: #ccc;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.alert.alert-success {
+  background-color: #3bb9ff;
+  border-color: #3bb9ff;
+}
+.content{
+  margin-bottom: 20px;
+}
+.color-alert {
+  color: #a52a2a;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+.pre-dark{
+  color: #fff;
+  background: #343a40;
+}
+.sidebar .widget .categories li a:active,.sidebar .widget .categories li > a:active {
+  color: #556179;
+  font-weight:700;
 }
 /*End of API documentation styles*/

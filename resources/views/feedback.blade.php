@@ -43,6 +43,7 @@
                                 <option value="Bug">Bug</option>
                                 <option value="Appraisal">Appraisal</option>
                                 <option value="Data Error">Data Error</option>
+                                <option value="Rate Limiting">Rate Limiting</option>
                                 <option value="Others">Others</option>
                             </select>
                             <br/>

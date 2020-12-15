@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\FeedBack;
 
-use App\Mail\AccessTokenMail;
-use App\User;
+
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
 
@@ -67,5 +66,6 @@ class HomeController extends Controller
 
         return redirect()->back()->with("success","Thanks for your feedback.");
     }
+
 
 }
