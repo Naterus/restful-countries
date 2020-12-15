@@ -33,7 +33,7 @@ class ApiTokenController extends Controller
         }catch (\Exception $e){
 
             return redirect()->back()->with([
-                "success" => "Api access Token been generated successfully but failed to send mail. below is your api key",
+                "success" => "Api Access Token been generated successfully but failed to send mail. Please find your API Access Token below",
                 "api_token" => $api_token
             ]);
 

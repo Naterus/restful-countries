@@ -1,0 +1,38 @@
+{
+  "data": {
+    "name": "Nigeria",
+    "full_name": "Federal Republic of Nigeria",
+    "capital": "Abuja",
+    "iso2": "NG",
+    "iso3": "NGA",
+    "covid19": {
+      "total_case": "69,645",
+      "total_deaths": "1,181",
+      "last_updated": "2020-12-09T09:57:48.000000Z"
+    },
+    "current_president": {
+      "name": "Muhammadu Buhari",
+      "gender": "Male",
+      "appointment_start_date": "2015-05-29",
+      "appointment_end_date": null,
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents/Muhammadu-Buhari",
+        "country": "https://restfulcountries.com/api/v1/countries/Nigeria",
+        "picture": "https://restfulcountries.com/storage/images/presidents/muhammadu-buharipxpjw98lcj.jpg"
+      }
+    },
+    "currency": "NGN",
+    "phone_code": "234",
+    "continent": "Africa",
+    "description": "Nigeria is the most populous country in Africa and the seventh most populous country in the world, with an estimated 206 million inhabitants as of late 2019.  The name Nigeria was taken from the Niger River running through the country.",
+    "size": "923,768 km²",
+    "independence_date": "1960-10-01",
+    "population": "208,355,710",
+    "href": {
+      "self": "https://restfulcountries.com/api/v1/countries/Nigeria",
+      "states": "https://restfulcountries.com/api/v1/countries/Nigeria/states",
+      "presidents": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents",
+      "flag": "https://restfulcountries.com/storage/images/flags/Nigeria.png"
+    }
+  }
+}

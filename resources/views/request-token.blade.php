@@ -4,7 +4,6 @@
     Request Token to access Api.
 @endsection
 
-
 @section('nav-bar')
     @include('layouts.navbar')
 @endsection
@@ -24,29 +23,28 @@
                         </div>
 
                         <div class="home-form-position">
-
-                            @if(Session::has('success'))
-                                <div class="alert alert-success text-center">
-                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            @if(Session::has('success') || Session::has('api_token'))
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert"
+                                        aria-hidden="true">&times;</button>
+                                @if(Session::has('success'))
                                     <strong>{!! Session::get('success') !!}</strong>
-                                </div>
+                                @endif
+                                @if(Session::has('api_token'))
+                                    <div style="margin: 1.5rem;">
+                                        <input type="text" placeholder="API Token" id="api-token" class="api-text "
+                                               value="{!! Session::get('api_token') !!}" readonly>
+                                        <button class="copy-btn">Copy</button>
+                                    </div>
+                                @endif
+                            </div>
                             @endif
-
-                            @if(Session::has('api_token'))
-
-                                <textarea placeholder="API Token" id="api-token" class="api-text" rows="14" readonly>
-                                    {!! Session::get('api_token') !!}
-                                </textarea>
-
-                                <button class="copy-btn">Copy</button>
-                            @endif
-
-
                             <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
                                 @csrf
                                 <div class="form-group">
                                     <label>Email address </label>
-                                    <input type="email" class="form-control" name="email" placeholder="Email address" required>
+                                    <input type="email" class="form-control" name="email" placeholder="Email address"
+                                           required>
                                 </div>
 
                                 <div class="form-group">
@@ -55,7 +53,7 @@
                                 </div>
                                 <div class="form-group">
 
-                                    <button class="btn  btn-submit" >Submit</button>
+                                    <button class="btn  btn-submit">Submit</button>
                                 </div>
 
                             </form>
@@ -72,9 +70,4 @@
 
 
 @endsection
-@section("page-script")
-<script>
 
-</script>
-
-@endsection

@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="{!! asset("assets/images/logo/logo-white.png") !!}">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{!! asset("assets/css/bootstrap.min.css") !!}" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!--Material Icon -->
     <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/materialdesignicons.min.css") !!}" />
@@ -60,7 +60,8 @@
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script src="{!! asset("assets/js/plugins.js") !!}" defer></script>
-
+<script src="{!! asset("assets/js/pretty-print-json.js") !!}"></script>
+<script src="{!! asset("assets/js/app.js") !!}"></script>
 @yield("page-script")
 
 </body>
