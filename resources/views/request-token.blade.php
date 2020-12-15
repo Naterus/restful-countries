@@ -35,6 +35,11 @@
                                     <strong>{!! Session::get('success') !!}</strong>
                                     <p class="text-info">{!! Session::get('api_token') !!}</p>
                                 </div>
+                            @elseif(Session::has('success'))
+                                <div class="alert alert-success text-center">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    <strong>{!! Session::get('success') !!}</strong>
+                                </div>
                             @endif
                             <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
                                 @csrf

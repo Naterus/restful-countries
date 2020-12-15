@@ -15,7 +15,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^7.29",
-        "laravel/passport": "~9.0",
+        "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.5",
         "league/omnipay": "^3.1",
         "omnipay/paypal": "^3.0"
