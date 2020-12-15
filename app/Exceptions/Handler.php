@@ -2,12 +2,11 @@
 
 namespace App\Exceptions;
 
-use Http\Discovery\Exception\NotFoundException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Exceptions\ThrottleRequestsException;
 use Illuminate\Http\Response;
-use Symfony\Component\HttpKernel\Exception\TooManyRequestsHttpException;
+use Illuminate\Auth\AuthenticationException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -61,7 +60,7 @@ class Handler extends ExceptionHandler
                     "status" => Response::HTTP_NOT_FOUND,
                     "message" => $exception->getMessage()
                 ]
-            ]);
+            ],404);
         }
 
         if($exception instanceof ThrottleRequestsException){
@@ -70,7 +69,16 @@ class Handler extends ExceptionHandler
                     "status" => Response::HTTP_TOO_MANY_REQUESTS,
                     "message" => $exception->getMessage()
                 ]
-            ]);
+            ],429);
+        }
+
+        if($exception instanceof AuthenticationException){
+            return response()->json([
+                "error" => [
+                    "status" => Response::HTTP_UNAUTHORIZED,
+                    "message" => $exception->getMessage()." Visit https://www.restfulcountries.com/request-access-token to generate token. See documentation for more details."
+                ]
+            ],401);
         }
 
         return parent::render($request, $exception);
