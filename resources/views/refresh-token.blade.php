@@ -1,8 +1,9 @@
 @extends("layouts.home-layout")
-@section("title","Request Token")
+@section("title","Refresh Token")
 @section("page-description")
-    Request Token to access Api.
+    Refresh Api Access Token.
 @endsection
+
 
 @section('nav-bar')
     @include('layouts.navbar')
@@ -18,8 +19,8 @@
                 <div class="col-md-8 mx-auto">
                     <div class=" text-white f-14">
                         <div class="mb-4">
-                            <h1 class="text-uppercase mb-4 text-center">Api Token Request</h1>
-                            <p>Request authorization token to get complete access to Api.</p>
+                            <h1 class="text-uppercase mb-4 text-center">Refresh Api Token</h1>
+                            <p>If you already generated a token but can't access it, provide your email to get new one.</p>
                         </div>
 
                         <div class="home-form-position">
@@ -29,17 +30,18 @@
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                     <strong>{!! Session::get('success') !!}</strong>
                                 </div>
-                                <div style="margin: 1.5rem;">
-                                        <input type="text" placeholder="API Token" id="api-token" class="api-text "
-                                               value="{!! Session::get('api_token') !!}" readonly>
-                                        <button class="copy-btn">Copy</button>
-                                 </div>
+                                <textarea placeholder="API Token" id="api-token" class="api-text" rows="14" readonly>
+                                    {!! Session::get('api_token') !!}
+                                </textarea>
+
+                                <button class="copy-btn">Copy</button>
                             @elseif(Session::has('success') )
                                 <div class="alert alert-success text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                     <strong>{!! Session::get('success') !!}</strong>
                                 </div>
                             @endif
+
                             @if(Session::has('error'))
                                 <div class="alert alert-danger text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -47,25 +49,21 @@
                                 </div>
                             @endif
 
-                            <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
+
+                            <form action="{!! route('refresh_token.regenerate') !!}" method="post" name="donation-form">
                                 @csrf
                                 <div class="form-group">
                                     <label>Email address </label>
-                                    <input type="email" class="form-control" name="email" placeholder="Email address"
-                                           required>
+                                    <input type="email" class="form-control" name="email" placeholder="Email address" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Website URL </label>
-                                    <input type="text" class="form-control" name="website" placeholder="Website URL">
-                                </div>
-                                <div class="form-group">
 
-                                    <button class="btn  btn-submit">Submit</button>
+                                    <button class="btn  btn-submit" >Submit</button>
                                 </div>
 
                             </form>
-                            <a href="{!! route("refresh_token") !!}">Refresh Token</a>
+                            <a href="{!! route("request_token") !!}">Request new Token</a>
                         </div>
                     </div>
                 </div>
@@ -76,5 +74,12 @@
     </section>
     <!-- end home -->
 
-@endsection
 
+
+@endsection
+@section("page-script")
+    <script>
+
+    </script>
+
+@endsection
