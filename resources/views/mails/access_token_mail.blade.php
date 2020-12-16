@@ -34,7 +34,7 @@
 
                                         <tr>
                                             <td align="left" class="menu">
-                                                Below is your access token for restful countries api, please ignore is you did not request for this service.
+                                                {!! $mail_message !!}.
                                             </td>
 
                                         </tr>

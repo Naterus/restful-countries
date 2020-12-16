@@ -13,16 +13,18 @@ class AccessTokenMail extends Mailable
 
     public $access_token;
     public $email;
+    public $mail_message;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($access_token,$email)
+    public function __construct($access_token,$email,$mail_message)
     {
         $this->access_token = $access_token;
         $this->email = $email;
+        $this->mail_message = $mail_message;
 
     }
 

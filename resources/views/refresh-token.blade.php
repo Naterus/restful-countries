@@ -1,7 +1,7 @@
 @extends("layouts.home-layout")
-@section("title","Request Token")
+@section("title","Refresh Token")
 @section("page-description")
-    Request Token to access Api.
+    Refresh Api Access Token.
 @endsection
 
 
@@ -19,8 +19,8 @@
                 <div class="col-md-8 mx-auto">
                     <div class=" text-white f-14">
                         <div class="mb-4">
-                            <h1 class="text-uppercase mb-4 text-center">Api Token Request</h1>
-                            <p>Request authorization token to get complete access to Api.</p>
+                            <h1 class="text-uppercase mb-4 text-center">Refresh Api Token</h1>
+                            <p>If you already generated a token but can't access it, provide your email to get new one.</p>
                         </div>
 
                         <div class="home-form-position">
@@ -41,6 +41,7 @@
                                     <strong>{!! Session::get('success') !!}</strong>
                                 </div>
                             @endif
+
                             @if(Session::has('error'))
                                 <div class="alert alert-danger text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -48,7 +49,8 @@
                                 </div>
                             @endif
 
-                            <form action="{!! route('request_token.generate') !!}" method="post" name="donation-form">
+
+                            <form action="{!! route('refresh_token.regenerate') !!}" method="post" name="donation-form">
                                 @csrf
                                 <div class="form-group">
                                     <label>Email address </label>
@@ -56,16 +58,12 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label>Website URL </label>
-                                    <input type="text" class="form-control" name="website" placeholder="Website URL">
-                                </div>
-                                <div class="form-group">
 
                                     <button class="btn  btn-submit" >Submit</button>
                                 </div>
 
                             </form>
-                            <a href="{!! route("refresh_token") !!}">Refresh Token</a>
+                            <a href="{!! route("request_token") !!}">Request new Token</a>
                         </div>
                     </div>
                 </div>
