@@ -483,10 +483,7 @@ button:not(:disabled) {
   border-color: #5a6d90;
 }
 
-.alert.alert-success {
-  background-color: #68ddad;
-  border-color: #2eca8b;
-}
+
 
 .alert.alert-danger {
   background-color: #ed828e;
@@ -2739,24 +2736,25 @@ pre {
 }
 .copy-btn {
   position: absolute;
-  right: 35px;
   margin-top: 5px;
   background: none;
   border: 1px solid #3bb9ff;
   font-size: 12px;
   color: #3bb9ff;
+  right: 45px;
 }
 .api-text {
-  width: 100%;
+   width: 100%;
   padding: 0 50px 0 10px;
   margin-bottom: 20px;
-  color: #ccc;
+  color: #5b5b5b;
   border: 1px solid #ced4da;
   border-radius: .25rem;
+  height: 50px;
 }
 .alert.alert-success {
-  background-color: #3bb9ff;
-  border-color: #3bb9ff;
+  background-color: #15546c75;
+  border-color: #15546c75;
 }
 .content{
   margin-bottom: 20px;

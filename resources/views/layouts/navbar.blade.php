@@ -1,3 +1,4 @@
+{{--todo : merge navbar styilng with navbar styling on documentation page--}}
 <!-- Navigation Bar-->
 <header  id="topnav" class="defaultscroll scroll-active">
     <!-- Tagline STart -->

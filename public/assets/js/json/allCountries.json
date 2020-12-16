@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "name": "Nigeria",
+      "full_name": "Federal Republic of Nigeria",
+      "capital": "Abuja",
+      "iso2": "NG",
+      "iso3": "NGA",
+      "covid19": {
+        "total_case": "67,412",
+        "total_deaths": "1,173",
+        "last_updated": "2020-11-30T19:36:49.000000Z"
+      },
+      "current_president": {
+        "name": "Muhammadu Buhari",
+        "gender": "Male",
+        "appointment_start_date": "2015-05-29",
+        "appointment_end_date": null,
+        "href": {
+          "self": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents/Muhammadu-Buhari",
+          "country": "https://restfulcountries.com/api/v1/countries/Nigeria",
+          "picture": "https://restfulcountries.com/storage/images/presidents/muhammadu-buharipxpjw98lcj.jpg"
+        }
+      },
+      "currency": "NGN",
+      "phone_code": "234",
+      "continent": "Africa",
+      "description": "Nigeria is the most populous country in Africa and the seventh most populous country in the world, with an estimated 206 million inhabitants as of late 2019.  The name Nigeria was taken from the Niger River running through the country.",
+      "size": "923,768 km²",
+      "independence_date": "1960-10-01",
+      "population": "208,355,710",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Nigeria",
+        "states": "https://restfulcountries.com/api/v1/countries/Nigeria/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Nigeria/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Nigeria.png"
+      }
+    }
+  ],
+  "links": {
+    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+    "last": "https://restfulcountries.com/api/v1/countries?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 1,
+    "path": "https://restfulcountries.com/api/v1/countries",
+    "per_page": 1,
+    "to": 1,
+    "total": 1
+  }
+}
