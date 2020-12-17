@@ -1,0 +1,170 @@
+@charset "ISO-8859-1";
+.header .logo {
+	color: #ffffff;
+	background: #3bb9ff;
+	font-weight: 500;
+}
+.header .logo img{
+    height:100%;
+    margin-bottom:25px;
+}
+
+.navigation .menu > li.current > a {
+	background: #3bb8ee;
+	color: #ffffff;
+}
+
+.fixed-navbar {
+
+	background: #3bb9ff;
+	color: #ffffff;
+}
+
+.menu-mobile-button {
+	color: #ffffff;
+	background: #3bb8ee;
+}
+
+@media (min-width: 1025px) {
+	.navigation .menu a:hover {
+		color: #3bb8ee;
+	}
+	.navigation .menu a:hover i {
+		color: #3bb8ee;
+	}
+}
+
+@media (min-width: 800px) {
+	.main-menu {
+		transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		-ms-transition: none;
+		-webkit-transition: none;
+	}
+	.header .logo {
+		transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		-ms-transition: none;
+		-webkit-transition: none;
+	}
+	.menu-active .header {
+		width: 75px;
+		height: 0;
+		padding: 0;
+	}
+	.menu-active .header .logo {
+		position: fixed;
+		z-index: 988;
+		width: 75px;
+		height: 75px;
+		font-size: 0;
+		line-height: 80px;
+		color: #3bb8ee;
+		background: transparent;
+	}
+	.menu-active .header .logo::first-letter {
+		font-size: 28px;
+	}
+	.menu-active .header .logo:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 75px;
+		height: 75px;
+		background: #3bb8ee;;
+		z-index: -2;
+	}
+	.menu-active .header .logo:after {
+		content: '';
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		width: 35px;
+		height: 35px;
+		background: #ffffff;
+		z-index: -1;
+		border-radius: 50%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+	}
+	.menu-active .main-menu {
+		width: 75px;
+		padding-top: 75px;
+		position: absolute;
+	}
+	.menu-active .fixed-navbar {
+		left: 75px;
+		z-index: 40;
+	}
+	.menu-active .main-content {
+		margin-left: 95px;
+	}
+	.menu-active .user {
+		display: none;
+	}
+	.menu-active .navigation .title {
+		display: none;
+	}
+	.menu-active .navigation .menu > li {
+		position: relative;
+	}
+	.menu-active .navigation .menu > li > a {
+		height: 48px;
+		padding: 10px 30px;
+		transition: color 0.4s ease;
+		-moz-transition: color 0.4s ease;
+		-o-transition: color 0.4s ease;
+		-ms-transition: color 0.4s ease;
+		-webkit-transition: color 0.4s ease;
+	}
+	.menu-active .navigation .menu > li > a span {
+		display: none;
+		font-size: 14px;
+		line-height: 30px;
+	}
+	.menu-active .navigation .menu > li > a .menu-arrow,
+	.menu-active .navigation .menu > li > a .notice {
+		display: none!important;
+	}
+	.menu-active .navigation .menu > li:hover > a {
+		width: 260px;
+		background: #3bb8ee;
+		color: #ffffff;
+		padding-left: 90px;
+	}
+	.menu-active .navigation .menu > li:hover > a i {
+		color: #ffffff;
+	}
+	.menu-active .navigation .menu > li:hover > a span {
+		display: block;
+	}
+	.menu-active .navigation .menu > li:hover .sub-menu {
+		display: block!important;
+	}
+	.menu-active .navigation .menu .menu-icon {
+		font-size: 24px;
+		width: 75px;
+	}
+	.menu-active .navigation .menu .sub-menu {
+		display: none!important;
+		position: absolute;
+		top: 100%;
+		left: 75px;
+		width: 185px;
+	}
+	.menu-active .navigation .menu .sub-menu a {
+		background: #e6e9ed;
+		padding: 10px 15px;
+	}
+	.menu-active .mCSB_container,
+	.menu-active .mCustomScrollBox,
+	.menu-active .content {
+		overflow: visible;
+	}
+	.menu-active body {
+		height: auto;
+	}
+}

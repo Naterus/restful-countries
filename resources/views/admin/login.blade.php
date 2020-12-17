@@ -10,25 +10,25 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <link rel="shortcut icon" href="{!! asset("storage/images/logo/logo-white.png") !!}">
+    <link rel="shortcut icon" href="{!! asset("assets/images/logo/logo-white.png") !!}">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{!! asset("storage/css/bootstrap.min.css") !!}" type="text/css">
+    <link rel="stylesheet" href="{!! asset("assets/css/bootstrap.min.css") !!}" type="text/css">
 
     <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/materialdesignicons.min.css") !!}" />
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/materialdesignicons.min.css") !!}" />
 
     <!-- Custom  Css -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/style.css") !!}" />
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/style.css") !!}" />
 
-    <link rel="stylesheet" type="text/css" href="{!! asset("storage/css/custom.css") !!}" />
+    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/custom.css") !!}" />
 
 </head>
 
 <body>
 
 <!-- Hero Start -->
-<section class="vh-100" style="background: url('{!! asset("storage/images/login.jpg") !!}') center center;">
+<section class="vh-100" style="background: url('{!! asset("assets/images/login.jpg") !!}') center center;">
 
     <div class="home-center">
         <div class="home-desc-center">
@@ -37,7 +37,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="login-page bg-white shadow rounded p-4">
                             <div class="text-center">
-                                <a href="{!! route('home') !!}"><img src="{!! asset("storage/images/logo/logo-v.png") !!}" alt="" class="logo-light" height="100" style="margin-bottom:30px;"/></a>
+                                <a href="{!! route('home') !!}"><img src="{!! asset("assets/images/logo/logo-v.png") !!}" alt="" class="logo-light" height="100" style="margin-bottom:30px;"/></a>
 
                             </div>
                             <form class="login-form" action="{!! route("admin.login.attempt") !!}" method="post">
@@ -73,13 +73,13 @@
 <!-- Hero End -->
 
 <!-- javascript -->
-<script src="{!! asset("storage/js/jquery.min.js") !!}"></script>
-<script src="{!! asset("storage/js/bootstrap.bundle.min.js") !!}"></script>
-<script src="{!! asset("storage/js/jquery.easing.min.js") !!}"></script>
-<script src="{!! asset("storage/js/plugins.js") !!}"></script>
+<script src="{!! asset("assets/js/jquery.min.js") !!}"></script>
+<script src="{!! asset("assets/js/bootstrap.bundle.min.js") !!}"></script>
+<script src="{!! asset("assets/js/jquery.easing.min.js") !!}"></script>
+<script src="{!! asset("assets/js/plugins.js") !!}"></script>
 
 
-<script src="{!! asset("storage/js/app.js") !!}"></script>
+<script src="{!! asset("assets/js/app.js") !!}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 @if(Session::has('error'))

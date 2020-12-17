@@ -46,7 +46,7 @@ class ApiTokenController extends Controller
         }catch (\Exception $e){
 
             return redirect()->back()->with([
-                "success" => "Api Access Token been generated successfully but failed to send mail. Please find your API Access Token below",
+                "success" => "Api Access Token generated successfully but failed to send mail. Please find your API Access Token below",
                 "api_token" => $api_token
             ]);
 
@@ -80,7 +80,7 @@ class ApiTokenController extends Controller
         }catch (\Exception $e){
 
             return redirect()->back()->with([
-                "success" => "Api access Token been regenerated successfully but failed to send mail. below is your new api key",
+                "success" => "Api access token regenerated successfully but failed to send mail. below is your new api key",
                 "api_token" => $api_token
             ]);
 
