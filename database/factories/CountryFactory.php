@@ -6,11 +6,16 @@ use App\Country;
 use Faker\Generator as Faker;
 
 $factory->define(Country::class, function (Faker $faker) {
+    $country = $faker->country;
     return [
-        'name' => $faker->country,
-        'population' => $faker->randomDigit,
+        'name' => $country,
+        'full_name' => $country,
+        'flag' => str_replace(" ","-",$country).".png",
+        'population' => $faker->randomNumber(),
+        'size' => $faker->randomNumber(),
+        'capital' => $faker->state,
+        'currency' => $faker->currencyCode,
         'description' => $faker->paragraph,
-        'flag' => $faker->country.".png",
         'iso2' => $faker->countryISOAlpha3,
         'iso3' => $faker->countryISOAlpha3,
         'code' => $faker->countryCode,

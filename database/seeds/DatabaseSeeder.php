@@ -16,10 +16,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        factory(App\Country::class,4)->create();
-        factory(App\State::class,50)->create();
+        factory(App\Country::class,5)->create();
+        factory(App\State::class,100)->create();
         factory(App\Role::class,1)->create();
         factory(App\User::class,1)->create();
+
+        //Create permissions for Super admin role
         foreach (helper::instance()->appOperations() as $operation){
             Permission::create([
                 "role_id" => 1,
@@ -27,6 +29,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        //Create covid 19 data for newly seeded countries
         $countries = Country::all();
         foreach ($countries as $country){
             Covid19::create([
