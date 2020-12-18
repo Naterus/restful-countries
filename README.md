@@ -10,75 +10,20 @@ Restful (JSON) Api to retrieve data about any country with an admin management c
 
 Everything on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
 
-## Donations
-
-A kind gesture would be appreciated for the maintenance of restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
-
-
-## Use Case
-A basic use case of this api is to populate your form with countries and states data using a select field.
-Here is a sample jquery script.
+## Usage
+`Curl`
 
 ```angular2html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    //Populate countries select on page load
-    $(document).ready(function(){
-        $.get('https://restfulcountries.com/api/v1/countries',function(countries){
-            //Loop through data returned and populate select field 
-            $.each(countries.data,function(key,value){
-                $('#country-select')
-                    .append($("<option></option>")
-                        .attr("value", value.name)
-                        .text(value.name));
-            });
-
-        });
-    });
-
-
-    //Load states on country change
-    $("#country-select").change(function(){
-        country=$("#country-select").val();
-
-        //Remove previous loaded options
-        $('#state-select option:gt(0)').remove();
-        $('#district-select option:gt(0)').remove();
-        $.get('https://restfulcountries.com/api/v1/countries/'+country+'/states',function(states){
-
-            //Loop through data returned and populate select field 
-            $.each(states.data,function(key,value){
-                $('#state-select')
-                    .append($("<option></option>")
-                        .attr("value", value.name)
-                        .text(value.name));
-            });
-
-        });
-    });
-
-</script>
-```
-Then of course add 2 select fields on your html form with IDs `country-select` and `state-select` which would be called in the script.
-
-```angular2html
-
-<select id="country-select" class="form-control">
-    <option selected disabled>Country</option>
-</select>
-
-<select  id="state-select" name="" class="form-control">
-    <option selected disabled>State</option>
-</select>
+curl -I https://restfulcountries.com/api/v1/countries?per_page=1  -H "Accept: application/json" -H "Authorization: Bearer Your-token"
 
 ```
-That's it, you should have your select populated with countries on load and get the country states on country select change.
-There are many other use cases, it all depends on the data you wish to access.
+`Postman`
+
 
 ## Documentation
 See api documentation here -  [Api Docs](https://restfulcountries.com/api-documentation)
 
-## Installation
+## Installation Guide
 The current release of restful countries is built with Laravel Framework 7.29.3 and might need [PHP](https://php.net) 7.4+ to run smoothly.
 
 If you wish to run the app for the purpose of contributing or just for personal use, you can follow these steps.
@@ -111,6 +56,11 @@ don't forget to add `APP_VERSION=1` to your .env, very important.
 ## Contributing
 
 See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
+
+## Donations
+
+A kind gesture would be appreciated for the maintenance of restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
+
 
 ## License
 

@@ -20,7 +20,7 @@ class ApiTokenController extends Controller
     public function generateApiToken(Request $request,Mailer $mail){
         $validated_details = $this->validate($request,[
             "email" => "required|min:6|max:40",
-            "website" => "string|max:40"
+            "website" => "max:40"
         ]);
 
         $existing_user = User::whereEmail($validated_details["email"])->first();
@@ -44,12 +44,12 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
+            $created_user->tokens()->delete();
+            $created_user->delete();
 
             return redirect()->back()->with([
-                "success" => "Api Access Token generated successfully but failed to send mail. Please find your API Access Token below",
-                "api_token" => $api_token
+                "error" => $e->getMessage(),
             ]);
-
         }
 
         return redirect()->back()->with([
@@ -78,10 +78,10 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
+            $existing_user->tokens()->delete();
 
             return redirect()->back()->with([
-                "success" => "Api access token regenerated successfully but failed to send mail. below is your new api key",
-                "api_token" => $api_token
+                "error" => $e->getMessage(),
             ]);
 
         }
