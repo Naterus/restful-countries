@@ -53,7 +53,7 @@
                             <form action="{!! route('refresh_token.regenerate') !!}" method="post" name="donation-form">
                                 @csrf
                                 <div class="form-group">
-                                    <label>Email address </label>
+                                    <label>Email address <span class="text-danger">*</span></label>
                                     <input type="email" class="form-control" name="email" placeholder="Email address" required>
                                 </div>
 
@@ -63,7 +63,7 @@
                                 </div>
 
                             </form>
-                            <a href="{!! route("request_token") !!}">Request new Token</a>
+                            <a href="{!! route("request_token") !!}" style="color: #ffffff;">Request new Token</a>
                         </div>
                     </div>
                 </div>
