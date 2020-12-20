@@ -113,7 +113,11 @@
 
 
                 <div class="col-lg-8 col-md-12  ml-auto px-0">
-
+                    <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
+                        <button class="btn btn-outline-dark">
+                            <i class="mdi mdi-github-circle"></i> Edit This Page
+                        </button>
+                    </a>
                     <div class="text-right">
                         <a href="{{url('/request-access-token')}}">
                             <button class="btn btn-primary" style="font-size: smaller;">Get Token</button>
@@ -126,8 +130,8 @@
                             <p>Restful Countries API allows users to explore the entire database for information on
                                 countries and their states, presidents, flag, population, covid19 stats and others.</p>
                             <p>Restful Countries API is organized around <a
-                                        href="http://en.wikipedia.org/wiki/Representational_State_Transfer"
-                                        target="_blank"> REST</a>. Our API has predictable resource-oriented URLs,
+                                    href="http://en.wikipedia.org/wiki/Representational_State_Transfer"
+                                    target="_blank"> REST</a>. Our API has predictable resource-oriented URLs,
                                 returns JSON-encoded responses and uses standard HTTP response codes, and verbs.</p>
                         </div>
                     </div>
@@ -236,9 +240,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}/api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?per_page=1" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -310,10 +314,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/Nigeria" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}" </pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -403,10 +406,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?continent=africa" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -503,10 +505,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?population_from=20000&population_to=5000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -605,10 +606,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?size_from=300&size_to=200000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -685,10 +685,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?iso2=GH" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -764,10 +763,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?iso3=AGO" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -842,10 +840,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?code=234" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -856,8 +853,6 @@
                             </div>
                         </div>
                     </div>
-                    {{--todo is slim the right phrase? --}}
-                    {{--todo is URL correct? seems fixed--}}
                     <div id="country-slim" class="content ">
                         <h4 class="title text-dark">Slim Country Response </h4>
                         <div class="inner">
@@ -922,9 +917,9 @@
                             <div>
                                 <h5>Sample Request</h5>
                                 <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                    /api/v1/countries?per_page=20"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -995,10 +990,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/nigeria/presidents" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1077,16 +1071,14 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/nigeria/presidents/Muhammadu Buhari" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
 
                                 <pre id="president-by-country-name-response"></pre>
-
 
                             </div>
                         </div>
@@ -1153,7 +1145,7 @@
                                 <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
                                     /api/v1/countries?per_page=1"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1217,7 +1209,7 @@
                                             <td>Specifies countries covid19 death rate starting point i.e. lowest death rate.
                                                 Example
                                                 <div class="code"> <span class="url"> {{env('APP_URL')}}
-                                                        /api/v1/countries?death_from=10000</span></div>
+                                                        /api/v1/covid19?death_from=10000</span></div>
                                             </td>
                                             <td>integer</td>
 
@@ -1228,7 +1220,7 @@
                                             <td>Specifies countries covid19 death rate ending point i.e. highest death rate.
                                                 Example
                                                 <div class="code"> <span class="url"> {{env('APP_URL')}}
-                                                        /api/v1/countries?death_to=50000</span></div>
+                                                        /api/v1/covid19?death_to=50000</span></div>
                                             </td>
                                             <td>integer</td>
 
@@ -1247,10 +1239,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/covid19?death_from=1000&death_to1000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1341,10 +1332,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/covid19?total_from=2000&total_to=10000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1416,10 +1406,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/Nigeria/states" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1494,10 +1483,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/united-states/states/Alaska" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1513,7 +1501,7 @@
                         <h4 class="title text-dark">Slim State Response </h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries/UnitedStates/states?fetch_type=slim</span></div>
+                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
 
                             <p>Returns minimal information of country's state. Response will only include name, phone code,
                                 flag and self link </p>
@@ -1557,7 +1545,7 @@
                                             <td class="color-alert">fetch_type</td>
                                             <td>required</td>
                                             <td>Specifies that response should only include name, ISO 2 code, ISO 3 code and self link. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/UnitedStates/states?fetch_type=slim</span></div>
+                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
                                             </td>
                                             <td>String</td>
 
@@ -1570,10 +1558,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
-                                    /api/v1/countries?per_page=1"</pre>
+                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/united-states/states?fetch_type=slim" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                            href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
