@@ -42,7 +42,7 @@
 <body>
 <div class="main-menu">
     <header class="header">
-        <div class="logo" >
+        <div class="logo">
             <a href="{!! route("home") !!}" target="_blank"><img src="{!! asset('assets/images/logo/logo-blue.png') !!}" alt="Restful Countries" /></a>
         </div>
         <button type="button" class="button-close fa fa-times js__menu_close"></button>
@@ -189,6 +189,30 @@
         }
     </script>
 @endif
+@if(Session::has("success"))
+    <script>
+        Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "rtl": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": 300,
+            "hideDuration": 1000,
+            "timeOut": 10000,
+            "extendedTimeOut": 1000,
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+@endif
 @if(Session::has("error"))
     <script>
         Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
@@ -204,7 +228,32 @@
             "onclick": null,
             "showDuration": 300,
             "hideDuration": 1000,
-            "timeOut": 5000,
+            "timeOut": 10000,
+            "extendedTimeOut": 1000,
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
+@endif
+
+@if(Session::has("errors"))
+    <script>
+        Command: toastr["error"]("{!! $errors->first() !!}", "Error")
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "rtl": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": 300,
+            "hideDuration": 1000,
+            "timeOut": 10000,
             "extendedTimeOut": 1000,
             "showEasing": "swing",
             "hideEasing": "linear",

@@ -39,14 +39,14 @@
                                 <label for="inputEmail3" class="col-sm-2 control-label">New Password</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <input type="password" name="new_password" required="required" class="form-control" >
+                                    <input type="password" name="password" required="required" class="form-control" >
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Confirm New Password</label>
                                 <span ></span>
                                 <div class="col-sm-6">
-                                    <input type="password" name="confirm_password" required="required" class="form-control" >
+                                    <input type="password" name="password_confirmation" required="required" class="form-control" >
                                 </div>
                             </div>
 
@@ -67,54 +67,4 @@
 
     </div>
     <!-- /.main-content -->
-@endsection
-@section("page-script")
-    @if(Session::has("success"))
-        <script>
-            Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
-    @if(Session::has("error"))
-        <script>
-            Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
 @endsection

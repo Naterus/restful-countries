@@ -82,14 +82,22 @@ class AdminController extends Controller
     }
 
     public function updateProfile(Request $request){
-        $this->validate($request,[
+        $validated_passwords = $this->validate($request,[
             "old_password" => "required",
-            "new_password" => "required",
-            "password_confirm" => "required"
+            "password" => "required|min:7|max:16|confirmed",
         ]);
 
+        if(password_verify($validated_passwords["old_password"],Auth::user()->password)){
 
 
+            User::findOrFail(Auth::user()->id)->update([
+               "password" => bcrypt($validated_passwords["password"])
+            ]);
+            return redirect()->back()->with("success","Password changed successfully.");
+
+        }
+
+        return redirect()->back()->with("error","Old password incorrect, please check and try again.");
 
     }
 
