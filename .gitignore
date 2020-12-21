@@ -2,8 +2,8 @@
 /public/hot
 /storage/*.key
 /.idea
+/.github
 /vendor
-/public/assets/images/logo
 /public/assets/images/presidents
 .env
 .env.backup
