@@ -81,6 +81,7 @@
                 @csrf
                 <div class="remodal-content">
                     <h2 id="modal1Title">Import Covid-19 Data from CSV File</h2>
+                    <p>Get file from <a href="https://covid19.who.int/table" target="_blank">https://covid19.who.int/table</a></p>
                     <label for="inputEmail3" class="col-sm-12 control-label">Csv file</label>
                     <input type="file" name="covid_csv" class="form-control">
                     <br/>
