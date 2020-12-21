@@ -18,8 +18,9 @@ curl -I https://restfulcountries.com/api/v1/countries?per_page=1  -H "Accept: ap
 
 ```
 `Postman`
+<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="120"></p>
 
-
+[Request access token](https://restfulcountries.com/request-token) to test api endpoints.
 ## Documentation
 See api documentation here -  [Api Docs](https://restfulcountries.com/api-documentation)
 
@@ -63,9 +64,13 @@ If you wish to run the app for the purpose of contributing or just for personal 
     ```bash
     php artisan serve
    ```
-10. open http://127.0.0.1:8000/ in your browser
 
-You should see the home page of restful countries.
+10. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
+
+11. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
+
+12. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
+
 
 ## Contributing
 
@@ -73,7 +78,7 @@ See contribution  guide here - [Restful Countries Contribution](https://laravel.
 
 ## Donations
 
-A kind gesture would be appreciated for the maintenance of restful countries. If you are interested in donating to restful countries, please visit [donation page](https://restfulcountries.com/donation).
+If you would like to sponsor this project, please visit [donation page](https://restfulcountries.com/donation).
 
 
 ## License
