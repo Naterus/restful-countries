@@ -10,24 +10,7 @@
 
 
 @section("page-content")
-    <style>
-        .close{
-            margin-top: -3px;
-        }
-        .alert.alert-danger {
-            background-color: #e43f52;
-            border-color: #e43f52;
-            min-height: 40px;
-        }
-        .refresh{
-            /*text-align: right;*/
-            /*margin-top: -40px;*/
-        }
-        .refresh a{
-            font-size: 15px;
-            color: #66c8ff;
-        }
-    </style>
+
     <!-- Start home -->
     <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>

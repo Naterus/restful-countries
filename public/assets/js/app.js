@@ -1,7 +1,7 @@
 //todo : Store sample json data in individual json files
 
 
-//todo simplify the functions below into one simple function
+//todo : simplify the functions below into one simple function
 
 $.getJSON( "../../assets/js/json/allCountries.json", function( data ) {
     $('#all-countries-response').html(prettyPrintJson.toHtml(data));
@@ -31,32 +31,12 @@ $.getJSON( "../../assets/js/json/countriesByIso3.json", function( data ) {
     $('#country-by-iso3-response').html(prettyPrintJson.toHtml(data));
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-$('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
-$('#states-response').html(prettyPrintJson.toHtml(statesResponse));
-$('#presidents-response').html(prettyPrintJson.toHtml(presidentsResponse));
-$('#countries-slim').html(prettyPrintJson.toHtml(countriesSlim));
-$('#states-slim').html(prettyPrintJson.toHtml(statesSlim));
-$('#president-by-country-name-response').html(prettyPrintJson.toHtml(presidentByCountry));
+// $('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
+// $('#states-response').html(prettyPrintJson.toHtml(statesResponse));
+// $('#presidents-response').html(prettyPrintJson.toHtml(presidentsResponse));
+// $('#countries-slim').html(prettyPrintJson.toHtml(countriesSlim));
+// $('#states-slim').html(prettyPrintJson.toHtml(statesSlim));
+// $('#president-by-country-name-response').html(prettyPrintJson.toHtml(presidentByCountry));
 
 $("#select-country").on("change", function () {
     version = $("select[name='version']").val();
@@ -67,7 +47,7 @@ $(document).on('click','.scroll-div', function() {
     var target =  $(this).attr('href');
 
     $('html, body').animate({
-        scrollTop: $(target).offset().top -100
+        scrollTop: $(target).offset().top - 100
     }, 100);
 });
 
@@ -103,4 +83,28 @@ $(".copy-btn").click(function () {
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
     alert("You have copied your API key");
+});
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+        if (entry.intersectionRatio > 0) {
+            document.querySelector(`.list-unstyled li a[href="#${id}"]`).classList.add('active');
+        } else {
+            document.querySelector(`.list-unstyled li a[href="#${id}"]`).classList.remove('active');
+        }
+    });
+});
+
+// Track all sections that have an `id` applied
+document.querySelectorAll('.content[id]').forEach((section) => {
+    observer.observe(section);
+});
+
 });
