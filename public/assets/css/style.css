@@ -2734,6 +2734,9 @@ pre {
 .mb-40{
   margin-bottom: 40%;
 }
+.mr-6{
+  margin-right: 4rem;
+}
 .copy-btn {
   position: absolute;
   margin-top: 5px;
