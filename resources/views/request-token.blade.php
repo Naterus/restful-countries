@@ -10,6 +10,24 @@
 
 
 @section("page-content")
+    <style>
+        .close{
+            margin-top: -3px;
+        }
+        .alert.alert-danger {
+            background-color: #e43f52;
+            border-color: #e43f52;
+            min-height: 40px;
+        }
+        .refresh{
+            /*text-align: right;*/
+            /*margin-top: -40px;*/
+        }
+        .refresh a{
+            font-size: 15px;
+            color: #66c8ff;
+        }
+    </style>
     <!-- Start home -->
     <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>
@@ -51,13 +69,13 @@
                                 @csrf
                                 <div class="form-group">
                                     <label>Email address <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" name="email" placeholder="Email address"
+                                    <input type="email" value="{{old('email')}}" class="form-control" name="email" placeholder="Email address"
                                            required>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Website URL </label>
-                                    <input type="text" class="form-control" name="website" placeholder="Website URL">
+                                    <input type="text" value="{{old('website')}}"  class="form-control" name="website" placeholder="Website URL">
                                 </div>
                                 <div class="form-group">
 
@@ -65,7 +83,10 @@
                                 </div>
 
                             </form>
-                            <a href="{!! route("refresh_token") !!}" style="color: #ffffff;">Refresh Token</a>
+                                <div class="refresh">
+                                    Click here to <a href="{!! route("refresh_token") !!}"> Refresh Token !</a>
+
+                                </div>
                         </div>
                     </div>
                 </div>
