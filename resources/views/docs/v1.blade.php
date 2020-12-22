@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/pretty-print-json.css") !!}"/>
 @endsection
 
-{{--todo: as the page scrolls set active links and onclick of link set active link - sidebar--}}
+
 {{--todo: Update sample request and response--}}
 
 @section('nav-bar')
