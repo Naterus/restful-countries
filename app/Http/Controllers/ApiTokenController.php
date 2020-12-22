@@ -27,7 +27,9 @@ class ApiTokenController extends Controller
 
         if($existing_user){
             return redirect()->back()->with([
-                "error" => "Api access Token has already been generated for this email, refresh token if you don't have access to it.",
+                "error" => "API access Token has already been generated for this email. 
+                            If this is your email address, please click \"Refresh Token\" below to generate a new access
+                            token.",
             ]);
         }
 
@@ -73,7 +75,7 @@ class ApiTokenController extends Controller
         $existing_user->tokens()->delete();
 
         $api_token = $existing_user->createToken('authToken')->plainTextToken;
-        $mail_message = "Congratulations!, you successfully generated a new access token for restful countries api, please ignore if you did not request for this service";
+        $mail_message = "Congratulations!, you successfully generated a new access token for restful countries api, please ignore this mail if you did not request for this service";
 
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));

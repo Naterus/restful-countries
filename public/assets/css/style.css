@@ -2201,10 +2201,9 @@ a.job-list[data-toggle=collapse].collapsed:before {
   transition: all 0.5s ease;
 }
 
-.sidebar .widget .categories li a:hover {
-  color: #2f55d4;
+.sidebar .widget .categories .active, .sidebar .widget .categories li a:hover, .sidebar .widget .categories a:active,.sidebar .widget .categories li:active{
+  color: #4466e0;
 }
-
 .sidebar .widget .post-recent {
   padding-bottom: 15px;
 }
@@ -2734,6 +2733,23 @@ pre {
 .mb-40{
   margin-bottom: 40%;
 }
+.mr-6{
+  margin-right: 4rem;
+}
+.close{
+  margin-top: -3px;
+}
+.alert{
+  min-height: 40px;
+}
+.alert.alert-danger {
+  background-color: #e43f52;
+  border-color: #e43f52;
+}
+.refresh a{
+  font-size: 15px;
+  color: #66c8ff;
+}
 .copy-btn {
   position: absolute;
   margin-top: 5px;
@@ -2767,8 +2783,5 @@ pre {
   color: #fff;
   background: #343a40;
 }
-.sidebar .widget .categories li a:active,.sidebar .widget .categories li > a:active {
-  color: #556179;
-  font-weight:700;
-}
+
 /*End of API documentation styles*/

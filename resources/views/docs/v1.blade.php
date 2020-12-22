@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/pretty-print-json.css") !!}"/>
 @endsection
 
-{{--todo: as the page scrolls set active links and onclick of link set active link - sidebar--}}
+
 {{--todo: Update sample request and response--}}
 
 @section('nav-bar')
@@ -42,7 +42,13 @@
                         <li class="nav-item {{Route::is('donate') ? 'active' : ''}}">
                             <a class="nav-link" href="{!! route("donate") !!}">Donate</a>
                         </li>
+
                     </ul>
+                    <div class="my-2 my-lg-0">
+                        <a href="{{url('/request-access-token')}}">
+                            <button class="btn btn-dark">Get Token</button>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -113,16 +119,16 @@
 
 
                 <div class="col-lg-8 col-md-12  ml-auto px-0">
-                    <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
-                        <button class="btn btn-outline-dark">
-                            <i class="mdi mdi-github-circle"></i> Edit This Page
-                        </button>
-                    </a>
-                    <div class="text-right">
-                        <a href="{{url('/request-access-token')}}">
-                            <button class="btn btn-primary" style="font-size: smaller;">Get Token</button>
-                        </a>
+                    <div class="row my-3">
+                        <div class="ml-auto mr-6">
+                            <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
+                                <button class="btn btn-outline-dark">
+                                    <i class="mdi mdi-github-circle"></i> Edit this page
+                                </button>
+                            </a>
+                        </div>
                     </div>
+
 
                     <div id="api-reference" class="content">
                         <h4 class="title text-dark">API Reference </h4>
@@ -1590,9 +1596,7 @@
                                 <li><a href="https://covid19.who.int/" target="_blank">https://covid19.who.int</a></li>
                             </ul>
 
-                            <small>See <a href="{!! route("feedback") !!}">Feedback</a> to submit errors or new feature
-                                suggestions
-                            </small>
+                            <small>Please visit our <a href="{!! route("feedback") !!}">Feedback page</a> to let us know your complaints or suggestions for new features.</small>
                         </div>
                     </div>
 
