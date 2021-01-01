@@ -2031,6 +2031,9 @@ a.job-list[data-toggle=collapse].collapsed:before {
     left: 0;
     right: 200px;
   }
+  body {
+    font-size: 14px;
+  }
 }
 
 .employers-list {
@@ -2705,9 +2708,12 @@ hr {
 .inner{
   padding-left:20px;
 }
-.inner .url{
-  color:#007bff;
+
+.inner .url {
+  color: #007bff;
   overflow-wrap: break-word;
+  word-break: break-all;
+}
 }
 pre {
   display: block;

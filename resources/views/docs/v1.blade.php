@@ -29,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item {{Route::is('home') ? 'active' : ''}}">
-                            <a class="nav-link" href="{!! route('home') !!}">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{!! route('home') !!}">Home </a>
                         </li>
                         <li class="nav-item {{Route::is('documentation') ? 'active' : ''}}">
                             <a class="nav-link"
@@ -62,7 +62,7 @@
 
 
     <!-- API DOCUMENTATION START -->
-    <section style="margin-top: 100px;padding: 0 20px;">
+    <section style="margin-top: 100px;">
         <div class="container-fluid">
             <div class="row">
 
@@ -122,7 +122,7 @@
                     <div class="row my-3">
                         <div class="ml-auto mr-6">
                             <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
-                                <button class="btn btn-outline-dark">
+                                <button class="btn btn-outline-dark btn-sm">
                                     <i class="mdi mdi-github-circle"></i> Edit this page
                                 </button>
                             </a>
