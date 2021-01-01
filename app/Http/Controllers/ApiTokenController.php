@@ -27,7 +27,7 @@ class ApiTokenController extends Controller
 
         if($existing_user){
             return redirect()->back()->with([
-                "error" => "API access Token has already been generated for this email. 
+                "error" => "API access Token has already been generated for this email.
                             If this is your email address, please click \"Refresh Token\" below to generate a new access
                             token.",
             ]);

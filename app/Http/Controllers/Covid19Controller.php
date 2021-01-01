@@ -41,9 +41,9 @@ class Covid19Controller extends Controller
         //Extend execution time
         ini_set("max_execution_time",1500);
 
+        //Upload file
         $file = $request->covid_csv;
         $extension = $file->getClientOriginalExtension();
-        $file_name = "covid-19".str_replace(" ","_",now()).".".$extension;
 
         if($extension != "csv"){
             return redirect()->back()->with([
@@ -51,12 +51,12 @@ class Covid19Controller extends Controller
             ]);
         }
 
-        $path = "assets/docs";
-        $file->move($path, $file_name);
+        $file_name = "covid-19".str_replace(" ","_",now()).".".$extension;
+        Storage::putFileAs('public/docs/', $file, $file_name);
 
         $countries = Country::all();
         //Read uploaded file
-        $covid_csv_file = fopen(asset("assets/docs/". $file_name),'r');
+        $covid_csv_file = fopen(asset("storage/docs/".$file_name),'r');
 
         $csv_fields = fgetcsv($covid_csv_file);
 
