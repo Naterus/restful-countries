@@ -1,8 +1,8 @@
-<p align="center"><a href="https://restfulcountries.com" target="_blank"><img src="https://restfulcountries.com/storage/images/logo/restful-logo-VERTICAL-SVG.svg" width="120"></a></p>
+<p align="center"><a href="https://restfulcountries.com" target="_blank"><img src="https://restfulcountries.com/assets/images/logo/restful-logo-VERTICAL-SVG.svg" width="120"></a></p>
 
 <p align="center">
 
-<a href="https://github.com/Naterus/restful-countries/blob/main/LICENSE"><img src="https://restfulcountries.com/storage/images/license-mit.svg" alt="License"></a>
+<a href="https://github.com/Naterus/restful-countries/blob/main/LICENSE"><img src="https://restfulcountries.com/assets/images/license-mit.svg" alt="License"></a>
 </p>
 
 
@@ -18,7 +18,7 @@ curl -I https://restfulcountries.com/api/v1/countries?per_page=1  -H "Accept: ap
 
 ```
 `Postman`
-<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="120"></p>
+<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="250"></p>
 
 [Request access token](https://restfulcountries.com/request-token) to test api endpoints.
 ## Documentation
