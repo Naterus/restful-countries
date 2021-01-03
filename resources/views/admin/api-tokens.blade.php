@@ -1,7 +1,7 @@
 @extends("layouts.admin-layout")
 @section("title","Api Tokens")
 @section("page-title","Api Tokens")
-@section("api-tokens","current")
+@section("tokens","current")
 @section("page-style")
     <!-- Data Tables -->
     <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/media/css/dataTables.bootstrap.min.css') !!}">
@@ -12,7 +12,7 @@
         <div class="row small-spacing">
             <div class="col-xs-12">
                 <div class="box-content">
-                    <h4 class="box-title">Api Tokens</h4>
+                    <h4 class="box-title">Api Personal Access Tokens</h4>
                     <!-- /.box-title -->
 
                     <!-- /.dropdown js__dropdown -->
@@ -34,10 +34,10 @@
                         @foreach($api_tokens as $api_token)
                             <tr>
                                 <td >{!! $id !!}</td>
-                                <td >{!! $api_token->id !!}</td>
+                                <td >{!! $api_token->user->email !!}</td>
                                 <td >{!! $api_token->token !!}</td>
-                                <td >{!! $api_token->created_at !!}</td>
-                                <td >{!! $api_token->last_used_at !!}</td>
+                                <td >{!! $api_token->created_at->format("d M Y h:i:s A") !!}</td>
+                                <td >{!! $api_token->last_used_at!!}</td>
                                 <td ><a href="javascript:void(0)" onclick="confirmTokenDelete('{!! $api_token->tokenable_id !!}')">Revoke Token</a></td>
                             </tr>
                             <?php $id++; ?>

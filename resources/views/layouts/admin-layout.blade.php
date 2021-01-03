@@ -76,7 +76,7 @@
                 @endif
                 @if(helper::instance()->isPermitted("MANAGE TOKEN"))
                     <li class="@yield('tokens')">
-                        <a class="waves-effect" href="{!! route("admin.api_tokens") !!}"><i class="menu-icon ti-lock"></i><span>Api Tokens</span></a>
+                        <a class="waves-effect" href="{!! route("admin.api_tokens") !!}"><i class="menu-icon ti-key"></i><span>Api Tokens</span></a>
                     </li>
                 @endif
                 @if(helper::instance()->isPermitted("MANAGE USER"))

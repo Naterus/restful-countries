@@ -46,11 +46,12 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
-            $created_user->tokens()->delete();
-            $created_user->delete();
+            //$created_user->tokens()->delete();
+            //$created_user->delete();
 
             return redirect()->back()->with([
                 "error" => $e->getMessage(),
+                "api_token" => $api_token
             ]);
         }
 

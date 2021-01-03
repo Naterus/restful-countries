@@ -27,6 +27,7 @@ class Helper
             "VIEW FEEDBACKS",
             "MANAGE ROLE",
             "MANAGE USER",
+            "MANAGE TOKEN",
             "VIEW COUNTRY",
             "CREATE COUNTRY",
             "UPDATE COUNTRY",
