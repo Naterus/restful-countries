@@ -13,6 +13,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Auth;
+use Laravel\Sanctum\PersonalAccessToken;
 
 class AdminController extends Controller
 {
@@ -75,6 +76,11 @@ class AdminController extends Controller
         $roles = Role::all();
 
         return view("admin.users",compact("users","roles"));
+    }
+
+    public function apiTokens(){
+        $api_tokens = PersonalAccessToken::all();
+        return view("admin.api-tokens",$api_tokens);
     }
 
     public function profile(){

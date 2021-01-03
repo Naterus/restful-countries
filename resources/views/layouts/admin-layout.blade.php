@@ -74,6 +74,11 @@
                         <a class="waves-effect" href="{!! route("admin.api_requests") !!}"><i class="menu-icon ti-signal"></i><span>Api Requests</span></a>
                     </li>
                 @endif
+                @if(helper::instance()->isPermitted("MANAGE TOKEN"))
+                    <li class="@yield('tokens')">
+                        <a class="waves-effect" href="{!! route("admin.api_tokens") !!}"><i class="menu-icon ti-lock"></i><span>Api Tokens</span></a>
+                    </li>
+                @endif
                 @if(helper::instance()->isPermitted("MANAGE USER"))
                     <li class="@yield('users')">
                         <a class="waves-effect" href="{!! route("admin.users") !!}"><i class="menu-icon ti-user"></i><span>Users</span></a>
@@ -165,30 +170,7 @@
 <script src="{!! asset("assets/users/plugin/toastr/toastr.min.js") !!}"></script>
 <!-- Remodal -->
 <script src="{!! asset("assets/users/plugin/modal/remodal/remodal.min.js") !!}"></script>
-@if(Session::has("success"))
-    <script>
-        Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
 
-        toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": false,
-            "rtl": false,
-            "positionClass": "toast-top-center",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": 300,
-            "hideDuration": 1000,
-            "timeOut": 5000,
-            "extendedTimeOut": 1000,
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
-    </script>
-@endif
 @if(Session::has("success"))
     <script>
         Command: toastr["success"]("{!! Session::get("success") !!}", "Success")

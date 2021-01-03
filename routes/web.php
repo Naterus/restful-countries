@@ -41,6 +41,10 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::get('administrator/api-requests', 'AdminController@apiRequests')->name('admin.api_requests')->middleware("permission.check:VIEW API REQUESTS");
 
+    Route::get('administrator/api-tokens', 'AdminController@apiTokens')->name('admin.api_tokens')->middleware("permission.check:MANAGE TOKEN");
+
+    Route::post('administrator/api-tokens/revoke', 'ApiTokenController@revokeToken')->name('admin.api_tokens.revoke')->middleware("permission.check:MANAGE TOKEN");
+
     Route::get('administrator/users', 'AdminController@users')->name('admin.users')->middleware("permission.check:MANAGE USER");
 
     Route::post('administrator/user/delete', 'AdminController@deleteUser')->name('admin.user.delete')->middleware("permission.check:MANAGE USER");

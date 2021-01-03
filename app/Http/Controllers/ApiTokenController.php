@@ -92,4 +92,21 @@ class ApiTokenController extends Controller
             "success" => "New api token has been sent to your mail successfully"
         ]);
     }
+
+    public function revokeToken(Request $request){
+         $validated_details = $this->validate($request,[
+             "token_id" => "required"
+         ]);
+
+
+
+        $existing_user = User::whereId($validated_details["token_id"])->first();
+
+        $existing_user->tokens()->delete();
+
+        return redirect()->back()->with([
+            "success" => "Api access token revoked successfully"
+        ]);
+
+    }
 }
