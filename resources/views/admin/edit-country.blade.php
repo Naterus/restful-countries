@@ -2,9 +2,6 @@
 @section("title","Country")
 @section("page-title","Country")
 @section("countries","current")
-@section("page-style")
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/toastr/toastr.css") !!}">
-@endsection
 @section("page-content")
     <div class="main-content">
         <div class="row small-spacing">

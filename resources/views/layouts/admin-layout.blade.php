@@ -6,37 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title id="tab-title">Developer - @yield("title")</title>
+    <title id="tab-title">Administrator - @yield("title")</title>
 
     <link rel="shortcut icon" href="{!! asset('assets/images/logo/logo-white.png') !!}">
     <!-- Main Styles -->
-    <link rel="stylesheet" href="{!! asset('assets/users/styles/style.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('assets/admin/styles/style.min.css') !!}">
 
     <!-- Themify Icon -->
-    <link rel="stylesheet" href="{!! asset('assets/users/fonts/themify-icons/themify-icons.css') !!}">
+    <link rel="stylesheet" href="{!! asset('assets/admin/fonts/themify-icons/themify-icons.css') !!}">
 
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css') !!}">
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="{!! asset('assets/admin/plugin/datatables/media/css/dataTables.bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('assets/admin/plugin/datatables/extensions/Responsive/css/responsive.bootstrap.min.css') !!}">
 
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/waves/waves.min.css') !!}">
-
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/sweet-alert/sweetalert.css') !!}">
-
-    <!-- Percent Circle -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/percircle/css/percircle.css') !!}">
-
-    <!-- Chartist Chart -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/chart/chartist/chartist.min.css') !!}">
-
-    <!-- FullCalendar -->
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/fullcalendar/fullcalendar.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('assets/users/plugin/fullcalendar/fullcalendar.print.css') !!}" media='print'>
-    <link rel="stylesheet" href="{!! asset('assets/users/styles/custom.css') !!}">
-    <link rel="stylesheet" href="{!! asset("assets/users/plugin/toastr/toastr.css") !!}">
-    <link rel="stylesheet" href="{!! asset("assets/users/plugin/modal/remodal/remodal.css") !!}">
-    <link rel="stylesheet" href="{!! asset("assets/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
+    <link rel="stylesheet" href="{!! asset('assets/admin/styles/custom.css') !!}">
+    <link rel="stylesheet" href="{!! asset("assets/admin/plugin/toastr/toastr.css") !!}">
+    <link rel="stylesheet" href="{!! asset("assets/admin/plugin/modal/remodal/remodal.css") !!}">
+    <link rel="stylesheet" href="{!! asset("assets/admin/plugin/modal/remodal/remodal-default-theme.css") !!}">
     @yield("page-style")
 </head>
 <body>
@@ -134,42 +120,20 @@
     <script src="{!! asset('assets/script/html5shiv.min.js') !!}"></script>
     <script src="{!! asset('assets/script/respond.min.js') !!}"></script>
     <![endif]-->
-<!--
 
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="{!! asset('assets/users/scripts/jquery.min.js') !!}"></script>
-<script src="{!! asset('assets/users/scripts/modernizr.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/bootstrap/js/bootstrap.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/nprogress/nprogress.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/sweet-alert/sweetalert.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/waves/waves.min.js') !!}"></script>
-<!-- Sparkline Chart -->
-<script src="{!! asset('assets/users/plugin/chart/sparkline/jquery.sparkline.min.js') !!}"></script>
-<script src="{!! asset('assets/users/scripts/chart.sparkline.init.min.js') !!}"></script>
-
-<!-- Percent Circle -->
-<script src="{!! asset('assets/users/plugin/percircle/js/percircle.js') !!}"></script>
-
-<!-- Google Chart -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<!-- Chartist Chart -->
-<script src="{!! asset('assets/users/plugin/chart/chartist/chartist.min.js') !!}"></script>
-<script src="{!! asset('assets/users/scripts/jquery.chartist.init.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/scripts/jquery.min.js') !!}"></script>
 
 <!-- Data Tables -->
-<script src="{!! asset('assets/users/plugin/datatables/media/js/jquery.dataTables.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/datatables/media/js/dataTables.bootstrap.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/datatables/extensions/Responsive/js/dataTables.responsive.min.js') !!}"></script>
-<script src="{!! asset('assets/users/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js') !!}"></script>
-<script src="{!! asset('assets/users/scripts/datatables.demo.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/datatables/media/js/jquery.dataTables.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/datatables/media/js/dataTables.bootstrap.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/datatables/extensions/Responsive/js/dataTables.responsive.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/scripts/datatables.demo.min.js') !!}"></script>
 
 <script src="{!! asset('assets/users/scripts/main.min.js') !!}"></script>
 <script src="{!! asset("assets/users/plugin/toastr/toastr.min.js") !!}"></script>
 <!-- Remodal -->
-<script src="{!! asset("assets/users/plugin/modal/remodal/remodal.min.js") !!}"></script>
+<script src="{!! asset("assets/admin/plugin/modal/remodal/remodal.min.js") !!}"></script>
 
 @if(Session::has("success"))
     <script>

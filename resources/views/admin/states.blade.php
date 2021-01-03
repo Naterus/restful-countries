@@ -2,11 +2,6 @@
 @section("title","Countries")
 @section("page-title","Countries")
 @section("countries","current")
-@section("page-style")
-    <!-- Data Tables -->
-    <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/media/css/dataTables.bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/extensions/Responsive/css/responsive.bootstrap.min.css') !!}">
-@endsection
 @section("page-content")
     <div class="main-content">
         <div class="row small-spacing">

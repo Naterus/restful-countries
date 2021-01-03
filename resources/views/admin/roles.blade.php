@@ -2,14 +2,6 @@
 @section("title","Roles")
 @section("page-title","Roles")
 @section("roles","current")
-@section("page-style")
-    <!-- Data Tables -->
-    <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/media/css/dataTables.bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset('storage/users/plugin/datatables/extensions/Responsive/css/responsive.bootstrap.min.css') !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal.css") !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/modal/remodal/remodal-default-theme.css") !!}">
-    <link rel="stylesheet" href="{!! asset("storage/users/plugin/toastr/toastr.css") !!}">
-@endsection
 @section("page-content")
     <div class="main-content">
         <div class="row small-spacing">
