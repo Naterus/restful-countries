@@ -47,7 +47,7 @@
                                 <td>{!! $role->created_at !!}</td>
                                 <td>
                                     <a href="{!! route("admin.roles.edit",$role->id) !!}">Edit</a> <br/>
-                                    <a href="">Delete</a> <br/>
+                                    <a href="javascript:void(0)" onclick="confirmRoleDelete('{!! $role->id !!}')">Delete</a> <br/>
                                     <!--
                                     <a href="">Delete</a><br/>
                                     -->
@@ -73,7 +73,7 @@
             @csrf
             <div class="remodal-content">
                 <h2 id="modal1Title">Create Role</h2>
-                <label for="inputEmail3" class="col-sm-12 control-label">Role Name</label>
+                <label for="role" class="col-sm-12 control-label">Role Name</label>
                 <input type="text" name="role" required="required" class="form-control">
                 <br/>
 
@@ -91,55 +91,34 @@
         </form>
     </div>
 
+    <div class="remodal" data-remodal-id="delete-role" role="dialog"
+         aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+        <button data-remodal-action="close" class="remodal-close"
+                aria-label="Close"></button>
+
+
+        <form method="post" action="{!! route("admin.role.delete") !!}">
+            @csrf
+            <div class="remodal-content">
+                <h2 id="modal1Title">Delete Role</h2>
+                <h3 class="text-danger">Role and permissions would be permanently deleted.</h3>
+                <br/>
+                <input type="number" name="role_id" hidden>
+            </div>
+            <span data-remodal-action="cancel" class="remodal-cancel">Cancel</span>
+            <button class="remodal-confirm">Proceed Delete
+            </button>
+        </form>
+    </div>
+
 
 @endsection
 @section("page-script")
-    @if(Session::has("success"))
-        <script>
-            Command: toastr["success"]("{!! Session::get("success") !!}", "Success")
+    <script>
+        function confirmRoleDelete($role){
+            $("input[name='role_id']").val($role);
 
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
-    @if(Session::has("error"))
-        <script>
-            Command: toastr["error"]("{!! Session::get("error") !!}", "Error")
-
-            toastr.options = {
-                "closeButton": false,
-                "debug": false,
-                "newestOnTop": false,
-                "progressBar": false,
-                "rtl": false,
-                "positionClass": "toast-top-center",
-                "preventDuplicates": false,
-                "onclick": null,
-                "showDuration": 300,
-                "hideDuration": 1000,
-                "timeOut": 5000,
-                "extendedTimeOut": 1000,
-                "showEasing": "swing",
-                "hideEasing": "linear",
-                "showMethod": "fadeIn",
-                "hideMethod": "fadeOut"
-            }
-        </script>
-    @endif
+            window.location.href = "#delete-role";
+        }
+    </script>
 @endsection

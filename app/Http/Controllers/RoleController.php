@@ -69,4 +69,24 @@ class RoleController extends Controller
 
         return redirect()->back()->with("success","Role updated successfully");
     }
+
+    public function deleteRole(Request $request){
+
+        $validated_role = $this->validate($request,[
+           "role_id" => "required"
+        ]);
+
+        //Disallow super admin delete
+        $check_role = Role::where("id",$validated_role["role_id"])->first();
+
+        if($check_role->role == "Super Admin" || $check_role->id == 1){
+            return redirect()->back()->with("error","Can not delete super admin role.");
+        }
+
+        //Delete role and permissions
+        Permission::where("role_id",$validated_role["role_id"])->delete();
+        Role::findOrFail($validated_role["role_id"])->delete();
+
+        return redirect()->back()->with("success","Role and permissions deleted successfully");
+    }
 }

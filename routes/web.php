@@ -55,6 +55,8 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
     Route::post('administrator/roles/{id}/update', 'RoleController@updateRole')->name('admin.roles.edit.update')->middleware("permission.check:MANAGE ROLE");
 
+    Route::post('administrator/role/delete', 'RoleController@deleteRole')->name('admin.role.delete')->middleware("permission.check:MANAGE ROLE");
+
     Route::get('administrator/profile', 'AdminController@profile')->name('admin.profile');
 
     Route::post('administrator/profile/update', 'AdminController@updateProfile')->name('admin.profile.update');
