@@ -121,7 +121,12 @@
     <script src="{!! asset('assets/admin/scripts/respond.min.js') !!}"></script>
     <![endif]-->
 
+
 <script src="{!! asset('assets/admin/scripts/jquery.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/scripts/modernizr.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/bootstrap/js/bootstrap.min.js') !!}"></script>
+<script src="{!! asset('assets/admin/plugin/nprogress/nprogress.js') !!}"></script>
+
 
 <!-- Data Tables -->
 <script src="{!! asset('assets/admin/plugin/datatables/media/js/jquery.dataTables.min.js') !!}"></script>
