@@ -18,7 +18,7 @@ curl -I https://restfulcountries.com/api/v1/countries?per_page=1  -H "Accept: ap
 
 ```
 `Postman`
-<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="250"></p>
+<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="400"></p>
 
 [Request access token](https://restfulcountries.com/request-token) to test api endpoints.
 ## Documentation
@@ -37,7 +37,7 @@ If you wish to run the app for the purpose of contributing or just for personal 
     ```bash
     git clone https://github.com/Naterus/restful-countries.git
     ```
-3. CD into the folder created for cloned project:
+3. `cd` into the folder created for cloned project:
     ```bash
     cd restful_countries
    ```
@@ -50,31 +50,49 @@ If you wish to run the app for the purpose of contributing or just for personal 
     ```bash
     cp .env.example .env
    ```
+   verify that .env has key `APP_VERSION=1` or current api version.
+   
+
 6. Create database and add the database name,username and password (if any) to .env
+
 
 7. Run migration
    ```bash
    php artisan migrate
    ```
+
 8. Run database seed to create sample data
    ```bash
    php artisan db:seed
    ```
-9. Start laravel internal server
+   
+9. Create a symbolic link to storage for asset uploads
     ```bash
-    php artisan serve
+    php artisan storage:link
    ```
 
-10. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
+10. Start laravel internal server
+   ```angular2html
+   php artisan serve
+```
 
-11. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
 
-12. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
+11. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
+
+
+
+12. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
+
+
+13. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
 
 
 ## Contributing
 
-See contribution  guide here - [Restful Countries Contribution](https://laravel.com/docs/contributions).
+This project is far from perfect, If you find a bug or optimal way of implementing an existing code, Feel free to fork this repository, modify and create a pull request.
+
+
+Note : Ensure code is tested and well written before creating pull request.
 
 ## Donations
 
