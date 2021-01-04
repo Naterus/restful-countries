@@ -59,8 +59,12 @@ If you wish to run the app for the purpose of contributing or just for personal 
     php artisan key:generate
    ```
 
-7. Create an empty database and add the database name,username and password (if any) to .env
-
+7. Create an empty database and add the database credentials to `.env` file
+    ```angular2html
+        DB_DATABASE=your_database_name
+        DB_USERNAME=root
+        DB_PASSWORD=your_password
+   ```
 
 8. Run migration
    ```bash
