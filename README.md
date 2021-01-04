@@ -18,7 +18,7 @@ curl -I https://restfulcountries.com/api/v1/countries?per_page=1  -H "Accept: ap
 
 ```
 `Postman`
-<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="400"></p>
+<p><img src="https://restfulcountries.com/assets/images/postman-demo.png" width="320"></p>
 
 [Request access token](https://restfulcountries.com/request-token) to test api endpoints.
 ## Documentation
