@@ -31,7 +31,7 @@ If you wish to run the app for the purpose of contributing or just for personal 
 
 1. Open your terminal and `cd` to any directory of your choice
     ```bash
-    cd your_directory
+    cd your-directory
    ```
 2. Clone this repository
     ```bash
@@ -39,9 +39,12 @@ If you wish to run the app for the purpose of contributing or just for personal 
     ```
 3. `cd` into the folder created for cloned project:
     ```bash
-    cd restful_countries
+    cd restful-countries
    ```
-   
+4. Generate app key
+    ```bash
+    php artisan key:generate
+   ```
 4. Install packages with composer
     ```bash
     composer install
@@ -53,7 +56,7 @@ If you wish to run the app for the purpose of contributing or just for personal 
    verify that .env has key `APP_VERSION=1` or current api version.
    
 
-6. Create database and add the database name,username and password (if any) to .env
+6. Create an empty database and add the database name,username and password (if any) to .env
 
 
 7. Run migration
@@ -71,7 +74,7 @@ If you wish to run the app for the purpose of contributing or just for personal 
     php artisan storage:link
    ```
 
-10. Start laravel internal server
+10. Start laravel local server
    ```angular2html
    php artisan serve
 ```
