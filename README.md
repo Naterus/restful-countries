@@ -41,53 +41,55 @@ If you wish to run the app for the purpose of contributing or just for personal 
     ```bash
     cd restful-countries
    ```
-4. Generate app key
-    ```bash
-    php artisan key:generate
-   ```
+
 4. Install packages with composer
     ```bash
     composer install
    ```
+
 5. Make a copy of .env.example as .env
     ```bash
     cp .env.example .env
    ```
    verify that .env has key `APP_VERSION=1` or current api version.
-   
-
-6. Create an empty database and add the database name,username and password (if any) to .env
 
 
-7. Run migration
+6. Generate app key
+    ```bash
+    php artisan key:generate
+   ```
+
+7. Create an empty database and add the database name,username and password (if any) to .env
+
+
+8. Run migration
    ```bash
    php artisan migrate
    ```
 
-8. Run database seed to create sample data
+9. Run database seed to create sample data
    ```bash
    php artisan db:seed
    ```
    
-9. Create a symbolic link to storage for asset uploads
-    ```bash
-    php artisan storage:link
-   ```
-
-10. Start laravel local server
+10. Create a symbolic link to storage for asset uploads
    ```angular2html
-   php artisan serve
+   php artisan storage:link
 ```
 
+11. Start laravel local server
+   ```angular2html
+php artisan serve
+```
 
-11. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
+12. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
 
 
 
-12. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
+13. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
 
 
-13. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
+14. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
 
 
 ## Contributing
