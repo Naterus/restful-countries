@@ -117,8 +117,8 @@
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
-    <script src="{!! asset('assets/script/html5shiv.min.js') !!}"></script>
-    <script src="{!! asset('assets/script/respond.min.js') !!}"></script>
+    <script src="{!! asset('assets/admin/scripts/html5shiv.min.js') !!}"></script>
+    <script src="{!! asset('assets/admin/scripts/respond.min.js') !!}"></script>
     <![endif]-->
 
 <script src="{!! asset('assets/admin/scripts/jquery.min.js') !!}"></script>
