@@ -5,6 +5,7 @@
 /.github
 /vendor
 /public/assets/images/presidents
+/public/storage
 .env
 .env.backup
 .phpunit.result.cache
