@@ -6,7 +6,7 @@
 </p>
 
 
-Restful (JSON) Api to retrieve data about any country with an admin management console to monitor requests, manage country data, feedbacks, and admin users with roles and permissions:
+Restful (JSON) Api to retrieve data about any country with an admin management console to monitor requests, manage country data, feedbacks, and admin users with roles and permissions, api documentation, api authentication:
 
 Everything on [https://restfulcountries.com](https://restfulcountries.com) has its source code available here except the data itself as it is hosted on a live database server.
 
@@ -89,7 +89,7 @@ If you wish to run the app for the purpose of contributing or just for personal 
 
 ## Contributing
 
-This project is far from perfect, If you find a bug or optimal way of implementing an existing code, Feel free to fork this repository, modify and create a pull request.
+This project is far from perfect, If you find a bug or an optimal way of implementing an existing or new feature, Feel free to fork this repository, modify and create a pull request.
 
 
 Note : Ensure code is tested and well written before creating pull request.
