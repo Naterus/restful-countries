@@ -39,7 +39,7 @@
                         <tbody>
                         @foreach($countries as $country)
                             <tr>
-                                <td> <img src="{!! asset("storage/images/flags/".$country->flag) !!}" style="height:40px; width:40px;"></td>
+                                <td> <img src="{!! asset("assets/images/flags/".$country->flag) !!}" style="height:40px; width:40px;"></td>
                                 <td>{!! $country->name !!}</td>
                                 <td>{!! $country->capital !!}</td>
                                 <td>{!! $country->continent !!}</td>
