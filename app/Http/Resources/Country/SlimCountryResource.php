@@ -19,7 +19,7 @@ class SlimCountryResource extends JsonResource
             "phone_code" => $this->code,
             'href' => [
                 'self' => route("countries.show",$this->name),
-                'flag' => asset("storage/images/flags/".$this->flag),
+                'flag' => asset("assets/images/flags/".$this->flag),
             ]
         ];
     }
