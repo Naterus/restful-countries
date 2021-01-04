@@ -130,8 +130,8 @@
 <script src="{!! asset('assets/admin/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js') !!}"></script>
 <script src="{!! asset('assets/admin/scripts/datatables.demo.min.js') !!}"></script>
 
-<script src="{!! asset('assets/users/scripts/main.min.js') !!}"></script>
-<script src="{!! asset("assets/users/plugin/toastr/toastr.min.js") !!}"></script>
+<script src="{!! asset('assets/admin/scripts/main.min.js') !!}"></script>
+<script src="{!! asset("assets/admin/plugin/toastr/toastr.min.js") !!}"></script>
 <!-- Remodal -->
 <script src="{!! asset("assets/admin/plugin/modal/remodal/remodal.min.js") !!}"></script>
 

@@ -51,10 +51,9 @@ class Covid19Controller extends Controller
             ]);
         }
 
-        $file_name = "covid-19".str_replace(" ","_",now()).".".$extension;
+        $file_name = "covid-19_".str_replace(" ","_",now()).".".$extension;
         Storage::putFileAs('public/docs/', $file, $file_name);
 
-        $countries = Country::all();
         //Read uploaded file
         $covid_csv_file = fopen(asset("storage/docs/".$file_name),'r');
 
@@ -71,6 +70,7 @@ class Covid19Controller extends Controller
             $covidData[] = fgetcsv($covid_csv_file);
         }
 
+        $countries = Country::all();
         foreach ($covidData as $key => $value) {
 
             // $value[0] = country , $value[2] = Total cases , $value[6] = Total deaths
