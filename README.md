@@ -75,38 +75,55 @@ If you wish to run the app for the purpose of contributing or just for personal 
    ```bash
    php artisan db:seed
    ```
-   
-10. Create a symbolic link to storage for asset uploads
+10. Create a public folder for symbolic link
+   ```bash
+   mkdir storage/app/public
+   ``` 
+  
+11. Create a symbolic link to storage for asset uploads
    ```angular2html
    php artisan storage:link
 ```
 
-11. Start laravel local server
+12. Start laravel local server
    ```angular2html
 php artisan serve
 ```
 
-12. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
+13. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
 
 
 
-13. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
+14. Set up `mailgun` or `mailtrap` and add credentials to .env to enable application send api keys to mail.
 
 
-14. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
+15. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
 
 
 ## Contributing
 
-This project is far from perfect, If you find a bug or an optimal way of implementing an existing or new feature, Feel free to fork this repository, modify and create a pull request.
+This project is far from perfect, If you find a bug, or an optimal way of implementing an existing or new feature, Feel free to fork this repository, modify and create a pull request.
 
 
-Note : Ensure code is tested and well written before creating pull request.
+How can you contribute?
+- Update api documentation 
+- Clean code (indentations,variable and function names, unused assets and links)
+- Modify user interface
+- Optimize back-end code
+- Fix bug
+- Add new feature (Would be merged as new api version). 
 
-## Donations
+Note :
 
-If you would like to sponsor this project, please visit [donation page](https://restfulcountries.com/donation).
+- Ensure code is tested and well written before creating pull request. 
 
+- Pull request should be modularized, you should not have too much code in one pull request. e.g if you are modifying documentation page and admin dashboard page, they should both be in different pull requests.
+
+## Appreciation
+
+-  To sponsor this project, please visit [donation page](https://restfulcountries.com/donation).
+-  Help star this github repo.
+-  Share repository link on twitter and other platforms.
 
 ## License
 
