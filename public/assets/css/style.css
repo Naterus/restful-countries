@@ -1,25 +1,3 @@
-/*
-Template Name: Jobya - Responsive Job Listing Template
-Author: Themesdesign
-File: main stylesheet
-*/
-/**********************
-01.General
-02.helper
-03.components
-04.menu
-05.default
-06.home
-07.footer
-08.subscribe
-09.jobs
-10.candidates
-11.employers
-12.blog
-13.pages
-14.contact
-15.post-a-job
-**********************/
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,400,600,700&display=swap");
 .bg-primary {
   background-color: #2f55d4 !important;
@@ -2400,7 +2378,7 @@ a.job-list[data-toggle=collapse].collapsed:before {
 }
 
 /********************
-        PRICING  
+        PRICING
 *********************/
 .pricing-box {
   -webkit-transition: all 0.5s ease;
