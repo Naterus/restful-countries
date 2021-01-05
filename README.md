@@ -107,7 +107,7 @@ This project is far from perfect, If you find a bug, or an optimal way of implem
 
 How can you contribute?
 - Update api documentation 
-- Clean code (indentations,variable and function names, unused assets and links)
+- Clean code (indentations,variable and function names)
 - Modify user interface
 - Optimize back-end code
 - Fix bug
