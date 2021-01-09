@@ -9,10 +9,12 @@ use Tests\TestCase;
 class APIAuthenticationTest extends TestCase
 {
     use RefreshDatabase;
-
+    public function testCreatingUser(){
+        $user = factory(\App\User::class)->create();
+    }
     public function testCreatingAPIToken()
     {
-
+//        $user = factory(\App\User::class)->create();
     }
     public function testAccessingAPIWithoutAuthentication()
     {

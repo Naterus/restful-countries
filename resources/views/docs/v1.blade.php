@@ -1611,3 +1611,6 @@
     </div>
 @endsection
 
+@section("page-script")
+    <script src="{!! asset("assets/js/pretty-print-json.js") !!}"></script>
+@endsection
