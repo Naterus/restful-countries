@@ -37,14 +37,16 @@ class CountryController extends Controller
             }
             return new CountryCollection(Country::where("population",">=",$population_from)->where("population","<=",$population_to)->orderBy("name","ASC")->paginate($per_page));
 
-        } elseif (isset($population_from)){
+        }
+        elseif (isset($population_from)){
 
             if($request->fetch_type == "slim"){
                 return SlimCountryResource::collection(Country::where("population",">=",$population_from)->orderBy("name","ASC")->paginate($per_page));
             }
             return new CountryCollection(Country::where("population",">=",$population_from)->orderBy("name","ASC")->paginate($per_page));
 
-        } elseif (isset($population_to)) {
+        }
+        elseif (isset($population_to)) {
 
             if($request->fetch_type == "slim"){
                 return SlimCountryResource::collection(Country::where("population","<=",$population_to)->orderBy("name","ASC")->paginate($per_page));
@@ -59,7 +61,8 @@ class CountryController extends Controller
             }
 
             return new CountryCollection(Country::where("size",">=",$size_from)->where("size","<=",$size_to)->orderBy("name","ASC")->paginate($per_page));
-        } elseif (isset($size_from)) {
+        }
+        elseif (isset($size_from)) {
 
             if($request->fetch_type == "slim"){
 
