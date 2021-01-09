@@ -2,17 +2,17 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Country;
+
 use Faker\Generator as Faker;
 
-$factory->define(Country::class, function (Faker $faker) {
-    $country = $faker->country;
+$factory->define(App\Country::class, function (Faker $faker) {
+    $country = $faker->unique()->country;
     return [
         'name' => $country,
         'full_name' => $country,
         'flag' => str_replace(" ","-",$country).".png",
-        'population' => $faker->randomNumber(),
-        'size' => $faker->randomNumber(),
+        'population' => $faker->numberBetween($min = 100000, $max = 1000000),
+        'size' => $faker->numberBetween($min = 10000, $max = 100000),
         'capital' => $faker->state,
         'currency' => $faker->currencyCode,
         'description' => $faker->paragraph,
@@ -24,3 +24,6 @@ $factory->define(Country::class, function (Faker $faker) {
         'independence_date' => $faker->date(),
     ];
 });
+
+
+

@@ -2,8 +2,13 @@
 
 use App\Country;
 use App\Covid19;
-use App\Helpers\Helper;
+use Illuminate\Support\Facades\DB;
 use App\Permission;
+use App\Role;
+use App\User;
+use App\PersonalAccessToken;
+use App\State;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,10 +21,41 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        factory(App\Country::class,5)->create();
-        factory(App\State::class,100)->create();
-        factory(App\Role::class,1)->create();
-        factory(App\User::class,1)->create();
+
+        if (env('APP_ENV') === 'production') exit('Fatal! APP is in production');
+
+        //Truncates all tables in the database
+        Schema::disableForeignKeyConstraints();
+
+        $tableNames = Schema::getConnection()->getDoctrineSchemaManager()->listTableNames();
+        foreach ($tableNames as $table) {
+            if ($table != 'migrations')
+                DB::table($table)->truncate();
+        }
+
+        Schema::enableForeignKeyConstraints();
+
+
+        Role::create(["role"=> 'Super Admin']);
+        Role::create(["role"=> 'User']);
+
+
+        factory(App\User::class)->states('admin')->create();
+        factory(App\User::class,5)->create()->each(function ($user){
+            factory(App\PersonalAccessToken::class)->create([
+                "tokenable_id" => $user->id
+            ]);
+        });
+
+        factory(App\Country::class, 10)->create()->each(function ($country){
+            factory(App\State::class,5)->create([
+                "country_id" => $country->id
+            ]);
+            factory(App\Covid19::class)->create([
+                "country_id" => $country->id
+            ]);
+        });
+
 
         //Create permissions for Super admin role
         foreach (helper::instance()->appOperations() as $operation){
@@ -29,14 +65,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        //Create covid 19 data for newly seeded countries
-        $countries = Country::all();
-        foreach ($countries as $country){
-            Covid19::create([
-                "country_id" => $country->id,
-                "updated_by" => 1
-            ]);
-        }
+
 
     }
 }

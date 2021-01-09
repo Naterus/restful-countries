@@ -729,15 +729,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-weight: 600;
 }
 
-::-moz-selection {
-  background: #4466d8;
-  color: #ffffff;
-}
-
-::selection {
-  background: #4466d8;
-  color: #ffffff;
-}
 
 a {
   text-decoration: none !important;
@@ -1254,14 +1245,6 @@ p {
 }
 
 .tagline .topbar-list .selectize-input input:-ms-input-placeholder {
-  color: #f8f9fc;
-}
-
-.tagline .topbar-list .selectize-input input::-ms-input-placeholder {
-  color: #f8f9fc;
-}
-
-.tagline .topbar-list .selectize-input input::placeholder {
   color: #f8f9fc;
 }
 
@@ -1846,64 +1829,6 @@ a.job-list[data-toggle=collapse].collapsed:before {
           transform: translateY(-5px);
 }
 
-/********************
-    JOB LIST GRID
-*********************/
-.job-list-grid {
-  padding: 210px 0px 60px 0px;
-  background-image: url("../images/job-list-grid-bg.jpg");
-  background-size: cover;
-  position: relative;
-  background-position: center center;
-}
-
-.job-list-grid-reg-form {
-  background-color: #fcfcfe !important;
-  border: 1px solid #eaedf6;
-}
-
-.list-grid-item {
-  border: 1px solid #eaedf6;
-  border-radius: 6px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.list-grid-item:hover {
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  border-color: transparent;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.grid-fev-icon {
-  -webkit-text-stroke: 2px #2f55d4;
-  -webkit-text-fill-color: transparent;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.grid-fev-icon:hover {
-  -webkit-text-stroke: 0px #2f55d4;
-  -webkit-text-fill-color: #2f55d4;
-}
-
-/********************
-    JOB SINGLE
-*********************/
-.job-time-btn {
-  border-radius: 50px;
-}
-
-.job-overview {
-  padding: 24px 0 24px 24px;
-}
-
-.overview-details {
-  overflow: hidden;
-}
-
 @media (min-width: 200px) and (max-width: 768px) {
   .company-logo-img {
     margin-bottom: 30px;
@@ -2267,7 +2192,7 @@ a.job-list[data-toggle=collapse].collapsed:before {
 *********************/
 .about-bg {
   padding: 180px 0px 80px 0px;
-  background-image: url("../images/about-bg.jpg");
+  /*background-image: url("../images/about-bg.jpg");*/
   background-size: cover;
   position: relative;
   background-position: center center;
@@ -2692,7 +2617,7 @@ hr {
   overflow-wrap: break-word;
   word-break: break-all;
 }
-}
+
 pre {
   display: block;
   font-size: 87.5%;
@@ -2763,9 +2688,10 @@ pre {
   color: #a52a2a;
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
-.pre-dark{
+.pre-dark {
   color: #fff;
   background: #343a40;
+  min-height: 70px;
+  padding: 15px;
 }
-
 /*End of API documentation styles*/
