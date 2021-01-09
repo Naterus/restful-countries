@@ -35,8 +35,16 @@ class DatabaseSeeder extends Seeder
 
         Schema::enableForeignKeyConstraints();
 
+        //Test assumes Super Admin should always be id 1
+        $role =  Role::create(["role"=> 'Super Admin']);
 
-        Role::create(["role"=> 'Super Admin']);
+        //Create permissions for Super admin role
+        foreach (helper::instance()->appOperations() as $operation){
+            Permission::create([
+                "role_id" => $role->id,
+                "permission" => $operation
+            ]);
+        }
         Role::create(["role"=> 'User']);
 
 
@@ -57,13 +65,7 @@ class DatabaseSeeder extends Seeder
         });
 
 
-        //Create permissions for Super admin role
-        foreach (helper::instance()->appOperations() as $operation){
-            Permission::create([
-                "role_id" => 1,
-                "permission" => $operation
-            ]);
-        }
+
 
 
 
