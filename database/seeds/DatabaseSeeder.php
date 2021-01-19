@@ -50,9 +50,11 @@ class DatabaseSeeder extends Seeder
 
         factory(App\User::class)->states('admin')->create();
         factory(App\User::class,5)->create()->each(function ($user){
-            factory(App\PersonalAccessToken::class)->create([
-                "tokenable_id" => $user->id
-            ]);
+            $user->createToken('authToken')->plainTextToken;
+
+//            factory(App\PersonalAccessToken::class)->create([
+//                "tokenable_id" => $user->id
+//            ]);
         });
 
         factory(App\Country::class, 10)->create()->each(function ($country){
