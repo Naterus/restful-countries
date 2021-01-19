@@ -56,7 +56,7 @@ class ApiTokenController extends Controller
         }
 
         return redirect()->back()->with([
-            "success" => "Api access Token has been sent to your email successfully.",
+            "success" => "Api Access Token has been sent to your email successfully.",
         ]);
     }
 
