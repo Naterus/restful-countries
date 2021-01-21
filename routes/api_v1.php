@@ -19,7 +19,7 @@ Route::group(['middleware' => ["auth:sanctum","throttle:100,1","api_logger"]], f
 
     Route::get("/countries/{country}/states/{state}",'StateController@getState')->name("states.show");
 
-    Route::get("/covid19",'Covid19Controller@getAllCases');
+    Route::get("/covid19",'Covid19Controller@getAllCases')->name("covid19.index");
 
 });
 
