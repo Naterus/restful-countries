@@ -33,7 +33,7 @@ $factory->state(User::class, 'admin', function (Faker $faker) {
         'name' => "Administrator",
         'role_id' => 1,
         'email' => "administrator@restfulcountries.com",
-        'email_verified_at' => now(),
+        'email_verified_at' => $faker->dateTime(),
         'password' => '$2y$10$D1vv7cFf4zzI/Bb5QHdP9unaganGUpK53t.vejmLIryI.DQzZtoxy', // password=12345
         'remember_token' => Str::random(10),
     ];
