@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use App\User;
 use App\Country;
-use App\President;
+
 use App\Covid19;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -13,18 +13,12 @@ use Tests\TestCase;
 
 class EndPointTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
+
     public function testBaseRoute()
     {
-        $user = factory(User::class)->create();
 
-        $token = $user->createToken('authToken')->plainTextToken;
 
-        $this->get('/api/v1', ['Authorization' => 'Bearer ' . $token])
+        $this->get('/api/v1', ['Authorization' => 'Bearer ' .  $this->getToken()])
             ->assertStatus(200)
             ->assertJsonStructure([
                 "data",
@@ -48,11 +42,7 @@ class EndPointTest extends TestCase
     public function testCountriesIndexRoute()
     {
 
-        $user = factory(User::class)->create();
-
-        $token = $user->createToken('authToken')->plainTextToken;
-
-        $this->get('/api/v1/countries/', ['Authorization' => 'Bearer ' . $token])
+        $this->get('/api/v1/countries/', ['Authorization' => 'Bearer ' . $this->getToken()])
             ->assertStatus(200)
             ->assertJsonStructure([
                 "data",
@@ -76,12 +66,11 @@ class EndPointTest extends TestCase
     }
     public function testCountriesShowRoute()
     {
-        $user = factory(User::class)->create();
-        $token = $user->createToken('authToken')->plainTextToken;
+
         $countries = Country::where('id','<', 6)->get();
         foreach ($countries as $country) {
 
-            $this->get('/api/v1/countries/' . $country->name, ['Authorization' => 'Bearer ' . $token])
+            $this->get('/api/v1/countries/' . $country->name, ['Authorization' => 'Bearer ' . $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
                     'data' => [
@@ -127,8 +116,6 @@ class EndPointTest extends TestCase
 }
     public function testPresidentsIndexRoute()
     {
-        $user = factory(User::class)->create();
-        $token = $user->createToken('authToken')->plainTextToken;
 
         $pattern = [
             'name',
@@ -151,7 +138,7 @@ class EndPointTest extends TestCase
             for ($i=0 ; $i < $number_of_presidents; $i++){
                 $data[$i] = $pattern;
             }
-            $this->get('/api/v1/countries/' . $country->name . '/presidents', ['Authorization' => 'Bearer ' . $token])
+            $this->get('/api/v1/countries/' . $country->name . '/presidents', ['Authorization' => 'Bearer ' .  $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
                     "data" => $data]);
@@ -160,8 +147,7 @@ class EndPointTest extends TestCase
     }
     public function testPresidentsShowRoute()
     {
-        $user = factory(User::class)->create();
-        $token = $user->createToken('authToken')->plainTextToken;
+
 
         $data = [
             "data" => [
@@ -178,7 +164,7 @@ class EndPointTest extends TestCase
         ];
         $country = Country::inRandomOrder()->first();
         foreach ($country->presidents as $president) {
-            $this->get('/api/v1/countries/' . $country->name . '/presidents/' . $president->name, ['Authorization' => 'Bearer ' . $token])
+            $this->get('/api/v1/countries/' . $country->name . '/presidents/' . $president->name, ['Authorization' => 'Bearer ' .  $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure($data);
         }
@@ -187,8 +173,7 @@ class EndPointTest extends TestCase
     }
     public function testStatesIndexRoute()
     {
-        $user = factory(User::class)->create();
-        $token = $user->createToken('authToken')->plainTextToken;
+
 
         $pattern = [
             'name',
@@ -213,7 +198,7 @@ class EndPointTest extends TestCase
             for ($i=0 ; $i < $number_of_states; $i++){
                 $data[$i] = $pattern;
             }
-            $this->get('/api/v1/countries/' . $country->name . '/states', ['Authorization' => 'Bearer ' . $token])
+            $this->get('/api/v1/countries/' . $country->name . '/states', ['Authorization' => 'Bearer ' . $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
                     "data" => $data
@@ -223,16 +208,75 @@ class EndPointTest extends TestCase
     }
     public function testStatesShowRoute()
     {
-        $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $pattern = [
+            'name',
+            'iso2',
+            'fips_code',
+            'population',
+            'size',
+            'official_language',
+            'region',
+            'href' => [
+                'self',
+                'country'
+            ]
+        ];
+
+        $country = Country::inRandomOrder()->first();
+
+        foreach ($country->states as $state) {
+
+            $this->get('/api/v1/countries/' . $country->name . '/states/'.$state->name, ['Authorization' => 'Bearer ' .  $this->getToken()])
+                ->assertStatus(200)
+                ->assertJsonStructure([
+                    "data" => $pattern
+                ]);
+        }
     }
-//    public function testCovid19IndexRoute()
-//    {
-//        $response = $this->get('/');
-//
-//        $response->assertStatus(200);
-//    }
+    public function testCovid19IndexRoute()
+    {
+        $pattern = [
+            "country_name",
+            "total_case",
+            "total_deaths",
+            "last_updated",
+            "href" => [
+                "country"
+            ]
+        ];
+        $data = [];
+        for ($i=0 ; $i < 10; $i++){
+            $data[$i] = $pattern;
+        }
+        $this->get('/api/v1/covid19', ['Authorization' => 'Bearer ' .  $this->getToken()])
+            ->assertStatus(200)
+            ->assertJsonStructure([
+                "data" => $data,
+                "links"=>[
+                    "first",
+                    "last",
+                    "prev",
+                    "next"
+                ],
+                "meta" => [
+                    "current_page",
+                    "from",
+                    "last_page",
+                    "path",
+                    "per_page",
+                    "to",
+                    "total"
+                ]
+                ]);
+        }
+
+    private function getToken()
+    {
+        $user = factory(User::class)->create();
+        $token = $user->createToken('authToken')->plainTextToken;
+        return $token;
+    }
 
 }
 
