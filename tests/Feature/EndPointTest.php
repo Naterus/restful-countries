@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Helpers\Helper;
 use App\User;
 use App\Country;
 
@@ -134,10 +135,8 @@ class EndPointTest extends TestCase
         foreach ($countries as $country) {
             $number_of_presidents = $country->presidents()->count();
 
-            $data = [];
-            for ($i=0 ; $i < $number_of_presidents; $i++){
-                $data[$i] = $pattern;
-            }
+            $data = Helper::instance()->duplicate($pattern,$number_of_presidents);
+
             $this->get('/api/v1/countries/' . $country->name . '/presidents', ['Authorization' => 'Bearer ' .  $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
@@ -194,10 +193,8 @@ class EndPointTest extends TestCase
         foreach ($countries as $country) {
             $number_of_states = $country->states()->count();
 
-            $data = [];
-            for ($i=0 ; $i < $number_of_states; $i++){
-                $data[$i] = $pattern;
-            }
+            $data = Helper::instance()->duplicate($pattern,$number_of_states);
+
             $this->get('/api/v1/countries/' . $country->name . '/states', ['Authorization' => 'Bearer ' . $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
@@ -245,10 +242,9 @@ class EndPointTest extends TestCase
                 "country"
             ]
         ];
-        $data = [];
-        for ($i=0 ; $i < 10; $i++){
-            $data[$i] = $pattern;
-        }
+        $count = Covid19::all()->count();
+        $data = Helper::instance()->duplicate($pattern,$count);
+
         $this->get('/api/v1/covid19', ['Authorization' => 'Bearer ' .  $this->getToken()])
             ->assertStatus(200)
             ->assertJsonStructure([
