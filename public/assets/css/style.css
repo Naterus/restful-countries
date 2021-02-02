@@ -1564,10 +1564,9 @@ p {
 }
 
 .bg-home {
-  padding: 300px 0px 175px 0px;
-  background-size: cover;
-  position: relative;
-  background-position: center center;
+    padding: 300px 0px 175px 0px;
+    position: relative;
+    background: url('../images/map2.jpg') center center;
 }
 
 .home-center {
@@ -2369,13 +2368,11 @@ a.job-list[data-toggle=collapse].collapsed:before {
 }
 
 .error_message {
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  border: 2px solid #4063d7;
-  color: #4063d7;
-  border-radius: 5px;
-  font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    color: #e43f52;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 .contact-loader {

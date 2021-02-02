@@ -11,6 +11,8 @@ Route::get('/api-documentation','HomeController@docs')->name('docs');
 
 Route::get('/api-documentation/version/{version}','HomeController@documentation')->name('documentation');
 
+Route::get('/documentation/url', 'HomeController@getCurrentDocumentationUrl')->name('documentation.url');
+
 Route::get('/feedback','HomeController@feedback')->name('feedback');
 
 Route::get('/request-access-token','ApiTokenController@requestApiToken')->name('request_token');
@@ -100,3 +102,8 @@ Route::group(['middleware' => ["auth.admin"]], function() {
     Route::post('administrator/countries/{country}/president/create', 'PresidentController@createPresident')->name('admin.presidents.create')->middleware("permission.check:CREATE PRESIDENT");
 
 });
+
+
+Route::get('/vue',function(){
+    return view('vue.welcome');
+})->name('vue.welcome');
