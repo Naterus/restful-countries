@@ -53,7 +53,10 @@ class HomeController extends Controller
     }
 
     public function submitFeedback(Request $request){
+
+
         $this->validate($request,[
+            "email" => "required|email",
             "feedback_category" => "required",
             "feedback" => "required|max:450",
         ]);
@@ -64,8 +67,12 @@ class HomeController extends Controller
             "feedback" => $request->input("feedback"),
         ]);
 
-        return redirect()->back()->with("success","Thanks for your feedback.");
+        return json_encode(["success"=>"Thanks for your feedback."]);
     }
 
+    public function getCurrentDocumentationUrl()
+    {
+        return route("documentation",env("APP_VERSION"));
+    }
 
 }

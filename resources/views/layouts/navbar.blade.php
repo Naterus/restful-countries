@@ -6,7 +6,7 @@
         <div class="container">
             <div class="float-left">
                 <div class="email">
-                    <a href="mail-to:support@restfulcountries.com">
+                    <a href="mailto:support@restfulcountries.com">
                         <i class="mdi mdi-email"></i> support@restfulcountries.com
                     </a>
                 </div>

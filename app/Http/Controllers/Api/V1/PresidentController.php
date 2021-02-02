@@ -15,9 +15,11 @@ class PresidentController extends Controller
     public function getPresidents($country){
 
         //remove hyphen from country name e.g south-africa to south africa
-        $country_id = Country::whereName(str_replace("-"," ",$country))->first();
-
-        return new PresidentCollection(President::whereCountryId($country_id->id ? : null)->get());
+        $country = Country::whereName(str_replace("-"," ",$country))->first();
+        if ($country){
+            return new PresidentCollection(President::whereCountryId($country->id ? : null)->get());
+        }
+        throw new ModelNotFoundException("Presidents resources not found");
 
     }
 
