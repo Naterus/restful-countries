@@ -17,25 +17,36 @@ class StateController extends Controller
     public function getStates($country,Request $request){
 
         $country = Country::whereName(str_replace("-"," ",$country))->first();
-        $states  = State::whereCountryId($country->id ? : null)->orderBy("name","ASC")->get();
+        if ($country){
+            $states  = State::whereCountryId($country->id ? : null)->orderBy("name","ASC")->get();
+            if ($states){
+                if($request->input('fetch_type') == "slim"){
+                    return SlimStateResource::collection($states);
+                }
+                return new StateCollection($states);
+            }
+            throw new ModelNotFoundException("States resources not found");
 
-        if($request->fetch_type == "slim"){
-            return SlimStateResource::collection($states);
         }
-        return new StateCollection($states);
+        throw new ModelNotFoundException("Country resource not found");
+
+
     }
 
-    public function getState($country,$state){
+    public function getState($country,$state)
+    {
         //Get country_id using country name to find state
-        $country_id = Country::whereName(str_replace("-"," ",$country))->first();
+        $country_id = Country::whereName(str_replace("-", " ", $country))->first();
+        if ($country) {
 
-        $state = State::whereName(str_replace("-"," ",$state))->whereCountryId($country_id->id ?: null)->first();
+            $state = State::whereName(str_replace("-", " ", $state))->whereCountryId($country_id->id ?: null)->first();
 
-        if($state) {
-            return new StateResource($state);
+            if ($state) {
+                return new StateResource($state);
+            }
+
+            throw new ModelNotFoundException("State resource not found");
         }
-
-        throw new ModelNotFoundException("State resource not found");
     }
 
 }

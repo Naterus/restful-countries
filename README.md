@@ -99,6 +99,21 @@ php artisan serve
 
 15. Navigate to http://127.0.0.1:8000/administrator/login, enter `administrator@restfulcountries.com` as email and `12345` as password. you should be logged in as super admin user.
 
+## Testing
+
+1. Create test database 
+2. Ensure you have created `.env.testing` file
+3. Update your database details. Example
+```angular2html
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=test_restful_countries
+DB_USERNAME=root
+DB_PASSWORD=
+```
+2. Run test by running this command `vendor\bin\phpunit` or `composer test`    
+
 
 ## Contributing
 

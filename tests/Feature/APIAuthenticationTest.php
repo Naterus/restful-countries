@@ -2,19 +2,19 @@
 
 namespace Tests\Feature;
 
-use App\PersonalAccessToken;
+
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+
 use Tests\TestCase;
 use App\User;
 use App\Country;
+use App\President;
 
-use Illuminate\Support\Facades\Route;
 
 
 class APIAuthenticationTest extends TestCase
 {
-    use WithFaker, RefreshDatabase;
+    use  RefreshDatabase;
 
     public function testGeneratingAPIToken()
     {
@@ -45,8 +45,9 @@ class APIAuthenticationTest extends TestCase
     }
     public function testAccessingAPIWithAuthenticationSucceeds()
     {
-        $country = factory(Country::class)->create();
-        factory(User::class,5)->create()->each(function ($user) use ($country) {
+
+        $country = Country::find(1);
+        factory(User::class,2)->create()->each(function ($user) use ($country) {
 
             $token = $user->createToken('authToken')->plainTextToken;
             $this->get('/api/v1/countries/'.$country->name, ['Authorization' => 'Bearer ' . $token])
@@ -59,22 +60,21 @@ class APIAuthenticationTest extends TestCase
                         'iso2',
                         'iso3',
                         'covid19' => [
-//                            'total_case',
-//                            'total_deaths',
-//                            'last_updated',
+                            'total_case',
+                            'total_deaths',
+                            'last_updated',
                         ],
                         'current_president' => [
-//                            'name',
-//                            'gender',
-//                            'appointment_start_date',
-//                            'appointment_end_date',
-//                            'href' => [
-//                                'self',
-//                                'country',
-//                                'picture'
-//                            ],
+                            'name',
+                            'gender',
+                            'appointment_start_date',
+                            'appointment_end_date',
+                            'href' => [
+                                'self',
+                                'country',
+                                'picture'
+                            ],
                         ],
-
                         'currency',
                         'phone_code',
                         'continent',
@@ -94,7 +94,8 @@ class APIAuthenticationTest extends TestCase
     }
     public function testAPIThrottling(){
 
-        $country = factory(Country::class)->create();
+        $country = Country::inRandomOrder()->first();
+
         $user = factory(User::class)->create();
         $token = $user->createToken('authToken')->plainTextToken;
 

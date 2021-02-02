@@ -4,13 +4,12 @@
     text-align: center;
     font-size: 34px;
     line-height: 74px;
-    border-color: $primary !important; 
+    border-color: $primary !important;
     transition: all 0.5s;
 }
 
 .error {
     margin: 8px 0px;
-    display: none;
     color:$danger;
 }
 
@@ -24,10 +23,8 @@
 
 .error_message {
     padding: 10px;
-    margin-bottom: 20px;
     text-align: center;
-    border: 2px solid lighten($primary, 4%);
-    color: lighten($primary, 4%);
+    color: lighten($danger, 4%);
     border-radius: 5px;
     font-size: 14px;
 }
@@ -42,7 +39,7 @@
     h3 {
         color: $success;
         font-size: 22px;
-    }    
+    }
 }
 
 .app-contact-desc {

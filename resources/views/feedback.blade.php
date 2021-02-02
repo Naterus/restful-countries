@@ -63,7 +63,7 @@
             </div>
 
         </div>
-        </div>
+
     </section>
     <!-- end home -->
 

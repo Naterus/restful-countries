@@ -64,9 +64,18 @@ class Helper
 
     }
 
+    public function duplicate($original_array, $count){
+        $new_array = [];
+        for ($i=0 ; $i < $count; $i++){
+            $new_array[$i] = $original_array;
+        }
+        return $new_array;
+    }
+
     public static function instance()
     {
         return new Helper();
     }
+
 
 }
