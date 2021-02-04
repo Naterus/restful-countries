@@ -8,7 +8,7 @@
                 <div class="float-left">
                     <div class="email">
                         <a href="mailto:support@restfulcountries.com">
-                            <i class="mdi mdi-email"></i> support@restfulcountries.com
+                            <i class="fa fa-envelope"></i> support@restfulcountries.com
                         </a>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li>
-                        <router-link to="/" class="navbar-item" exact>
+                        <router-link :to="{name:'home'}" class="navbar-item" exact>
                             Home
                         </router-link>
                     </li>
@@ -55,12 +55,12 @@
                         </a>
                     </li>
                     <li>
-                        <router-link to="/feedback" class="navbar-item" exact>
+                        <router-link :to="{name:'feedback'}" class="navbar-item" exact>
                             Feedback
                         </router-link>
                     </li>
                     <li>
-                        <router-link to="/donate" class="navbar-item" exact>
+                        <router-link :to="{name:'donate'}" class="navbar-item" exact>
                             Donate
                         </router-link>
                     </li>

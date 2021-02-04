@@ -17,20 +17,21 @@ class ApiTokenController extends Controller
         return view("refresh-token");
     }
 
-    public function generateApiToken(Request $request,Mailer $mail){
+    public function generateApiToken(Request $request,Mailer $mail): \Illuminate\Http\JsonResponse
+    {
         $validated_details = $this->validate($request,[
-            "email" => "required|min:6|max:40",
-            "website" => "max:40"
+            "email" => "required|min:6|email",
+            "website" => "nullable|url"
         ]);
 
         $existing_user = User::whereEmail($validated_details["email"])->first();
 
         if($existing_user){
-            return redirect()->back()->with([
-                "error" => "API access Token has already been generated for this email.
-                            If this is your email address, please click \"Refresh Token\" below to generate a new access
-                            token.",
-            ]);
+            return response()->json([
+                "error" => 'API access Token has already been generated for this email.
+                            If this is your email address, please click Refresh Token below to generate a new access
+                            token.',
+            ],409);
         }
 
         $created_user = User::create([
@@ -48,19 +49,21 @@ class ApiTokenController extends Controller
         }catch (\Exception $e){
             //$created_user->tokens()->delete();
             //$created_user->delete();
+            //todo - better email failed message
 
-            return redirect()->back()->with([
-                "error" => $e->getMessage(),
+            return response()->json([
+                "success" => $e->getMessage(),
                 "api_token" => $api_token
-            ]);
+            ],202);
         }
 
-        return redirect()->back()->with([
-            "success" => "Api Access Token has been sent to your email successfully.",
-        ]);
+        return response()->json([
+            "success" => "Your Api Access Token has been sent to your email successfully.",
+        ],201);
     }
 
-    public function regenerateApiToken(Request $request,Mailer $mail){
+    public function regenerateApiToken(Request $request,Mailer $mail): \Illuminate\Http\JsonResponse
+    {
         $validated_details = $this->validate($request,[
             "email" => "required|min:6|max:40",
         ]);
@@ -68,9 +71,9 @@ class ApiTokenController extends Controller
         $existing_user = User::whereEmail($validated_details["email"])->first();
 
         if(!$existing_user){
-            return redirect()->back()->with([
+            return response()->json([
                 "error" => "Api access Token has not been generated for this email.",
-            ]);
+            ],404);
         }
 
         $existing_user->tokens()->delete();
@@ -81,24 +84,25 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
+            //todo - why delete?
             $existing_user->tokens()->delete();
-
-            return redirect()->back()->with([
+//todo - better email failed message
+            return response()->json([
                 "error" => $e->getMessage(),
-            ]);
+            ],409);
 
         }
 
-        return redirect()->back()->with([
+        return response()->json([
             "success" => "New api token has been sent to your mail successfully"
-        ]);
+        ],201);
     }
 
-    public function revokeToken(Request $request){
+    public function revokeToken(Request $request): \Illuminate\Http\RedirectResponse
+    {
          $validated_details = $this->validate($request,[
              "token_id" => "required"
          ]);
-
 
 
         $existing_user = User::whereId($validated_details["token_id"])->first();
