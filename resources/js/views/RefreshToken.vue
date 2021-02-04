@@ -1,4 +1,5 @@
 <template>
+
     <!-- Start home -->
     <section class="bg-half page-next-level">
         <div class="bg-overlay"></div>
@@ -46,7 +47,10 @@
                                 </div>
 
                             </form>
-                            <a :href="'/vue/request-access-token'" style="color: #ffffff;">Request new Token</a>
+                            <div class="refresh">
+                                Click here to <router-link :to="'/request-access-token'" exact>
+                                request for a new token !</router-link>
+                            </div>
                         </div>
                     </div>
                 </div>

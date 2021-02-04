@@ -1,65 +1,4 @@
-@extends("layouts.home-layout")
-@section("title","Documentation")
-@section("page-description")
-    Api documentation V{!! $version !!}
-@endsection
-@section("page-style")
-    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/pretty-print-json.css") !!}"/>
-@endsection
-
-
-{{--todo: Update sample request and response--}}
-
-@section('nav-bar')
-    <!-- simple__navigation Bar-->
-    <div id="simple__navigation">
-
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="{!! route('home') !!}">
-                    <img alt="Restful Countries" src="{!! asset("assets/images/logo/logo-w-b.png") !!}"
-                         class="logo-light" height="60"/>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item {{Route::is('home') ? 'active' : ''}}">
-                            <a class="nav-link" href="{!! route('home') !!}">Home </a>
-                        </li>
-                        <li class="nav-item {{Route::is('documentation') ? 'active' : ''}}">
-                            <a class="nav-link"
-                               href="{!! route("documentation",env("APP_VERSION")) !!}">Documentation</a>
-                        </li>
-
-                        <li class="nav-item {{Route::is('feedback') ? 'active' : ''}}">
-                            <a class="nav-link" href="{!! route("feedback") !!}">Feedback</a>
-                        </li>
-                        <li class="nav-item {{Route::is('donate') ? 'active' : ''}}">
-                            <a class="nav-link" href="{!! route("donate") !!}">Donate</a>
-                        </li>
-
-                    </ul>
-                    <div class="my-2 my-lg-0">
-                        <a href="{{url('/request-access-token')}}">
-                            <button class="btn btn-dark">Get Token</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </nav>
-
-    </div>
-@endsection
-
-@section("page-content")
-
-
+<template>
 
     <!-- API DOCUMENTATION START -->
     <section style="margin-top: 100px;">
@@ -72,23 +11,18 @@
                         <h4 class="widget-title">Restful Countries API</h4>
 
                         <div class="home-registration-form my-4">
-                            <form class="registration-form">
 
-                                <select id="select-country" name="version" class="select__version">
-                                    @for($version = 1; $version <= env('APP_VERSION'); $version++)
-                                        <option value="{!! $version !!}">Version {!! $version !!}</option>
-                                    @endfor
+                                <select name="version" class="select__version" v-on:change="fetchDocumentation($event)">
+                                    <option v-for="version in versions" :value="version">Version {{version}} </option>
                                 </select>
 
-
-                            </form>
                         </div>
                         <ul class="list-unstyled mb-40 categories">
                             <li><a href="#api-reference" class="scroll-div">API Reference</a></li>
                             <li><a href="#authentication-guide" class="scroll-div">Authentication Guide</a></li>
                             <li><a href="#rate-limiting" class="scroll-div">Rate Limiting</a></li>
                             <li><a href="#base-url" class="scroll-div">Base URL</a></li>
-                            {{--<li><a href="#quick-start" class="scroll-div">Quick Start</a></li>--}}
+<!--                            <li><a href="#quick-start" class="scroll-div">Quick Start</a></li>-->
                             <li><a href="#all-countries" class="scroll-div">All Countries</a></li>
                             <li><a href="#country-by-name" class="scroll-div">Country by name</a></li>
                             <li><a href="#country-by-continent" class="scroll-div">Countries by continent</a></li>
@@ -105,12 +39,12 @@
                             <li><a href="#covid19-by-deaths" class="scroll-div">Covid 19 by deaths</a></li>
                             <li><a href="#covid19-by-total" class="scroll-div">Covid 19 by total case</a></li>
 
-                            {{--todo: add covid19-by-recovery--}}
-                            {{--<li><a href="#covid19-by-deaths" class="scroll-div">Covid 19 by deaths</a></li>--}}
+<!--                            todo: add covid19-by-recovery-->
+<!--                            <li><a href="#covid19-by-deaths" class="scroll-div">Covid 19 by deaths</a></li>-->
 
                             <li><a href="#state-by-country" class="scroll-div">States by country name</a></li>
                             <li><a href="#state-by-country-state" class="scroll-div">State by country name and state
-                                    name</a></li>
+                                name</a></li>
                             <li><a href="#state-slim" class="scroll-div">Slim State response</a></li>
                             <li><a href="#references" class="scroll-div">References</a></li>
                         </ul>
@@ -123,7 +57,7 @@
                         <div class="ml-auto mr-6">
                             <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
                                 <button class="btn btn-outline-dark btn-sm">
-                                    <i class="mdi mdi-github-circle"></i> Edit this page
+                                    <i class="fa fa-github"></i> Edit this page
                                 </button>
                             </a>
                         </div>
@@ -136,8 +70,8 @@
                             <p>Restful Countries API allows users to explore the entire database for information on
                                 countries and their states, presidents, flag, population, covid19 stats and others.</p>
                             <p>Restful Countries API is organized around <a
-                                    href="http://en.wikipedia.org/wiki/Representational_State_Transfer"
-                                    target="_blank"> REST</a>. Our API has predictable resource-oriented URLs,
+                                href="http://en.wikipedia.org/wiki/Representational_State_Transfer"
+                                target="_blank"> REST</a>. Our API has predictable resource-oriented URLs,
                                 returns JSON-encoded responses and uses standard HTTP response codes, and verbs.</p>
                         </div>
                     </div>
@@ -150,8 +84,8 @@
                                 be sent with each request.
                             </p>
                             <p>
-                                To obtain an API key, go to the <a href="{{url('/request-access-token')}}"> request
-                                    access token page </a> and register your application by providing your email and
+                                To obtain an API key, go to the <a :href="'/request-access-token'"> request
+                                access token page </a> and register your application by providing your email and
                                 application URL. This will allocate a unique key to your application which can be sent
                                 with any GET request for a public resource served by Restful Countries API.
                             <p>
@@ -177,7 +111,7 @@
                             <h6>Increasing your rate limit</h6>
                             <p>
                                 If you have an application that requires a higher rate limit than the default applied,
-                                then please <a href="{{url('feedback')}}"> contact us </a>, we will be happy to help.
+                                then please <a :href="'/feedback'"> contact us </a>, we will be happy to help.
                             </p>
                         </div>
                     </div>
@@ -185,14 +119,14 @@
                     <div id="base-url" class="content ">
                         <h4 class="title text-dark">Base URL </h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1</span></div>
+                            <div class="code">GET <span class="url"> {{APP_URL}}/api/v1</span></div>
                         </div>
                     </div>
 
                     <div id="all-countries" class="content ">
                         <h4 class="title text-dark">All Countries </h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries</span></div>
+                            <div class="code">GET <span class="url"> {{APP_URL}}/api/v1/countries</span></div>
 
                             <p>Returns information of all the countries available in the world. Including every other
                                 information on that country. </p>
@@ -246,9 +180,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?per_page=1" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?per_page=1" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -263,7 +197,7 @@
                         <h4 class="title text-dark">Country by name</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}
+                            <div class="code">GET <span class="url"> {{APP_URL}}
                                     /api/v1/countries/{country}</span></div>
 
                             <p>Returns information of a particular country. </p>
@@ -284,7 +218,7 @@
                                         <tr>
                                             <td>{country}</td>
                                             <td>The name of the particular country you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries/Nigeria</span></div>
                                             </td>
                                         </tr>
@@ -320,9 +254,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/Nigeria" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}" </pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/Nigeria" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}" </pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -344,7 +278,7 @@
                     <div id="country-by-continent" class="content ">
                         <h4 class="title text-dark">Country by continent</h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}
+                            <div class="code">GET <span class="url"> {{APP_URL}}
                                     /api/v1/countries?continent={continent}</span></div>
 
                             <p>Returns information of all countries in a continent. </p>
@@ -388,7 +322,7 @@
                                             <td class="color-alert">continent</td>
                                             <td>required</td>
                                             <td>Specifies continent to retrieve data on. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?continent=africa</span></div>
                                             </td>
                                             <td>String</td>
@@ -398,7 +332,7 @@
                                             <td class="color-alert">per_page</td>
                                             <td>optional</td>
                                             <td>Specifies number of items to return. Returns paginated data. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?continent=africa&per_page=5</span></div>
 
                                             </td>
@@ -412,9 +346,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?continent=africa" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?continent=africa" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -430,7 +364,7 @@
                         <h4 class="title text-dark">Country by Population</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}
+                            <div class="code">GET <span class="url"> {{APP_URL}}
                                     /api/v1/countries?population_from={min_population}&population_to={max_population}</span>
                             </div>
 
@@ -476,7 +410,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries population starting point i.e. smallest population.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?population_from=500000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -487,7 +421,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries population ending point i.e. largest population..
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?population_to=1000000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -497,7 +431,7 @@
                                             <td class="color-alert">per_page</td>
                                             <td>optional</td>
                                             <td>Specifies number of items to return. Returns paginated data. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?continent=africa&per_page=5</span></div>
 
                                             </td>
@@ -511,9 +445,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?population_from=20000&population_to=5000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?population_from=20000&population_to=5000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -530,7 +464,7 @@
                         <h4 class="title text-dark">Country by Size </h4>
                         <div class="inner">
                             <div class="code">GET
-                                <span class="url"> {{env('APP_URL')}}
+                                <span class="url"> {{APP_URL}}
                                     /api/v1/countries?size_from={min_size}&size_to={max_size}</span>
                             </div>
 
@@ -576,7 +510,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries size starting point i.e. smallest size.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?size_from=10000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -587,7 +521,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries population ending point i.e. largest size..
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?size_to=1000000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -597,7 +531,7 @@
                                             <td class="color-alert">per_page</td>
                                             <td>optional</td>
                                             <td>Specifies number of items to return. Returns paginated data. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?size_from=10000&size_to=100000&per_page=5</span>
                                                 </div>
 
@@ -612,9 +546,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?size_from=300&size_to=200000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?size_from=300&size_to=200000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -632,7 +566,7 @@
                         <h4 class="title text-dark">Country by ISO2</h4>
                         <div class="inner">
                             <div class="code">GET
-                                <span class="url"> {{env('APP_URL')}}/api/v1/countries?iso2={iso2}</span>
+                                <span class="url"> {{APP_URL}}/api/v1/countries?iso2={iso2}</span>
                             </div>
 
                             <p>Returns information of a country by ISO2 code . </p>
@@ -677,7 +611,7 @@
                                             <td>optional</td>
                                             <td>Specifies country to retrieve by passing country's ISO2 code.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?iso2=AO</span></div>
                                             </td>
                                             <td>String</td>
@@ -691,9 +625,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?iso2=GH" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?iso2=GH" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -710,7 +644,7 @@
                         <h4 class="title text-dark">Country by ISO3 - <span class="text-success">GET</span></h4>
                         <div class="inner">
                             <div class="code">GET
-                                <span class="url"> {{env('APP_URL')}}/api/v1/countries?iso3={iso3}</span>
+                                <span class="url"> {{APP_URL}}/api/v1/countries?iso3={iso3}</span>
                             </div>
 
                             <p>Returns information of a country by ISO3 code . </p>
@@ -755,7 +689,7 @@
                                             <td>optional</td>
                                             <td>Specifies country to retrieve by passing country's ISO2 code.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/countries?iso3=AGO</span></div>
                                             </td>
                                             <td>String</td>
@@ -769,9 +703,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?iso3=AGO" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?iso3=AGO" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -788,7 +722,7 @@
                         <h4 class="title text-dark">Country by Code </h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}
+                            <div class="code">GET <span class="url"> {{APP_URL}}
                                     /api/v1/countries?code={code}</span></div>
 
                             <p>Returns information of a single country by calling code. </p>
@@ -832,7 +766,7 @@
                                             <td class="color-alert">code</td>
                                             <td>required</td>
                                             <td>Specifies country to retrieve by passing country's calling code. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?code=234</span></div>
                                             </td>
                                             <td>String</td>
@@ -846,14 +780,13 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries?code=234" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries?code=234" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
 
-                                {{--<pre id="country-by-continent-response"></pre>--}}
+<!--                                <pre id="country-by-continent-response"></pre>-->
 
 
                             </div>
@@ -862,7 +795,7 @@
                     <div id="country-slim" class="content ">
                         <h4 class="title text-dark">Slim Country Response </h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}
+                            <div class="code">GET <span class="url"> {{APP_URL}}
                                     /api/v1/countries?fetch_type=slim</span></div>
 
                             <p>Returns minimal information of countries. Response will only include name, phone code,
@@ -908,7 +841,7 @@
                                             <td>required</td>
                                             <td>Specifies that response should only include name, phone code,
                                                 flag and self link . Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries?fetch_type=slim</span></div>
                                             </td>
                                             <td>String</td>
@@ -922,10 +855,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
+                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{APP_URL}}
                                     /api/v1/countries?per_page=20"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <p>In the sample request above, replace {TOKEN} with your actual token.<a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -940,7 +872,7 @@
                     <div id="presidents-by-country" class="content ">
                         <h4 class="title text-dark">Presidents by Country</h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries/{country}/presidents</span></div>
+                            <div class="code">GET <span class="url"> {{APP_URL}}/api/v1/countries/{country}/presidents</span></div>
 
                             <p>Returns information on a country's past and present presidents and/or presidents </p>
                             <div>
@@ -960,7 +892,7 @@
                                         <tr>
                                             <td>{country}</td>
                                             <td>Specifies the country the name of the particular country you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}
+                                                <div class="code"><span class="url"> {{APP_URL}}
                                                         /api/v1/countries/india/presidents</span></div>
                                             </td>
                                         </tr>
@@ -996,9 +928,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/nigeria/presidents" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/nigeria/presidents" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
                                 <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                    :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1016,7 +948,7 @@
                         <h4 class="title text-dark">Presidents by Country and Name</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries/{country}/presidents/{president}</span></div>
+                            <div class="code">GET <span class="url"> {{APP_URL}}/api/v1/countries/{country}/presidents/{president}</span></div>
 
                             <p>Returns information on a particular country's presidents including leader's name, gender, appointment start and end date. </p>
                             <div>
@@ -1036,13 +968,13 @@
                                         <tr>
                                             <td>{country}</td>
                                             <td>Specifies the country the name of the particular country you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/india/presidents/{president}</span></div>
+                                                <div class="code"><span class="url"> {{APP_URL}}/api/v1/countries/india/presidents/{president}</span></div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>{president}</td>
                                             <td>Specifies the president in the {country} you want to look up. Example
-                                                <div class="code"><span class="url">{{env('APP_URL')}}/api/v1/countries/{country}/presidents/Ashraf Ghani</span></div>
+                                                <div class="code"><span class="url">{{APP_URL}}/api/v1/countries/{country}/presidents/Ashraf Ghani</span></div>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -1077,9 +1009,8 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/nigeria/presidents/Muhammadu Buhari" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/nigeria/presidents/Muhammadu Buhari" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1094,7 +1025,7 @@
                         <h4 class="title text-dark">Covid 19 Cases Only</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url">{{env('APP_URL')}}/api/v1/covid19</span></div>
+                            <div class="code">GET <span class="url">{{APP_URL}}/api/v1/covid19</span></div>
 
                             <p>Returns countries information on Covid19 cases. </p>
                             <div>
@@ -1148,10 +1079,9 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{env('APP_URL')}}
+                                <pre class="pre-dark">curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "{{APP_URL}}
                                     /api/v1/countries?per_page=1"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1168,7 +1098,7 @@
                     <div id="covid19-by-deaths" class="content ">
                         <h4 class="title text-dark">Covid 19 cases by death range only</h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url">{{env('APP_URL')}}
+                            <div class="code">GET <span class="url">{{APP_URL}}
                                     /api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}</span></div>
 
                             <p>Returns information countries Covid19 cases filtered by death rate. </p>
@@ -1214,7 +1144,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries covid19 death rate starting point i.e. lowest death rate.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/covid19?death_from=10000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -1225,7 +1155,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries covid19 death rate ending point i.e. highest death rate.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}
+                                                <div class="code"> <span class="url"> {{APP_URL}}
                                                         /api/v1/covid19?death_to=50000</span></div>
                                             </td>
                                             <td>integer</td>
@@ -1245,14 +1175,13 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/covid19?death_from=1000&death_to1000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/covid19?death_from=1000&death_to1000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
 
-                                {{--<pre id="covid19-response"></pre>--}}
+<!--                                <pre id="covid19-response"></pre>-->
 
 
                             </div>
@@ -1263,7 +1192,7 @@
                         <h4 class="title text-dark">Covid 19 cases by total confirmed range only</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url">{{env('APP_URL')}}
+                            <div class="code">GET <span class="url">{{APP_URL}}
                                     /api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}</span></div>
 
                             <p>Returns information countries Covid19 cases filtered by total confirmed cases. </p>
@@ -1309,7 +1238,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries covid19 death rate starting point i.e. lowest death rate.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}/api/v1/covid19?total_from=3000</span></div>
+                                                <div class="code"> <span class="url"> {{APP_URL}}/api/v1/covid19?total_from=3000</span></div>
                                             </td>
                                             <td>integer</td>
 
@@ -1319,7 +1248,7 @@
                                             <td>optional</td>
                                             <td>Specifies countries covid19 death rate ending point i.e. highest death rate.
                                                 Example
-                                                <div class="code"> <span class="url"> {{env('APP_URL')}}/api/v1/covid19?total_to=500000</span></div>
+                                                <div class="code"> <span class="url"> {{APP_URL}}/api/v1/covid19?total_to=500000</span></div>
                                             </td>
                                             <td>integer</td>
 
@@ -1338,14 +1267,13 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/covid19?total_from=2000&total_to=10000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/covid19?total_from=2000&total_to=10000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
 
-                                {{--<pre id="covid19-response"></pre>--}}
+<!--                                <pre id="covid19-response"></pre>-->
 
 
                             </div>
@@ -1357,7 +1285,7 @@
                     <div id="state-by-country" class="content ">
                         <h4 class="title text-dark">State by Country Name </h4>
                         <div class="inner">
-                            <div class="code">GET <span class="url">{{env('APP_URL')}}/api/v1/countries/{country}/states</span></div>
+                            <div class="code">GET <span class="url">{{APP_URL}}/api/v1/countries/{country}/states</span></div>
 
                             <p>Returns information a country's states. </p>
                             <div>
@@ -1377,7 +1305,7 @@
                                         <tr>
                                             <td>{country}</td>
                                             <td>Specifies the country the name of the particular country you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/Nigeria/states</span></div>
+                                                <div class="code"><span class="url"> {{APP_URL}}/api/v1/countries/Nigeria/states</span></div>
                                             </td>
                                         </tr>
 
@@ -1412,9 +1340,8 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/Nigeria/states" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/Nigeria/states" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token.<a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1429,7 +1356,7 @@
                         <h4 class="title text-dark">State by Country Name and State Name</h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url">{{env('APP_URL')}}/api/v1/countries/{country}/states/{state}</span></div>
+                            <div class="code">GET <span class="url">{{APP_URL}}/api/v1/countries/{country}/states/{state}</span></div>
 
                             <p>Returns information a country's states. </p>
                             <div>
@@ -1449,13 +1376,13 @@
                                         <tr>
                                             <td>{country}</td>
                                             <td>Specifies the country the name of the particular country you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/United States/states/{state}</span></div>
+                                                <div class="code"><span class="url"> {{APP_URL}}/api/v1/countries/United States/states/{state}</span></div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>{state}</td>
                                             <td>Specifies the state of the particular {country} you want to look up. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/{country}/states/Alaska</span></div>
+                                                <div class="code"><span class="url"> {{APP_URL}}/api/v1/countries/{country}/states/Alaska</span></div>
                                             </td>
                                         </tr>
                                         </tbody>
@@ -1489,13 +1416,12 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/united-states/states/Alaska" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/united-states/states/Alaska" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'">Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
-                                {{--<pre id="states-response"></pre>--}}
+<!--                                <pre id="states-response"></pre>-->
 
 
                             </div>
@@ -1507,7 +1433,7 @@
                         <h4 class="title text-dark">Slim State Response </h4>
 
                         <div class="inner">
-                            <div class="code">GET <span class="url"> {{env('APP_URL')}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
+                            <div class="code">GET <span class="url"> {{APP_URL}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
 
                             <p>Returns minimal information of country's state. Response will only include name, phone code,
                                 flag and self link </p>
@@ -1551,7 +1477,7 @@
                                             <td class="color-alert">fetch_type</td>
                                             <td>required</td>
                                             <td>Specifies that response should only include name, ISO 2 code, ISO 3 code and self link. Example
-                                                <div class="code"><span class="url"> {{env('APP_URL')}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
+                                                <div class="code"><span class="url"> {{APP_URL}}/api/v1/countries/United-States/states?fetch_type=slim</span></div>
                                             </td>
                                             <td>String</td>
 
@@ -1564,9 +1490,8 @@
                             </div>
                             <div>
                                 <h5>Sample Request</h5>
-                                <pre class="pre-dark">curl -I "{{env('APP_URL')}}/api/v1/countries/united-states/states?fetch_type=slim" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
-                                <p>In the sample request above, replace {TOKEN} with your actual token. <a
-                                        href="{{url('/request-access-token')}}">Generate your Token here</a></p>
+                                <pre class="pre-dark">curl -I "{{APP_URL}}/api/v1/countries/united-states/states?fetch_type=slim" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"</pre>
+                                <p>In the sample request above, replace {TOKEN} with your actual token. <a :href="'/request-access-token'"> Generate your Token here</a></p>
                             </div>
                             <div>
                                 <h5>Sample Response</h5>
@@ -1596,21 +1521,79 @@
                                 <li><a href="https://covid19.who.int/" target="_blank">https://covid19.who.int</a></li>
                             </ul>
 
-                            <small>Please visit our <a href="{!! route("feedback") !!}">Feedback page</a> to let us know your complaints or suggestions for new features.</small>
+                            <small>Please visit our <a :href="'/feedback'">Feedback page</a> to let us know your complaints or suggestions for new features.</small>
                         </div>
                     </div>
 
+                </div>
+
+                <div class="show-sidebar-sm" v-on:click="openSideBar">
+                    <i class="fa fa-bars"></i>
                 </div>
             </div>
         </div>
     </section>
     <!-- API DOCUMENTATION END -->
 
-    <div class="show-sidebar-sm">
-        <i class="mdi mdi-book-open-page-variant"></i>
-    </div>
-@endsection
+</template>
 
-@section("page-script")
-    <script src="{!! asset("assets/js/pretty-print-json.js") !!}"></script>
-@endsection
+<script>
+import DocUrl from "../../models/DocUrl";
+import $ from "jquery";
+
+export default {
+name: "v1",
+    data(){
+    return{
+        APP_URL:'',
+        versions: {}
+
+    }
+
+    },
+    created() {
+        DocUrl.getAppUrl(APP_URL => this.APP_URL = APP_URL);
+        DocUrl.getVersions(versions => this.versions = versions);
+
+    },
+    methods: {
+        fetchDocumentation(event){
+            console.log(event.target.value);
+
+        },
+        openSideBar(){
+
+            if ($(window).width() < 994) {
+
+                $(document).mouseup(function(e)
+                {
+                    let container = $(".sidebar");
+                    if (!container.is(e.target) && container.has(e.target).length === 0)
+                    {
+                        container.hide();
+                        $(".show-sidebar-sm").show()
+                    }
+
+                });
+
+                $(".show-sidebar-sm").click(function () {
+                    console.log('hello small')
+                    $(".sidebar").show(300);
+                    $(".show-sidebar-sm").hide();
+                });
+
+                $(".scroll-div").click(function () {
+                    $(".sidebar").hide();
+                    $(".show-sidebar-sm").show()
+                });
+            }
+
+        }
+    }
+
+}
+</script>
+
+<style scoped>
+
+</style>

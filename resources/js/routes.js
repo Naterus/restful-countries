@@ -1,35 +1,41 @@
 import VueRouter from 'vue-router';
 
 
+
 const routes = [
     {
-        path: '/vue/',
+        path: '/',
         name:'home',
         component:  require('./views/Welcome').default,
     },
     {
-        path: '/vue/feedback',
+        path: '/api-documentation/version/1',
+        name:'docs.v1',
+        component: require('./views/docs/V1').default,
+    },
+    {
+        path: '/feedback',
         name:'feedback',
         component: require('./views/Feedback').default,
     },
     {
-        path: '/vue/donate',
+        path: '/donate',
         name:'donate',
         component: require('./views/Donate').default,
     },
     {
-        path: '/vue/request-access-token',
+        path: '/request-access-token',
         name:'request-token',
         component: require('./views/RequestToken').default,
     },
     {
-        path: '/vue/refresh-access-token',
+        path: '/refresh-access-token',
         name:'refresh-token',
         component: require('./views/RefreshToken').default,
     },
 ]
 export default new VueRouter({
     routes, // short for `routes: routes`
-    linkActiveClass:'is-active',
+    linkActiveClass:'active',
     mode: 'history'
 })

@@ -1,5 +1,6 @@
 <template>
 <div>
+
     <!-- Start home -->
     <section class="bg-half " id="donation">
         <div class="bg-overlay"></div>
@@ -8,12 +9,11 @@
                 <div class="col-md-8 mx-auto">
                     <div class=" text-center text-white f-14">
                         <div class="mb-5">
-                            <h1 class="text-uppercase mb-4">Support Restful Countries</h1>
+                            <h1 class="heading font-weight-bold mb-4">Support Restful Countries</h1>
                             <p>Restful Countries API aims to provide developers and researchers all over the world with relevant information about any country.
                             </p>
                             <p>You may wish to support the research work, development and maintenance of restful
                                 countries using any of the channels below:</p>
-
                         </div>
 
                         <div class="home-form-position ">
@@ -88,15 +88,17 @@
         </div>
     </div>
 
-
+    <script type="application/javascript" src="https://blockchain.info/Resources/js/pay-now-button.js" defer></script>
 </div>
 
 </template>
 
 <script>
+import $ from 'jquery';
 
 export default {
     name: "Donate",
+
     metaInfo() {
         return {
             title: "Restful Countries | Donate",
