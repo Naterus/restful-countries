@@ -1589,8 +1589,15 @@ name: "v1",
             }
 
         }
+    },
+    metaInfo() {
+        return {
+            title: "Restful Countries | Api documentation V1",
+            meta: [
+                { property: 'og:title', content: "Restful Countries | Api documentation V1"},
+            ]
+        }
     }
-
 }
 </script>
 

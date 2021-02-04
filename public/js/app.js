@@ -4336,6 +4336,15 @@ __webpack_require__.r(__webpack_exports__);
         });
       }
     }
+  },
+  metaInfo: function metaInfo() {
+    return {
+      title: "Restful Countries | Api documentation V1",
+      meta: [{
+        property: 'og:title',
+        content: "Restful Countries | Api documentation V1"
+      }]
+    };
   }
 });
 
