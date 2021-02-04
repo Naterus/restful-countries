@@ -25,14 +25,14 @@
                                            border="0" name="submit"
                                            title="PayPal - The safer, easier way to pay online!"
                                            alt="Donate with PayPal button"/>
-                                    <img alt="" border="0" src="https://www.paypal.com/en_NG/i/scr/pixel.gif" width="1"
-                                         height="1"/>
+<!--                                    <img alt="" border="0" src="https://www.paypal.com/en_NG/i/scr/pixel.gif" width="1"-->
+<!--                                         height="1"/>-->
                                 </form>
                             </div>
                             <div>
 
                                 <div data-toggle="modal" data-target="#bitcoinModal">
-                                    <img src="assets/images/iconfinder_payment_method_bitcoin_206681.png"
+                                    <img :src="'../assets/images/iconfinder_payment_method_bitcoin_206681.png'"
                                     style="height: 50px;">
                                 </div>
                             </div>
@@ -92,10 +92,19 @@
 </div>
 
 </template>
+
 <script>
 
 export default {
-    name: "Donate"
+    name: "Donate",
+    metaInfo() {
+        return {
+            title: "Restful Countries | Donate",
+            meta: [
+                { property: 'og:title', content: "Restful Countries | Donate"},
+            ]
+        }
+    }
 }
 </script>
 

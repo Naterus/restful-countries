@@ -81,6 +81,14 @@ export default {
         alertMessage(message){
             this.$swal("Feedback Successful!", message.success , "success");
         }
+    },
+    metaInfo() {
+        return {
+            title: "Restful Countries | Feedback",
+            meta: [
+                { property: 'og:title', content: "Restful Countries | Feedback"},
+            ]
+        }
     }
 }
 </script>

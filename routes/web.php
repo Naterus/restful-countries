@@ -103,7 +103,11 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 
 });
 
+Route::view('/vue','vue.welcome');
+Route::view('/vue/feedback','vue.welcome');
+Route::view('/vue/donate','vue.welcome');
+Route::view('/vue/request-access-token','vue.welcome');
+Route::view('/vue/refresh-access-token','vue.welcome');
 
-Route::get('/vue',function(){
-    return view('vue.welcome');
-})->name('vue.welcome');
+
+
