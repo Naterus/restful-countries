@@ -1,0 +1,71 @@
+{
+  "data": [
+    {
+      "name": "Algeria",
+      "full_name": "Democratic Republic of Algeria",
+      "capital": "Algiers",
+      "iso2": "DZ",
+      "iso3": "DZA",
+      "covid19": {
+        "total_case": "88,825",
+        "total_deaths": "2,527",
+        "last_updated": "2020-12-09T09:57:48.000000Z"
+      },
+      "current_president": null,
+      "currency": "DZD",
+      "phone_code": "213",
+      "continent": "Africa",
+      "description": null,
+      "size": "2,381,741 km²",
+      "independence_date": null,
+      "population": "44,190,030",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Algeria",
+        "states": "https://restfulcountries.com/api/v1/countries/Algeria/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Algeria/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Algeria.png"
+      }
+    },
+    {
+      "name": "Angola",
+      "full_name": "Republic of Angola",
+      "capital": "Luanda",
+      "iso2": "AO",
+      "iso3": "AGO",
+      "covid19": {
+        "total_case": "15,648",
+        "total_deaths": "354",
+        "last_updated": "2020-12-09T09:57:48.000000Z"
+      },
+      "current_president": null,
+      "currency": "AOA",
+      "phone_code": "244",
+      "continent": "Africa",
+      "description": "1246620",
+      "size": "1,246,620 km²",
+      "independence_date": null,
+      "population": "33,312,843",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Angola",
+        "states": "https://restfulcountries.com/api/v1/countries/Angola/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Angola/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Angola.png"
+      }
+    }
+  ],
+  "links": {
+    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+    "last": "https://restfulcountries.com/api/v1/countries?page=25",
+    "prev": null,
+    "next": "https://restfulcountries.com/api/v1/countries?page=2"
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 25,
+    "path": "https://restfulcountries.com/api/v1/countries",
+    "per_page": "2",
+    "to": 2,
+    "total": 50
+  }
+}

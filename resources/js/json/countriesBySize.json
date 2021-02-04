@@ -1,0 +1,18 @@
+{
+  "data": null,
+  "links": {
+    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+    "last": "https://restfulcountries.com/api/v1/countries?page=1",
+    "prev": null,
+    "next": null
+  },
+  "meta": {
+    "current_page": 1,
+    "from": null,
+    "last_page": 1,
+    "path": "https://restfulcountries.com/api/v1/countries",
+    "per_page": "3",
+    "to": null,
+    "total": 0
+  }
+}

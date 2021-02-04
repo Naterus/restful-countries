@@ -23,6 +23,11 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "bootstrap": "^4.6.0",
+        "jquery": "^3.5.1",
+        "popper.js": "^1.16.1",
+        "pretty-print-json": "0.0.3",
+        "vue-meta": "^2.4.0",
         "vue-swal": "^1.0.0"
     }
 }

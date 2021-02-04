@@ -1,0 +1,28 @@
+{
+  "data": {
+    "name": "Angola",
+    "full_name": "Republic of Angola",
+    "capital": "Luanda",
+    "iso2": "AO",
+    "iso3": "AGO",
+    "covid19": {
+      "total_case": "15,648",
+      "total_deaths": "354",
+      "last_updated": "2020-12-09T09:57:48.000000Z"
+    },
+    "current_president": null,
+    "currency": "AOA",
+    "phone_code": "244",
+    "continent": "Africa",
+    "description": "1246620",
+    "size": "1,246,620 km²",
+    "independence_date": null,
+    "population": "33,312,843",
+    "href": {
+      "self": "https://restfulcountries.com/api/v1/countries/Angola",
+      "states": "https://restfulcountries.com/api/v1/countries/Angola/states",
+      "presidents": "https://restfulcountries.com/api/v1/countries/Angola/presidents",
+      "flag": "https://restfulcountries.com/storage/images/flags/Angola.png"
+    }
+  }
+}

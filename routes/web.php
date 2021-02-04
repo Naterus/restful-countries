@@ -2,27 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::view('/','layout');
 
-Route::get('/','HomeController@index')->name('home');
 
-Route::get('/donate','HomeController@donate')->name('donate');
+Route::view('/feedback','layout');
+Route::view('/donate','layout');
+Route::view('/request-access-token','layout');
+Route::view('/refresh-access-token','layout');
+Route::view('/api-documentation/version/{version}','docs-layout')->name('documentation');
 
-Route::get('/api-documentation','HomeController@docs')->name('docs');
-
-Route::get('/api-documentation/version/{version}','HomeController@documentation')->name('documentation');
-
-Route::get('/documentation/url', 'HomeController@getCurrentDocumentationUrl')->name('documentation.url');
-
-Route::get('/feedback','HomeController@feedback')->name('feedback');
-
-Route::get('/request-access-token','ApiTokenController@requestApiToken')->name('request_token');
+Route::get('/documentation/url','HomeController@getCurrentDocumentationUrl')->name('documentation.url');
+Route::get('/app/url','HomeController@getAppUrl')->name('app.url');
+Route::get('/app/versions','HomeController@getVersions')->name('app.versions');
 
 Route::post('/request-access-token/generate-token','ApiTokenController@generateApiToken')->name('request_token.generate');
-
-Route::get('/refresh-access-token','ApiTokenController@refreshApiToken')->name('refresh_token');
-
 Route::post('/refresh-access-token/regenerate-token','ApiTokenController@regenerateApiToken')->name('refresh_token.regenerate');
-
 Route::post('/feedback/submit','HomeController@submitFeedback')->name('feedback.submit');
 
 
@@ -104,6 +98,7 @@ Route::group(['middleware' => ["auth.admin"]], function() {
 });
 
 
-Route::get('/vue',function(){
-    return view('vue.welcome');
-})->name('vue.welcome');
+
+
+
+
