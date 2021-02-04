@@ -13,7 +13,7 @@
                                     We provide you with detailed and useful information on countries including their states, presidents, flag, population, covid19 stats and others.
                                 </p>
                                 <div class="text-center mt-5">
-                                    <a :href="documentationUrl"><button class="btn-submit ">Explore Endpoints</button></a>
+                                    <a :href="documentationUrl"><button class="btn-submit">Explore Endpoints</button></a>
                                 </div>
                             </div>
                         </div>

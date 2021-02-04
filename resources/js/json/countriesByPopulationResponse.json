@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "name": "Bahamas",
+      "full_name": "Commonwealth of The Bahamas",
+      "capital": "Nassau",
+      "iso2": "BS",
+      "iso3": "BHS",
+      "covid19": {
+        "total_case": "7,579",
+        "total_deaths": "163",
+        "last_updated": "2020-12-09T09:57:48.000000Z"
+      },
+      "current_president": null,
+      "currency": "BSD",
+      "phone_code": "+1-242",
+      "continent": "The Caribean",
+      "description": null,
+      "size": "13,878 km²",
+      "independence_date": null,
+      "population": "394,833",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Bahamas",
+        "states": "https://restfulcountries.com/api/v1/countries/Bahamas/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Bahamas/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Bahamas.png"
+      }
+    },
+    {
+      "name": "Barbados",
+      "full_name": "Barbados",
+      "capital": "Bridgetown",
+      "iso2": "BB",
+      "iso3": "BRB",
+      "covid19": {
+        "total_case": "287",
+        "total_deaths": "7",
+        "last_updated": "2020-12-09T09:57:48.000000Z"
+      },
+      "current_president": null,
+      "currency": "BBD",
+      "phone_code": "+1-246",
+      "continent": "North America",
+      "description": null,
+      "size": "431 km²",
+      "independence_date": null,
+      "population": "287,522",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Barbados",
+        "states": "https://restfulcountries.com/api/v1/countries/Barbados/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Barbados/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Barbados.png"
+      }
+    },
+    {
+      "name": "Belize",
+      "full_name": "Belize",
+      "capital": "Belmopan",
+      "iso2": "BZ",
+      "iso3": "BLZ",
+      "covid19": {
+        "total_case": "7,769",
+        "total_deaths": "173",
+        "last_updated": "2020-12-09T09:57:48.000000Z"
+      },
+      "current_president": null,
+      "currency": "BZD",
+      "phone_code": "501",
+      "continent": "Central America",
+      "description": null,
+      "size": "22,966 km²",
+      "independence_date": null,
+      "population": "400,720",
+      "href": {
+        "self": "https://restfulcountries.com/api/v1/countries/Belize",
+        "states": "https://restfulcountries.com/api/v1/countries/Belize/states",
+        "presidents": "https://restfulcountries.com/api/v1/countries/Belize/presidents",
+        "flag": "https://restfulcountries.com/storage/images/flags/Belize.png"
+      }
+    }
+  ],
+  "links": {
+    "first": "https://restfulcountries.com/api/v1/countries?page=1",
+    "last": "https://restfulcountries.com/api/v1/countries?page=9",
+    "prev": null,
+    "next": "https://restfulcountries.com/api/v1/countries?page=2"
+  },
+  "meta": {
+    "current_page": 1,
+    "from": 1,
+    "last_page": 9,
+    "path": "https://restfulcountries.com/api/v1/countries",
+    "per_page": "3",
+    "to": 3,
+    "total": 25
+  }
+}

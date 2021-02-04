@@ -1946,6 +1946,74 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DocNavigation.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DocNavigation.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _models_DocUrl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../models/DocUrl */ "./resources/js/models/DocUrl.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "DocNavigation",
+  data: function data() {
+    return {
+      documentationUrl: ''
+    };
+  },
+  created: function created() {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooterView.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FooterView.vue?vue&type=script&lang=js& ***!
@@ -2071,7 +2139,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Navigation",
@@ -2100,6 +2167,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 //
 //
 //
@@ -2195,6 +2264,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Donate",
   metaInfo: function metaInfo() {
@@ -2220,6 +2290,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_Form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core/Form */ "./resources/js/core/Form.js");
+//
 //
 //
 //
@@ -2328,6 +2399,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_Form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core/Form */ "./resources/js/core/Form.js");
+//
+//
+//
+//
 //
 //
 //
@@ -2528,6 +2603,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "RequestToken",
@@ -2657,6 +2733,1616 @@ __webpack_require__.r(__webpack_exports__);
       meta: [{
         property: 'og:title',
         content: "Restful Countries | Home"
+      }]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/docs/V1.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/docs/V1.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _models_DocUrl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../models/DocUrl */ "./resources/js/models/DocUrl.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "v1",
+  data: function data() {
+    return {
+      APP_URL: '',
+      versions: {}
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    _models_DocUrl__WEBPACK_IMPORTED_MODULE_0__["default"].getAppUrl(function (APP_URL) {
+      return _this.APP_URL = APP_URL;
+    });
+    _models_DocUrl__WEBPACK_IMPORTED_MODULE_0__["default"].getVersions(function (versions) {
+      return _this.versions = versions;
+    });
+  },
+  methods: {
+    fetchDocumentation: function fetchDocumentation(event) {
+      console.log(event.target.value);
+    },
+    openSideBar: function openSideBar() {
+      if (jquery__WEBPACK_IMPORTED_MODULE_1___default()(window).width() < 994) {
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).mouseup(function (e) {
+          var container = jquery__WEBPACK_IMPORTED_MODULE_1___default()(".sidebar");
+
+          if (!container.is(e.target) && container.has(e.target).length === 0) {
+            container.hide();
+            jquery__WEBPACK_IMPORTED_MODULE_1___default()(".show-sidebar-sm").show();
+          }
+        });
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".show-sidebar-sm").click(function () {
+          console.log('hello small');
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()(".sidebar").show(300);
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()(".show-sidebar-sm").hide();
+        });
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()(".scroll-div").click(function () {
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()(".sidebar").hide();
+          jquery__WEBPACK_IMPORTED_MODULE_1___default()(".show-sidebar-sm").show();
+        });
+      }
+    }
+  },
+  metaInfo: function metaInfo() {
+    return {
+      title: "Restful Countries | Api documentation V1",
+      meta: [{
+        property: 'og:title',
+        content: "Restful Countries | Api documentation V1"
       }]
     };
   }
@@ -20775,6 +22461,19 @@ Popper.Defaults = Defaults;
 
 /***/ }),
 
+/***/ "./node_modules/pretty-print-json/dist/pretty-print-json.min.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/pretty-print-json/dist/pretty-print-json.min.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(module) {//! pretty-print-json v0.0.3 ~ github.com/center-key/pretty-print-json ~ MIT License
+function _typeof(a){return _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(a){return typeof a}:function(a){return a&&"function"==typeof Symbol&&a.constructor===Symbol&&a!==Symbol.prototype?"symbol":typeof a},_typeof(a)}var prettyPrintJson={version:"0.0.3",toHtml:function c(a){var b=/^( *)("[^"]+": )?("[^"]*"|[\w.+-]*)?([{}[\],]*)?$/mg;return JSON.stringify(a,null,3).replace(/&/g,"&amp;").replace(/\\"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(b,function(a,b,c,d,e){var f={indent:b,key:c,value:d,end:e},g=["true","false"].includes(f.value),h=/^"/.test(f.value)?"<span class=json-string>":g?"<span class=json-boolean>":"<span class=json-value>",i=/"([\w]+)": |(.*): /,j=f.indent||"",k=f.key?"<span class=json-key>"+f.key.replace(i,"$1$2")+"</span>: ":"",l=f.value?h+f.value+"</span>":"",m=f.end||"";return j+k+l+m})}};"object"===( false?undefined:_typeof(module))&&(module.exports=prettyPrintJson),"object"===("undefined"==typeof window?"undefined":_typeof(window))&&(window.prettyPrintJson=prettyPrintJson);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -21782,6 +23481,134 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "simple__navigation" } }, [
+    _c(
+      "nav",
+      { staticClass: "navbar navbar-expand-lg navbar-light fixed-top" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse",
+              attrs: { id: "navbarSupportedContent" }
+            },
+            [
+              _c("ul", { staticClass: "navbar-nav mx-auto" }, [
+                _c("li", { staticClass: "nav-item" }, [
+                  _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
+                    _vm._v("Home ")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "nav-link",
+                      attrs: { href: _vm.documentationUrl }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Documentation\n                        "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/feedback" } },
+                    [_vm._v("Feedback")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "nav-item" }, [
+                  _c(
+                    "a",
+                    { staticClass: "nav-link", attrs: { href: "/donate" } },
+                    [_vm._v("Donate")]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "my-2 my-lg-0" }, [
+                _c("a", { attrs: { href: "/request-access-token" } }, [
+                  _c("button", { staticClass: "btn btn-dark" }, [
+                    _vm._v("Get Token")
+                  ])
+                ])
+              ])
+            ]
+          )
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
+      _c("img", {
+        staticClass: "logo-light",
+        attrs: {
+          alt: "Restful Countries",
+          src: "/assets/images/logo/logo-w-b.png",
+          height: "60"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarSupportedContent",
+          "aria-controls": "navbarSupportedContent",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("span", { staticClass: "navbar-toggler-icon" })]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FooterView.vue?vue&type=template&id=750c5b8b&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FooterView.vue?vue&type=template&id=750c5b8b&scoped=true& ***!
@@ -22111,7 +23938,15 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(2),
+    _vm._v(" "),
+    _c("script", {
+      attrs: {
+        type: "application/javascript",
+        src: "https://blockchain.info/Resources/js/pay-now-button.js",
+        defer: ""
+      }
+    })
   ])
 }
 var staticRenderFns = [
@@ -22120,7 +23955,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mb-5" }, [
-      _c("h1", { staticClass: "text-uppercase mb-4" }, [
+      _c("h1", { staticClass: "heading font-weight-bold mb-4" }, [
         _vm._v("Support Restful Countries")
       ]),
       _vm._v(" "),
@@ -22317,7 +24152,7 @@ var render = function() {
     _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-md-8 mx-auto" }, [
-          _c("div", { staticClass: " text-white f-14" }, [
+          _c("div", { staticClass: "text-white f-14" }, [
             _vm._m(0),
             _vm._v(" "),
             _c("div", { staticClass: "home-form-position" }, [
@@ -22335,160 +24170,162 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("Email Address ")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.email,
-                        expression: "form.email"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { type: "email", name: "email", required: "" },
-                    domProps: { value: _vm.form.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "email", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "error_message",
-                    domProps: {
-                      textContent: _vm._s(_vm.form.errors.get("email"))
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("label", [_vm._v("Feedback Category")]),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Email Address ")]),
+                    _vm._v(" "),
+                    _c("input", {
                       directives: [
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.form.feedback_category,
-                          expression: "form.feedback_category"
+                          value: _vm.form.email,
+                          expression: "form.email"
                         }
                       ],
                       staticClass: "form-control",
-                      attrs: { name: "feedback_category", required: "" },
+                      attrs: { type: "email", name: "email", required: "" },
+                      domProps: { value: _vm.form.email },
                       on: {
-                        change: [
-                          function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.form,
-                              "feedback_category",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          },
-                          function($event) {
-                            return _vm.form.errors.clear("feedback_category")
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
                           }
-                        ]
-                      }
-                    },
-                    [
-                      _c("option", [_vm._v("Select category")]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "New Feature" } }, [
-                        _vm._v("New Feature")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Bug" } }, [
-                        _vm._v("Bug")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Appraisal" } }, [
-                        _vm._v("Appraisal")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Data Error" } }, [
-                        _vm._v("Data Error")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Rate Limiting" } }, [
-                        _vm._v("Rate Limiting")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Others" } }, [
-                        _vm._v("Others")
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "error_message",
-                    domProps: {
-                      textContent: _vm._s(
-                        _vm.form.errors.get("feedback_category")
-                      )
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("label", [_vm._v("Feedback")]),
-                  _vm._v(" "),
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.feedback,
-                        expression: "form.feedback"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { name: "feedback", required: "" },
-                    domProps: { value: _vm.form.feedback },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
+                          _vm.$set(_vm.form, "email", $event.target.value)
                         }
-                        _vm.$set(_vm.form, "feedback", $event.target.value)
                       }
-                    }
-                  }),
+                    }),
+                    _vm._v(" "),
+                    _c("div", {
+                      staticClass: "error_message",
+                      domProps: {
+                        textContent: _vm._s(_vm.form.errors.get("email"))
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("div", {
-                    staticClass: "error_message",
-                    domProps: {
-                      textContent: _vm._s(_vm.form.errors.get("feedback"))
-                    }
-                  }),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Feedback Category")]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.form.feedback_category,
+                            expression: "form.feedback_category"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "feedback_category", required: "" },
+                        on: {
+                          change: [
+                            function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.form,
+                                "feedback_category",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            },
+                            function($event) {
+                              return _vm.form.errors.clear("feedback_category")
+                            }
+                          ]
+                        }
+                      },
+                      [
+                        _c("option", [_vm._v("Select category")]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "New Feature" } }, [
+                          _vm._v("New Feature")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "Bug" } }, [
+                          _vm._v("Bug")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "Appraisal" } }, [
+                          _vm._v("Appraisal")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "Data Error" } }, [
+                          _vm._v("Data Error")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "Rate Limiting" } }, [
+                          _vm._v("Rate Limiting")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "Others" } }, [
+                          _vm._v("Others")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", {
+                      staticClass: "error_message",
+                      domProps: {
+                        textContent: _vm._s(
+                          _vm.form.errors.get("feedback_category")
+                        )
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("br"),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Feedback")]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.form.feedback,
+                          expression: "form.feedback"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { name: "feedback", required: "" },
+                      domProps: { value: _vm.form.feedback },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.form, "feedback", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("div", {
+                      staticClass: "error_message",
+                      domProps: {
+                        textContent: _vm._s(_vm.form.errors.get("feedback"))
+                      }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn  btn-submit",
-                      attrs: { disabled: _vm.form.errors.any() }
-                    },
-                    [_vm._v("Submit")]
-                  )
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn-submit",
+                        attrs: { disabled: _vm.form.errors.any() }
+                      },
+                      [_vm._v("Submit")]
+                    )
+                  ])
                 ]
               ),
               _vm._v(" "),
@@ -22505,8 +24342,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-4" }, [
-      _c("h1", { staticClass: "text-uppercase mb-4 text-center" }, [
+    return _c("div", { staticClass: "text-center mb-4" }, [
+      _c("h1", { staticClass: "heading font-weight-bold mb-4" }, [
         _vm._v("Feedback")
       ]),
       _vm._v(" "),
@@ -22705,12 +24542,21 @@ var render = function() {
               ),
               _vm._v(" "),
               _c(
-                "a",
-                {
-                  staticStyle: { color: "#ffffff" },
-                  attrs: { href: "/vue/request-access-token" }
-                },
-                [_vm._v("Request new Token")]
+                "div",
+                { staticClass: "refresh" },
+                [
+                  _vm._v("\n                            Click here to "),
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/request-access-token", exact: "" } },
+                    [
+                      _vm._v(
+                        "\n                            request for a new token !"
+                      )
+                    ]
+                  )
+                ],
+                1
               )
             ])
           ])
@@ -22966,12 +24812,23 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "refresh" }, [
-                _vm._v("\n                            Click here to "),
-                _c("a", { attrs: { href: "/vue/refresh-access-token" } }, [
-                  _vm._v(" Refresh Token !")
-                ])
-              ])
+              _c(
+                "div",
+                { staticClass: "refresh" },
+                [
+                  _vm._v("\n                            Click here to "),
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/refresh-access-token", exact: "" } },
+                    [
+                      _vm._v(
+                        "\n                            refresh your token !"
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
             ])
           ])
         ])
@@ -23057,7 +24914,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("div", { staticClass: "text-center mt-5" }, [
                     _c("a", { attrs: { href: _vm.documentationUrl } }, [
-                      _c("button", { staticClass: "btn-submit " }, [
+                      _c("button", { staticClass: "btn-submit" }, [
                         _vm._v("Explore Endpoints")
                       ])
                     ])
@@ -23072,6 +24929,3194 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", { staticStyle: { "margin-top": "100px" } }, [
+    _c("div", { staticClass: "container-fluid" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "sidebar" }, [
+          _c("div", { staticClass: "widget pl-4" }, [
+            _c("h4", { staticClass: "widget-title" }, [
+              _vm._v("Restful Countries API")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "home-registration-form my-4" }, [
+              _c(
+                "select",
+                {
+                  staticClass: "select__version",
+                  attrs: { name: "version" },
+                  on: {
+                    change: function($event) {
+                      return _vm.fetchDocumentation($event)
+                    }
+                  }
+                },
+                _vm._l(_vm.versions, function(version) {
+                  return _c("option", { domProps: { value: version } }, [
+                    _vm._v("Version " + _vm._s(version) + " ")
+                  ])
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-lg-8 col-md-12  ml-auto px-0" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "authentication-guide" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Authentication Guide ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                                Restful Countries API requires authentication credentials, in the form of an API key, to\n                                be sent with each request.\n                            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                                To obtain an API key, go to the "
+                  ),
+                  _c("a", { attrs: { href: "/request-access-token" } }, [
+                    _vm._v(
+                      " request\n                                access token page "
+                    )
+                  ]),
+                  _vm._v(
+                    " and register your application by providing your email and\n                                application URL. This will allocate a unique key to your application which can be sent\n                                with any GET request for a public resource served by Restful Countries API.\n                            "
+                  )
+                ]),
+                _c("p")
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "rate-limiting" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Rate Limiting ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("p", [
+                  _vm._v(
+                    "\n                                Rate limiting is applied to the Restful Countries API to ensure a high-quality service\n                                is delivered for all users, and to protect client applications from unexpected loops.\n                            "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("h6", [_vm._v("Per application rates")]),
+                _vm._v(" "),
+                _vm._m(3),
+                _vm._v(" "),
+                _c("h6", [_vm._v("Increasing your rate limit")]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "\n                                If you have an application that requires a higher rate limit than the default applied,\n                                then please "
+                  ),
+                  _c("a", { attrs: { href: "/feedback" } }, [
+                    _vm._v(" contact us ")
+                  ]),
+                  _vm._v(
+                    ", we will be happy to help.\n                            "
+                  )
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "content ", attrs: { id: "base-url" } }, [
+            _c("h4", { staticClass: "title text-dark" }, [_vm._v("Base URL ")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "inner" }, [
+              _c("div", { staticClass: "code" }, [
+                _vm._v("GET "),
+                _c("span", { staticClass: "url" }, [
+                  _vm._v(" " + _vm._s(_vm.APP_URL) + "/api/v1")
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "all-countries" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("All Countries ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(" " + _vm._s(_vm.APP_URL) + "/api/v1/countries")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information of all the countries available in the world. Including every other\n                                information on that country. "
+                  )
+                ]),
+                _vm._v(" "),
+                _vm._m(4),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?per_page=1" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(5)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-name" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by name")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries/{country}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Returns information of a particular country. ")
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(6),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", [_vm._v("{country}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "The name of the particular country you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries/Nigeria"
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _vm._m(7)
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries/Nigeria" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}" '
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(8)
+              ]),
+              _vm._v(" "),
+              _vm._m(9)
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-continent" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by continent")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries?continent={continent}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information of all countries in a continent. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(10),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(11),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("continent")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("required")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies continent to retrieve data on. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?continent=africa"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("String")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("per_page")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies number of items to return. Returns paginated data. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?continent=africa&per_page=5"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?continent=africa" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(12)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-population" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by Population")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries?population_from={min_population}&population_to={max_population}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information a list of countries filtered by their Population range. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(13),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(14),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("population_from")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries population starting point i.e. smallest population.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?population_from=500000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("population_to")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries population ending point i.e. largest population..\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?population_to=1000000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("per_page")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies number of items to return. Returns paginated data. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?continent=africa&per_page=5"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?population_from=20000&population_to=5000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(15)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-size" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by Size ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET\n                                "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries?size_from={min_size}&size_to={max_size}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information a list of countries filtered by size (km²) range . "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(16),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(17),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("size_from")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries size starting point i.e. smallest size.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?size_from=10000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("size_to")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries population ending point i.e. largest size..\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?size_to=1000000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("per_page")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies number of items to return. Returns paginated data. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?size_from=10000&size_to=100000&per_page=5"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?size_from=300&size_to=200000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(18)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-iso2" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by ISO2")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET\n                                "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "/api/v1/countries?iso2={iso2}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Returns information of a country by ISO2 code . ")
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(19),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(20),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("iso2")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies country to retrieve by passing country's ISO2 code.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?iso2=AO"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("String")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?iso2=GH" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(21)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-iso3" } },
+            [
+              _vm._m(22),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET\n                                "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "/api/v1/countries?iso3={iso3}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v("Returns information of a country by ISO3 code . ")
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(23),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(24),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("iso3")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies country to retrieve by passing country's ISO2 code.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?iso3=AGO"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("String")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?iso3=AGO" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(25)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-by-code" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Country by Code ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries?code={code}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information of a single country by calling code. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(26),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(27),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("code")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("required")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies country to retrieve by passing country's calling code. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?code=234"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("String")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries?code=234" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(28)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "country-slim" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Slim Country Response ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/countries?fetch_type=slim"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns minimal information of countries. Response will only include name, phone code,\n                                flag and self link "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(29),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(30),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("fetch_type")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("required")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies that response should only include name, phone code,\n                                                flag and self link . Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries?fetch_type=slim"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("String")])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "' +
+                        _vm._s(_vm.APP_URL) +
+                        '\n                                    /api/v1/countries?per_page=20"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token."
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(31)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "presidents-by-country" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Presidents by Country")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "/api/v1/countries/{country}/presidents"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information on a country's past and present presidents and/or presidents "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(32),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", [_vm._v("{country}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the country the name of the particular country you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/countries/india/presidents"
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _vm._m(33)
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries/nigeria/presidents" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(34)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "content ",
+              attrs: { id: "president-by-country-name" }
+            },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Presidents by Country and Name")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      " " +
+                        _vm._s(_vm.APP_URL) +
+                        "/api/v1/countries/{country}/presidents/{president}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information on a particular country's presidents including leader's name, gender, appointment start and end date. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(35),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", [_vm._v("{country}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the country the name of the particular country you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/countries/india/presidents/{president}"
+                                )
+                              ])
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", [_vm._v("{president}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the president in the {country} you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  _vm._s(_vm.APP_URL) +
+                                    "/api/v1/countries/{country}/presidents/Ashraf Ghani"
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _vm._m(36)
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries/nigeria/presidents/Muhammadu Buhari" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(37)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "content ", attrs: { id: "covid19" } }, [
+            _c("h4", { staticClass: "title text-dark" }, [
+              _vm._v("Covid 19 Cases Only")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "inner" }, [
+              _c("div", { staticClass: "code" }, [
+                _vm._v("GET "),
+                _c("span", { staticClass: "url" }, [
+                  _vm._v(_vm._s(_vm.APP_URL) + "/api/v1/covid19")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v("Returns countries information on Covid19 cases. ")
+              ]),
+              _vm._v(" "),
+              _vm._m(38),
+              _vm._v(" "),
+              _c("div", [
+                _c("h5", [_vm._v("Sample Request")]),
+                _vm._v(" "),
+                _c("pre", { staticClass: "pre-dark" }, [
+                  _vm._v(
+                    'curl -I -X "Accept: application/json" "Authorization: Bearer ${TOKEN}" GET "' +
+                      _vm._s(_vm.APP_URL) +
+                      '\n                                    /api/v1/countries?per_page=1"'
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "In the sample request above, replace {TOKEN} with your actual token. "
+                  ),
+                  _c("a", { attrs: { href: "/request-access-token" } }, [
+                    _vm._v("Generate your Token here")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(39)
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "covid19-by-deaths" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Covid 19 cases by death range only")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/covid19?death_from={minimum_death}&death_to={maximum-deaths}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information countries Covid19 cases filtered by death rate. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(40),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(41),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("death_from")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries covid19 death rate starting point i.e. lowest death rate.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/covid19?death_from=10000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("death_to")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries covid19 death rate ending point i.e. highest death rate.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "\n                                                        /api/v1/covid19?death_to=50000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(42)
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/covid19?death_from=1000&death_to1000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(43)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "covid19-by-total" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("Covid 19 cases by total confirmed range only")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      _vm._s(_vm.APP_URL) +
+                        "\n                                    /api/v1/covid19?total_from={minimum_total}&death_to={maximum-total}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "Returns information countries Covid19 cases filtered by total confirmed cases. "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _vm._m(44),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(45),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("total_from")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries covid19 death rate starting point i.e. lowest death rate.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/covid19?total_from=3000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", { staticClass: "color-alert" }, [
+                            _vm._v("total_to")
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("optional")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies countries covid19 death rate ending point i.e. highest death rate.\n                                                Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/covid19?total_to=500000"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v("integer")])
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(46)
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/covid19?total_from=2000&total_to=10000000" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(47)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "content ", attrs: { id: "state-by-country" } },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("State by Country Name ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      _vm._s(_vm.APP_URL) + "/api/v1/countries/{country}/states"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Returns information a country's states. ")]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(48),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", [_vm._v("{country}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the country the name of the particular country you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/countries/Nigeria/states"
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _vm._m(49)
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries/Nigeria/states" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token."
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(50)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "content ",
+              attrs: { id: "state-by-country-state" }
+            },
+            [
+              _c("h4", { staticClass: "title text-dark" }, [
+                _vm._v("State by Country Name and State Name")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "inner" }, [
+                _c("div", { staticClass: "code" }, [
+                  _vm._v("GET "),
+                  _c("span", { staticClass: "url" }, [
+                    _vm._v(
+                      _vm._s(_vm.APP_URL) +
+                        "/api/v1/countries/{country}/states/{state}"
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", [_vm._v("Returns information a country's states. ")]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Parameters")]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Path Parameters")]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "table-responsive" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(51),
+                      _vm._v(" "),
+                      _c("tbody", [
+                        _c("tr", [
+                          _c("td", [_vm._v("{country}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the country the name of the particular country you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/countries/United States/states/{state}"
+                                )
+                              ])
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("tr", [
+                          _c("td", [_vm._v("{state}")]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "Specifies the state of the particular {country} you want to look up. Example\n                                                "
+                            ),
+                            _c("div", { staticClass: "code" }, [
+                              _c("span", { staticClass: "url" }, [
+                                _vm._v(
+                                  " " +
+                                    _vm._s(_vm.APP_URL) +
+                                    "/api/v1/countries/{country}/states/Alaska"
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("h6", [_vm._v("Query string parameter")]),
+                  _vm._v(" "),
+                  _vm._m(52)
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h5", [_vm._v("Sample Request")]),
+                  _vm._v(" "),
+                  _c("pre", { staticClass: "pre-dark" }, [
+                    _vm._v(
+                      'curl -I "' +
+                        _vm._s(_vm.APP_URL) +
+                        '/api/v1/countries/united-states/states/Alaska" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "In the sample request above, replace {TOKEN} with your actual token. "
+                    ),
+                    _c("a", { attrs: { href: "/request-access-token" } }, [
+                      _vm._v("Generate your Token here")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(53)
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "content ", attrs: { id: "state-slim" } }, [
+            _c("h4", { staticClass: "title text-dark" }, [
+              _vm._v("Slim State Response ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "inner" }, [
+              _c("div", { staticClass: "code" }, [
+                _vm._v("GET "),
+                _c("span", { staticClass: "url" }, [
+                  _vm._v(
+                    " " +
+                      _vm._s(_vm.APP_URL) +
+                      "/api/v1/countries/United-States/states?fetch_type=slim"
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _vm._v(
+                  "Returns minimal information of country's state. Response will only include name, phone code,\n                                flag and self link "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h5", [_vm._v("Parameters")]),
+                _vm._v(" "),
+                _c("h6", [_vm._v("Path Parameters")]),
+                _vm._v(" "),
+                _vm._m(54),
+                _vm._v(" "),
+                _c("h6", [_vm._v("Query string parameter")]),
+                _vm._v(" "),
+                _c("div", { staticClass: "table-responsive" }, [
+                  _c("table", { staticClass: "table" }, [
+                    _vm._m(55),
+                    _vm._v(" "),
+                    _c("tbody", [
+                      _c("tr", [
+                        _c("td", { staticClass: "color-alert" }, [
+                          _vm._v("fetch_type")
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("required")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(
+                            "Specifies that response should only include name, ISO 2 code, ISO 3 code and self link. Example\n                                                "
+                          ),
+                          _c("div", { staticClass: "code" }, [
+                            _c("span", { staticClass: "url" }, [
+                              _vm._v(
+                                " " +
+                                  _vm._s(_vm.APP_URL) +
+                                  "/api/v1/countries/United-States/states?fetch_type=slim"
+                              )
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v("String")])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h5", [_vm._v("Sample Request")]),
+                _vm._v(" "),
+                _c("pre", { staticClass: "pre-dark" }, [
+                  _vm._v(
+                    'curl -I "' +
+                      _vm._s(_vm.APP_URL) +
+                      '/api/v1/countries/united-states/states?fetch_type=slim" -H "Accept: application/json" -H "Authorization: Bearer {TOKEN}"'
+                  )
+                ]),
+                _vm._v(" "),
+                _c("p", [
+                  _vm._v(
+                    "In the sample request above, replace {TOKEN} with your actual token. "
+                  ),
+                  _c("a", { attrs: { href: "/request-access-token" } }, [
+                    _vm._v(" Generate your Token here")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(56)
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "content ", attrs: { id: "references" } }, [
+            _c("h4", { staticClass: "title text-dark" }, [
+              _vm._v("References ")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "inner" }, [
+              _c("div", { staticClass: "alert" }, [
+                _vm._v(
+                  "As much as we try to source data from reliable sources, the information\n                                returned by\n                                our api stands to be corrected in the case of spelling errors or invalid data.\n\n\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _vm._m(57),
+              _vm._v(" "),
+              _c("small", [
+                _vm._v("Please visit our "),
+                _c("a", { attrs: { href: "/feedback" } }, [
+                  _vm._v("Feedback page")
+                ]),
+                _vm._v(
+                  " to let us know your complaints or suggestions for new features."
+                )
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "show-sidebar-sm", on: { click: _vm.openSideBar } },
+          [_c("i", { staticClass: "fa fa-bars" })]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "list-unstyled mb-40 categories" }, [
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#api-reference" } },
+          [_vm._v("API Reference")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#authentication-guide" }
+          },
+          [_vm._v("Authentication Guide")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#rate-limiting" } },
+          [_vm._v("Rate Limiting")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "scroll-div", attrs: { href: "#base-url" } }, [
+          _vm._v("Base URL")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#all-countries" } },
+          [_vm._v("All Countries")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-by-name" } },
+          [_vm._v("Country by name")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#country-by-continent" }
+          },
+          [_vm._v("Countries by continent")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#country-by-population" }
+          },
+          [_vm._v("Country by population range")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-by-size" } },
+          [_vm._v("Country by Size range")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-by-iso2" } },
+          [_vm._v("Country by ISO2")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-by-iso3" } },
+          [_vm._v("Country by ISO3")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-by-code" } },
+          [_vm._v("Country by code")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#country-slim" } },
+          [_vm._v("Slim Country response")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#presidents-by-country" }
+          },
+          [_vm._v("Presidents by country")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#president-by-country-name" }
+          },
+          [_vm._v("Presidents by country and name")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "scroll-div", attrs: { href: "#covid19" } }, [
+          _vm._v("Covid 19 cases only")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#covid19-by-deaths" } },
+          [_vm._v("Covid 19 by deaths")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#covid19-by-total" } },
+          [_vm._v("Covid 19 by total case")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { staticClass: "scroll-div", attrs: { href: "#state-by-country" } },
+          [_vm._v("States by country name")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            staticClass: "scroll-div",
+            attrs: { href: "#state-by-country-state" }
+          },
+          [
+            _vm._v(
+              "State by country name and state\n                                name"
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "scroll-div", attrs: { href: "#state-slim" } }, [
+          _vm._v("Slim State response")
+        ])
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c("a", { staticClass: "scroll-div", attrs: { href: "#references" } }, [
+          _vm._v("References")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row my-3" }, [
+      _c("div", { staticClass: "ml-auto mr-6" }, [
+        _c(
+          "a",
+          {
+            attrs: {
+              href:
+                "https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php",
+              target: "_blank"
+            }
+          },
+          [
+            _c("button", { staticClass: "btn btn-outline-dark btn-sm" }, [
+              _c("i", { staticClass: "fa fa-github" }),
+              _vm._v(" Edit this page\n                                ")
+            ])
+          ]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "content", attrs: { id: "api-reference" } },
+      [
+        _c("h4", { staticClass: "title text-dark" }, [
+          _vm._v("API Reference ")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "inner" }, [
+          _c("p", [
+            _vm._v(
+              "Restful Countries API allows users to explore the entire database for information on\n                                countries and their states, presidents, flag, population, covid19 stats and others."
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("Restful Countries API is organized around "),
+            _c(
+              "a",
+              {
+                attrs: {
+                  href:
+                    "http://en.wikipedia.org/wiki/Representational_State_Transfer",
+                  target: "_blank"
+                }
+              },
+              [_vm._v(" REST")]
+            ),
+            _vm._v(
+              ". Our API has predictable resource-oriented URLs,\n                                returns JSON-encoded responses and uses standard HTTP response codes, and verbs."
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v(
+        "\n                                You can make up to 100 requests within a minute period. If you exceed this limit, you\n                                will receive a "
+      ),
+      _c("span", { staticClass: "code" }, [
+        _vm._v("429 Too Many Requests HTTP status code")
+      ]),
+      _vm._v(
+        " for each\n                                request made within the remainder of the one-minute window. At the end of the period,\n                                your rate limit will reset back to its maximum value of 100 requests.\n                            "
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Parameters")]),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Path Parameters")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c("table", { staticClass: "table" }, [
+          _c("thead", { staticClass: "thead-dark" }, [
+            _c("tr", [
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr", [
+              _c("td", [_vm._v("None")]),
+              _vm._v(" "),
+              _c("td", [_vm._v("None")])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Query string parameter")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c("table", { staticClass: "table" }, [
+          _c("thead", { staticClass: "thead-dark" }, [
+            _c("tr", [
+              _c("th", { attrs: { scope: "col" } }, [
+                _vm._v("Query string parameter")
+              ]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [
+                _vm._v("Required / optional")
+              ]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr", [
+              _c("td", { staticClass: "color-alert" }, [_vm._v("per_page")]),
+              _vm._v(" "),
+              _c("td", [_vm._v("optional")]),
+              _vm._v(" "),
+              _c("td", [
+                _vm._v("Specifies number of items to return."),
+                _c("br"),
+                _vm._v(" Returns paginated data")
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v("integer")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "all-countries-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Query string parameter")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Required / optional")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", { staticClass: "color-alert" }, [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "country-by-name-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("small", [
+      _vm._v(
+        " You may use space in country name or hyphen e.g\n                            "
+      ),
+      _c("span", { staticClass: "url" }, [_vm._v("countries/south africa")]),
+      _vm._v("\n                            or "),
+      _c("span", { staticClass: "url" }, [_vm._v("countries/south-africa")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "countries-by-continent-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "countries-by-population-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "country-by-size-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "country-by-iso2-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h4", { staticClass: "title text-dark" }, [
+      _vm._v("Country by ISO3 - "),
+      _c("span", { staticClass: "text-success" }, [_vm._v("GET")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "country-by-iso3-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h5", [_vm._v("Sample Response")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "countries-slim" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Query string parameter")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Required / optional")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "presidents-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Query string parameter")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Required / optional")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "president-by-country-name-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Parameters")]),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Path Parameters")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c("table", { staticClass: "table" }, [
+          _c("thead", { staticClass: "thead-dark" }, [
+            _c("tr", [
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr", [
+              _c("td", [_vm._v("none")]),
+              _vm._v(" "),
+              _c("td", [_vm._v("none")])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Query string parameter")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c("table", { staticClass: "table" }, [
+          _c("thead", { staticClass: "thead-dark" }, [
+            _c("tr", [
+              _c("th", { attrs: { scope: "col" } }, [
+                _vm._v("Query string parameter")
+              ]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [
+                _vm._v("Required / optional")
+              ]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+              _vm._v(" "),
+              _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tbody", [
+            _c("tr", [
+              _c("td", { staticClass: "color-alert" }, [_vm._v("per_page")]),
+              _vm._v(" "),
+              _c("td", [_vm._v("optional")]),
+              _vm._v(" "),
+              _c("td", [
+                _vm._v("Specifies number of items to return."),
+                _c("br"),
+                _vm._v(" Returns paginated data")
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v("integer")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "covid19-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", { staticClass: "color-alert" }, [_vm._v("per_page")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("optional")]),
+      _vm._v(" "),
+      _c("td", [
+        _vm._v("Specifies number of items to return."),
+        _c("br"),
+        _vm._v(" Returns paginated data")
+      ]),
+      _vm._v(" "),
+      _c("td", [_vm._v("integer")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h5", [_vm._v("Sample Response")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", { staticClass: "color-alert" }, [_vm._v("per_page")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("optional")]),
+      _vm._v(" "),
+      _c("td", [
+        _vm._v("Specifies number of items to return."),
+        _c("br"),
+        _vm._v(" Returns paginated data")
+      ]),
+      _vm._v(" "),
+      _c("td", [_vm._v("integer")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h5", [_vm._v("Sample Response")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Query string parameter")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Required / optional")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "states-response" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Query string parameter")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [
+              _vm._v("Required / optional")
+            ]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h5", [_vm._v("Sample Response")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "table-responsive" }, [
+      _c("table", { staticClass: "table" }, [
+        _c("thead", { staticClass: "thead-dark" }, [
+          _c("tr", [
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Path parameter")]),
+            _vm._v(" "),
+            _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("none")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("none")])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [
+          _vm._v("Query string parameter")
+        ]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Required / optional")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Type")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h5", [_vm._v("Sample Response")]),
+      _vm._v(" "),
+      _c("pre", { attrs: { id: "states-slim" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", [
+      _c("li", [
+        _c(
+          "a",
+          { attrs: { href: "https://en.wikipedia.org/", target: "_blank" } },
+          [_vm._v("https://en.wikipedia.org/")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "https://www.worldometers.info/world-population",
+              target: "_blank"
+            }
+          },
+          [_vm._v("https://www.worldometers.info/world-population")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("li", [
+        _c(
+          "a",
+          { attrs: { href: "https://covid19.who.int/", target: "_blank" } },
+          [_vm._v("https://covid19.who.int")]
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -41145,6 +46190,39 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./node_modules/webpack/buildin/module.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -41174,9 +46252,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-/* harmony import */ var _js_components_Navigation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../js/components/Navigation */ "./resources/js/components/Navigation.vue");
-/* harmony import */ var _js_components_FooterView__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../js/components/FooterView */ "./resources/js/components/FooterView.vue");
+/* harmony import */ var _js_components_Navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../js/components/Navigation */ "./resources/js/components/Navigation.vue");
+/* harmony import */ var _js_components_FooterView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../js/components/FooterView */ "./resources/js/components/FooterView.vue");
+/* harmony import */ var _components_DocNavigation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/DocNavigation */ "./resources/js/components/DocNavigation.vue");
 
 
 
@@ -41186,8 +46264,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navigation', _js_components_Navigation__WEBPACK_IMPORTED_MODULE_7__["default"]);
-vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('footer-view', _js_components_FooterView__WEBPACK_IMPORTED_MODULE_8__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('doc-navigation', _components_DocNavigation__WEBPACK_IMPORTED_MODULE_8__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('navigation', _js_components_Navigation__WEBPACK_IMPORTED_MODULE_6__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('footer-view', _js_components_FooterView__WEBPACK_IMPORTED_MODULE_7__["default"]);
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   router: _routes__WEBPACK_IMPORTED_MODULE_2__["default"]
 }).$mount('#app');
@@ -41224,6 +46303,75 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_meta__WEBPACK_IMPORTED_MODULE_4__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_swal__WEBPACK_IMPORTED_MODULE_3___default.a);
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/***/ }),
+
+/***/ "./resources/js/components/DocNavigation.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/DocNavigation.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DocNavigation.vue?vue&type=template&id=60d069de&scoped=true& */ "./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true&");
+/* harmony import */ var _DocNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DocNavigation.vue?vue&type=script&lang=js& */ "./resources/js/components/DocNavigation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _DocNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "60d069de",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/DocNavigation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/DocNavigation.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/DocNavigation.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DocNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./DocNavigation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DocNavigation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DocNavigation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true& ***!
+  \**********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./DocNavigation.vue?vue&type=template&id=60d069de&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/DocNavigation.vue?vue&type=template&id=60d069de&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DocNavigation_vue_vue_type_template_id_60d069de_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -41487,6 +46635,9 @@ var Form = /*#__PURE__*/function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var pretty_print_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! pretty-print-json */ "./node_modules/pretty-print-json/dist/pretty-print-json.min.js");
+/* harmony import */ var pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(pretty_print_json__WEBPACK_IMPORTED_MODULE_1__);
+
  // Menu
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.navbar-toggle').on('click', function (event) {
@@ -41501,7 +46652,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu-arrow,.submenu-arrow').on('
   }
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(".navigation-menu a").each(function () {
-  if (this.href == window.location.href) {
+  if (this.href === window.location.href) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().addClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().parent().parent().addClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().parent().parent().parent().parent().addClass("active");
@@ -41535,89 +46686,57 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
   } else {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".defaultscroll").removeClass("scroll");
   }
+}); //todo : Store sample json data in individual json files
+//todo : simplify the functions below into one simple function
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/allCountries.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#all-countries-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
 });
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
-  var root = "https://blockchain.info/";
-  var buttons = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.blockchain-btn');
-  buttons.find('.blockchain').hide();
-  buttons.find('.stage-begin').trigger('show').show();
-  buttons.each(function (index) {
-    var _button = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this);
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countryByName.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#country-by-name-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countriesByContinent.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#countries-by-continent-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countriesByPopulationResponse.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#countries-by-population-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countriesBySize.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#country-by-size-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countriesByIso2.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#country-by-iso2-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default.a.getJSON("../../assets/js/json/countriesByIso3.json", function (data) {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('#country-by-iso3-response').html(pretty_print_json__WEBPACK_IMPORTED_MODULE_1___default.a.toHtml(data));
+}); // $('#covid19-response').html(prettyPrintJson.toHtml(covid19Response));
+// $('#states-response').html(prettyPrintJson.toHtml(statesResponse));
+// $('#presidents-response').html(prettyPrintJson.toHtml(presidentsResponse));
+// $('#countries-slim').html(prettyPrintJson.toHtml(countriesSlim));
+// $('#states-slim').html(prettyPrintJson.toHtml(statesSlim));
+// $('#president-by-country-name-response').html(prettyPrintJson.toHtml(presidentByCountry));
 
-    (function () {
-      var button = _button;
-      button.click(function () {
-        var receivers_address = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('address');
-        var test = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('test');
-        button.find('.blockchain').hide();
-        button.find('.stage-loading').trigger('show').show();
-        button.find('.qr-code').empty();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.scroll-div', function () {
+  var target = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('html, body').animate({
+    scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(target).offset().top - 100
+  }, 100);
+});
+window.addEventListener('DOMContentLoaded', function () {
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var id = entry.target.getAttribute('id');
 
-        function checkBalance() {
-          jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({
-            type: "GET",
-            url: root + 'q/getreceivedbyaddress/' + receivers_address + '?start_time=' + new Date().getTime(),
-            data: {
-              format: 'plain'
-            },
-            success: function success(response) {
-              if (!response) return;
-              var value = parseInt(response);
+      if (entry.intersectionRatio > 0) {
+        document.querySelector(".list-unstyled li a[href=\"#".concat(id, "\"]")).classList.add('active');
+      } else {
+        document.querySelector(".list-unstyled li a[href=\"#".concat(id, "\"]")).classList.remove('active');
+      }
+    });
+  }); // Track all sections that have an `id` applied
 
-              if (value > 0 || test) {
-                button.find('.blockchain').hide();
-                button.find('.stage-paid').trigger('show').show().html(button.find('.stage-paid').html().replace('[[value]]', value / 100000000));
-              } else {
-                setTimeout(checkBalance, 5000);
-              }
-            }
-          });
-        }
-
-        try {
-          ws = new WebSocket('wss://ws.blockchain.info/inv');
-          if (!ws) return;
-
-          ws.onmessage = function (e) {
-            try {
-              var obj = jquery__WEBPACK_IMPORTED_MODULE_0___default.a.parseJSON(e.data);
-
-              if (obj.op == 'utx') {
-                var tx = obj.x;
-                var result = 0;
-
-                for (var i = 0; i < tx.out.length; i++) {
-                  var output = tx.out[i];
-
-                  if (output.addr == receivers_address) {
-                    result += parseInt(output.value);
-                  }
-                }
-              }
-
-              button.find('.blockchain').hide();
-              button.find('.stage-paid').trigger('show').show().html(button.find('.stage-paid').html().replace('[[value]]', result / 100000000));
-              ws.close();
-            } catch (e) {
-              console.log(e);
-              console.log(e.data);
-            }
-          };
-
-          ws.onopen = function () {
-            ws.send('{"op":"addr_sub", "addr":"' + receivers_address + '"}');
-          };
-        } catch (e) {
-          console.log(e);
-        }
-
-        button.find('.stage-ready').trigger('show').show().html(button.find('.stage-ready').html().replace('[[address]]', receivers_address));
-        button.find('.qr-code').html('<img style="margin:5px" src="' + root + 'qr?data=' + receivers_address + '&size=125">');
-        button.unbind(); ///Check for incoming payment
-
-        setTimeout(checkBalance, 5000);
-      });
-    })();
+  document.querySelectorAll('.content[id]').forEach(function (section) {
+    observer.observe(section);
   });
 });
 
@@ -41650,6 +46769,20 @@ var DocUrl = /*#__PURE__*/function () {
         return then(res.data);
       });
     }
+  }, {
+    key: "getAppUrl",
+    value: function getAppUrl(then) {
+      return axios.get('/app/url').then(function (res) {
+        return then(res.data);
+      });
+    }
+  }, {
+    key: "getVersions",
+    value: function getVersions(then) {
+      return axios.get('/app/versions').then(function (res) {
+        return then(res.data);
+      });
+    }
   }]);
 
   return DocUrl;
@@ -41671,30 +46804,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 
 var routes = [{
-  path: '/vue/',
+  path: '/',
   name: 'home',
   component: __webpack_require__(/*! ./views/Welcome */ "./resources/js/views/Welcome.vue")["default"]
 }, {
-  path: '/vue/feedback',
+  path: '/api-documentation/version/1',
+  name: 'docs.v1',
+  component: __webpack_require__(/*! ./views/docs/V1 */ "./resources/js/views/docs/V1.vue")["default"]
+}, {
+  path: '/feedback',
   name: 'feedback',
   component: __webpack_require__(/*! ./views/Feedback */ "./resources/js/views/Feedback.vue")["default"]
 }, {
-  path: '/vue/donate',
+  path: '/donate',
   name: 'donate',
   component: __webpack_require__(/*! ./views/Donate */ "./resources/js/views/Donate.vue")["default"]
 }, {
-  path: '/vue/request-access-token',
+  path: '/request-access-token',
   name: 'request-token',
   component: __webpack_require__(/*! ./views/RequestToken */ "./resources/js/views/RequestToken.vue")["default"]
 }, {
-  path: '/vue/refresh-access-token',
+  path: '/refresh-access-token',
   name: 'refresh-token',
   component: __webpack_require__(/*! ./views/RefreshToken */ "./resources/js/views/RefreshToken.vue")["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   routes: routes,
   // short for `routes: routes`
-  linkActiveClass: 'is-active',
+  linkActiveClass: 'active',
   mode: 'history'
 }));
 
@@ -42058,6 +47195,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_1ae8ae93_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Welcome_vue_vue_type_template_id_1ae8ae93_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/views/docs/V1.vue":
+/*!****************************************!*\
+  !*** ./resources/js/views/docs/V1.vue ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./V1.vue?vue&type=template&id=196407c0&scoped=true& */ "./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true&");
+/* harmony import */ var _V1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./V1.vue?vue&type=script&lang=js& */ "./resources/js/views/docs/V1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _V1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "196407c0",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/docs/V1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/docs/V1.vue?vue&type=script&lang=js&":
+/*!*****************************************************************!*\
+  !*** ./resources/js/views/docs/V1.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_V1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./V1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/docs/V1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_V1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./V1.vue?vue&type=template&id=196407c0&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/docs/V1.vue?vue&type=template&id=196407c0&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_V1_vue_vue_type_template_id_196407c0_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

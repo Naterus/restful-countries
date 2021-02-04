@@ -1,6 +1,5 @@
 <template>
 
-    <!-- Navigation Bar-->
     <header  id="topnav" class="defaultscroll scroll-active">
         <!-- Tagline STart -->
         <div class="tagline">
@@ -50,6 +49,7 @@
                         </router-link>
                     </li>
                     <li>
+
                         <a :href="documentationUrl" class="navbar-item">
                             Documentation
                         </a>
@@ -69,8 +69,7 @@
             </div><!--end navigation-->
         </div><!--end container-->
         <!--end end-->
-    </header><!--end header-->
-    <!-- Navbar End -->
+    </header>
 
 </template>
 

@@ -29,7 +29,7 @@ class HomeController extends Controller
             return view("docs.v".$latest_version,compact('latest_version','error'));
         }
 
-        return view("docs.v".$version,compact('version'));
+        return view("vue.docs.v".$version,compact('version'));
     }
 
     public function donate(Request $request){
@@ -67,12 +67,23 @@ class HomeController extends Controller
             "feedback" => $request->input("feedback"),
         ]);
 
-        return json_encode(["success"=>"Thanks for your feedback."]);
+        return response()->json(["success"=>"Thanks for your feedback."]);
     }
 
-    public function getCurrentDocumentationUrl()
+    public function getCurrentDocumentationUrl(): string
     {
-        return route("documentation",env("APP_VERSION"));
+        return '/api-documentation/version/'.env("APP_VERSION");
+    }
+    public function getAppUrl():string{
+        return env("APP_URL");
+    }
+    //todo - better way to handle versions
+    public function getVersions(){
+        $array = [];
+        for ($i=1;$i <= env("APP_VERSION");$i++){
+            $array[$i]=$i;
+        }
+        return $array;
     }
 
 }

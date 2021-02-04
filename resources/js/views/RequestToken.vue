@@ -55,7 +55,8 @@
 
                             </form>
                             <div class="refresh">
-                                Click here to <a :href="'/vue/refresh-access-token'"> Refresh Token !</a>
+                                Click here to <router-link :to="'/refresh-access-token'" exact>
+                                refresh your token !</router-link>
                             </div>
                         </div>
                     </div>
