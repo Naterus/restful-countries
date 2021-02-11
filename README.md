@@ -42,54 +42,61 @@ If you wish to run the app for the purpose of contributing or just for personal 
     cd restful-countries
    ```
 
-4. Install packages with composer
+4. Install laravel packages with composer
     ```bash
     composer install
    ```
+5. Install javascript packages with npm. Please make sure you have node.js installed on your PC
+    ```bash
+    npm install
+   ```
 
-5. Make a copy of .env.example as .env
+6. Make a copy of .env.example as .env
     ```bash
     cp .env.example .env
    ```
    verify that .env has key `APP_VERSION=1` or current api version.
 
 
-6. Generate app key
+7. Generate app key
     ```bash
     php artisan key:generate
    ```
 
-7. Create an empty database and add the database credentials to `.env` file
-    ```angular2html
+8. Create an empty database and add the database credentials to `.env` file
+    ```
         DB_DATABASE=your_database_name
         DB_USERNAME=root
         DB_PASSWORD=your_password
    ```
 
-8. Run migration
+9. Run migration
    ```bash
    php artisan migrate
    ```
 
-9. Run database seed to create sample data
+10. Run database seed to create sample data
    ```bash
    php artisan db:seed
    ```
-10. Create a public folder for symbolic link
+11. Create a public folder for symbolic link
    ```bash
    mkdir storage/app/public
    ``` 
   
-11. Create a symbolic link to storage for asset uploads
-   ```angular2html
+12. Create a symbolic link to storage for asset uploads
+   ```bash
    php artisan storage:link
 ```
 
 12. Start laravel local server
-   ```angular2html
+   ```bash
 php artisan serve
 ```
-
+13. Compile Javascript
+    ```bash
+    npm run dev
+    ```
 13. open http://127.0.0.1:8000/ in your browser, You should see the home page of restful countries.
 
 
