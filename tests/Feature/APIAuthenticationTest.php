@@ -24,7 +24,7 @@ class APIAuthenticationTest extends TestCase
         ];
 
         $this->json('POST', 'request-access-token/generate-token', $data, ['Accept' => 'application/json'])
-            ->assertSessionHas('success',"Api Access Token has been sent to your email successfully.");
+            ->assertStatus(201);
 
         $user = User::where('email',$data['email'])->first();
 

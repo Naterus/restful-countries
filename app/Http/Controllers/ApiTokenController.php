@@ -49,10 +49,11 @@ class ApiTokenController extends Controller
         }catch (\Exception $e){
             //$created_user->tokens()->delete();
             //$created_user->delete();
-            //todo - better email failed message
+
+            //todo - this error should be avoided
 
             return response()->json([
-                "success" => $e->getMessage(),
+                "success" => 'Your API key has been successfully created but there was as error while sending it to your mail. Please find your key in the field below.',
                 "api_token" => $api_token
             ],202);
         }
@@ -84,11 +85,11 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
-            //todo - why delete?
+
             $existing_user->tokens()->delete();
-//todo - better email failed message
+
             return response()->json([
-                "error" => $e->getMessage(),
+                "error" =>'Oops! Failure regenerating your API key',
             ],409);
 
         }

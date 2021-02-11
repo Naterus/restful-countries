@@ -1,13 +1,6 @@
 <?php
 
-use App\Country;
-use App\Covid19;
 use Illuminate\Support\Facades\DB;
-use App\Permission;
-use App\Role;
-use App\User;
-use App\PersonalAccessToken;
-use App\State;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Seeder;
 
@@ -36,16 +29,17 @@ class DatabaseSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         //Test assumes Super Admin should always be id 1
-        $role =  Role::create(["role"=> 'Super Admin']);
+        $role =  App\Role::create(["role"=> 'Super Admin']);
 
         //Create permissions for Super admin role
         foreach (helper::instance()->appOperations() as $operation){
-            Permission::create([
+            App\Permission::create([
                 "role_id" => $role->id,
                 "permission" => $operation
             ]);
         }
-        Role::create(["role"=> 'User']);
+
+        App\Role::create(["role"=> 'User']);
 
 
         factory(App\User::class)->states('admin')->create();

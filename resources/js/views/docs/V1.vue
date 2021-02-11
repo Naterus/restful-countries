@@ -55,6 +55,7 @@
                 <div class="col-lg-8 col-md-12  ml-auto px-0">
                     <div class="row my-3">
                         <div class="ml-auto mr-6">
+<!--                            todo - this url will change after merging to main -->
                             <a href="https://github.com/Naterus/restful-countries/blob/main/resources/views/docs/v1.blade.php" target="_blank" >
                                 <button class="btn btn-outline-dark btn-sm">
                                     <i class="fa fa-github"></i> Edit this page

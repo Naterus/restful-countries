@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/','layout');
+Route::view('/','layout')->name("home");
 
 
 Route::view('/feedback','layout');
