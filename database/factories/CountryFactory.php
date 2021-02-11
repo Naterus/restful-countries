@@ -7,6 +7,11 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Country::class, function (Faker $faker) {
     $country = $faker->unique()->country;
+
+    $continent_array = helper::instance()->listContinents();
+    $key = array_rand($continent_array);
+    $continent = $continent_array[$key];
+
     return [
         'name' => $country,
         'full_name' => $country,
@@ -19,7 +24,7 @@ $factory->define(App\Country::class, function (Faker $faker) {
         'iso2' => $faker->countryISOAlpha3,
         'iso3' => $faker->countryISOAlpha3,
         'code' => $faker->countryCode,
-        'continent' => $faker->word,
+        'continent' => $continent,
         'official_language' => $faker->word,
         'independence_date' => $faker->date(),
     ];

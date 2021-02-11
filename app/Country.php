@@ -8,19 +8,23 @@ class Country extends Model
 {
     protected $guarded = ["id"];
 
-    public function states(){
+    public function states(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
         return $this->hasMany(State::class);
     }
 
-    public function president(){
+    public function president(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
         return $this->hasOne(President::class);
     }
 
-    public function presidents(){
+    public function presidents(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
         return $this->hasMany(President::class);
     }
 
-    public function covid19(){
+    public function covid19(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
         return $this->hasOne(Covid19::class);
     }
 }

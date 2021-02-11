@@ -9,24 +9,19 @@
     <title>Restful Countries - Login</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-
     <link rel="shortcut icon" href="{!! asset("assets/images/logo/logo-white.png") !!}">
-
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{!! asset("assets/css/bootstrap.min.css") !!}" type="text/css">
-
-    <!--Material Icon -->
-    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/materialdesignicons.min.css") !!}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Custom  Css -->
     <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/style.css") !!}" />
 
-    <link rel="stylesheet" type="text/css" href="{!! asset("assets/css/custom.css") !!}" />
-
 </head>
 
 <body>
+<style>
 
+</style>
 <!-- Hero Start -->
 <section class="vh-100" style="background: url('{!! asset("assets/images/login.jpg") !!}') center center;">
 
@@ -38,7 +33,6 @@
                         <div class="login-page bg-white shadow rounded p-4">
                             <div class="text-center">
                                 <a href="{!! route('home') !!}"><img src="{!! asset("assets/images/logo/logo-v.png") !!}" alt="" class="logo-light" height="100" style="margin-bottom:30px;"/></a>
-
                             </div>
                             <form class="login-form" action="{!! route("admin.login.attempt") !!}" method="post">
                                 @csrf
@@ -63,7 +57,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div><!---->
+                        </div>
                     </div> <!--end col-->
                 </div><!--end row-->
             </div> <!--end container-->
@@ -73,13 +67,7 @@
 <!-- Hero End -->
 
 <!-- javascript -->
-<script src="{!! asset("assets/js/jquery.min.js") !!}"></script>
-<script src="{!! asset("assets/js/bootstrap.bundle.min.js") !!}"></script>
-<script src="{!! asset("assets/js/jquery.easing.min.js") !!}"></script>
-<script src="{!! asset("assets/js/plugins.js") !!}"></script>
 
-
-<script src="{!! asset("assets/js/app.js") !!}"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 @if(Session::has('error'))

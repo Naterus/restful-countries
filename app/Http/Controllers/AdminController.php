@@ -34,7 +34,7 @@ class AdminController extends Controller
             "status" => 1
         ],true)){
 
-            return redirect()->intended("administrator/profile");
+            return redirect()->intended("administrator/dashboard");
         }
 
         return redirect()->back()->with("error","Email or password incorrect");

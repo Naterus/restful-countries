@@ -44,6 +44,19 @@ class Helper
         ];
     }
 
+    public function listContinents(){
+        return [
+            "Africa",
+            "Antarctica",
+            "Asia",
+            "Australia",
+            "Europe",
+            "North America",
+            "South America"
+        ];
+
+    }
+
     /**
      * This function will be used to check if user has the permission to perform any operation
      * @param $operation

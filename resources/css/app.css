@@ -1343,8 +1343,8 @@ a.job-list[data-toggle=collapse].collapsed:before {
 
 .error_message {
     padding: 10px;
-    text-align: center;
-    color: #e43f52;
+
+    color: #ff4646;
     border-radius: 5px;
     font-size: 14px;
 }
