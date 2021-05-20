@@ -1,5 +1,8 @@
 name: Restful Countries Github Action
-on: [push]
+on:
+  push:
+  pull_request:
+
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
