@@ -68,10 +68,10 @@ class EndPointTest extends TestCase
     public function testCountriesShowRoute()
     {
 
-        $countries = Country::where('id','<', 6)->get();
+        $countries = Country::all();
         foreach ($countries as $country) {
 
-            $this->get('/api/v1/countries/' . $country->name, ['Authorization' => 'Bearer ' . $this->getToken()])
+            $this->get(route("countries.show",$country->name), ['Authorization' => 'Bearer ' . $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
                     'data' => [
@@ -130,14 +130,14 @@ class EndPointTest extends TestCase
             ]
         ];
 
-        $countries = Country::inRandomOrder()->limit(5)->get();
+        $countries = Country::inRandomOrder()->limit(3)->get();
 
         foreach ($countries as $country) {
             $number_of_presidents = $country->presidents()->count();
 
             $data = Helper::instance()->duplicate($pattern,$number_of_presidents);
 
-            $this->get('/api/v1/countries/' . $country->name . '/presidents', ['Authorization' => 'Bearer ' .  $this->getToken()])
+            $this->get(route("presidents.index",$country->name), ['Authorization' => 'Bearer ' .  $this->getToken()])
                 ->assertStatus(200)
                 ->assertJsonStructure([
                     "data" => $data]);

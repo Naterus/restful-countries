@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+.footer {
+    background: #000f1e;
+    color: #fff;
+}
+
+.btn.btn-primary {
+    background: #3bb8ee;
+    border: 1px solid #2f55d4;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary.active, .btn.btn-primary.focus {
+    background-color: #3bb9ff;
+}
+
+.footer .footer-list li a:hover {
+    color: #fff;
+}
+
+.footer .text-foot {
+    color: #fff;
+}
+
+hr{
+    border-top: 1px solid #fff;
+}
