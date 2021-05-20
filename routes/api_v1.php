@@ -21,6 +21,8 @@ Route::group(['middleware' => ["auth:sanctum","throttle:100,1","api_logger"]], f
 
     Route::get("/covid19",'Covid19Controller@getAllCases')->name("covid19.index");
 
+    Route::get("/covid20",'Covid19Controller@getAllCases')->name("covid20.index");
+
 });
 
 Route::fallback(function(){
