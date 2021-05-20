@@ -1,0 +1,38 @@
+name: Restful Countries Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-app:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+
+        uses: actions/checkout@v2
+
+      - name: Deployment
+
+        uses: appleboy/ssh-action@main
+
+        with:
+
+          host: ${{ secrets.SSH_HOST }}
+
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+          username: ${{ secrets.SSH_USERNAME }}
+
+          script: |
+
+            cd /var/www/html/
+
+            git checkout -f
+
+            git pull
+
+
