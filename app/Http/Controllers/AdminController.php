@@ -3,18 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\ApiRequest;
-use App\Country;
-use App\Covid19;
 use App\FeedBack;
 use App\Role;
-use App\State;
-use App\State2;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 use App\PersonalAccessToken;
+use Yajra\DataTables\DataTables;
 
 class AdminController extends Controller
 {
@@ -67,9 +63,15 @@ class AdminController extends Controller
         return view("admin.feedbacks",compact("feedbacks"));
     }
 
-    public function apiRequests(){
-        $api_requests =ApiRequest::orderBy("created_at","desc")->get();
-        return view("admin.api-requests",compact("api_requests"));
+    /**
+     * @throws \Exception
+     */
+    public function apiRequests(Request $request){
+        if ($request->ajax()){
+            return Datatables::of(ApiRequest::query())->make(true);
+        }
+
+        return view("admin.api-requests");
     }
 
     public function users(){

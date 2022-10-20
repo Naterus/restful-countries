@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\AccessTokenMail;
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailer;
@@ -18,11 +19,11 @@ class ApiTokenController extends Controller
     }
 
     public function generateApiToken(Request $request,Mailer $mail){
+
         $validated_details = $this->validate($request,[
             "email" => "required|min:6|max:40",
             "website" => "max:40"
         ]);
-
         $existing_user = User::whereEmail($validated_details["email"])->first();
 
         if($existing_user){
@@ -33,11 +34,12 @@ class ApiTokenController extends Controller
             ]);
         }
 
+        $roleUser = Role::whereRole('User')->first();
         $created_user = User::create([
             "email" => $validated_details["email"],
             "website" => $validated_details["website"],
             "password" => bcrypt($validated_details["email"]),
-            "role_id" => 4,
+            "role_id" => $roleUser->id,
             "status" => 0
         ]);
 

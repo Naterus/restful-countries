@@ -9,16 +9,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.2.5|^8.0",
-        "doctrine/dbal": "^2.0",
-        "fabpot/goutte": "^4.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
         "laravel/framework": "^7.29",
-        "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.5",
         "league/omnipay": "^3.1",
-        "omnipay/paypal": "^3.0"
+        "omnipay/paypal": "^3.0",
+        "yajra/laravel-datatables": "^1.2",
+        "laravel/sanctum": "^2.8"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -63,9 +62,6 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ],
-        "test": [
-            "vendor\\bin\\phpunit"
         ]
     }
 }

@@ -12,34 +12,34 @@
                     <!-- /.box-title -->
 
                     <!-- /.dropdown js__dropdown -->
-                    <table id="example" class="table table-striped table-bordered display" style="width:100%">
+                    <table id="apiRequests" class="table table-striped table-bordered display" style="width:100%">
                         <thead>
                         <tr>
-                            <th width="5%">#</th>
-                            <th width="20%">Endpoint</th>
-                            <th width="10%">Status</th>
-                            <th width="15%">Host</th>
-                            <th width="10%">Message</th>
-                            <th width="15%">Request Time</th>
+                            <th>#</th>
+                            <th>Endpoint</th>
+                            <th>Status</th>
+                            <th>Host</th>
+                            <th>Message</th>
+                            <th>Request Time</th>
                         </tr>
                         </thead>
 
-                        <tbody>
+{{--                        <tbody>--}}
 
-                        <?php $id = 1; ?>
-                        @foreach($api_requests as $api_request)
-                            <tr>
-                                <td >{!! $id !!}</td>
-                                <td >{!! $api_request->endpoint !!}</td>
-                                <td >@if($api_request->status == 1) Successful @else Failed @endif</td>
-                                <td >{!! $api_request->host !!}</td>
-                                <td >{!! $api_request->message !!}</td>
-                                <td >{!! $api_request->created_at !!}</td>
-                            </tr>
-                            <?php $id++; ?>
-                        @endforeach
+{{--                        <?php $id = 1; ?>--}}
+{{--                        @foreach($api_requests as $api_request)--}}
+{{--                            <tr>--}}
+{{--                                <td >{!! $id !!}</td>--}}
+{{--                                <td >{!! $api_request->endpoint !!}</td>--}}
+{{--                                <td >@if($api_request->status == 1) Successful @else Failed @endif</td>--}}
+{{--                                <td >{!! $api_request->host !!}</td>--}}
+{{--                                <td >{!! $api_request->message !!}</td>--}}
+{{--                                <td >{!! $api_request->created_at !!}</td>--}}
+{{--                            </tr>--}}
+{{--                            <?php $id++; ?>--}}
+{{--                        @endforeach--}}
 
-                        </tbody>
+{{--                        </tbody>--}}
                     </table>
                 </div>
             </div>
@@ -48,5 +48,20 @@
 
 @endsection
 @section("page-script")
+    <script>
+        $('#apiRequests').DataTable( {
+            ajax: '/administrator/api-requests',
+            processing: true,
+            serverSide: true,
+            columns: [
+                { data: 'id' },
+                { data: 'endpoint' },
+                { data: 'status' },
+                { data: 'host' },
+                { data: 'message' },
+                { data: 'created_at' }
+            ]
+        } );
+    </script>
 
 @endsection
