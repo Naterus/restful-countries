@@ -37,6 +37,7 @@ class ApiTokenController extends Controller
             "email" => $validated_details["email"],
             "website" => $validated_details["website"],
             "password" => bcrypt($validated_details["email"]),
+            "role_id" => 4,
             "status" => 0
         ]);
 
@@ -50,7 +51,7 @@ class ApiTokenController extends Controller
             //$created_user->delete();
 
             return redirect()->back()->with([
-                "error" => $e->getMessage(),
+                "success" => "New Api key created, please copy and save your api token securely as it would only be displayed once.",
                 "api_token" => $api_token
             ]);
         }
@@ -81,10 +82,11 @@ class ApiTokenController extends Controller
         try {
             $mail->to($validated_details["email"])->send(new AccessTokenMail( $api_token,$validated_details["email"],$mail_message));
         }catch (\Exception $e){
-            $existing_user->tokens()->delete();
+            //$existing_user->tokens()->delete();
 
             return redirect()->back()->with([
-                "error" => $e->getMessage(),
+                "success" => "Please copy your new api token as it would only be displayed once.",
+                "api_token" => $api_token
             ]);
 
         }

@@ -17,6 +17,9 @@ class SlimCountryResource extends JsonResource
         return [
             "name" => $this->name,
             "phone_code" => $this->code,
+            "currency" => $this->currency,
+            "iso2" => $this->iso2,
+            "iso3" => $this->iso3,
             'href' => [
                 'self' => route("countries.show",$this->name),
                 'flag' => asset("assets/images/flags/".$this->flag),

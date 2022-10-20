@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => ["auth:sanctum","throttle:100,1","api_logger"]], function(){
+Route::group(['middleware' =>  ["auth:sanctum","throttle:100,1","api_logger"]], function(){
 
     Route::get("/",'CountryController@getCountries');
 
@@ -18,6 +18,12 @@ Route::group(['middleware' => ["auth:sanctum","throttle:100,1","api_logger"]], f
     Route::get("/countries/{country}/states",'StateController@getStates')->name("states.index");
 
     Route::get("/countries/{country}/states/{state}",'StateController@getState')->name("states.show");
+
+    Route::get("/countries/{country}/states/{state}/districts",'DistrictController@getDistricts')->name("districts.index");
+
+    Route::post("/upload-districts",'DistrictController@upload')->name("districts.upload");
+
+    Route::get("/countries/{country}/states/{state}/districts/{id}",'DistrictController@getDistrict')->name("districts.show");
 
     Route::get("/covid19",'Covid19Controller@getAllCases')->name("covid19.index");
 

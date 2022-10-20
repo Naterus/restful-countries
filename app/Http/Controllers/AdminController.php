@@ -11,8 +11,9 @@ use App\State;
 use App\State2;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Auth;
+
 use App\PersonalAccessToken;
 
 class AdminController extends Controller
@@ -54,8 +55,8 @@ class AdminController extends Controller
             $total_api_versions = $total_api_versions+1;
         }
 
-        $feedbacks = FeedBack::all()->count();
-        $total_requests = ApiRequest::all()->count();
+        $feedbacks = FeedBack::count();
+        $total_requests = ApiRequest::count();
         $failed_requests = ApiRequest::whereStatus(0)->count();
         $successful_requests = ApiRequest::whereStatus(1)->count();
         return view('admin.dashboard',compact("feedbacks","current_api_version","total_api_versions","total_requests","failed_requests","successful_requests"));
@@ -67,12 +68,12 @@ class AdminController extends Controller
     }
 
     public function apiRequests(){
-        $api_requests = DB::table("api_requests")->orderBy("created_at","desc")->get();
+        $api_requests =ApiRequest::orderBy("created_at","desc")->get();
         return view("admin.api-requests",compact("api_requests"));
     }
 
     public function users(){
-        $users = User::where("status","!=",0)->get();
+        $users = User::all();
         $roles = Role::all();
 
         return view("admin.users",compact("users","roles"));

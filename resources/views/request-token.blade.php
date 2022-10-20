@@ -24,13 +24,16 @@
                         </div>
 
                         <div class="home-form-position">
+@if(Session::has('success') && Session::has('api_token'))
+                                <div class="alert alert-success text-center">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                    <strong>{!! Session::get('success') !!}</strong>
+                                </div>
+                                <textarea placeholder="API Token" id="api-token" class="api-text" rows="14" readonly>
+                                    {!! Session::get('api_token') !!}
+                                </textarea>
 
-                            @if(Session::has('error') && Session::has('api_token'))
-                                <div style="margin: 1.5rem;">
-                                        <input type="text" placeholder="API Token" id="api-token" class="api-text "
-                                               value="{!! Session::get('api_token') !!}" readonly>
-                                        <button class="copy-btn">Copy</button>
-                                 </div>
+                                <button class="copy-btn">Copy</button>
                             @elseif(Session::has('success') )
                                 <div class="alert alert-success text-center">
                                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
